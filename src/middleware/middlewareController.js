@@ -4,12 +4,14 @@ const middlewareController = {
 		const token = req.headers.token;
 		if (token) {
 			const accessToken = token.split(' ')[1];
+			console.log(req.headers.token);
 			jwt.verify(accessToken, process.env.JWT_ACCESS_KEY, (err, doctor) => {
 				if (err) {
-					return res.status(403).json({ status: 'Token is not valid' });
+					return res.status(403).json({ 
+						isLogin: false,
+						message: 'Invalid access token' 
+					});
 				}
-				// Sau khi giải mã accesstoken sẽ đc object là id và roleId
-				// gán user này vào req
 				req.doctor = doctor;
 				next();
 			});

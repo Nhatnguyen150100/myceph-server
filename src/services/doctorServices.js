@@ -32,6 +32,33 @@ const doctorServices = {
 			}
 		});
 	},
+  getDoctorFromEmail: (email) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const doctor = await db.Doctor.findOne({
+          where: {
+            email: email
+          }
+        })        
+        if(doctor){
+          resolve({
+            statusDoctor: true,
+            messageDoctor: 'get information of doctor successfully',
+            doctor: doctor
+          })
+        }else{
+          console.log("failed to get information");
+          resolve({
+            statusDoctor: false,
+            messageDoctor: 'get information of doctor failed',
+            doctor: doctor
+          })
+        }
+      } catch (error) {
+        reject(error);
+      }
+    })
+  },
   updateDoctorInformation: (id,data) => {
     return new Promise(async (resolve, reject) => {
       try {
@@ -39,25 +66,64 @@ const doctorServices = {
           firstName: data.firstName,
           lastName: data.lastName,
           gender: data.gender,
-          birthday: data.birthday,
+          birthday: new Date(data.birthday),
           avatar: data.avatar,
           phoneNumber: data.phoneNumber,
           description: data.description
         }
         const doctorUpdate = await db.Doctor.update(dataUpdate, {where: {id : id}});
         if(doctorUpdate){
+          const newInformation = await db.Doctor.findOne({where: { id: id }});
+          delete newInformation.password;
           resolve({
+            status: true,
             message: 'Update information of doctor successfully',
-            data: doctorUpdate
+            data: newInformation
           })
         }else{
           resolve({
+            status: false,
             message: 'Update information of doctor failed',
             data: {}
           })
         }
       } catch (error) {
         reject(error);
+      }
+    })
+  },
+  getAllClinicFromDoctor: (idDoctor) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const listIdClinic = await db.MemberOfClinic.findAll({
+          attributes: ['idClinic'],
+          where: {
+            idDoctor: idDoctor
+          }
+        })
+        let listClinic = [];
+        for (let i = 0; i < listIdClinic.length; i++) {
+          listClinic.push(await db.Clinic.findOne({
+            where: {
+              id: listIdClinic[i].idClinic
+            }
+          }))
+        }
+        if(listClinic.length > 0) {
+          resolve({
+            status: true,
+            message: "Get all clinic successfully",
+            data: listClinic
+          })
+        }else{
+          resolve({
+            status: false,
+            message: "Get all clinic failed",
+            data: listClinic
+          })
+        }
+      } catch (error) {
+        reject(error);        
       }
     })
   }
