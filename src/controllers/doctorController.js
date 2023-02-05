@@ -22,7 +22,7 @@ const doctorController = {
   },
   getInformationDoctor: async (req,res) => {
     try {
-      const { statusDoctor, messageDoctor, doctor } = await doctorServices.getDoctorFromEmail(req.doctor.email);
+      const { statusDoctor, messageDoctor, doctor } = await doctorServices.getDoctorFromEmail(req.params.email);
       if(statusDoctor){
         res.status(200).json({
           message: messageDoctor,

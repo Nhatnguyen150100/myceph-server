@@ -4,7 +4,6 @@ const middlewareController = {
 		const token = req.headers.token;
 		if (token) {
 			const accessToken = token.split(' ')[1];
-			console.log(req.headers.token);
 			jwt.verify(accessToken, process.env.JWT_ACCESS_KEY, (err, doctor) => {
 				if (err) {
 					return res.status(403).json({ 

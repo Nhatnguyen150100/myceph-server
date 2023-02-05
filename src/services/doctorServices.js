@@ -41,6 +41,7 @@ const doctorServices = {
           }
         })        
         if(doctor){
+          delete doctor.password
           resolve({
             statusDoctor: true,
             messageDoctor: 'get information of doctor successfully',

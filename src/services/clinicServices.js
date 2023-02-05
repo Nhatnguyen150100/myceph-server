@@ -20,25 +20,32 @@ const clinicServices = {
   getAllDoctorInClinic: (idClinic) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const listIdDoctor = await db.MemberOfClinic.findAll({
-          attributes: ['idDoctor'],
-          where: {
-            idClinic: idClinic
+        // const listIdDoctor = await db.MemberOfClinic.findAll({
+        //   attributes: ['idDoctor'],
+        //   where: {
+        //     idClinic: idClinic
+        //   }
+        // })
+        // let listDoctor = [];
+        // for (let i = 0; i < listIdDoctor.length; i++) {
+        //   listDoctor.push(await db.Doctor.findOne({
+        //     where: {
+        //       id: listIdDoctor[i].idDoctor
+        //     }
+        //   }))
+        // }
+        const listDoctor = await sequelize.query('select email,avatar,roleOfDoctor from myceph.memberofclinics, myceph.doctors where myceph.memberofclinics.idClinic = ? and myceph.memberofclinics.idDoctor = myceph.doctors.id',
+          {
+            replacements: [idClinic],
+            type: QueryTypes.SELECT
           }
-        })
-        let listDoctor = [];
-        for (let i = 0; i < listIdDoctor.length; i++) {
-          listDoctor.push(await db.Doctor.findOne({
-            where: {
-              id: listIdDoctor[i].idDoctor
-            }
-          }))
-        }
+        )
+        console.log(listDoctor[0]);
         if(listDoctor.length > 0) {
           resolve({
             status: true,
             message: "Get all doctor successfully",
-            data: listDoctor
+            data: listDoctor[0]
           })
         }else{
           resolve({
