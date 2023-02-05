@@ -13,13 +13,13 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Doctor.hasMany(models.MemberOfClinic, {foreignKey:'idDoctor', sourceKey: 'id'});
       Doctor.hasMany(models.SharePatient, {foreignKey:'idDoctor', sourceKey: 'id'});
+      Doctor.hasMany(models.Patient, {foreignKey:'idDoctor', sourceKey: 'id'});
     }
   }
   Doctor.init({
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
+    fullName: DataTypes.STRING,
     gender: DataTypes.STRING,
     birthday: DataTypes.DATE,
     avatar: DataTypes.STRING,
