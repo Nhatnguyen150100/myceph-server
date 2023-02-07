@@ -84,18 +84,11 @@ const clinicControllers = {
   },
   getInformationClinic: async (req,res) => {
     try {
-      const { status, message, data } = await clinicServices.updateClinicInformation(req.params.id);
-      if(status){
-        res.status(200).json({
-          message: message,
-          data: data
-        })
-      }else{
-        res.status(400).json({
-          message: message,
-          data: data
-        })
-      }
+      const clinic = req.clinic;
+      res.status(200).json({
+        message: 'get information clinic successfully',
+        data: clinic
+      })
     } catch (error) {
       res.status(400).json({
         message: error

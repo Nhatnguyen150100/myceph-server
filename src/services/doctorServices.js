@@ -8,15 +8,6 @@ const doctorServices = {
 		return new Promise(async (resolve, reject) => {
 			try {
 				let hashed = await bcrypt.hash(data.password, salt);
-				let emailDoctorExist = await db.Doctor.findOne({
-					where: { email: data.email },
-				});
-				if (emailDoctorExist) {
-					return resolve({
-						status: false,
-						message: 'Email was already exsit.'
-					});
-				}
 				let newDoctor = await db.Doctor.create({
 					email: data.email,
 					password: hashed,
@@ -60,7 +51,7 @@ const doctorServices = {
       }
     })
   },
-  updateDoctorInformation: (id,data) => {
+  updateDoctorInformation: (idDoctor,data) => {
     return new Promise(async (resolve, reject) => {
       try {
         const dataUpdate = {
@@ -72,9 +63,9 @@ const doctorServices = {
           phoneNumber: data.phoneNumber,
           description: data.description
         }
-        const doctorUpdate = await db.Doctor.update(dataUpdate, {where: {id : id}});
+        const doctorUpdate = await db.Doctor.update(dataUpdate, {where: {id : idDoctor}});
         if(doctorUpdate){
-          const newInformation = await db.Doctor.findOne({where: { id: id }});
+          const newInformation = await db.Doctor.findOne({where: { id: idDoctor }});
           delete newInformation.password;
           resolve({
             status: true,
@@ -110,7 +101,7 @@ const doctorServices = {
             }
           }))
         }
-        if(listClinic.length > 0) {
+        if(listClinic.length >= 0) {
           resolve({
             status: true,
             message: "Get all clinic successfully",

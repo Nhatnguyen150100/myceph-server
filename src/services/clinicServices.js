@@ -47,36 +47,23 @@ const clinicServices = {
   createNewClinic: (idAdminDoctor,data) =>{
     return new Promise(async (resolve, reject) => {
       try {
-        const checkNameClinicExists = await db.Clinic.findOne({
-          where:{
-            nameClinic: data.nameClinic
-          }
-        })
-        if(checkNameClinicExists){
+        const newClinic = await db.Clinic.create({
+          nameClinic: data.nameClinic,
+          emailClinic: data.emailClinic,
+          phoneNumberClinic: data.phoneNumberClinic,
+          avatarClinic: data.avatarClinic,
+          addressClinic: data.addressClinic,
+          description: data.description
+        });
+        const { status } = await clinicServices.addDoctorToClinic(newClinic.dataValues.id,idAdminDoctor,"admin");
+        if(status){
           resolve({
-            status: false,
-            message: 'Name of clinic is already in use'
+            status: true,
+            message: 'create new clinic successfully',
+            data: newClinic
           })
-        }else{
-          const newClinic = await db.Clinic.create({
-            nameClinic: data.nameClinic,
-            emailClinic: data.emailClinic,
-            phoneNumberClinic: data.phoneNumberClinic,
-            avatarClinic: data.avatarClinic,
-            addressClinic: data.addressClinic,
-            description: data.description
-          });
-          const { status } = await clinicServices.addDoctorToClinic(newClinic.dataValues.id,idAdminDoctor,"admin");
-          if(status){
-            resolve({
-              status: true,
-              message: 'create new clinic successfully',
-              data: newClinic
-            })
-          }
         }
       } catch (error) {
-        console.log(error);
         reject({error});
       }
     })
@@ -129,7 +116,6 @@ const clinicServices = {
             data: clinic
           })
         }else{
-          console.log("failed to get information");
           resolve({
             status: false,
             message: 'get information of clinic failed',
@@ -141,7 +127,7 @@ const clinicServices = {
       }
     })
   },
-  updateClinicInformation: (id,data) => {
+  updateClinicInformation: (idClinic,data) => {
     return new Promise(async (resolve, reject) => {
       try {
         const dataUpdate = {
@@ -152,9 +138,9 @@ const clinicServices = {
           addressClinic: data.addressClinic,
           description: data.description,
         }
-        const clinicUpdate = await db.Clinic.update(dataUpdate, {where: {id : id}});
+        const clinicUpdate = await db.Clinic.update(dataUpdate, {where: {id : idClinic}});
         if(clinicUpdate){
-          const newInformation = await db.Clinic.findOne({where: { id: id }});
+          const newInformation = await db.Clinic.findOne({where: { id: idClinic }});
           delete newInformation.password;
           resolve({
             status: true,

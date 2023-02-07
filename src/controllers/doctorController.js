@@ -22,17 +22,12 @@ const doctorController = {
   },
   getInformationDoctor: async (req,res) => {
     try {
-      const { statusDoctor, messageDoctor, doctor } = await doctorServices.getDoctorFromEmail(req.params.email);
-      if(statusDoctor){
-        res.status(200).json({
-          message: messageDoctor,
-          data: doctor
-        })
-      }else{
-        res.status(400).json({
-          message: messageDoctor
-        })
-      }
+      const doctor = req.doctor;
+      delete doctor.password;
+      res.status(200).json({
+        message: 'get information doctor successfully',
+        data: doctor
+      })
     } catch (error) {
       res.status(400).json({
         message: error
@@ -58,7 +53,7 @@ const doctorController = {
       })
     }
   },
-  gettAllClinicFromDoctor: async (req,res) => {
+  getAllClinicFromDoctor: async (req,res) => {
     try {
       const { status, message, data } = await doctorServices.getAllClinicFromDoctor(req.params.id);
       if(status){
