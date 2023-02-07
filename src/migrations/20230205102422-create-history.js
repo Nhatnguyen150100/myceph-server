@@ -3,10 +3,16 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Histories', {
-      idPatient: {
+      id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
+        type: Sequelize.INTEGER
+      },
+      idHistory: {
+        allowNull: false,
+        autoIncrement: false,
+        unique: true,
         type: Sequelize.INTEGER
       },
       dentalHistory: {

@@ -10,6 +10,7 @@ import connectDB from './config/connectDB';
 import clinicRouter from './routes/clinicRoutes';
 import doctorRouter from './routes/doctorRoutes';
 import authRouter from './routes/authRouters';
+import patientRouter from './routes/patientRouters';
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/v1/clinic', clinicRouter);
 app.use('/v1/doctor', doctorRouter);
 app.use('/v1/auth', authRouter);
+app.use('/v1/patient', patientRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

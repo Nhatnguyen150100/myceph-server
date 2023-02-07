@@ -9,13 +9,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      idPatient: {
+      idSharedPatient: {
         type: Sequelize.INTEGER
       },
-      idDoctor: {
+      idSharedPatientOfDoctor: {
         type: Sequelize.INTEGER
       },
-      idClinic: {
+      idSharedPatientOfClinic: {
         type: Sequelize.INTEGER
       },
       idOwerDoctor: {

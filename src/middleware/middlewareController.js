@@ -26,6 +26,6 @@ const middlewareController = {
 				res.status(403).json({ status: "You're not allowed!" });
 			}
 		});
-	}
+	},
 };
 export default middlewareController;

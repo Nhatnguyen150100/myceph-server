@@ -9,10 +9,12 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      idDoctor: {
+      idPatientOfDoctor: {
+        allowNull: true,
         type: Sequelize.INTEGER
       },
-      idClinic: {
+      idPatientOfClinic: {
+        allowNull: true,
         type: Sequelize.INTEGER
       },
       fullName: {
@@ -34,6 +36,9 @@ module.exports = {
         type: Sequelize.STRING
       },
       chiefcomplaint: {
+        type: Sequelize.STRING
+      },
+      note: {
         type: Sequelize.STRING
       },
       updateByDoctor: {

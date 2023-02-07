@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      idPatient: {
+      idTreatmentPlan: {
         type: Sequelize.INTEGER
       },
       plan: {
