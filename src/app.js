@@ -11,6 +11,11 @@ import clinicRouter from './routes/clinicRoutes';
 import doctorRouter from './routes/doctorRoutes';
 import authRouter from './routes/authRouters';
 import patientRouter from './routes/patientRouters';
+import historyRouter from './routes/historyRouters';
+import extraoralRouter from './routes/extraoralRouters';
+import intraoralRouter from './routes/intraoralRouters';
+import radiographyRouter from './routes/radiographyRouters';
+import diagnosisAndTreatmentRouters from './routes/diagnosisAndTreatmentRouters';
 
 var app = express();
 
@@ -28,10 +33,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+// router setup
 app.use('/v1/clinic', clinicRouter);
 app.use('/v1/doctor', doctorRouter);
 app.use('/v1/auth', authRouter);
 app.use('/v1/patient', patientRouter);
+app.use('/v1/history', historyRouter);
+app.use('/v1/extraoral', extraoralRouter);
+app.use('/v1/intraoral', intraoralRouter);
+app.use('/v1/radiography', radiographyRouter);
+app.use('/v1/diagnosis', diagnosisAndTreatmentRouters);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -127,6 +127,18 @@ const patientServices = {
         reject(error);
       }
     })
+  },
+  saveUpdateDoctor: (idDoctor) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const newUpdateDoctor = await db.Patient.update({
+          updateByDoctor: idDoctor
+        })
+        if(newUpdateDoctor) resolve();
+      } catch (error) {
+        reject(error);
+      }
+    })
   }
 }
 

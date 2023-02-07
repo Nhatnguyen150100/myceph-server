@@ -33,7 +33,7 @@ module.exports = {
       detalAldevelopment: {
         type: Sequelize.STRING
       },
-      ortheProblems: {
+      otherProblems: {
         type: Sequelize.STRING
       },
       archForm: {
