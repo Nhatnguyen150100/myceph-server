@@ -14,7 +14,6 @@ const clinicServices = {
         console.log(error);
         reject(error);
       }
-
     });
   },
   getAllDoctorInClinic: (idClinic) => {
@@ -28,13 +27,13 @@ const clinicServices = {
         )
         if(listDoctor.length > 0) {
           resolve({
-            status: true,
+            status: 200,
             message: "Get all doctor successfully",
             data: listDoctor[0]
           })
         }else{
           resolve({
-            status: false,
+            status: 202,
             message: "Get all doctor failed",
             data: listDoctor
           })
@@ -58,9 +57,13 @@ const clinicServices = {
         const { status } = await clinicServices.addDoctorToClinic(newClinic.dataValues.id,idAdminDoctor,"admin");
         if(status){
           resolve({
-            status: true,
-            message: 'create new clinic successfully',
-            data: newClinic
+            status: 200,
+            message: 'create new clinic successfully'
+          })
+        }else{
+          resolve({
+            status: 202,
+            message: 'create new clinic failed'
           })
         }
       } catch (error) {
@@ -77,7 +80,7 @@ const clinicServices = {
           }
         })
         if(!checkDoctorExists) {
-          resolve({status: false, message:'doctor not found'});
+          resolve({status: 202, message:'doctor not found'});
         }
         const checkDoctorInClinic = await db.MemberOfClinic.findOne({
           where : {
@@ -85,17 +88,23 @@ const clinicServices = {
             idDoctor: idDoctor
           }
         })
-        if(checkDoctorInClinic) resolve({status: false, message:'doctor is already in this clinic'});
+        if(checkDoctorInClinic) resolve({status: 202, message:'doctor is already in this clinic'});
         const addMemberToClinic = await db.MemberOfClinic.create({
           idClinic: idClinic,
           idDoctor: idDoctor,
           roleOfDoctor: roleOfDoctor
         })
-        resolve({
-          status: true,
-          message: 'Add member to clinic successfully',
-          data: addMemberToClinic
-        })
+        if(addMemberToClinic){
+          resolve({
+            status: 200,
+            message: 'Add member to clinic successfully'
+          })
+        }else{
+          resolve({
+            status: 202,
+            message: 'Add member to clinic failed'
+          })
+        }
       } catch (error) {
         reject(error)
       }
@@ -111,13 +120,13 @@ const clinicServices = {
         })        
         if(clinic){
           resolve({
-            status: true,
+            status: 200,
             message: 'get information of clinic successfully',
             data: clinic
           })
         }else{
           resolve({
-            status: false,
+            status: 202,
             message: 'get information of clinic failed',
             data: {}
           })
@@ -140,18 +149,14 @@ const clinicServices = {
         }
         const clinicUpdate = await db.Clinic.update(dataUpdate, {where: {id : idClinic}});
         if(clinicUpdate){
-          const newInformation = await db.Clinic.findOne({where: { id: idClinic }});
-          delete newInformation.password;
           resolve({
-            status: true,
-            message: 'Update information of clinic successfully',
-            data: newInformation
+            status: 200,
+            message: 'Update information of clinic successfully'
           })
         }else{
           resolve({
-            status: false,
-            message: 'Update information of clinic failed',
-            data: {}
+            status: 202,
+            message: 'Update information of clinic failed'
           })
         }
       } catch (error) {

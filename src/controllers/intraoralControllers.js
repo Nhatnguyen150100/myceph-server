@@ -1,20 +1,15 @@
+import patientServices from "../services/patientServices";
+
 const { default: intraoralServices } = require("../services/intraoralServices")
 
 const intraoralControllers = {
   getIntraoral: async (req,res) => {
     try {
       const { status, message, data } = await intraoralServices.getIntraoral(req.params.id);
-      if(status){
-        res.status(200).json({
-          message: message,
-          data: data
-        })
-      }else{
-        res.status(400).json({
-          message: message,
-          data: data
-        });
-      }
+      res.status(status).json({
+        message: message,
+        data: data
+      })
     } catch (error) {
       res.status(400).json({
         message: error
@@ -23,18 +18,13 @@ const intraoralControllers = {
   },
   updateIntraoral: async (req,res) => {
     try {
-      const { status, message, data } = await intraoralServices.updateIntraoral(req.params.id,req.body);
-      if(status){
-        res.status(200).json({
+      const { status, message } = await intraoralServices.updateIntraoral(req.params.id,req.body);
+      patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
+        res.status(status).json({
           message: message,
           data: data
         })
-      }else{
-        res.status(400).json({
-          message: message,
-          data: data
-        });
-      }
+      })
     } catch (error) {
       res.status(400).json({
         message: error

@@ -13,7 +13,7 @@ const authServices = {
         })
         if(!doctor){
           resolve({
-            staus: false,
+            status: false,
             message: 'Could not find doctor email'
           })
         }

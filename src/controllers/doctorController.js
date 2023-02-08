@@ -4,16 +4,10 @@ const doctorController = {
   registerDoctorController: async (req,res) =>{
     try {
       const { status ,message, data } = await doctorServices.createNewDoctor(req.body);
-      if(status){
-        res.status(200).json({
-          message: message,
-          data: data
-        })
-      }else{
-        res.status(400).json({
-          message: message
-        })
-      }
+      res.status(status).json({
+        message: message,
+        data: data
+      })
     } catch (error) {
       res.status(400).json({
         message: error
@@ -36,17 +30,10 @@ const doctorController = {
   },
   updateInformationDoctor: async (req, res) => {
     try {
-      const { status, message, data } = await doctorServices.updateDoctorInformation(req.params.id,req.body);
-      if(status){
-        res.status(200).json({
-          message: message,
-          data: data
-        })
-      }else{
-        res.status(400).json({
-          message: message
-        })
-      }
+      const { status, message } = await doctorServices.updateDoctorInformation(req.params.id,req.body);
+      res.status(status).json({
+        message: message
+      })
     } catch (error) {
       res.status(400).json({
         message: error
@@ -56,16 +43,10 @@ const doctorController = {
   getAllClinicFromDoctor: async (req,res) => {
     try {
       const { status, message, data } = await doctorServices.getAllClinicFromDoctor(req.params.id);
-      if(status){
-        res.status(200).json({
-          message: message,
-          data: data
-        })
-      }else{
-        res.status(400).json({
-          message: message
-        })
-      }
+      res.status(status).json({
+        message: message,
+        data: data
+      })
     } catch (error) {
       res.status(400).json({
         message: error

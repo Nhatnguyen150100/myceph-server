@@ -11,13 +11,13 @@ const historyServices = {
         })
         if(history){
           resolve({
-            status: true,
+            status: 200,
             message: 'get history of patient successfully',
             data: history
           })
         }else{
           resolve({
-            status: false,
+            status: 202,
             message: 'get history of patient failed',
             data: {}
           })
@@ -45,21 +45,14 @@ const historyServices = {
           }
         })
         if(updateNewHistory){
-          const newHistory = await db.History.findOne({
-            where: {
-              idHistory: idPatient
-            }
-          })
           resolve({
-            status: true,
-            message: 'updated history successfully',
-            data: newHistory
+            status: 200,
+            message: 'updated history successfully'
           })
         }else{
           resolve({
-            status: false,
-            message: 'update history failed',
-            data: {}
+            status: 202,
+            message: 'update history failed'
           })
         }
       } catch (error) {

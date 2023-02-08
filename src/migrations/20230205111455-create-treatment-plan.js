@@ -15,6 +15,10 @@ module.exports = {
       plan: {
         type: Sequelize.STRING
       },
+      selected: {
+        defaultValue: 0,
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

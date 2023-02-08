@@ -11,13 +11,13 @@ const diagnosisandtreatmentServices = {
         })
         if(diagnosis){
           resolve({
-            status: true,
+            status: 200,
             message: 'get diagnosisAndTreatment successfully',
             data: diagnosis
           })
         }else{
           resolve({
-            status: false,
+            status: 202,
             message: 'get diagnosisAndTreatment failed',
             data: {}
           })
@@ -40,21 +40,14 @@ const diagnosisandtreatmentServices = {
           }
         })
         if(diagnosisUpdate){
-          const newDiagnosisUpdate = await db.DiagnosisAndTreatment.findOne({
-            where: {
-              idDiagnosisAndTreatment: idPatient
-            }
-          })
           resolve({
-            status: true,
-            message: 'update diagnosisAndTreatment successfully',
-            data: newDiagnosisUpdate
+            status: 200,
+            message: 'update diagnosisAndTreatment successfully'
           })
         }else{
           resolve({
-            status: false,
-            message: 'update diagnosisAndTreatment failed',
-            data: {}
+            status: 202,
+            message: 'update diagnosisAndTreatment failed'
           })
         }
       } catch (error) {

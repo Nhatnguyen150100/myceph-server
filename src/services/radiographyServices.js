@@ -11,13 +11,13 @@ const radiographyServices = {
         })
         if(radiography){
           resolve({
-            status: true,
+            status: 200,
             message: 'get radiography successfully',
             data: radiography
           })
         }else{
           resolve({
-            status: false,
+            status: 202,
             message: 'get radiography failed',
             data: {}
           })
@@ -46,21 +46,14 @@ const radiographyServices = {
           }
         })
         if(radiographyUpdate){
-          const newIntraoralUpdate = await db.Radiography.findOne({
-            where: {
-              idRadiography: idPatient
-            }
-          })
           resolve({
-            status: true,
-            message: 'update radiography successfully',
-            data: newIntraoralUpdate
+            status: 200,
+            message: 'update radiography successfully'
           })
         }else{
           resolve({
-            status: false,
-            message: 'update radiography failed',
-            data: {}
+            status: 202,
+            message: 'update radiography failed'
           })
         }
       } catch (error) {

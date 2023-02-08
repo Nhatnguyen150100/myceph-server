@@ -17,9 +17,8 @@ const patientServices = {
             const patientRadiography = await db.Radiography.create({idRadiography: newPatient.id});
             const patientDiagnosisAndTreatment = await db.DiagnosisAndTreatment.create({idDiagnosisAndTreatment: newPatient.id});
             if(patientHistory && patientExtraOral && patientIntraOral && patientRadiography && patientDiagnosisAndTreatment) resolve({
-              status: true,
-              message: 'create patient successfully',
-              data: newPatient
+              status: 200,
+              message: 'create patient successfully'
             })
           }
         }else{
@@ -35,16 +34,14 @@ const patientServices = {
             const patientRadiography = await db.Radiography.create({idRadiography: newPatient.id});
             const patientDiagnosisAndTreatment = await db.DiagnosisAndTreatment.create({idDiagnosisAndTreatment: newPatient.id});
             if(patientHistory && patientExtraOral && patientIntraOral && patientRadiography && patientDiagnosisAndTreatment) resolve({
-              status: true,
-              message: 'create patient successfully',
-              data: newPatient
+              status: 200,
+              message: 'create patient successfully'
             })
           }
         }
         reject({
-          status: false,
-          message: 'create patient failed',
-          data: {}
+          status: 202,
+          message: 'create patient failed'
         })
       } catch (error) {
         reject(error);
@@ -73,12 +70,12 @@ const patientServices = {
         })
         if(deletePatient){
           resolve({
-            status: true,
+            status: 200,
             message: 'Patient deleted successfully'
           })
         }else{
           resolve({
-            status: false,
+            status: 202,
             message: 'Patient deleted failed'
           })
         }
@@ -107,19 +104,13 @@ const patientServices = {
           }
         })
         if(checkUpdatePatient){
-          const newInformation = await db.Patient.findOne({
-            where : {
-              id: id
-            }
-          });
           resolve({
-            status: true,
-            message: 'update information patient successfully',
-            data: newInformation
+            status: 200,
+            message: 'update information patient successfully'
           })
         }else{
           resolve({
-            status: false,
+            status: 202,
             message: 'update information patient failed'
           })
         }
@@ -128,13 +119,33 @@ const patientServices = {
       }
     })
   },
-  saveUpdateDoctor: (idDoctor) => {
+  saveUpdateDoctor: (idPatient,idDoctor) => {
     return new Promise(async (resolve, reject) => {
       try {
         const newUpdateDoctor = await db.Patient.update({
           updateByDoctor: idDoctor
+        },
+        {
+          where: {
+            id: idPatient
+          }
         })
         if(newUpdateDoctor) resolve();
+      } catch (error) {
+        reject(error);
+      }
+    })
+  },
+  getUpdateDoctor: (idPatient) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const updateDoctor = await db.Patient.findOne({
+          attributes: ['updateByDoctor'],
+          where: {
+            id: idPatient
+          }
+        })
+        if(updateDoctor) resolve(updateDoctor);
       } catch (error) {
         reject(error);
       }

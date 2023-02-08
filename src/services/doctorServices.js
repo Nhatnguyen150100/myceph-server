@@ -14,7 +14,7 @@ const doctorServices = {
 				});
 				delete newDoctor.dataValues.password;
 				resolve({
-          status: true,
+          status: 200,
 					message: 'Create new doctor successfully.',
 					data: newDoctor.dataValues,
 				});
@@ -39,7 +39,6 @@ const doctorServices = {
             doctor: doctor
           })
         }else{
-          console.log("failed to get information");
           resolve({
             statusDoctor: false,
             messageDoctor: 'get information of doctor failed',
@@ -65,18 +64,14 @@ const doctorServices = {
         }
         const doctorUpdate = await db.Doctor.update(dataUpdate, {where: {id : idDoctor}});
         if(doctorUpdate){
-          const newInformation = await db.Doctor.findOne({where: { id: idDoctor }});
-          delete newInformation.password;
           resolve({
-            status: true,
-            message: 'Update information of doctor successfully',
-            data: newInformation
+            status: 200,
+            message: 'Update information of doctor successfully'
           })
         }else{
           resolve({
-            status: false,
-            message: 'Update information of doctor failed',
-            data: {}
+            status: 202,
+            message: 'Update information of doctor failed'
           })
         }
       } catch (error) {
@@ -103,13 +98,13 @@ const doctorServices = {
         }
         if(listClinic.length >= 0) {
           resolve({
-            status: true,
+            status: 200,
             message: "Get all clinic successfully",
             data: listClinic
           })
         }else{
           resolve({
-            status: false,
+            status: 202,
             message: "Get all clinic failed",
             data: listClinic
           })

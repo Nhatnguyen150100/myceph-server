@@ -4,22 +4,20 @@ const intraoralServices = {
   getIntraoral: (idPatient) => {
     return new Promise(async (resolve, reject) => {
       try {
-        console.log(idPatient);
         const intraoral = await db.IntraOral.findOne({
           where: {
             idIntraOral: idPatient
           }
         })
-        console.log(intraoral);
         if(intraoral){
           resolve({
-            status: true,
+            status: 200,
             message: 'get intra-oral successfully',
             data: intraoral
           })
         }else{
           resolve({
-            status: false,
+            status: 202,
             message: 'get intra-oral failed',
             data: {}
           })
@@ -68,21 +66,14 @@ const intraoralServices = {
           }
         })
         if(intraoralUpdate){
-          const newIntraoralUpdate = await db.Intraoral.findOne({
-            where: {
-              idIntraOral: idPatient
-            }
-          })
           resolve({
-            status: true,
-            message: 'update intra-oral successfully',
-            data: newIntraoralUpdate
+            status: 200,
+            message: 'update intra-oral successfully'
           })
         }else{
           resolve({
-            status: false,
-            message: 'update intra-oral failed',
-            data: {}
+            status: 202,
+            message: 'update intra-oral failed'
           })
         }
       } catch (error) {

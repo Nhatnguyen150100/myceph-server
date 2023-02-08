@@ -11,13 +11,13 @@ const extraoralServices = {
         })
         if(extraoral){
           resolve({
-            status: true,
+            status: 200,
             message: 'get extra-oral successfully',
             data: extraoral
           })
         }else{
           resolve({
-            status: false,
+            status: 202,
             message: 'get extra-oral failed',
             data: {}
           })
@@ -57,21 +57,14 @@ const extraoralServices = {
           }
         })
         if(extraoralUpdate){
-          const newExtraoralUpdate = await db.ExtraOral.findOne({
-            where: {
-              idExtraOral: idPatient
-            }
-          })
           resolve({
-            status: true,
-            message: 'update extra-oral successfully',
-            data: newExtraoralUpdate
+            status: 200,
+            message: 'update extra-oral successfully'
           })
         }else{
           resolve({
-            status: false,
-            message: 'update extra-oral failed',
-            data: {}
+            status: 202,
+            message: 'update extra-oral failed'
           })
         }
       } catch (error) {

@@ -15,8 +15,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   TreatmentPlan.init({
-    idPatient: DataTypes.INTEGER,
-    plan: DataTypes.STRING
+    idTreatmentPlan: DataTypes.INTEGER,
+    plan: DataTypes.STRING,
+    selected: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'TreatmentPlan',

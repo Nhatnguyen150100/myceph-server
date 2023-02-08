@@ -1,20 +1,18 @@
+import patientServices from "../services/patientServices";
+
 const { default: extraoralServices } = require("../services/extraoralServices")
 
 const extraoralControllers = {
   getExtraoral: async (req,res) => {
     try {
       const { status, message, data } = await extraoralServices.getExtraoral(req.params.id);
-      if(status){
-        res.status(200).json({
+      patientServices.getUpdateDoctor(req.params.id).finally(value => {
+        res.status(status).json({
           message: message,
-          data: data
+          data: data,
+          updateByDoctor: value,
         })
-      }else{
-        res.status(400).json({
-          message: message,
-          data: data
-        });
-      }
+      })
     } catch (error) {
       res.status(400).json({
         message: error
@@ -23,18 +21,12 @@ const extraoralControllers = {
   },
   updateExtraoral: async (req,res) => {
     try {
-      const { status, message, data } = await extraoralServices.updateExtraoral(req.params.id,req.body);
-      if(status){
-        res.status(200).json({
-          message: message,
-          data: data
+      const { status, message } = await extraoralServices.updateExtraoral(req.params.id,req.body);
+      patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
+        res.status(status).json({
+          message: message
         })
-      }else{
-        res.status(400).json({
-          message: message,
-          data: data
-        });
-      }
+      })
     } catch (error) {
       res.status(400).json({
         message: error

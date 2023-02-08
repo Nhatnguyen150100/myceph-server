@@ -16,6 +16,9 @@ import extraoralRouter from './routes/extraoralRouters';
 import intraoralRouter from './routes/intraoralRouters';
 import radiographyRouter from './routes/radiographyRouters';
 import diagnosisAndTreatmentRouters from './routes/diagnosisAndTreatmentRouters';
+import listOfIssueRouter from './routes/listOfIssueRouters';
+import treatmentPlanRouter from './routes/treatmentPlanRouters';
+import treatmentHistoryRouter from './routes/treatmentHistoryRouters';
 
 var app = express();
 
@@ -44,6 +47,10 @@ app.use('/v1/extraoral', extraoralRouter);
 app.use('/v1/intraoral', intraoralRouter);
 app.use('/v1/radiography', radiographyRouter);
 app.use('/v1/diagnosis', diagnosisAndTreatmentRouters);
+app.use('/v1/listOfIssue', listOfIssueRouter);
+app.use('/v1/treatmentPlan', treatmentPlanRouter);
+app.use('/v1/treatmentHistor', treatmentHistoryRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

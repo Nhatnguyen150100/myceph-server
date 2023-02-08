@@ -22,6 +22,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       priotized: {
+        defaultValue: 0,
         type: Sequelize.BOOLEAN
       },
       createdAt: {
