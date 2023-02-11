@@ -1,13 +1,31 @@
 const { default: doctorServices } = require("../services/doctorServices")
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 const doctorController = {
   registerDoctorController: async (req,res) =>{
     try {
-      const { status ,message, data } = await doctorServices.createNewDoctor(req.body);
+      const { status ,message } = await doctorServices.sendVerifyEmail(req.body);
       res.status(status).json({
-        message: message,
-        data: data
+        message: message
       })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
+  verifyEmailDoctor: async (req,res) => {
+    try {
+      jwt.verify(req.query.token, process.env.JWT_ACCESS_KEY, async (err, email) => {
+				if (err) {
+          res.status(500).send("The check email has expired, please go back to the registration page");
+				}else{
+          const { status, message } = await doctorServices.createNewDoctor(req.query.email, req.query.password);
+          if(status === 200) res.redirect(`${process.env.BASE_URL_CLIENT}/login`);
+          else res.status(status).send(message);
+        }
+			});
     } catch (error) {
       res.status(400).json({
         message: error

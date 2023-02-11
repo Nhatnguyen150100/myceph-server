@@ -9,5 +9,6 @@ router.post('/register', doctorMiddleware.checkDoctorDontExistsByEmail, doctorCo
 router.get('/getInformationDoctor/:email', middlewareController.verifyToken, doctorMiddleware.checkDoctorExistsByEmail ,doctorController.getInformationDoctor);
 router.get('/getAllClinicFromDoctor/:id', middlewareController.verifyToken, doctorMiddleware.checkDoctorExistsById ,doctorController.getAllClinicFromDoctor);
 router.put('/updateInformation/:id', middlewareController.verifyToken, doctorMiddleware.checkDoctorExistsById ,doctorController.updateInformationDoctor);
+router.get('/verify', doctorController.verifyEmailDoctor);
 
 export default router;

@@ -1,23 +1,41 @@
 import bcrypt from 'bcrypt';
 import db from '../models';
+import mailerServices from './mailerServices';
+import jwt from 'jsonwebtoken';
 
 const salt = bcrypt.genSaltSync(10);
 
 const doctorServices = {
-  createNewDoctor: (data) => {
+  createNewDoctor: (email,password) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-				let hashed = await bcrypt.hash(data.password, salt);
-				let newDoctor = await db.Doctor.create({
-					email: data.email,
-					password: hashed,
+				await db.Doctor.create({
+					email: email,
+					password: password,
 				});
-				delete newDoctor.dataValues.password;
 				resolve({
           status: 200,
-					message: 'Create new doctor successfully.',
-					data: newDoctor.dataValues,
+					message: 'Create new doctor successfully.'
 				});
+			} catch (error) {
+				reject(error);
+			}
+		});
+	},
+  sendVerifyEmail: (data) => {
+		return new Promise(async (resolve, reject) => {
+			try {
+        let hashEmail = jwt.sign({email:data.email},process.env.JWT_ACCESS_KEY,{expiresIn:60*3});
+        let hashPassword = await bcrypt.hash(data.password, salt);
+        mailerServices.sendMail(data.email,`${process.env.BASE_URL_SERVER}/v1/doctor/verify?email=${data.email}&password=${hashPassword}&token=${hashEmail}`).then(sendMail =>{
+          resolve({
+            status: 200,
+            message:'send verify mail successfully'
+          })
+        }).catch(err => reject({
+          status: 500,
+          message:'send verify mail failed'
+        }))
 			} catch (error) {
 				reject(error);
 			}

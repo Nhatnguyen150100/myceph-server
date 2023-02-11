@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser')
 require('dotenv').config();
+const cors = require('cors');
 
 import connectDB from './config/connectDB';
 import clinicRouter from './routes/clinicRoutes';
@@ -21,6 +22,12 @@ import treatmentPlanRouter from './routes/treatmentPlanRouters';
 import treatmentHistoryRouter from './routes/treatmentHistoryRouters';
 
 var app = express();
+
+app.use(
+  cors({
+    origin: process.env.BASE_URL_CLIENT
+  })
+)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

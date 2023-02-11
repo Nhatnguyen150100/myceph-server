@@ -13,23 +13,26 @@ const authServices = {
         })
         if(!doctor){
           resolve({
-            status: false,
-            message: 'Could not find doctor email'
+            status: 202,
+            message: 'Could not find doctor email',
+            data: {}
           })
         }
         let validPassword = await bcrypt.compare(data.password, doctor.password);
         if(!validPassword){
           resolve({
-            staus: false,
-            message: 'wrong password'
+            status: 202,
+            message: 'wrong password',
+            data: {}
           })
+        }else{
+          delete doctor.password;
+          resolve({
+            status: 200,
+            message: 'login successfully',
+            data: doctor
+          });
         }
-        delete doctor.password;
-        resolve({
-          status: true,
-          message: 'login successfully',
-          data: doctor
-        });
       } catch (error) {
         reject(error);
       }
