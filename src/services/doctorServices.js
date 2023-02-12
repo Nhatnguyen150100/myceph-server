@@ -120,8 +120,7 @@ const doctorServices = {
     return new Promise(async (resolve, reject) => {
       try {
         const dataUpdate = {
-          firstName: data.firstName,
-          lastName: data.lastName,
+          fullName: data.fullName,
           gender: data.gender,
           birthday: new Date(data.birthday),
           avatar: data.avatar,
