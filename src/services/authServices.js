@@ -14,7 +14,7 @@ const authServices = {
         if(!doctor){
           resolve({
             status: 202,
-            message: 'Could not find doctor email',
+            message: 'Could not find email',
             data: {}
           })
         }

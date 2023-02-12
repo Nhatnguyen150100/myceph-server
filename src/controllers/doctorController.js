@@ -3,12 +3,53 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
 const doctorController = {
-  registerDoctorController: async (req,res) =>{
+  findDoctorEmail: (req,res) => {
+    const doctor = req.doctor;
+    if(doctor){
+      res.status(200).json({
+        email: doctor.email
+      })
+    }else{
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
+  sendVerifyEmailDoctor: async (req,res) =>{
     try {
       const { status ,message } = await doctorServices.sendVerifyEmail(req.body);
       res.status(status).json({
         message: message
       })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
+  sendVerifyEmailResetPasswordDoctor: async (req,res) =>{
+    try {
+      const { status ,message } = await doctorServices.sendVerifyEmailResetPassword(req.body);
+      res.status(status).json({
+        message: message
+      })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
+  verifyResetEmailDoctor: async (req,res) => {
+    try {
+      jwt.verify(req.query.token, process.env.JWT_ACCESS_KEY, async (err, email) => {
+				if (err) {
+          res.status(500).send("The check email has expired, please go back to the registration page");
+				}else{
+          const { status, message } = await doctorServices.resetPassword(req.query.email, req.query.password);
+          if(status === 200) res.redirect(`${process.env.BASE_URL_CLIENT}/login`);
+          else res.status(status).send(message);
+        }
+			});
     } catch (error) {
       res.status(400).json({
         message: error

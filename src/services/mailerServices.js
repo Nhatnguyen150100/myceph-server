@@ -2,7 +2,7 @@ import nodeMailer from 'nodemailer';
 import mailConfig from '../config/mail.config';
 
 const mailerServices = {
-  sendMail: (receivedMail,linkVerify) => {
+  sendMail: (receivedMail,htmlContent,linkVerify) => {
     return new Promise(async (resolve, reject) => {
       try {
         const transport = nodeMailer.createTransport({
@@ -19,7 +19,7 @@ const mailerServices = {
           from: mailConfig.optionMail.FROM_ADDRESS,
           to: receivedMail,
           subject: mailConfig.optionMail.SUBJECT,
-          html: mailConfig.HTML_CONTENT(linkVerify)
+          html: htmlContent(linkVerify)
         }
 
         const sendMail = await transport.sendMail(options);
