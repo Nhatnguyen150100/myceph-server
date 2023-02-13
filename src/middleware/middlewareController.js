@@ -8,7 +8,7 @@ const middlewareController = {
 				if (err) {
 					return res.status(403).json({ 
 						isLogin: false,
-						message: 'Invalid access token' 
+						message: 'Please login to continue!' 
 					});
 				}
 				req.doctor = doctor;
