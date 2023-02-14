@@ -74,14 +74,6 @@ const clinicServices = {
   addDoctorToClinic: (idClinic,idDoctor,roleOfDoctor) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const checkDoctorExists = await db.Doctor.findOne({
-          where:{
-            id: idDoctor
-          }
-        })
-        if(!checkDoctorExists) {
-          resolve({status: 202, message:'doctor not found'});
-        }
         const checkDoctorInClinic = await db.MemberOfClinic.findOne({
           where : {
             idClinic: idClinic,

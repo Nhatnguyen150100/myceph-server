@@ -150,19 +150,19 @@ const doctorServices = {
   getAllClinicFromDoctor: (idDoctor) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const listIdClinic = await db.MemberOfClinic.findAll({
-          attributes: ['idClinic'],
+        const listMember = await db.MemberOfClinic.findAll({
           where: {
             idDoctor: idDoctor
           }
         })
         let listClinic = [];
-        for (let i = 0; i < listIdClinic.length; i++) {
-          listClinic.push(await db.Clinic.findOne({
+        for (let i = 0; i < listMember.length; i++) {
+          const data = 
+          listClinic.push(Object.assign(await db.Clinic.findOne({
             where: {
-              id: listIdClinic[i].idClinic
+              id: listMember[i].idClinic
             }
-          }))
+          }),{roleOfDoctor: listMember[i].roleOfDoctor}))
         }
         if(listClinic.length >= 0) {
           resolve({
