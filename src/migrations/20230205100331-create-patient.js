@@ -5,17 +5,31 @@ module.exports = {
     await queryInterface.createTable('Patients', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
       },
       idPatientOfDoctor: {
         allowNull: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'doctors',
+            name: 'idPatientOfDoctor'
+          },
+          key: 'id',
+        },
       },
       idPatientOfClinic: {
         allowNull: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'clinics',
+            name: 'idPatientOfClinic'
+          },
+          key: 'id',
+        },
       },
       fullName: {
         type: Sequelize.STRING

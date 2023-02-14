@@ -125,6 +125,9 @@ const doctorServices = {
           birthday: new Date(data.birthday),
           avatar: data.avatar,
           phoneNumber: data.phoneNumber,
+          speciality:data.speciality,
+          diploma: data.diploma,
+          position :data.position,
           description: data.description
         }
         const doctorUpdate = await db.Doctor.update(dataUpdate, {where: {id : idDoctor}});

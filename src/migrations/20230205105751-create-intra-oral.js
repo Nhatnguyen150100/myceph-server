@@ -10,10 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       idIntraoral: {
-        allowNull: false,
-        autoIncrement: false,
         unique: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
+        references:{
+          model: {
+            tableName: 'patients',
+            name: 'idIntraoral',
+          },
+          key: 'id',
+        }
       },
       oralHygiene: {
         type: Sequelize.STRING

@@ -10,10 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       idExtraoral: {
-        allowNull: false,
-        autoIncrement: false,
         unique: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
+        references:{
+          model: {
+            tableName: 'patients',
+            name: 'idExtraoral',
+          },
+          key: 'id',
+        }
       },
       faceAsymetry: {
         type: Sequelize.STRING

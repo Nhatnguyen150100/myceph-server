@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   DiagnosisAndTreatment.init({
-    idDiagnosisAndTreatment: DataTypes.INTEGER,
+    idDiagnosisAndTreatment: DataTypes.UUID,
     diagnose: DataTypes.STRING,
     prognosisAndNotes: DataTypes.STRING
   }, {

@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   ExtraOral.init({
-    idExtraOral:DataTypes.INTEGER,
+    idExtraOral:DataTypes.UUID,
     faceAsymetry: DataTypes.STRING,
     chin: DataTypes.STRING,
     lipCompetence: DataTypes.STRING,

@@ -15,7 +15,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   TreatmentHistory.init({
-    idTreatmentHistory: DataTypes.INTEGER,
+    id: {
+      allowNull: false,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+      type: DataTypes.UUID
+    },
+    idTreatmentHistory: DataTypes.UUID,
     currentStatus: DataTypes.STRING,
     performedProcedures: DataTypes.STRING,
     consultationDate: DataTypes.DATE

@@ -5,9 +5,9 @@ module.exports = {
     await queryInterface.createTable('Doctors', {
       id: {
         allowNull: false,
-        autoIncrement: true,
+        defaultValue: Sequelize.UUIDV4,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
       },
       email: {
         unique: true,
@@ -30,6 +30,15 @@ module.exports = {
         type: Sequelize.STRING
       },
       phoneNumber: {
+        type: Sequelize.STRING
+      },
+      speciality: {
+        type: Sequelize.STRING
+      },
+      diploma: {
+        type: Sequelize.STRING
+      },
+      position: {
         type: Sequelize.STRING
       },
       description: {

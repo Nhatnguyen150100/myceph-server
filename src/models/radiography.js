@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Radiography.init({
-    idRadiography: DataTypes.INTEGER,
+    idRadiography: DataTypes.UUID,
     sinuses: DataTypes.STRING,
     condyles: DataTypes.STRING,
     apparentPathology: DataTypes.STRING,

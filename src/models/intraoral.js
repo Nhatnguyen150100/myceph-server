@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   IntraOral.init({
-    idIntraOral: DataTypes.INTEGER,
+    idIntraOral: DataTypes.UUID,
     oralHygiene: DataTypes.STRING,
     dentition: DataTypes.STRING,
     caries: DataTypes.STRING,

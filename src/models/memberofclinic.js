@@ -16,8 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   MemberOfClinic.init({
-    idClinic: DataTypes.INTEGER,
-    idDoctor: DataTypes.INTEGER,
+    idClinic: DataTypes.UUID,
+    idDoctor: DataTypes.UUID,
     roleOfDoctor: DataTypes.STRING
   }, {
     sequelize,

@@ -15,7 +15,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   ListOfIssue.init({
-    idListOfIssue: DataTypes.INTEGER,
+    id: {
+      allowNull: false,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+      type: DataTypes.UUID
+    },
+    idListOfIssue: DataTypes.UUID,
     issue: DataTypes.STRING,
     treatmentObject: DataTypes.STRING,
     treatmentMethod: DataTypes.STRING,

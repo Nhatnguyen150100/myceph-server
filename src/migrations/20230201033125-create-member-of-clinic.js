@@ -10,10 +10,26 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       idClinic: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'clinics',
+            name: 'idClinic'
+          },
+          key: 'id',
+        },
+        allowNull: false
       },
       idDoctor: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'doctors',
+            name: 'idDoctor'
+          },
+          key: 'id',
+        },
+        allowNull: false
       },
       roleOfDoctor: {
         type: Sequelize.STRING

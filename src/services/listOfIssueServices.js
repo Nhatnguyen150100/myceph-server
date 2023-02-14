@@ -6,7 +6,7 @@ const listOfIssueServices = {
       try {
         const listOfIssue = db.ListOfIssue.findAll({
           where: {
-            idPatient: idPatient
+            idListOfIssue: idPatient
           }
         })
         if(listOfIssue.length>=0) {
@@ -30,13 +30,13 @@ const listOfIssueServices = {
   createIssue: (idPatient,data) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const newIssue = {
-          idPatient: idPatient,
+        const newIssue = await db.ListOfIssue.create({
+          idListOfIssue: idPatient,
           issue: data.issue,
           treatmentObject: data.treatmentObject,
           treatmentMethod: data.treatmentMethod,
           priotized: data.priotized
-        }
+        })
         if(newIssue){
           resolve({
             status: 200,

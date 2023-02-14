@@ -17,6 +17,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Clinic.init({
+    id: {
+      allowNull: false,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+      type: DataTypes.UUID
+    },
     nameClinic: DataTypes.STRING,
     emailClinic: DataTypes.STRING,
     phoneNumberClinic: DataTypes.STRING,

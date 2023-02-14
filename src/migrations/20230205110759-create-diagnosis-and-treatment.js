@@ -10,10 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       idDiagnosisAndTreatment: {
-        allowNull: false,
-        autoIncrement: false,
         unique: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
+        references:{
+          model: {
+            tableName: 'patients',
+            name: 'idDiagnosisAndTreatment',
+          },
+          key: 'id',
+        }
       },
       diagnose: {
         type: Sequelize.STRING

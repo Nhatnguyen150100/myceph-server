@@ -58,15 +58,14 @@ const doctorController = {
   },
   verifyEmailDoctor: async (req,res) => {
     try {
-      jwt.verify(req.query.token, process.env.JWT_ACCESS_KEY, async (err, email) => {
-				if (err) {
-          res.status(500).send("The check email has expired, please go back to the registration page");
-				}else{
+      const doctor = jwt.verify(req.query.token, process.env.JWT_ACCESS_KEY);
+      if(doctor){
           const { status, message } = await doctorServices.createNewDoctor(req.query.email, req.query.password);
-          if(status === 200) res.redirect(`${process.env.BASE_URL_CLIENT}/login`);
+          if(status === 200) res.status(status).redirect(`${process.env.BASE_URL_CLIENT}/login`);
           else res.status(status).send(message);
-        }
-			});
+      }else{
+        res.status(400).send('failed to verify token');
+      }
     } catch (error) {
       res.status(400).json({
         message: error

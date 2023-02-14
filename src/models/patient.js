@@ -27,8 +27,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Patient.init({
-    idPatientOfDoctor: DataTypes.INTEGER,
-    idPatientOfClinic: DataTypes.INTEGER,
+    id: {
+      allowNull: false,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+      type: DataTypes.UUID
+    },
+    idPatientOfDoctor: DataTypes.UUID,
+    idPatientOfClinic: DataTypes.UUID,
     fullName: DataTypes.STRING,
     gender: DataTypes.STRING,
     birthday: DataTypes.DATE,

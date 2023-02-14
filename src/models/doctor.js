@@ -17,6 +17,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Doctor.init({
+    id: {
+      allowNull: false,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+      type: DataTypes.UUID
+    },
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     fullName: DataTypes.STRING,
@@ -24,6 +30,9 @@ module.exports = (sequelize, DataTypes) => {
     birthday: DataTypes.DATE,
     avatar: DataTypes.STRING,
     phoneNumber: DataTypes.STRING,
+    speciality:DataTypes.STRING,
+    diploma: DataTypes.STRING,
+    position :DataTypes.STRING,
     description: DataTypes.STRING
   }, {
     sequelize,

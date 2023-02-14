@@ -15,7 +15,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   TreatmentPlan.init({
-    idTreatmentPlan: DataTypes.INTEGER,
+    id: {
+      allowNull: false,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+      type: DataTypes.UUID
+    },
+    idTreatmentPlan: DataTypes.UUID,
     plan: DataTypes.STRING,
     selected: DataTypes.BOOLEAN
   }, {

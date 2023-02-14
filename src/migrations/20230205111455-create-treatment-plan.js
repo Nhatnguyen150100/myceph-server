@@ -5,12 +5,19 @@ module.exports = {
     await queryInterface.createTable('TreatmentPlans', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
       },
       idTreatmentPlan: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'patients',
+            name: 'idTreatmentPlan',
+          },
+          key: 'id',
+        }
       },
       plan: {
         type: Sequelize.STRING

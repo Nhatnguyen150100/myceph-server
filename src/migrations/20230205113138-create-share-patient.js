@@ -10,22 +10,62 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       idSharedPatient: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'patients',
+            name: 'idSharedPatient',
+          },
+          key: 'id',
+        }
       },
       idSharedPatientOfDoctor: {
-        type: Sequelize.INTEGER
+        allowNull: true,
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'doctors',
+            name: 'idSharedPatientOfDoctor',
+          },
+          key: 'id',
+        }
       },
       idSharedPatientOfClinic: {
-        type: Sequelize.INTEGER
+        allowNull: true,
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'clinics',
+            name: 'idSharedPatientOfClinic',
+          },
+          key: 'id',
+        }
       },
       idOwerDoctor: {
-        type: Sequelize.INTEGER
+        allowNull: true,
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'doctors',
+            name: 'idOwerDoctor',
+          },
+          key: 'id',
+        }
       },
       roleOfWoerDoctor: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       idOwerClinic: {
-        type: Sequelize.INTEGER
+        allowNull: true,
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'clinics',
+            name: 'idOwerClinic',
+          },
+          key: 'id',
+        }
       },
       roleOfOwerClinic: {
         type: Sequelize.STRING
