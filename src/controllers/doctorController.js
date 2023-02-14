@@ -2,6 +2,8 @@ const { default: doctorServices } = require("../services/doctorServices")
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
+const salt = bcrypt.genSaltSync(10);
+
 const doctorController = {
   findDoctorEmail: (req,res) => {
     const doctor = req.doctor;
@@ -10,6 +12,19 @@ const doctorController = {
         email: doctor.email
       })
     }else{
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
+  createDoctorDev: async (req,res) => {
+    try {
+      let hashPassword = await bcrypt.hash(req.body.password, salt);
+      const { status, message } = await doctorServices.createNewDoctor(req.body.email, hashPassword);
+      res.status(status).json({
+        message: message
+      })
+    } catch (error) {
       res.status(400).json({
         message: error
       })
