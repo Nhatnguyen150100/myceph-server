@@ -14,6 +14,11 @@ module.exports = (sequelize, DataTypes) => {
       Clinic.hasMany(models.MemberOfClinic, {foreignKey: 'idClinic', sourceKey: 'id'});
       Clinic.hasMany(models.SharePatient, {foreignKey: 'idSharedPatientOfClinic', sourceKey: 'id'});
       Clinic.hasMany(models.Patient, {foreignKey: 'idPatientOfClinic', sourceKey: 'id'});
+      Clinic.hasMany(models.LibraryImageClinic, {foreignKey: 'idClinicImage', sourceKey: 'id'});
+      Clinic.hasMany(models.RoomOfClinic, {foreignKey: 'idClinicRoom', sourceKey: 'id'});
+      Clinic.hasMany(models.ServicesOfClinic, {foreignKey: 'idClinicService', sourceKey: 'id'});
+      Clinic.hasMany(models.StatusOfClinic, {foreignKey: 'idClinicStatus', sourceKey: 'id'});
+      Clinic.hasMany(models.Schedule, {foreignKey: 'idClinicSchedule', sourceKey: 'id'});
     }
   }
   Clinic.init({

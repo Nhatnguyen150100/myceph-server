@@ -157,7 +157,6 @@ const doctorServices = {
         })
         let listClinic = [];
         for (let i = 0; i < listMember.length; i++) {
-          const data = 
           listClinic.push(Object.assign(await db.Clinic.findOne({
             where: {
               id: listMember[i].idClinic

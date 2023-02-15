@@ -1,0 +1,42 @@
+'use strict';
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.createTable('ServicesOfClinics', {
+      id: {
+        allowNull: false,
+        primaryKey: true,
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
+      },
+      idClinicService: {
+        allowNull: false,
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'clinics',
+            name: 'idClinicService',
+          },
+          key: 'id',
+        }
+      },
+      nameService: {
+        type: Sequelize.STRING
+      },
+      colorService: {
+        type: Sequelize.STRING
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      }
+    });
+  },
+  async down(queryInterface, Sequelize) {
+    await queryInterface.dropTable('ServicesOfClinics');
+  }
+};
