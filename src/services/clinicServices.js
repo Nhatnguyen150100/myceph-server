@@ -58,12 +58,14 @@ const clinicServices = {
         if(status){
           resolve({
             status: 200,
-            message: 'create new clinic successfully'
+            message: 'create new clinic successfully',
+            idClinic: newClinic.dataValues.id
           })
         }else{
           resolve({
             status: 202,
-            message: 'create new clinic failed'
+            message: 'create new clinic failed',
+            idClinic: null
           })
         }
       } catch (error) {
@@ -80,22 +82,24 @@ const clinicServices = {
             idDoctor: idDoctor
           }
         })
-        if(checkDoctorInClinic) resolve({status: 202, message:'doctor is already in this clinic'});
-        const addMemberToClinic = await db.MemberOfClinic.create({
-          idClinic: idClinic,
-          idDoctor: idDoctor,
-          roleOfDoctor: roleOfDoctor
-        })
-        if(addMemberToClinic){
-          resolve({
-            status: 200,
-            message: 'Add member to clinic successfully'
+        if(checkDoctorInClinic) resolve({status: 202, message:'doctor is already in this clinic'})
+        else{
+          const addMemberToClinic = await db.MemberOfClinic.create({
+            idClinic: idClinic,
+            idDoctor: idDoctor,
+            roleOfDoctor: roleOfDoctor
           })
-        }else{
-          resolve({
-            status: 202,
-            message: 'Add member to clinic failed'
-          })
+          if(addMemberToClinic){
+            resolve({
+              status: 200,
+              message: 'Add member to clinic successfully'
+            })
+          }else{
+            resolve({
+              status: 202,
+              message: 'Add member to clinic failed'
+            })
+          }
         }
       } catch (error) {
         reject(error)

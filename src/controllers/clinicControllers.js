@@ -30,9 +30,10 @@ const clinicControllers = {
   },
   createNewClinic: async (req,res) => {
     try {
-      const { status ,message } = await clinicServices.createNewClinic(req.params.id, req.body);     
+      const { idClinic, status, message } = await clinicServices.createNewClinic(req.params.id, req.body);     
       res.status(status).json({
-        message: message
+        message: message,
+        idClinic: idClinic
       })
     } catch (error) {
       res.status(400).json({
