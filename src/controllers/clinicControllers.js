@@ -17,10 +17,11 @@ const clinicControllers = {
   },
   getAllDoctorInClinic: async (req, res) => {
     try {
-      const { status, message, data } = await clinicServices.getAllDoctorInClinic(req.params.id);
+      const { status, message, data, count } = await clinicServices.getAllDoctorInClinic(req.params.id,req.query.page,req.query.pageSize);
       res.status(status).json({
         message: message,
-        data: data
+        data: data,
+        count: count
       })
     } catch (error) {
       res.status(400).json({

@@ -96,7 +96,7 @@ const doctorServices = {
           where: {
             email: email
           }
-        })        
+        })       
         if(doctor){
           delete doctor.password
           resolve({
@@ -107,7 +107,7 @@ const doctorServices = {
         }else{
           resolve({
             statusDoctor: false,
-            messageDoctor: 'get information of doctor failed',
+            messageDoctor: "can't find information of doctor",
             doctor: doctor
           })
         }

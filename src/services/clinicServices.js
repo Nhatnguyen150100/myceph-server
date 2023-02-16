@@ -16,12 +16,19 @@ const clinicServices = {
       }
     });
   },
-  getAllDoctorInClinic: (idClinic) => {
+  getAllDoctorInClinic: (idClinic,page,pageSize) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const listDoctor = await sequelize.query('select email,avatar,roleOfDoctor from myceph.memberofclinics, myceph.doctors where myceph.memberofclinics.idClinic = ? and myceph.memberofclinics.idDoctor = myceph.doctors.id',
+        const start = (page-1)*pageSize;
+        const count = await sequelize.query('select * from myceph.memberofclinics, myceph.doctors where myceph.memberofclinics.idClinic = ? and myceph.memberofclinics.idDoctor = myceph.doctors.id',
           {
             replacements: [idClinic],
+            type: QueryTypes.SELECT
+          }
+        );
+        const listDoctor = await sequelize.query('select email,fullName,gender,birthday,speciality,avatar,roleOfDoctor from myceph.memberofclinics, myceph.doctors where myceph.memberofclinics.idClinic = ? and myceph.memberofclinics.idDoctor = myceph.doctors.id limit ?,?',
+          {
+            replacements: [idClinic,start,Number(pageSize)],
             type: QueryTypes.SELECT
           }
         )
@@ -29,13 +36,15 @@ const clinicServices = {
           resolve({
             status: 200,
             message: "Get all doctor successfully",
-            data: listDoctor[0]
+            data: listDoctor[0],
+            count: count[0].length
           })
         }else{
           resolve({
             status: 202,
             message: "Get all doctor failed",
-            data: listDoctor
+            data: listDoctor,
+            count: null
           })
         }
       } catch (error) {
@@ -76,6 +85,7 @@ const clinicServices = {
   addDoctorToClinic: (idClinic,idDoctor,roleOfDoctor) => {
     return new Promise(async (resolve, reject) => {
       try {
+        // console.log({idClinic,idDoctor,roleOfDoctor});
         const checkDoctorInClinic = await db.MemberOfClinic.findOne({
           where : {
             idClinic: idClinic,
