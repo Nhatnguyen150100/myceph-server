@@ -17,7 +17,7 @@ const clinicControllers = {
   },
   getAllDoctorInClinic: async (req, res) => {
     try {
-      const { status, message, data, count } = await clinicServices.getAllDoctorInClinic(req.params.id,req.query.page,req.query.pageSize);
+      const { status, message, data, count } = await clinicServices.getAllDoctorInClinic(req.params.id,req.query.page,req.query.pageSize,req.query.nameSearch);
       res.status(status).json({
         message: message,
         data: data,
@@ -35,6 +35,30 @@ const clinicControllers = {
       res.status(status).json({
         message: message,
         idClinic: idClinic
+      })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
+  updateRoleOfDoctor: async(req,res) => {
+    try {
+      const { status, message } = await clinicServices.updateRoleOfDoctor(req.params.id,req.body.idDoctor,req.body.roleOfDoctor);
+      res.status(status).json({
+        message: message
+      })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
+  deleteDoctorFromClinic: async (req,res) => {
+    try {
+      const { status, message } = await clinicServices.deleteDoctorFromClinic(req.clinic.id,req.query.idDoctor);
+      res.status(status).json({
+        message: message
       })
     } catch (error) {
       res.status(400).json({
@@ -78,6 +102,18 @@ const clinicControllers = {
   updateInformationClinic: async (req, res) => {
     try {
       const { status, message } = await clinicServices.updateClinicInformation(req.params.id,req.body);
+      res.status(status).json({
+        message: message
+      })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
+  deleteClinic: async (req,res) => {
+    try {
+      const { status, message } = await clinicServices.deleteClinic(req.clinic.id);
       res.status(status).json({
         message: message
       })

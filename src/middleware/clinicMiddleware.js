@@ -4,7 +4,6 @@ const clinicMiddleware = {
   checkClinicExists: async (req,res,next) =>{
     try {
       const idClinic = req.params.id;
-      console.log(idClinic);
       const clinic = await db.Clinic.findOne({
         where : {
           id: idClinic

@@ -11,5 +11,8 @@ router.get('/getAllDoctorFromClinic/:id', middlewareController.verifyToken, clin
 router.get('/getInformationClinic/:id', middlewareController.verifyToken, clinicMiddleware.checkClinicExists, clinicControllers.getInformationClinic);
 router.put('/updateInformationClinic/:id', middlewareController.verifyToken, clinicMiddleware.checkClinicExists, clinicControllers.updateInformationClinic);
 router.post('/addDoctorToClinic/:id', middlewareController.verifyToken, clinicMiddleware.checkClinicExists, clinicControllers.addDoctorToClinic);
+router.put('/updateRoleOfDoctor/:id', middlewareController.verifyToken, clinicMiddleware.checkClinicExists, clinicControllers.updateRoleOfDoctor);
+router.delete('/deleteDoctorFromClinic/:id', middlewareController.verifyToken, clinicMiddleware.checkClinicExists, clinicControllers.deleteDoctorFromClinic);
+router.delete('/deleteClinic/:id', middlewareController.verifyToken, clinicMiddleware.checkClinicExists, clinicControllers.deleteClinic);
 
 export default router;
