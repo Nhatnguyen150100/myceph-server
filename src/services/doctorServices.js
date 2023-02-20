@@ -1,8 +1,9 @@
 import bcrypt from 'bcrypt';
-import db from '../models';
+import db, { sequelize } from '../models';
 import mailerServices from './mailerServices';
 import jwt from 'jsonwebtoken';
 import mailConfig from '../config/mail.config';
+import { QueryTypes } from 'sequelize';
 
 const salt = bcrypt.genSaltSync(10);
 
@@ -48,6 +49,33 @@ const doctorServices = {
         }
       } catch (error) {
         reject(error)
+      }
+    })
+  },
+  getAllDoctorByEmailSearch: (emailDoctor,currentEmailDoctor) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const listDoctor = await sequelize.query("select id,email,fullName,avatar from myceph.doctors where myceph.doctors.email like ? and myceph.doctors.email != ? limit 5",
+          {
+            replacements: ['%'+emailDoctor+'%',currentEmailDoctor],
+            type: QueryTypes.SELECT
+          }
+        );
+        if(listDoctor.length>=0){
+          resolve({
+            status: 200,
+            message: 'get list doctor successfully',
+            data: listDoctor
+          })
+        }else{
+          resolve({
+            status: 202,
+            message: 'get list doctor failed',
+            data: []
+          })
+        }
+      } catch (error) {
+        reject(error);
       }
     })
   },

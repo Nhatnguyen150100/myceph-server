@@ -18,6 +18,14 @@ const clinicControllers = {
   getAllDoctorInClinic: async (req, res) => {
     try {
       const { status, message, data, count } = await clinicServices.getAllDoctorInClinic(req.params.id,req.query.page,req.query.pageSize,req.query.nameSearch);
+      const indexOfElement = data.findIndex(element => 
+        element.email === req.query.currentEmailDoctor
+      );
+      if(data && indexOfElement>=0){
+        const elementIndex = data[indexOfElement];
+        data.splice(indexOfElement,1);
+        data.unshift(elementIndex);
+      }
       res.status(status).json({
         message: message,
         data: data,

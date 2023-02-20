@@ -71,6 +71,19 @@ const doctorController = {
       })
     }
   },
+  getAllDoctorByEmailSearch: async (req,res) => {
+    try {
+      const { status, message, data } = await doctorServices.getAllDoctorByEmailSearch(req.params.email,req.query.currentEmailDoctor);
+      res.status(status).json({
+        message: message,
+        data: data
+      })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
   verifyEmailDoctor: async (req,res) => {
     try {
       const doctor = jwt.verify(req.query.token, process.env.JWT_ACCESS_KEY);
