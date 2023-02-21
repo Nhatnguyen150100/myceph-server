@@ -41,10 +41,11 @@ const patientController = {
   },
   getPatientListForClinic: async (req, res) => {
     try {
-      const { status, message, data } = await patientServices.getPatientListForClinic(req.params.id,req.query.page,req.query.pageSize,req.query.nameSearch);
+      const { status, message, data, count } = await patientServices.getPatientListForClinic(req.params.id,req.query.page,req.query.pageSize,req.query.nameSearch);
       res.status(status).json({
         message: message,
-        data: data
+        data: data,
+        count: count
       })
     } catch (error) {
       res.status(400).json({

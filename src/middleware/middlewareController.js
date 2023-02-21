@@ -2,13 +2,13 @@ import jwt from 'jsonwebtoken';
 const middlewareController = {
 	verifyToken: (req, res, next) => {
 		const token = req.headers.token;
-		if (token) {
+		if (token!==undefined) {
 			const accessToken = token.split(' ')[1];
 			jwt.verify(accessToken, process.env.JWT_ACCESS_KEY, (err, doctor) => {
 				if (err) {
 					return res.status(403).json({ 
-						isLogin: false,
-						message: 'Please login to continue!' 
+						refreshToken: true,
+						message: 'Reload window...' 
 					});
 				}
 				req.doctor = doctor;

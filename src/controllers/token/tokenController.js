@@ -9,10 +9,22 @@ const tokenController = {
 			},
 			process.env.JWT_ACCESS_KEY,
 			{
-				expiresIn: '1h',
+				expiresIn: '1m',
 			},
 		);
 	},
+  generateRefreshToken: (doctor) => {
+		return jwt.sign(
+			{
+				id: doctor.id,
+				email: doctor.email,
+			},
+			process.env.JWT_REFRESH_KEY,
+			{
+				expiresIn: '1d',
+			},
+		);
+	}
 }
 
 export default tokenController;

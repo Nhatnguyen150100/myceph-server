@@ -1,3 +1,5 @@
+import db from "../../models";
+
 const { default: authServices } = require("../../services/authServices");
 const { default: tokenController } = require("../token/tokenController");
 
@@ -6,11 +8,16 @@ const authLoginController = async (req, res) => {
     const { status, message, data } = await authServices.login(req.body);
     if(status === 200){
       const accessToken = tokenController.generateAccessToken(data);
+      const refreshToken = tokenController.generateRefreshToken(data);
+      await db.RefreshToken.create({
+				token: refreshToken,
+			});
       res.status(status).json({
         message: message,
         data: {
           ...data,
           accessToken,
+          refreshToken
         },
       });
     }else{
