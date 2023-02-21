@@ -1,4 +1,5 @@
 const db = require("../models")
+const { Op } = require("sequelize");
 
 const patientServices = {
   createNewPatient: (data) => {
@@ -8,6 +9,8 @@ const patientServices = {
           const newPatient = await db.Patient.create({
             fullName: data.fullName,
             birthday: new Date(data.birthday),
+            gender: data.gender,
+            note: data.note,
             idPatientOfDoctor: data.idDoctor
           });
           if(newPatient){
@@ -78,6 +81,136 @@ const patientServices = {
             status: 202,
             message: 'Patient deleted failed'
           })
+        }
+      } catch (error) {
+        reject(error);
+      }
+    })
+  },
+  getPatientListForDoctor: (idDoctor,page,pageSize,nameSearch) =>{
+    return new Promise(async (resolve, reject) =>{
+      try {
+        const count = await db.Patient.findAll({
+          where: {
+            idPatientOfDoctor: idDoctor
+          }
+        })
+        const start = (page-1)*pageSize;
+        if(nameSearch){
+          console.log(nameSearch);
+          const listPatient = await db.Patient.findAll(
+            {
+              offset: start,
+              limit: Number(pageSize),
+              where: {
+                idPatientOfDoctor: idDoctor,
+                fullName: {[Op.substring]: `${nameSearch}`}
+              },   
+              raw: true
+            }
+          );
+          if(listPatient.length > 0){
+            resolve({
+              status: 200,
+              message: 'get patient successfully',
+              data: listPatient,
+              count: count.length
+            })
+          }else{
+            resolve({
+              status: 202,
+              message: 'get patient failed',
+              data: [],
+              count: count.length
+            })
+          }
+        }else{
+          if(count.length>1){
+            count.sort((a,b) => {
+              if(new Date(a.createdAt).getTime() > new Date(b.createdAt).getTime()) return -1;
+              else return 1;
+            })
+          }
+          if(count.length>0){
+            resolve({
+              status: 200,
+              message: 'get patient successfully',
+              data: count.slice(start,(start+Number(pageSize))),
+              count: count.length
+            })
+          }else{
+            resolve({
+              status: 202,
+              message: 'get patient failed',
+              data: [],
+              count: count.length
+            })
+          }
+        }
+      } catch (error) {
+        reject(error);
+      }
+    })
+  },
+  getPatientListForClinic: (idClinic,page,pageSize,nameSearch) =>{
+    return new Promise(async (resolve, reject) =>{
+      try {
+        const count = await db.Patient.findAll({
+          where: {
+            idPatientOfClinic: idClinic
+          }
+        })
+        const start = (page-1)*pageSize;
+        if(nameSearch){
+          console.log(nameSearch);
+          const listPatient = await db.Patient.findAll(
+            {
+              offset: start,
+              limit: Number(pageSize),
+              where: {
+                idPatientOfClinic: idClinic,
+                fullName: {[Op.substring]: `${nameSearch}`}
+              },   
+              raw: true
+            }
+          );
+          if(listPatient.length > 0){
+            resolve({
+              status: 200,
+              message: 'get patient successfully',
+              data: listPatient,
+              count: count.length
+            })
+          }else{
+            resolve({
+              status: 202,
+              message: 'get patient failed',
+              data: [],
+              count: count.length
+            })
+          }
+        }else{
+          if(count.length>1){
+            count.sort((a,b) => {
+              if(new Date(a.createdAt).getTime() > new Date(b.createdAt).getTime()) return -1;
+              else return 1;
+            })
+          }
+          if(count.length>0){
+            resolve({
+              status: 200,
+              message: 'get patient successfully',
+              data: count.slice(start,(start+Number(pageSize))),
+              count: count.length
+            })
+          }else{
+            resolve({
+              status: 202,
+              message: 'get patient failed',
+              data: [],
+              count: count.length
+            })
+          }
         }
       } catch (error) {
         reject(error);
