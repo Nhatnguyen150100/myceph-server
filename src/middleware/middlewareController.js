@@ -8,7 +8,7 @@ const middlewareController = {
 				if (err) {
 					return res.status(403).json({ 
 						refreshToken: true,
-						message: 'Reload window...' 
+						message: 'Token is error. Reload window...' 
 					});
 				}
 				req.doctor = doctor;

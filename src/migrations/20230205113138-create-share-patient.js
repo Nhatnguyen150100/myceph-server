@@ -42,33 +42,19 @@ module.exports = {
           key: 'id',
         }
       },
-      idOwerDoctor: {
+      idOwnerDoctor: {
         allowNull: true,
         type: Sequelize.UUID,
         references:{
           model: {
             tableName: 'doctors',
-            name: 'idOwerDoctor',
+            name: 'idOwnerDoctor',
           },
           key: 'id',
         }
       },
-      roleOfWoerDoctor: {
+      roleOfOwnerDoctor: {
         type: Sequelize.STRING,
-      },
-      idOwerClinic: {
-        allowNull: true,
-        type: Sequelize.UUID,
-        references:{
-          model: {
-            tableName: 'clinics',
-            name: 'idOwerClinic',
-          },
-          key: 'id',
-        }
-      },
-      roleOfOwerClinic: {
-        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

@@ -89,6 +89,116 @@ const patientServices = {
       }
     })
   },
+  getSharedPatientOfDoctor: (idDoctor,page,pageSize,nameSearch) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const count = await db.Patient.count({
+          include: [{
+            model: db.SharePatient,
+            where: {
+              idOwnerDoctor: idDoctor,
+              idSharedPatientOfClinic: {
+                [Op.is] : null 
+              }
+            }
+          }]
+        })
+        const start = (page-1)*pageSize;
+        const listPatient = await db.Patient.findAll(
+          {
+            include: [{
+              model: db.SharePatient,
+              where: {
+                idOwnerDoctor: idDoctor,
+                idSharedPatientOfClinic: {
+                  [Op.is] : null 
+                }
+              }
+            }],
+            offset: start,
+            limit: Number(pageSize),
+            order: [
+              ['createdAt', 'DESC']
+            ],
+            where: {
+              fullName: {[Op.substring]: `${nameSearch}`}
+            },   
+            raw: true
+          }
+        );
+        if(listPatient.length>0){
+          resolve({
+            status: 200,
+            message: 'get patient successfully',
+            data: listPatient,
+            count: count
+          })
+        }else{
+          resolve({
+            status: 200,
+            message: 'get patient failed',
+            data: [],
+            count: 0
+          })
+        }
+      } catch (error) {
+        reject(error);
+      }
+    })
+  },
+  getSharedPatientOfDoctorInClinic: (idDoctor,idClinic,page,pageSize,nameSearch) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const count = await db.Patient.count({
+          include: [{
+            model: db.SharePatient,
+            where: {
+              idOwnerDoctor: idDoctor,
+              idSharedPatientOfClinic: idClinic
+            }
+          }]
+        })
+        const start = (page-1)*pageSize;
+        const listPatient = await db.Patient.findAll(
+          {
+            include: [{
+              model: db.SharePatient,
+              where: {
+                idOwnerDoctor: idDoctor,
+                idSharedPatientOfClinic: idClinic
+              }
+            }],
+            offset: start,
+            limit: Number(pageSize),
+            order: [
+              ['createdAt', 'DESC']
+            ],
+            where: {
+              fullName: {[Op.substring]: `${nameSearch}`}
+            },  
+            raw: true
+          }
+        );
+        if(listPatient.length>0){
+          resolve({
+            status: 200,
+            message: 'get patient successfully',
+            data: listPatient,
+            count: count
+          })
+        }else{
+          resolve({
+            status: 200,
+            message: 'get patient failed',
+            data: [],
+            count: 0
+          })
+        }
+      } catch (error) {
+        reject(error);
+      }
+    })
+  },
   getPatientListForDoctor: (idDoctor,page,pageSize,nameSearch) =>{
     return new Promise(async (resolve, reject) =>{
       try {

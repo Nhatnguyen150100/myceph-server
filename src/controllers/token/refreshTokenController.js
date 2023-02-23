@@ -17,12 +17,11 @@ const refreshToken = async (req,res) => {
     }
     jwt.verify(refreshToken, process.env.JWT_REFRESH_KEY, async (err, doctor) => {
       try {
+        await db.RefreshToken.destroy({ where: { token: refreshToken } });
         if (err) {
           return res.status(403).json('Refresh token is not valid');
         }else{
           // create new access token và refresh token
-          await db.RefreshToken.destroy({ where: { token: refreshToken } });
-      
           const newAccessToken = tokenController.generateAccessToken(doctor);
           const newRefreshToken = tokenController.generateRefreshToken(doctor);
       

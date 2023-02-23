@@ -14,16 +14,15 @@ module.exports = (sequelize, DataTypes) => {
       SharePatient.belongsTo(models.Patient, {foreignKey:{name: 'idSharedPatient', allowNull:false}, targetKey:'id'});
       SharePatient.belongsTo(models.Doctor, {foreignKey:{name: 'idSharedPatientOfDoctor', allowNull:true}, targetKey:'id'});
       SharePatient.belongsTo(models.Clinic, {foreignKey:{name: 'idSharedPatientOfClinic', allowNull:true}, targetKey:'id'});
+      SharePatient.belongsTo(models.Doctor, {foreignKey:{name: 'idOwnerDoctor', allowNull:true}, targetKey:'id'});
     }
   }
   SharePatient.init({
     idSharedPatient: DataTypes.UUID,
     idSharedPatientOfDoctor: DataTypes.UUID,
     idSharedPatientOfClinic: DataTypes.UUID,
-    idOwerDoctor: DataTypes.UUID,
-    roleOfWoerDoctor: DataTypes.STRING,
-    idOwerClinic: DataTypes.UUID,
-    roleOfOwerClinic: DataTypes.STRING
+    idOwnerDoctor: DataTypes.UUID,
+    roleOfOwnerDoctor: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'SharePatient',

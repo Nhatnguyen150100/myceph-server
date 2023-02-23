@@ -25,6 +25,34 @@ const patientController = {
       })
     }
   },
+  getSharedPatientOfDoctor: async (req, res) => {
+    try {
+      const { status, message, data, count } = await patientServices.getPatientListForDoctor(req.params.id,req.query.page,req.query.pageSize,req.query.nameSearch);
+      res.status(status).json({
+        message: message,
+        data: data,
+        count: count
+      })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
+  getSharedPatientOfDoctorInClinic: async (req, res) => {
+    try {
+      const { status, message, data, count } = await patientServices.getSharedPatientOfDoctorInClinic(req.params.id,req.query.idClinic,req.query.page,req.query.pageSize,req.query.nameSearch);
+      res.status(status).json({
+        message: message,
+        data: data,
+        count: count
+      })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
   getPatientListForDoctor: async (req, res) => {
     try {
       const { status, message, data, count } = await patientServices.getPatientListForDoctor(req.params.id,req.query.page,req.query.pageSize,req.query.nameSearch);
