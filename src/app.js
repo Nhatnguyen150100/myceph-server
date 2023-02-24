@@ -20,6 +20,7 @@ import diagnosisAndTreatmentRouters from './routes/diagnosisAndTreatmentRouters'
 import listOfIssueRouter from './routes/listOfIssueRouters';
 import treatmentPlanRouter from './routes/treatmentPlanRouters';
 import treatmentHistoryRouter from './routes/treatmentHistoryRouters';
+import sharePatientRouters from './routes/sharePatientRouters';
 
 var app = express();
 
@@ -57,6 +58,7 @@ app.use('/v1/diagnosis', diagnosisAndTreatmentRouters);
 app.use('/v1/listOfIssue', listOfIssueRouter);
 app.use('/v1/treatmentPlan', treatmentPlanRouter);
 app.use('/v1/treatmentHistor', treatmentHistoryRouter);
+app.use('/v1/sharePatient',sharePatientRouters);
 
 
 // catch 404 and forward to error handler

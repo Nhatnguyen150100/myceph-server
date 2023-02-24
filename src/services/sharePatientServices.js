@@ -1,3 +1,5 @@
+import { sequelize } from "../models";
+import QueryTypes from "sequelize";
 const db = require("../models");
 
 const sharePatientServices = {
@@ -5,11 +7,22 @@ const sharePatientServices = {
     return new Promise(async (resolve,reject) =>{
       try {
         if(data.idSharedPatientOfDoctor){
+          const checkSharePatient= await db.SharePatient.findOne({
+            where: {
+              idSharedPatient: idSharedPatient,
+              idSharedPatientOfDoctor: data.idSharedPatientOfDoctor,
+              idOwnerDoctor: idOwnerDoctor
+            }
+          })
+          if(checkSharePatient) return resolve({
+            status: 202,
+            message: 'this patient is shared for doctor'
+          })
           const addPatient = await db.SharePatient.create({
             idSharedPatient: idSharedPatient,
             idSharedPatientOfDoctor: data.idSharedPatientOfDoctor,
             idOwnerDoctor: idOwnerDoctor,
-            roleOfOwerDoctor: 'view'
+            roleOfOwnerDoctor: 'view'
           })
           if(addPatient){
             resolve({
@@ -27,7 +40,7 @@ const sharePatientServices = {
             idSharedPatient: idSharedPatient,
             idSharedPatientOfClinic: data.idSharedPatientOfClinic,
             idOwnerDoctor: idOwnerDoctor,
-            roleOfOwerDoctor: 'view'
+            roleOfOwnerDoctor: 'view'
           })
           if(addPatient){
             resolve({
@@ -171,30 +184,171 @@ const sharePatientServices = {
       }
     })
   },
-  getDoctorSharedPatient: (idSharedPatient) => {
+  getDoctorSharedPatient: (idSharedPatient,idSharedPatientOfDoctor) => {
     return new Promise(async (resolve, reject) => {
       try {
         const listDoctor = await db.Doctor.findAll({
           include: [{
             model: db.SharePatient,
             where: {
-              idSharedPatient: idSharedPatient
+              idSharedPatient: idSharedPatient,
+              idSharedPatientOfDoctor: idSharedPatientOfDoctor
             }
           }]
         })
-        if(listDoctor){
+        if(listDoctor.length>=0){
           resolve({
             status: 200,
-            message: 'get doctor share patient successfully'
+            message: 'get doctor share patient successfully',
+            data: listDoctor
           })
         }else{
           resolve({
             status: 202,
-            message: 'get doctor share patient failed'
+            message: 'get doctor share patient failed',
+            data: []
           })
         }
       } catch (error) {
         reject(error)
+      }
+    })
+  },
+  getAllDoctorSharePatient: (idSharedPatientOfDoctor,page,pageSize) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const count = await sequelize.query('select distinct myceph.doctors.id from myceph.doctors, myceph.sharepatients where myceph.doctors.id = myceph.sharepatients.idOwnerDoctor and myceph.sharepatients.idSharedPatientOfDoctor = ?',
+          {
+            replacements: [idSharedPatientOfDoctor],
+            type: QueryTypes.SELECT
+          }
+        );
+        if(count[0].length>0){
+          const start = (page-1)*pageSize;
+          const listDoctor = await sequelize.query('select distinct myceph.doctors.id,fullName,email,avatar,gender,birthday from myceph.doctors, myceph.sharepatients where myceph.doctors.id = myceph.sharepatients.idOwnerDoctor and myceph.sharepatients.idSharedPatientOfDoctor = ? limit ?, ?',
+            {
+              replacements: [idSharedPatientOfDoctor,start,Number(pageSize)],
+              type: QueryTypes.SELECT
+            }
+          );
+          if(listDoctor.length>=0){
+            resolve({
+              status: 200,
+              message: 'get doctor share patient successfully',
+              data: listDoctor[0],
+              count: count[0].length
+            })
+          }else{
+            resolve({
+              status: 202,
+              message: 'get doctor share patient failed',
+              data: [],
+              count: 0
+            })
+          }
+        }else{
+          resolve({
+            status: 200,
+            message: 'get doctor share patient successfully',
+            data: [],
+            count: 0
+          })
+        }
+      } catch (error) {
+        reject(error);
+      }
+    })
+  },
+  getListSharePatientOfDoctor: (idSharedPatientOfDoctor,idOwnerDoctor,page,pageSize) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const count = await db.Patient.count(
+          {
+            include: [{
+              model: db.SharePatient,
+              where: {
+                idSharedPatientOfDoctor: idSharedPatientOfDoctor,
+                idOwnerDoctor: idOwnerDoctor
+              }
+            }]
+          }
+        )
+        if(count>0){
+          const start = (page-1)*pageSize;
+          const listPatient = await db.Patient.findAll(
+            {
+              include: [{
+                model: db.SharePatient,
+                where: {
+                  idSharedPatientOfDoctor: idSharedPatientOfDoctor,
+                  idOwnerDoctor: idOwnerDoctor
+                }
+              }],
+              offset: start,
+              limit: Number(pageSize),
+              order: [
+                ['createdAt', 'DESC']
+              ], 
+              raw: true
+            }
+          );
+          if(listPatient.length>0){
+            resolve({
+              status: 200,
+              message: 'get patient successfully',
+              data: listPatient,
+              count: count
+            })
+          }else{
+            resolve({
+              status: 202,
+              message: 'get patient failed',
+              data: [],
+              count: 0
+            })
+          }
+        }else{
+          resolve({
+            status: 200,
+            message: 'get patient successfully',
+            data: [],
+            count: 0
+          })
+        }
+      } catch (error) {
+        reject(error);
+      }
+    })
+  },
+  deleteShareDoctor: (idSharedPatientOfDoctor,idOwnerDoctor) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const checkDoctorSharePatient = await db.SharePatient.findAll({
+          where: {
+            idSharedPatientOfDoctor: idSharedPatientOfDoctor,
+            idOwnerDoctor: idOwnerDoctor
+          }
+        })
+        if(checkDoctorSharePatient.length > 0){
+          await db.SharePatient.destroy({
+            where: {
+              idSharedPatientOfDoctor: idSharedPatientOfDoctor,
+              idOwnerDoctor: idOwnerDoctor
+            },
+            force: true
+          })
+          resolve({
+            status: 200,
+            message: 'delete share doctor successfully'
+          })
+        }else{
+          resolve({
+            status: 202,
+            message: 'share doctor is not found'
+          })
+        }
+      } catch (error) {
+        reject(error);
       }
     })
   }
