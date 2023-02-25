@@ -9,7 +9,7 @@ const tokenController = {
 			},
 			process.env.JWT_ACCESS_KEY,
 			{
-				expiresIn: '1m',
+				expiresIn: '2h',
 			},
 		);
 	},

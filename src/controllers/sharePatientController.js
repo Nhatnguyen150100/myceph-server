@@ -90,6 +90,35 @@ const sharePatientController = {
       })
     }
   }
+  ,
+  getListSharePatientOfDoctorInClinic: async (req,res) => {
+    try {
+      const { status, message, data, count } = await sharePatientServices.getListSharePatientOfDoctorInClinic(req.params.idSharedPatientOfClinic,req.query.idOwnerDoctor,req.query.page,req.query.pageSize);
+      res.status(status).json({
+        message: message,
+        data: data,
+        count: count
+      })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
+  getListSharePatientOfCurrentDoctor: async (req,res) => {
+    try {
+      const { status, message, data, count } = await sharePatientServices.getListSharePatientOfCurrentDoctor(req.params.idOwnerDoctor,req.query.page,req.query.pageSize,req.query.nameSearch);
+      res.status(status).json({
+        message: message,
+        data: data,
+        count: count
+      })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
 }
 
 export default sharePatientController;

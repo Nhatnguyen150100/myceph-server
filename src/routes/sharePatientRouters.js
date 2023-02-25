@@ -10,5 +10,8 @@ router.get('/getDoctorSharedPatient/:idSharedPatientOfDoctor', middlewareControl
 router.get('/getAllDoctorSharePatient/:idSharedPatientOfDoctor', middlewareController.verifyToken, sharePatientController.getAllDoctorSharePatient);
 router.get('/getListSharePatientOfDoctor/:idSharedPatientOfDoctor', middlewareController.verifyToken, sharePatientController.getListSharePatientOfDoctor);
 router.delete('/deleteShareDoctor/:idSharedPatientOfDoctor', middlewareController.verifyToken, sharePatientController.deleteShareDoctor);
+router.get('/getListSharePatientOfDoctorInClinic/:idSharedPatientOfClinic', middlewareController.verifyToken, sharePatientController.getListSharePatientOfDoctorInClinic);
+router.get('/getListSharePatientOfCurrentDoctor/:idOwnerDoctor', middlewareController.verifyToken, sharePatientController.getListSharePatientOfCurrentDoctor);
+
 
 export default router;

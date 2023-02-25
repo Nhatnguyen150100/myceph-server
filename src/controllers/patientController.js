@@ -27,7 +27,7 @@ const patientController = {
   },
   getSharedPatientOfDoctor: async (req, res) => {
     try {
-      const { status, message, data, count } = await patientServices.getPatientListForDoctor(req.params.id,req.query.page,req.query.pageSize,req.query.nameSearch);
+      const { status, message, data, count } = await patientServices.getSharedPatientOfDoctor(req.params.id,req.query.page,req.query.pageSize,req.query.nameSearch);
       res.status(status).json({
         message: message,
         data: data,
