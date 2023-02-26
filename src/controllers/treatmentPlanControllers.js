@@ -16,6 +16,22 @@ const treatmentPlanControllers = {
       })
     }
   },
+  getSelectedTreatmentPlan: async (req,res) => {
+    try {      
+      const { status, message, data } = await treatmentPlanServices.getSelectedTreatmentPlan(req.params.id);
+      patientServices.getUpdateDoctor(req.params.id).then(value => {
+        res.status(status).json({
+          message: message,
+          data: data,
+         ...value,
+        })
+      });
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
   getAllTreatmentPlan: async (req,res) => {
     try {      
       const { status, message, data } = await treatmentPlanServices.getAllTreatmentPlan(req.params.id);
@@ -23,7 +39,7 @@ const treatmentPlanControllers = {
         res.status(status).json({
           message: message,
           data: data,
-          updateByDoctor: value,
+         ...value,
         })
       });
     } catch (error) {
@@ -34,7 +50,7 @@ const treatmentPlanControllers = {
   },
   updateTreatmentPlan: async (req,res) => {
     try {
-      const { status, message } = await treatmentPlanServices.updateTreatmentPlan(req.params.idPlan, req.body);
+      const { status, message } = await treatmentPlanServices.updateTreatmentPlan(req.params.id,req.query.idPlan,req.body);
       patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
         res.status(status).json({
           message: message
@@ -48,7 +64,7 @@ const treatmentPlanControllers = {
   },
   deleteTreatmentPlan: async (req,res) => {
     try {
-      const { status, message } = await treatmentPlanServices.deletePlane(req.params.idPlan);
+      const { status, message } = await treatmentPlanServices.deletePlane(req.params.id,req.query.idPlan);
       patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
         res.status(status).json({
           message: message

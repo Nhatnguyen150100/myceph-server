@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       selected: {
-        defaultValue: 0,
+        defaultValue: false,
         type: Sequelize.BOOLEAN
       },
       createdAt: {

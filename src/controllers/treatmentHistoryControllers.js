@@ -23,7 +23,7 @@ const treatmentHistoryControllers = {
         res.status(status).json({
           message: message,
           data: data,
-          updateByDoctor: value,
+          ...value,
         })
       });
     } catch (error) {

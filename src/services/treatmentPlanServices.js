@@ -1,6 +1,33 @@
 const db = require("../models")
 
 const treatmentPlanServices = {
+  getSelectedTreatmentPlan: (idPatient) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const selectedTreatmentPlan = await db.TreatmentPlan.findOne({
+          where: {
+            idTreatmentPlan: idPatient,
+            selected: true,
+          }
+        })
+        if(selectedTreatmentPlan){
+          resolve({
+            status: 200,
+            message: 'get selected treatment plan successfully',
+            data: selectedTreatmentPlan
+          })
+        }else{
+          resolve({
+            status: 200,
+            message: 'get selected treatment plan failed',
+            data: {}
+          })
+        }
+      } catch (error) {
+        reject(error);
+      }
+    });
+  },
   getAllTreatmentPlan: (idPatient) => {
     return new Promise(async (resolve, reject) => {
       try {
@@ -52,7 +79,7 @@ const treatmentPlanServices = {
       }
     })
   },
-  updateTreatmentPlan: (idPlan,data) => {
+  updateTreatmentPlan: (idPatient,idPlan,data) => {
     return new Promise(async (resolve, reject) => {
       try {
         const dataUpdate = {
@@ -64,6 +91,15 @@ const treatmentPlanServices = {
             id: idPlan
           }
         })
+        if(data.selected){
+          await db.TreatmentPlan.update({
+            selected: false
+          },{
+            where: {
+              idTreatmentPlan: data.idPatient
+            }
+          })
+        }
         if(newPlan){
           resolve({
             status: 200,
@@ -80,7 +116,7 @@ const treatmentPlanServices = {
       }
     })
   },
-  deletePlane: (idPlan) => {
+  deletePlane: (idPatient,idPlan) => {
     return new Promise(async (resolve, reject) => {
       try {
         const deletePlan = await db.TreatmentPlan.destroy({

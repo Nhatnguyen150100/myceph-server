@@ -29,7 +29,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       priotized: {
-        defaultValue: 0,
+        defaultValue: false,
         type: Sequelize.BOOLEAN
       },
       createdAt: {
@@ -46,3 +46,4 @@ module.exports = {
     await queryInterface.dropTable('ListOfIssues');
   }
 };
+
