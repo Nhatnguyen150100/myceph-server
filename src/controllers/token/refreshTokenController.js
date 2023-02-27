@@ -23,9 +23,11 @@ const refreshToken = async (req,res) => {
         }else{
           // create new access token và refresh token
           const newAccessToken = tokenController.generateAccessToken(doctor);
+          const newRefreshToken = tokenController.generateRefreshToken(doctor);
       
           res.status(200).json({
             newAccessToken: newAccessToken,
+            newRefreshToken: newRefreshToken,
             message: 'refresh token successfully'
           });
         }
