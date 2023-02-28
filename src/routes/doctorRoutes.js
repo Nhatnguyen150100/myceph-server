@@ -6,6 +6,7 @@ import recaptchaMiddleware from '../middleware/recaptchaMiddleware';
 
 const router = express.Router();
 
+router.get('/:id', middlewareController.verifyToken, doctorMiddleware.checkDoctorExistsById, doctorController.getInformationDoctorById);
 router.post('/register', recaptchaMiddleware.verifyRecaptcha, doctorMiddleware.checkDoctorDontExistsByEmail, doctorController.sendVerifyEmailDoctor);
 router.get('/getInformationDoctor/:email', middlewareController.verifyToken, doctorMiddleware.checkDoctorExistsByEmail ,doctorController.getInformationDoctor);
 router.get('/getAllClinicFromDoctor/:id', middlewareController.verifyToken, doctorMiddleware.checkDoctorExistsById ,doctorController.getAllClinicFromDoctor);

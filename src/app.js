@@ -1,11 +1,17 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var bodyParser = require('body-parser')
-require('dotenv').config();
-const cors = require('cors');
+import createError from 'http-errors';
+import express from 'express';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config();
+import logger from './config/winston';
+
+import passport from 'passport';
+// import session from 'express-session';
+// import localStrategy from 'passport-local';
+// const LocalStrategy = localStrategy.Strategy();
 
 import connectDB from './config/connectDB';
 import clinicRouter from './routes/clinicRoutes';
@@ -21,6 +27,7 @@ import listOfIssueRouter from './routes/listOfIssueRouters';
 import treatmentPlanRouter from './routes/treatmentPlanRouters';
 import treatmentHistoryRouter from './routes/treatmentHistoryRouters';
 import sharePatientRouters from './routes/sharePatientRouters';
+import morgan from 'morgan';
 
 var app = express();
 
@@ -30,11 +37,14 @@ app.use(
   })
 )
 
+// set up passport
+// app.use(passport.initialize());
+// app.use(passport.session());
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
-app.use(logger('dev'));
+app.use(morgan('dev', {stream: logger.app.stream.write}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -80,7 +90,7 @@ app.use(function(err, req, res, next) {
 connectDB();
 
 app.listen(process.env.PORT || 3000, ()=>{
-  console.log('server listening on port: ' + process.env.PORT || 3000);
+  logger.app.info('server listening on port: ' + process.env.PORT || 3000);
 })
 
 module.exports = app;

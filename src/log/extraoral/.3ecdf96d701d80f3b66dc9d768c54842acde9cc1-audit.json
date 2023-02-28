@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "src\\log\\extraoral\\.3ecdf96d701d80f3b66dc9d768c54842acde9cc1-audit.json",
+    "files": [
+        {
+            "date": 1677609524013,
+            "name": "src\\log\\extraoral\\extraoral-2023-03-01.log",
+            "hash": "b0d51c01db3a68bb669b6ebef090478959de9040d0689c2c319bd66cfe41ed0f"
+        }
+    ],
+    "hashType": "sha256"
+}

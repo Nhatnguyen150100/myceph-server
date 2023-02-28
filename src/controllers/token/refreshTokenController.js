@@ -2,7 +2,7 @@ const db = require("../../models");
 const { default: tokenController } = require("./tokenController");
 import jwt from 'jsonwebtoken';
 
-const refreshToken = async (req,res) => {
+const refreshTokenController = async (req,res) => {
   try {
     const refreshToken = req.body.refreshToken;
     if (!refreshToken) {
@@ -12,7 +12,7 @@ const refreshToken = async (req,res) => {
       where: { token: refreshToken },
       raw: true,
     });
-    if (refreshTokenExist == null) {
+    if (refreshTokenExist === null) {
       return res.status(403).json('Refresh token is not valid');
     }
     jwt.verify(refreshToken, process.env.JWT_REFRESH_KEY, async (err, doctor) => {
@@ -24,7 +24,17 @@ const refreshToken = async (req,res) => {
           // create new access token và refresh token
           const newAccessToken = tokenController.generateAccessToken(doctor);
           const newRefreshToken = tokenController.generateRefreshToken(doctor);
-      
+
+          await db.RefreshToken.update({
+            token: newRefreshToken,
+            timeRefresh: refreshTokenExist.timeRefresh+1
+          },{
+            where: {
+              idDoctor: doctor.id,
+              token: refreshToken
+            }
+          });
+
           res.status(200).json({
             newAccessToken: newAccessToken,
             newRefreshToken: newRefreshToken,
@@ -44,4 +54,4 @@ const refreshToken = async (req,res) => {
   }
 }
 
-export default refreshToken;
+export default refreshTokenController;

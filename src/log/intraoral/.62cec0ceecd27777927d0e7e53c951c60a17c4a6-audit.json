@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "src\\log\\intraoral\\.62cec0ceecd27777927d0e7e53c951c60a17c4a6-audit.json",
+    "files": [
+        {
+            "date": 1677609524016,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-01.log",
+            "hash": "3185f97dd52a34b67d235033d35466b1c86026d84c8bd295ee2c2d030db0e991"
+        }
+    ],
+    "hashType": "sha256"
+}

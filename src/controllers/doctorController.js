@@ -100,6 +100,20 @@ const doctorController = {
       })
     }
   },
+  getInformationDoctorById: async (req,res) => {
+    try {
+      const doctor = req.doctor;
+      delete doctor.password;
+      res.status(200).json({
+        message: 'get information doctor successfully',
+        data: doctor
+      })
+    } catch (error) {
+      res.status(400).json({
+        message: error
+      })
+    }
+  },
   getInformationDoctor: async (req,res) => {
     try {
       const doctor = req.doctor;

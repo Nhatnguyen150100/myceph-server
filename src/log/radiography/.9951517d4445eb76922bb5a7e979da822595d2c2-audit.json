@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "src\\log\\radiography\\.9951517d4445eb76922bb5a7e979da822595d2c2-audit.json",
+    "files": [
+        {
+            "date": 1677607213061,
+            "name": "src\\log\\radiography\\radiography-2023-03-01.log",
+            "hash": "30fd3677290608f7e756e049e3acc21a7a2a2e8f8d571fc60f061bb59add4cc8"
+        }
+    ],
+    "hashType": "sha256"
+}

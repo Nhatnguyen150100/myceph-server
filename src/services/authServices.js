@@ -1,5 +1,6 @@
 const db = require("../models");
 import bcrypt from 'bcrypt';
+import logger from '../config/winston';
 import refreshToken from '../controllers/token/refreshTokenController';
 
 const salt = bcrypt.genSaltSync(10);
@@ -12,6 +13,7 @@ const authServices = {
           where: { email: data.email},
           raw: true
         })
+        logger.doctor.info(doctor);
         if(!doctor){
           resolve({
             status: 202,
@@ -20,6 +22,7 @@ const authServices = {
           })
         }
         let validPassword = await bcrypt.compare(data.password, doctor.password);
+        logger.doctor.info(validPassword);
         if(!validPassword){
           resolve({
             status: 202,
@@ -35,21 +38,28 @@ const authServices = {
           });
         }
       } catch (error) {
+        logger.doctor.error(error);
         reject(error);
       }
     });
   },
-  logout: (refreshToken) => {
+  logout: (idDoctor,refreshToken) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const RefreshToken = await db.RefreshToken.findOne({
+        const token = await db.RefreshToken.findOne({
           where: {
+            idDoctor: idDoctor,
             token: refreshToken
           }
         })
-        if(RefreshToken){
-          await db.RefreshToken.destroy({
+        logger.token.info(token);
+        if(token){
+          await db.RefreshToken.update({
+            isActive: false
+          },
+          {
             where: {
+              idDoctor: idDoctor,
               token: refreshToken
             },
             force: true
@@ -65,6 +75,7 @@ const authServices = {
           })
         }
       } catch (error) {
+        logger.token.error(error);
         reject(error);
       }
     })

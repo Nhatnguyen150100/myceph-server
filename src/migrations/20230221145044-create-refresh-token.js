@@ -12,6 +12,27 @@ module.exports = {
       token: {
         type: Sequelize.STRING
       },
+      idDoctor: {
+        allowNull: false,
+        type: Sequelize.UUID
+      },
+      nameDevice: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      ipOfDevice: {
+        allowNull:false,
+        type: Sequelize.STRING
+      },
+      timeRefresh: {
+        allowNull: false,
+        defaultValue: 0,
+        type: Sequelize.INTEGER
+      },
+      isActive: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

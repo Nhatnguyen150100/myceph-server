@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "src\\log\\passport\\.b63a1f2a89b4de2bf6a198b8d74ef4e723e2b6b6-audit.json",
+    "files": [
+        {
+            "date": 1677609523981,
+            "name": "src\\log\\passport\\passport-2023-03-01.log",
+            "hash": "73ff3732f9ef90caf60ac1fc07bce64afda1f8b35324880b13d1757d29fcdd75"
+        }
+    ],
+    "hashType": "sha256"
+}

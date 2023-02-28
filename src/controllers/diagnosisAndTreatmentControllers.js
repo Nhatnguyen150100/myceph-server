@@ -15,13 +15,13 @@ const diagnosisAndTreatmentControllers = {
       })
     } catch (error) {
       res.status(400).json({
-        message: error
+        message: 'server error'
       })
     }
   },
   updateDiagnosisAndTreatment: async (req,res) => {
     try {
-      const { status, message } = await diagnosisandtreatmentServices.updateDiagnosisAndTreatment(req.params.id,req.body);
+      const { status, message } = await diagnosisandtreatmentServices.updateDiagnosisAndTreatment(req.query.idPatient,req.body);
       patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
         res.status(status).json({
           message: message
@@ -29,7 +29,7 @@ const diagnosisAndTreatmentControllers = {
       })
     } catch (error) {
       res.status(400).json({
-        message: error
+        message: 'server error'
       });
     }
   } 

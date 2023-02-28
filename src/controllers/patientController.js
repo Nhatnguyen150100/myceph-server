@@ -9,7 +9,7 @@ const patientController = {
       })
     } catch (error) {
       res.status(400).json({
-        message: error
+        message: 'server error'
       })
     }
   },
@@ -21,7 +21,7 @@ const patientController = {
       })
     } catch (error) {
       res.status(400).json({
-        message: error
+        message: 'server error'
       })
     }
   },
@@ -35,7 +35,7 @@ const patientController = {
       })
     } catch (error) {
       res.status(400).json({
-        message: error
+        message: 'server error'
       })
     }
   },
@@ -49,7 +49,7 @@ const patientController = {
       })
     } catch (error) {
       res.status(400).json({
-        message: error
+        message: 'server error'
       })
     }
   },
@@ -63,7 +63,7 @@ const patientController = {
       })
     } catch (error) {
       res.status(400).json({
-        message: error
+        message: 'server error'
       })
     }
   },
@@ -77,7 +77,7 @@ const patientController = {
       })
     } catch (error) {
       res.status(400).json({
-        message: error
+        message: 'server error'
       })
     }
   },
@@ -89,19 +89,19 @@ const patientController = {
       })
     } catch (error) {
       res.status(400).json({
-        message: error
+        message: 'server error'
       })
     }
   },
   updateInformationPatient: async (req, res) => {
     try {
-      const { status, message, data } = await patientServices.updateInformationPatient(req.params.id,req.body);
+      const { status, message } = await patientServices.updateInformationPatient(req.params.id,req.body);
       res.status(status).json({
         message: message
       })
     } catch (error) {
       res.status(400).json({
-        message: error
+        message: 'server error'
       })
     }
   },

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "src\\log\\sharePatient\\.aef5290484c8bc60a8f142d990c02c9563b5864a-audit.json",
+    "files": [
+        {
+            "date": 1677609524027,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-03-01.log",
+            "hash": "4892251ca03988efec5df2c5235e5f5efc0ef2e4712130c248ce71ca7eda2486"
+        }
+    ],
+    "hashType": "sha256"
+}

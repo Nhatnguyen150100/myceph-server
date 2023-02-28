@@ -59,7 +59,8 @@ const treatmentPlanServices = {
       try {
         const treatmentPlan = await db.TreatmentPlan.create({
           idTreatmentPlan: idPatient,
-          plan: data.plan
+          plan: data.plan,
+          selected: data.selected
         })
         if(treatmentPlan){
           resolve({

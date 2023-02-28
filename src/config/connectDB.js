@@ -1,3 +1,5 @@
+import logger from './winston';
+
 const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize('myceph', 'root', 'nhatnguyen150100', {
@@ -15,9 +17,9 @@ const sequelize = new Sequelize('myceph', 'root', 'nhatnguyen150100', {
 let connectDB = async () => {
 	try {
 		await sequelize.authenticate();
-		console.log('Connection has been established successfully.');
+		logger.app.info('Connection has been established successfully.');
 	} catch (error) {
-		console.error('Unable to connect to the database:', error);
+		logger.app.error('Unable to connect to the database:', error);
 	}
 };
 export default connectDB;

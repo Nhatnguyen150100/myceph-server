@@ -297,7 +297,7 @@ const patientServices = {
           address: data.address,
           chiefcomplaint: data.chiefcomplaint,
           note: data.note,
-          updateByDoctor: data.idDoctorUpdate
+          updateByDoctor: data.updateByDoctor
         }
         const checkUpdatePatient = await db.Patient.update(dataUpdate,{
           where: {
