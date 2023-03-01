@@ -1,6 +1,11 @@
 const db = require("../../models");
 const { default: tokenController } = require("./tokenController");
 import jwt from 'jsonwebtoken';
+import logger from '../../config/winston';
+import path from 'path';
+import fs from 'fs';
+
+const publicKeyRefreshToken = fs.readFileSync(path.join(__dirname, 'publicRefreshToken.pem'));
 
 const refreshTokenController = async (req,res) => {
   try {
@@ -9,13 +14,14 @@ const refreshTokenController = async (req,res) => {
       return res.status(401).json("You're not authenticated");
     }
     const refreshTokenExist = await db.RefreshToken.findOne({
-      where: { token: refreshToken },
+      where: { token: refreshToken, isActive: true },
       raw: true,
     });
     if (refreshTokenExist === null) {
+      logger.token.error(refreshTokenExist);
       return res.status(403).json('Refresh token is not valid');
     }
-    jwt.verify(refreshToken, process.env.JWT_REFRESH_KEY, async (err, doctor) => {
+    jwt.verify(refreshToken, publicKeyRefreshToken, async (err, doctor) => {
       try {
         if (err) {
           await db.RefreshToken.destroy({ where: { token: refreshToken } });
@@ -31,7 +37,8 @@ const refreshTokenController = async (req,res) => {
           },{
             where: {
               idDoctor: doctor.id,
-              token: refreshToken
+              token: refreshToken,
+              isActive: true
             }
           });
 
@@ -42,14 +49,16 @@ const refreshTokenController = async (req,res) => {
           });
         }
       } catch (error) {
-        res.status(400).json({
-          message: error
+        logger.token.error(error);
+        res.status(500).json({
+          message: 'server error'
         });
       }
     });
   } catch (error) {
-    res.status(400).json({
-      message: error
+    logger.token.error(error);
+    res.status(500).json({
+      message: 'server error'
     });
   }
 }

@@ -6,3 +6,42 @@
 {"level":"info","message":{"createdAt":"2023-02-28T19:05:15.000Z","id":7,"idDoctor":"fd79dd08-6854-47fc-8355-52d75f54db38","ipOfDevice":"localhost","isActive":1,"nameDevice":"lap top","timeRefresh":0,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc2MTExMTUsImV4cCI6MTY3NzY5NzUxNX0.NwusSxVuzZifoxfvOG2mijE0_yrSBP-6tMdNUxil9-U","updatedAt":"2023-02-28T19:05:15.000Z"},"timestamp":"2023-03-01 02:05:21"}
 {"level":"info","message":{"createdAt":"2023-02-28T19:05:15.000Z","id":7,"idDoctor":"fd79dd08-6854-47fc-8355-52d75f54db38","ipOfDevice":"localhost","isActive":0,"nameDevice":"lap top","timeRefresh":1,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc2MTE2ODQsImV4cCI6MTY3NzY5ODA4NH0.IKrfMSAxKo2Wr9XXO7DFtT7CDMTrS9f9jGL-s29BLSM","updatedAt":"2023-02-28T19:14:44.000Z"},"timestamp":"2023-03-01 02:14:44"}
 {"level":"info","message":{"createdAt":"2023-02-28T19:16:39.000Z","id":10,"idDoctor":"fd79dd08-6854-47fc-8355-52d75f54db38","ipOfDevice":"localhost","isActive":1,"nameDevice":"lap top","timeRefresh":0,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc2MTE3OTksImV4cCI6MTY3NzY5ODE5OX0._VOGqhjqqkLY7pjo2gmKVbI2fieRZSczyqE1NkFrA5U","updatedAt":"2023-02-28T19:16:39.000Z"},"timestamp":"2023-03-01 02:16:45"}
+{"level":"error","message":null,"timestamp":"2023-03-01 12:40:02"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:45:14"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:45:14"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:45:14"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:47:10"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:47:10"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:47:10"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:51:07"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:51:07"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:51:07"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:53:21"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:53:21"}
+{"level":"error","message":null,"timestamp":"2023-03-01 14:53:21"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:01:40"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:01:40"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:10:35"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:10:35"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:24:50"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:24:50"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:24:50"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:37:21"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:37:21"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:41:02"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:41:02"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:43:43"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:43:43"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:43:43"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:46:31"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:46:31"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:46:31"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:59:31"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:59:31"}
+{"level":"error","message":null,"timestamp":"2023-03-01 15:59:31"}
+{"level":"error","message":null,"timestamp":"2023-03-01 16:05:28"}
+{"level":"error","message":null,"timestamp":"2023-03-01 16:10:43"}
+{"level":"error","message":null,"timestamp":"2023-03-01 16:14:47"}
+{"level":"error","message":null,"timestamp":"2023-03-01 16:23:07"}
+{"level":"error","message":null,"timestamp":"2023-03-01 16:49:51"}
+{"level":"error","message":null,"timestamp":"2023-03-01 16:54:03"}

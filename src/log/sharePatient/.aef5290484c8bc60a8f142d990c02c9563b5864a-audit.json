@@ -9,6 +9,11 @@
             "date": 1677609524027,
             "name": "src\\log\\sharePatient\\sharePatient-2023-03-01.log",
             "hash": "4892251ca03988efec5df2c5235e5f5efc0ef2e4712130c248ce71ca7eda2486"
+        },
+        {
+            "date": 1677690005352,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-03-02.log",
+            "hash": "cc8eaf3c51c1f5d64354a794b4c74116a4a98edbec77b58f3100666b6f38c535"
         }
     ],
     "hashType": "sha256"

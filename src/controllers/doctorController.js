@@ -1,6 +1,7 @@
 const { default: doctorServices } = require("../services/doctorServices")
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import logger from '../config/winston';
 
 const salt = bcrypt.genSaltSync(10);
 
@@ -12,9 +13,10 @@ const doctorController = {
         email: doctor.email
       })
     }else{
-      res.status(400).json({
-        message: error
-      })
+      logger.doctor.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   createDoctorDev: async (req,res) => {
@@ -25,9 +27,10 @@ const doctorController = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.doctor.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   sendVerifyEmailDoctor: async (req,res) =>{
@@ -37,9 +40,10 @@ const doctorController = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.doctor.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   sendVerifyEmailResetPasswordDoctor: async (req,res) =>{
@@ -49,9 +53,10 @@ const doctorController = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.doctor.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   verifyResetEmailDoctor: async (req,res) => {
@@ -66,9 +71,10 @@ const doctorController = {
         }
 			});
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.doctor.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   getAllDoctorByEmailSearch: async (req,res) => {
@@ -79,9 +85,10 @@ const doctorController = {
         data: data
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.doctor.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   verifyEmailDoctor: async (req,res) => {
@@ -95,9 +102,10 @@ const doctorController = {
         res.status(400).send('failed to verify token');
       }
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.doctor.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   getInformationDoctorById: async (req,res) => {
@@ -109,9 +117,10 @@ const doctorController = {
         data: doctor
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.doctor.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   getInformationDoctor: async (req,res) => {
@@ -123,21 +132,24 @@ const doctorController = {
         data: doctor
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.doctor.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   updateInformationDoctor: async (req, res) => {
     try {
-      const { status, message } = await doctorServices.updateDoctorInformation(req.params.id,req.body);
+      const { status, message, data } = await doctorServices.updateDoctorInformation(req.params.id,req.body);
       res.status(status).json({
-        message: message
+        message: message,
+        data
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.doctor.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   getAllClinicFromDoctor: async (req,res) => {
@@ -148,9 +160,10 @@ const doctorController = {
         data: data
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.doctor.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   }
 } 

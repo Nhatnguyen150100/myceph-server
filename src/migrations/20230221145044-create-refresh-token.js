@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       token: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       idDoctor: {
         allowNull: false,

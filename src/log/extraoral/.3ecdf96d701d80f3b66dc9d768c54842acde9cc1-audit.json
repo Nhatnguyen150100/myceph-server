@@ -9,6 +9,11 @@
             "date": 1677609524013,
             "name": "src\\log\\extraoral\\extraoral-2023-03-01.log",
             "hash": "b0d51c01db3a68bb669b6ebef090478959de9040d0689c2c319bd66cfe41ed0f"
+        },
+        {
+            "date": 1677690005339,
+            "name": "src\\log\\extraoral\\extraoral-2023-03-02.log",
+            "hash": "7efb7ef93861e2385d9c9f3684fd0f76a0c8d9f3f5df8923553fd01eb96e3bd4"
         }
     ],
     "hashType": "sha256"

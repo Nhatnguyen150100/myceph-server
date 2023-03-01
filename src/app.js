@@ -7,11 +7,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 import logger from './config/winston';
-
-import passport from 'passport';
+import morgan from 'morgan';
 // import session from 'express-session';
-// import localStrategy from 'passport-local';
-// const LocalStrategy = localStrategy.Strategy();
 
 import connectDB from './config/connectDB';
 import clinicRouter from './routes/clinicRoutes';
@@ -27,19 +24,15 @@ import listOfIssueRouter from './routes/listOfIssueRouters';
 import treatmentPlanRouter from './routes/treatmentPlanRouters';
 import treatmentHistoryRouter from './routes/treatmentHistoryRouters';
 import sharePatientRouters from './routes/sharePatientRouters';
-import morgan from 'morgan';
+import passportJS from './controllers/token/passportJS';
 
-var app = express();
+const app = express();
 
 app.use(
   cors({
     origin: process.env.BASE_URL_CLIENT
   })
 )
-
-// set up passport
-// app.use(passport.initialize());
-// app.use(passport.session());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

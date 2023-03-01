@@ -1,4 +1,9 @@
 import jwt from 'jsonwebtoken';
+import path from 'path';
+import fs from 'fs';
+
+const privateKey = fs.readFileSync(path.join(__dirname, 'private.pem'));
+const privateKeyRefreshToken = fs.readFileSync(path.join(__dirname, 'privateRefreshToken.pem'));
 
 const tokenController = {
   generateAccessToken: (doctor) => {
@@ -7,9 +12,10 @@ const tokenController = {
 				id: doctor.id,
 				email: doctor.email,
 			},
-			process.env.JWT_ACCESS_KEY,
+			privateKey,
 			{
 				expiresIn: `${process.env.NODE_ENV==='development'?'1m':'5m'}`,
+				algorithm: 'RS512'
 			},
 		);
 	},
@@ -19,9 +25,10 @@ const tokenController = {
 				id: doctor.id,
 				email: doctor.email,
 			},
-			process.env.JWT_REFRESH_KEY,
+			privateKeyRefreshToken,
 			{
 				expiresIn: '1d',
+				algorithm: 'RS512'
 			},
 		);
 	}

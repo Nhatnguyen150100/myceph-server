@@ -1,3 +1,4 @@
+import logger from "../config/winston";
 import clinicServices from "../services/clinicServices"
 import doctorServices from "../services/doctorServices";
 
@@ -10,9 +11,10 @@ const clinicControllers = {
         data: data
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.clinic.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   getAllDoctorInClinic: async (req, res) => {
@@ -32,9 +34,10 @@ const clinicControllers = {
         count: count
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.clinic.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   createNewClinic: async (req,res) => {
@@ -45,9 +48,10 @@ const clinicControllers = {
         idClinic: idClinic
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.clinic.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   updateRoleOfDoctor: async(req,res) => {
@@ -57,9 +61,10 @@ const clinicControllers = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.clinic.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   deleteDoctorFromClinic: async (req,res) => {
@@ -69,9 +74,10 @@ const clinicControllers = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.clinic.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   addDoctorToClinic: async (req,res) => {
@@ -83,15 +89,16 @@ const clinicControllers = {
           message: message
         })
       }else{
-        res.status(400).json({
-          message: messageDoctor,
-          data: doctor
-        })
+        logger.clinic.error(error);
+        res.status(500).json({
+          message: 'server error'
+        });
       }
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.clinic.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   getInformationClinic: async (req,res) => {
@@ -102,9 +109,10 @@ const clinicControllers = {
         data: clinic
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.clinic.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   updateInformationClinic: async (req, res) => {
@@ -114,9 +122,10 @@ const clinicControllers = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.clinic.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   },
   deleteClinic: async (req,res) => {
@@ -126,9 +135,10 @@ const clinicControllers = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
-      })
+      logger.clinic.error(error);
+      res.status(500).json({
+        message: 'server error'
+      });
     }
   }
 }

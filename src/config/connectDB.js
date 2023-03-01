@@ -5,7 +5,7 @@ const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('myceph', 'root', 'nhatnguyen150100', {
 	host: 'localhost',
 	dialect: 'mysql',
-	logging: console.log,
+	logging: (message) => {logger.app.info(message)},
 	dialectOptions: {
 		ssl: {
 			require: true,
