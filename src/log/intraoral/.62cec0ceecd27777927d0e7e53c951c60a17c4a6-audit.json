@@ -11,9 +11,25 @@
             "hash": "3185f97dd52a34b67d235033d35466b1c86026d84c8bd295ee2c2d030db0e991"
         },
         {
+<<<<<<< HEAD
             "date": 1677864749781,
             "name": "src\\log\\intraoral\\intraoral-2023-03-04.log",
             "hash": "0168ac40ca1cde6cee6d5b82327c6e91aa5e763095ad55e54e5fb15c075b3cda"
+=======
+            "date": 1677690005341,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-02.log",
+            "hash": "d0e3d2a52650f19986891d2acd2743e885016b8edca684c2d58aad3b85b49e34"
+        },
+        {
+            "date": 1677777133415,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-03.log",
+            "hash": "c4586dd78b72fb45314e6a6b4bc47c2da7d8fb82040f37fdcd0f2724092bfda7"
+        },
+        {
+            "date": 1677862834554,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-04.log",
+            "hash": "6badce83170006c62a4509163d0ff0a29e94b8e72ddd209ab55d5faf48144d88"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"

@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     otherMethodToEvaluate: DataTypes.STRING,
     respiration: DataTypes.STRING,
     habits: DataTypes.STRING,
+    familyHistory: DataTypes.STRING,
     compliance: DataTypes.STRING
   }, {
     sequelize,

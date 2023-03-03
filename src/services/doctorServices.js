@@ -4,6 +4,7 @@ import mailerServices from './mailerServices';
 import jwt from 'jsonwebtoken';
 import mailConfig from '../config/mail.config';
 import { QueryTypes } from 'sequelize';
+import logger from '../config/winston';
 
 const salt = bcrypt.genSaltSync(10);
 
@@ -20,6 +21,7 @@ const doctorServices = {
 					message: 'Create new doctor successfully.'
 				});
 			} catch (error) {
+        logger.doctor.error(error);
 				reject(error);
 			}
 		});
@@ -48,6 +50,7 @@ const doctorServices = {
           })
         }
       } catch (error) {
+        logger.doctor.error(error);
         reject(error)
       }
     })
@@ -75,6 +78,7 @@ const doctorServices = {
           })
         }
       } catch (error) {
+        logger.doctor.error(error);
         reject(error);
       }
     })
@@ -94,6 +98,7 @@ const doctorServices = {
           message:'send verify mail failed'
         }))
 			} catch (error) {
+        logger.doctor.error(error);
 				reject(error);
 			}
 		});
@@ -113,6 +118,7 @@ const doctorServices = {
           message:'send verify mail failed'
         }))
 			} catch (error) {
+        logger.doctor.error(error);
 				reject(error);
 			}
 		});
@@ -140,6 +146,7 @@ const doctorServices = {
           })
         }
       } catch (error) {
+        logger.doctor.error(error);
         reject(error);
       }
     })
@@ -160,17 +167,25 @@ const doctorServices = {
         }
         const doctorUpdate = await db.Doctor.update(dataUpdate, {where: {id : idDoctor}});
         if(doctorUpdate){
+          const data = await db.Doctor.findOne({
+            where: {
+              id: idDoctor
+            }
+          })
           resolve({
             status: 200,
-            message: 'Update information of doctor successfully'
+            message: 'Update information of doctor successfully',
+            data: data
           })
         }else{
           resolve({
             status: 202,
-            message: 'Update information of doctor failed'
+            message: 'Update information of doctor failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.doctor.error(error);
         reject(error);
       }
     })
@@ -205,6 +220,7 @@ const doctorServices = {
           })
         }
       } catch (error) {
+        logger.doctor.error(error);
         reject(error);        
       }
     })

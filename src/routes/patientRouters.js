@@ -11,8 +11,8 @@ router.get('/getPatient/:id', middlewareController.verifyToken, patientMiddlewar
 router.get('/getPatientListForDoctor/:id', middlewareController.verifyToken, doctorMiddleware.checkDoctorExistsById, patientController.getPatientListForDoctor);
 router.get('/getPatientListForClinic/:id', middlewareController.verifyToken, clinicMiddleware.checkClinicExists, patientController.getPatientListForClinic);
 router.post('/createPatient', middlewareController.verifyToken, patientController.createPatient);
-router.delete('/deletePatient/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists, patientController.deletePatient);
-router.put('/updateInformationPatient/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists, patientController.updateInformationPatient);
+router.delete('/deletePatient/:id', middlewareController.verifyToken, patientController.deletePatient);
+router.put('/updateInformationPatient/:id', middlewareController.verifyToken, patientController.updateInformationPatient);
 router.get('/getSharedPatientOfDoctor/:id', middlewareController.verifyToken, doctorMiddleware.checkDoctorExistsById, patientController.getSharedPatientOfDoctor);
 router.get('/getSharedPatientOfDoctorInClinic/:id', middlewareController.verifyToken, doctorMiddleware.checkDoctorExistsById, patientController.getSharedPatientOfDoctorInClinic);
 

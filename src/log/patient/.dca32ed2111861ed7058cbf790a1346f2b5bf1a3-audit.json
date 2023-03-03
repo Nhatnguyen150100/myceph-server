@@ -11,9 +11,25 @@
             "hash": "32daa754850b39b13b429065d37402ff85e1a677667520e5aa1f31c009962bf5"
         },
         {
+<<<<<<< HEAD
             "date": 1677864749750,
             "name": "src\\log\\patient\\patient-2023-03-04.log",
             "hash": "37e70cf72a9aef0fe5b7219ea06c9a57595ac1e2935243af1c0fb938b697142f"
+=======
+            "date": 1677690005325,
+            "name": "src\\log\\patient\\patient-2023-03-02.log",
+            "hash": "065ea9c45a02484b52174f8968b95272b741b9c7116e9d453e2fa3a7baf622b3"
+        },
+        {
+            "date": 1677777133380,
+            "name": "src\\log\\patient\\patient-2023-03-03.log",
+            "hash": "6839c5137d591ddc5eca66978e9a475bf8caa989cdd4ddd0791a491744560de5"
+        },
+        {
+            "date": 1677862834535,
+            "name": "src\\log\\patient\\patient-2023-03-04.log",
+            "hash": "e3eca6a21d07075abf0f1d15050c98f5458851d00121ddcfe39b70b5421119b6"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"

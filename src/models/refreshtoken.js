@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   RefreshToken.init({
-    token: DataTypes.STRING,
+    token: DataTypes.TEXT,
     idDoctor: DataTypes.UUID,
     nameDevice: DataTypes.STRING,
     ipOfDevice: DataTypes.STRING,

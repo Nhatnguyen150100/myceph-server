@@ -11,9 +11,25 @@
             "hash": "02f1bda5ae20c91226268feddb404271ab466916ee99f4c02d86109588a982b6"
         },
         {
+<<<<<<< HEAD
             "date": 1677864749805,
             "name": "src\\log\\radiography\\radiography-2023-03-04.log",
             "hash": "ad10c86080811de5ae4ee9ebe6c29995364fd5a62ab28a5510b8eeaf11f98c78"
+=======
+            "date": 1677690005349,
+            "name": "src\\log\\radiography\\radiography-2023-03-02.log",
+            "hash": "997428606981ef80f118a688bc6c0ce3ebbe2b67c491727e2bcb2672f0f6a451"
+        },
+        {
+            "date": 1677777133442,
+            "name": "src\\log\\radiography\\radiography-2023-03-03.log",
+            "hash": "3f65bf40018eadca5159ef40dfb9f19051c3fc02c8eb541c1a209d9749fdb4ed"
+        },
+        {
+            "date": 1677862834561,
+            "name": "src\\log\\radiography\\radiography-2023-03-04.log",
+            "hash": "e7c310e0ebebff667adb2c36c49ce55473ddb4a0656b456e6847508d0e3dbe8a"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"

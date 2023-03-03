@@ -11,9 +11,25 @@
             "hash": "4892251ca03988efec5df2c5235e5f5efc0ef2e4712130c248ce71ca7eda2486"
         },
         {
+<<<<<<< HEAD
             "date": 1677864749812,
             "name": "src\\log\\sharePatient\\sharePatient-2023-03-04.log",
             "hash": "da82d9df5d48ef0a030daf49ec5d32954b9ae3ef74c00c92bcede22e6b4162b3"
+=======
+            "date": 1677690005352,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-03-02.log",
+            "hash": "cc8eaf3c51c1f5d64354a794b4c74116a4a98edbec77b58f3100666b6f38c535"
+        },
+        {
+            "date": 1677777133466,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-03-03.log",
+            "hash": "105b70d1077003de809c287d91cc682e2f69f8090b15d979b700e8af6cc3e328"
+        },
+        {
+            "date": 1677862834563,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-03-04.log",
+            "hash": "e6b1b3a9e4da20647d7fd94c314039043dbf32f26ae4290ef3f3aaf5bef6949d"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"

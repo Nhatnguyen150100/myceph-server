@@ -6,35 +6,30 @@ import refreshToken from '../controllers/token/refreshTokenController';
 const salt = bcrypt.genSaltSync(10);
 
 const authServices = {
-  login: (data) => {
+  login: (email,password) => {
     return new Promise(async (resolve, reject) => {
       try {
         const doctor = await db.Doctor.findOne({
-          where: { email: data.email},
+          where: { email: email},
           raw: true
         })
-        logger.doctor.info(doctor);
         if(!doctor){
           resolve({
-            status: 202,
-            message: 'Could not find email',
-            data: {}
-          })
+            data: null,
+            message: 'Could not find your email'
+          });
         }
-        let validPassword = await bcrypt.compare(data.password, doctor.password);
-        logger.doctor.info(validPassword);
+        let validPassword = await bcrypt.compare(password, doctor.password);
         if(!validPassword){
           resolve({
-            status: 202,
-            message: 'wrong password',
-            data: {}
-          })
+            data: null,
+            message: 'password mismatch'
+          });
         }else{
           delete doctor.password;
           resolve({
-            status: 200,
-            message: 'login successfully',
-            data: doctor
+            data: doctor,
+            message: 'login successfully'
           });
         }
       } catch (error) {
@@ -52,7 +47,6 @@ const authServices = {
             token: refreshToken
           }
         })
-        logger.token.info(token);
         if(token){
           await db.RefreshToken.update({
             isActive: false

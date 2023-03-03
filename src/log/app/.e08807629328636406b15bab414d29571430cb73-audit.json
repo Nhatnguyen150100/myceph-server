@@ -11,9 +11,25 @@
             "hash": "d817588fdb1a8f05e7035a33ab0d51e7b56d8863e7a204b609787d2b96ae1221"
         },
         {
+<<<<<<< HEAD
             "date": 1677864749694,
             "name": "src\\log\\app\\app-2023-03-04.log",
             "hash": "2af3f7d42b50fb287acb116ce34cb588ce8299fe0106ad774c7e986ec4589163"
+=======
+            "date": 1677690005287,
+            "name": "src\\log\\app\\app-2023-03-02.log",
+            "hash": "188455cf380bfb586fe0ecc0ebbd8d889eda723f9b803262afcc46179321334b"
+        },
+        {
+            "date": 1677777133304,
+            "name": "src\\log\\app\\app-2023-03-03.log",
+            "hash": "afb5731c12815dee6a0382cb18c0e327114d0465230c1ad6a1c4baf0bcf15cbd"
+        },
+        {
+            "date": 1677862834405,
+            "name": "src\\log\\app\\app-2023-03-04.log",
+            "hash": "2209f5e7e377dbd504245f26b688cea21d984b0d4daf217d58ad9cdc670ef8c2"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"

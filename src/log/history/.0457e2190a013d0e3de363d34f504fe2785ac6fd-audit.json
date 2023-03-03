@@ -11,9 +11,25 @@
             "hash": "152703c69971c92f1879f73d6c7d1976bd5b2d1609e38db0d348c84be3187a13"
         },
         {
+<<<<<<< HEAD
             "date": 1677864749789,
             "name": "src\\log\\history\\history-2023-03-04.log",
             "hash": "7412e53e7e45fa13bf6d0b82260a11bd88114aeef30496cb5cc11c9fdd0e61c1"
+=======
+            "date": 1677690005343,
+            "name": "src\\log\\history\\history-2023-03-02.log",
+            "hash": "3907f35e41863cd42ebc120fd5722686c6ca810963162b174f384bffd5710c66"
+        },
+        {
+            "date": 1677777133423,
+            "name": "src\\log\\history\\history-2023-03-03.log",
+            "hash": "2d5cf0aea75ba7fa81674bed7797410aac601a3e14333b27b4fa70d3a0c95a30"
+        },
+        {
+            "date": 1677862834556,
+            "name": "src\\log\\history\\history-2023-03-04.log",
+            "hash": "085bdf8f70abe721352681d91d82c7b64d5945257003ebd962fac1c28f37005e"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"
