@@ -14,6 +14,16 @@
             "date": 1677690005346,
             "name": "src\\log\\listOfIssue\\listOfIssue-2023-03-02.log",
             "hash": "8ca6be3d7e9a4283e638d4f92a6181f532838bd74c2df97c17ae0151abfde2d5"
+        },
+        {
+            "date": 1677777133432,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-03-03.log",
+            "hash": "ccc87d684751a5c2455e49a324d5d01541cc117be50365e2338d086c505e9d46"
+        },
+        {
+            "date": 1677862834558,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-03-04.log",
+            "hash": "fbc45008bfba622e905ed0a00647118c92088a097ee6922efb19ef195a950a1a"
         }
     ],
     "hashType": "sha256"

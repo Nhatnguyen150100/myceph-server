@@ -110,6 +110,7 @@ const logger = {
     format: customFormat,
     transports: [
       new transports.Console({level: 'error'}),
+      new transports.Console({level: 'info'}),
       new DailyRotateFile({
         format: combine(format.json()),
         filename: './src/log/patient/patient-%DATE%.log',

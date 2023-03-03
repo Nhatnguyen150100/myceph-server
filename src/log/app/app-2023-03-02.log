@@ -34,3 +34,106 @@
 {"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc2OTE5NzAsImV4cCI6MTY3Nzc3ODM3MH0.OiYgvxXsJVwDikQEt0bV55TOwSeg-_gLjPGZszg1DzQakndiju8rBdzFsSX-WAktFocum9tEta2rWIBJiHU0sNVhmyWT8iokk4SV36QiHjDU1Gx_Gz2uEvD4ewcbqtsAUSpWfuDYzJX6R61bnOpjjPcs61mRN6FxDJnNjy3_kiyY6A0RFUUOaSsLmuH8E9EIud00qqdgmqaqLtY_91DJ_ilPyI-I8z24G5ADFUy__QymNZy0J5P_aF0eSFJxyomE5lTSJ8BvPaylorF54eSjW9OGE6mo9fJR-q9Fm4W_jR9-UkTPkVLx3eCQexSP1HnvqkuN7ngRnjcPBrqCLe_5IA","timestamp":"2023-03-02 00:32:50"}
 {"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc2OTc4MTgsImV4cCI6MTY3Nzc4NDIxOH0.LSr7ZYZqpadvRY1vUSXltHgxSB6Ojl0Osi-0YkqWbTr9BqQgV-RA-fyIs6VJgqXIn1ybplPY46pAmgOP9in5_8GT-TA4d3l65RMCBaeknzHKp30y3YMW3SCTS25CqiEEio0N3g5hGzWRcHqp-qvtQP3FzLCnLSs1o1ObqW9YBCaZPUv2ttYg2NhU-FzieRUY7Ds_EOph0i1yFRvzgpSCnpEqsCSgDICAaCmp0hB6UjV6loFPwtWrHgfV7I84sebx6tjDyqi1pHitM24sHl9ojblfVO6nhDLypXasnuvzrnyAngO2Nxb5k0VySzKCI6YADmZojoFC55B6j350UKgkow","timestamp":"2023-03-02 02:10:18"}
 {"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc2OTgzMzAsImV4cCI6MTY3Nzc4NDczMH0.qP2AdBbHj4ENE5LIGE7Z0VLPQ-0TkSS0JdaQQiIPH0JlyomBlkDGQzM4mddfgUyeHfG5vMXkHZsHUjqZ2tVk0guBNG0gtTjOgNStX7Zqh5ZOQIPMrzVI46nMpfBh4oJRDUDqjW8VbN--S-IHPxEhqST6Z-8mblm8BpRYZkjYOVvYFZB0-BIL6Sna7SGHcHQccZDqcrOAemxwlXWwBzYRuICnvXEHYgZMkVG4GqufCaxTx3qYYJRGxnvxFY4YVJt_ppgYa2RdeAxyYyygo08ASZFzJkEoOcMAAucvlhwdXl8x31nimamb1LUPhyIo-6elrHBa_NQkp3vMBEWqGzrUJw","timestamp":"2023-03-02 02:18:50"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc3MDE5ODAsImV4cCI6MTY3Nzc4ODM4MH0.PMbyWZKFnouCeFrpZA_o7DPuOAB8jWkS4MB9j3o_cvWMnE-5Gk6583CIdSgKWLhkWz5fEkn8sc9CT1RZVHu2vaoZTzX33GoKaoVkIlYrZuOIX5MKnPJUPQk9pXgFsccusho27TIZL8ew5oIPzzmwJnJOD2_lh5BZGaEpOBEmzr4Pz-YIzyILXBYM7aGxQB1qQWuS1KEuqh49kbvkMhu6aormbt3OueC4RXpnJAdqlcgzywmAbR3F_0o3l-3Q64WT-qZQdn6eEremDpx7QXdSAUQGUL2FCSQFhX8FbMD5EVhIB1xT40zUFCiO8XMePwavKwVA-hOzh-SWbC20lBFkPA","timestamp":"2023-03-02 03:19:40"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 14:01:42"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 14:01:43"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 14:01:43"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc3NDA1NjUsImV4cCI6MTY3NzgyNjk2NX0.lL4nD-oPZy4tVVhSIB4fEckHj2weOXhSwsDVa_OezZmMzt63jgJgKLCatZuA652qBrCjevkjeDIiDUjAYONH-gDJpOI4rg471qPOF2JJS3jkFmmuxr-N-PLQ8WVD6E5yyj8nxL84YQwk9bCcVm_60A_LL8LyasLV9xP4O4X9SlLXkkeMs3OevDtxAPYQJRLcZOylnKcfkAQcyfpHUqIwEhiECwf7wdvieC3Ca4i5ydk305Keypa_cewokpn7I-N3SzpJEtj9RxnB-VmDyRm4VgGcNIuEmDY-MtU5iQcY2bdsK1AuTr2PrtC5vOVsGGfrqv6iL-ivEghFmN3fwILXJA","timestamp":"2023-03-02 14:02:45"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc3NDYxMDksImV4cCI6MTY3NzgzMjUwOX0.ibRwCu-6UCBX-g0OFK_h8i1Yc7CxC1dL9xC9aLOB1hHv2cwXv_0fGLGj-71VYPuVz2w3frz02XRAh0bcFJKlaHV_oyrDYkRaxlTtYtBTDsLAG_O1Oa_HkippGkcn1WwQbFwseG4g5maSbbH2hsvxbOPT_cY3OzCiweN-BoXiRJe2LbT9qwkPbTnGh48hdSyXzWRW1O6iDJ1h7IXVqFWHVVK9R80BFBGGnnL68s2XyaozRd9EzJtWJm7zqy7uAlJccznrJ7n3uJTzOcphDEMOM7WKnsjafh6Ftlemp24tZdMGuQbKFuXdX2xV7P1YkSeH2VXdzqIZyb0tieH94Y--Tw","timestamp":"2023-03-02 15:35:09"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 16:30:00"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 16:30:00"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 16:30:00"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 16:54:09"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 16:54:09"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 16:54:09"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc3NTA5OTgsImV4cCI6MTY3NzgzNzM5OH0.S1ebpsVcr7fPxWwVlVXQYk5uqCpEUjxtu-FWxKRJ8bTu4GjEK0lw1loRuIXlFp1CoAWuZ9jR-j652ilKoeNAoUraS6HYEe_ryok3yho46tz6v9twMrsaiVilEj1JsFc6EzYDf0dAkyDTZBLJsNU6O0ceqFXV84gPPJq3t7dDAz0DGKad6VbrG_x1NIiactbXhDh2pW5b3qlvdRVz4Km5v6FZvymammIDgxchxi6yFOetTwlY8X92oe9Pwc1nK3fWMr_HvWEz8CaZ0Oq65kCpsQRrU6jxygFdbrr8zn3boVMNtMM_4XhGxac3vyeZxSOc4I-oy0hY9zClVipfWyvj7A","timestamp":"2023-03-02 16:56:38"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:04:07"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:04:07"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:04:07"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:16:05"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:16:05"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:16:05"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:17:10"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:17:10"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:17:10"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:18:52"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:18:52"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:18:52"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc3NTYxOTcsImV4cCI6MTY3Nzg0MjU5N30.VOF64kFNxuL17HgiHRpKg6-xZImgZDdvl1XHfVjwlGGFu3uyOmtFr3QPe__dFZv5RUVd4targe3wG8SW7jdq-yRqkimjf7DSbawrIVc7vCdj7cjTdxKRC2Hp8mdV2jSTPzTazuI0Wz7nJsJAmizdD4uMjifbCKGw4zVqKW63zfHH385YRZTsktUQm8tFOOYsMTxabe4xhAyiaoiGYO1I1nf29x6_N7B_xrKKnr6MK3LtfyWLKOKz_hKyCpKgRIPfB50-0LcU86y5Y4Qtz_F_wPr9HjeVkQgdkj9wZBuXpHoHwi3MKsxFEZB1rc5bLIMwahQMsz1b92dvcaL4piShXQ","timestamp":"2023-03-02 18:23:17"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc3NTY0MDQsImV4cCI6MTY3Nzg0MjgwNH0.ihnAYD_rGMJbiLYZLjqVjCxPH3aFqrhqkJtLwJK7bd8M7LCvoOLDL_y8SzkbVGi7r_09j2MEDYhElA9DNNqa4w1NSthZ7g3uAKZ6Ydrr2YGJ8eyo0UMNz161MCvsz-wTpZY5nWuqFO4ATuwtH8Gdd2XV6mDI4JD0O4guzkyX6IT989qyEdI6G2QJB1vDUx5m1_Jj9MbrsExkvwAWW6mAmZuAHpiLbb6GJZMRHbD3pdkWPvtVlaktJ6Zd2iyhcfqNw1ltYYKkRd09ptuxb08atM3on2r7wZgMLVnmF-ewLXmx0vnYCGPnLKACkTRS8eirZBiEcASoaXUngGdAGSriSQ","timestamp":"2023-03-02 18:26:44"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:47:06"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:47:06"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:47:06"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:49:13"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:49:13"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:49:13"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:51:32"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:51:32"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:51:32"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:51:56"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:51:56"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:51:56"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:52:33"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:52:34"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:52:34"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:54:55"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:54:55"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:54:55"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:55:57"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:55:57"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:55:57"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:56:42"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:56:42"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:56:42"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:57:01"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:57:01"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:57:01"}
+{"level":"info","message":{"address":null,"birthday":"2023-02-21T00:00:00.000Z","chiefcomplaint":null,"consulationDate":null,"createdAt":"2023-02-21T10:14:54.000Z","fullName":"bbbbbbb","gender":"male","id":"5bb7195d-1c7b-4426-a9a4-ce835420e198","idPatientOfClinic":null,"idPatientOfDoctor":"fd79dd08-6854-47fc-8355-52d75f54db38","note":"dddfddf","phoneNumber":null,"updateByDoctor":null,"updatedAt":"2023-02-21T10:14:54.000Z"},"timestamp":"2023-03-02 18:57:04"}
+{"level":"info","message":{"address":null,"birthday":"2023-02-21T00:00:00.000Z","chiefcomplaint":null,"consulationDate":null,"createdAt":"2023-02-21T10:14:54.000Z","fullName":"bbbbbbb","gender":"male","id":"5bb7195d-1c7b-4426-a9a4-ce835420e198","idPatientOfClinic":null,"idPatientOfDoctor":"fd79dd08-6854-47fc-8355-52d75f54db38","note":"dddfddf","phoneNumber":null,"updateByDoctor":null,"updatedAt":"2023-02-21T10:14:54.000Z"},"timestamp":"2023-03-02 18:57:16"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:57:59"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:57:59"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:57:59"}
+{"level":"info","timestamp":"2023-03-02 18:58:24"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:58:38"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:58:38"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:58:38"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 18:59:59"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 18:59:59"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 18:59:59"}
+{"level":"info","message":{"createdAt":"2023-02-21T10:14:54.000Z","diagnose":null,"id":56,"idDiagnosisAndTreatment":"5bb7195d-1c7b-4426-a9a4-ce835420e198","prognosisAndNotes":null,"updatedAt":"2023-02-21T10:14:54.000Z"},"timestamp":"2023-03-02 19:00:03"}
+{"level":"info","message":{"createdAt":"2023-02-21T10:14:54.000Z","diagnose":null,"id":56,"idDiagnosisAndTreatment":"5bb7195d-1c7b-4426-a9a4-ce835420e198","prognosisAndNotes":null,"updatedAt":"2023-02-21T10:14:54.000Z"},"timestamp":"2023-03-02 19:00:47"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose cua benh nhan ds","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-01T08:14:57.000Z"},"timestamp":"2023-03-02 19:02:12"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose cua benh nhan ds","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-01T08:14:57.000Z"},"timestamp":"2023-03-02 19:02:43"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose cua benh nhan ds","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:02:43.000Z"},"timestamp":"2023-03-02 19:02:54"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose cua benh nhan ds","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:02:54.000Z"},"timestamp":"2023-03-02 19:05:03"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 19:06:28"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 19:06:28"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 19:06:28"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 19:07:23"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 19:07:24"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 19:07:24"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose cua benh nhan ds","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:05:03.000Z"},"timestamp":"2023-03-02 19:07:31"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc3NTg4NjYsImV4cCI6MTY3Nzg0NTI2Nn0.UvKPR5gJRXJXuPLKrlDFvmUtPlVAPimWKV6-DJuZznyoM1doIKT1nHGOe8A1frQQhD371jbPmajOhQIu586o9ZNQuUC_iVGKTDkmWEiBVDt15Zj8FE7q8FQsVHidJCoML7axRIYObfpg7ZoXxpjIBJA8GlF1yjqI-qrM4KXvBixPMrx1jYQ6dJwMj2juM8lDrCpGAWfMfdpPraim-23syT8JIrVMqwDwnWBWH87miSomhj4hJuov9BkrkUC9hBG-YBgq5fGsuaDsd8kiAVeECaSc9-hchJYricDsw8NU2F7RrQ8MT4uAO0amvMTg032cz-vVHuYPlnkQx_YQlFu4XQ","timestamp":"2023-03-02 19:07:46"}
+{"level":"info","message":{"createdAt":"2023-02-21T11:35:22.000Z","diagnose":null,"id":63,"idDiagnosisAndTreatment":"fe6ffd54-b64d-430a-9284-c5ef3b2df80f","prognosisAndNotes":null,"updatedAt":"2023-02-21T11:35:22.000Z"},"timestamp":"2023-03-02 19:08:06"}
+{"level":"info","message":{"createdAt":"2023-02-21T11:35:22.000Z","diagnose":null,"id":63,"idDiagnosisAndTreatment":"fe6ffd54-b64d-430a-9284-c5ef3b2df80f","prognosisAndNotes":null,"updatedAt":"2023-02-21T11:35:22.000Z"},"timestamp":"2023-03-02 19:08:32"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 19:10:29"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 19:10:29"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 19:10:29"}
+{"level":"info","message":{"createdAt":"2023-02-21T11:35:22.000Z","diagnose":"điều trị","id":63,"idDiagnosisAndTreatment":"fe6ffd54-b64d-430a-9284-c5ef3b2df80f","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:08:32.000Z"},"timestamp":"2023-03-02 19:11:03"}
+{"level":"info","message":{"createdAt":"2023-02-21T11:35:22.000Z","diagnose":"điều trị","id":63,"idDiagnosisAndTreatment":"fe6ffd54-b64d-430a-9284-c5ef3b2df80f","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:08:32.000Z"},"timestamp":"2023-03-02 19:11:24"}
+{"level":"info","message":{"createdAt":"2023-02-21T11:35:22.000Z","diagnose":"điều trị","id":63,"idDiagnosisAndTreatment":"fe6ffd54-b64d-430a-9284-c5ef3b2df80f","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:08:32.000Z"},"timestamp":"2023-03-02 19:11:59"}
+{"level":"info","message":{"createdAt":"2023-02-21T11:35:22.000Z","diagnose":"điều trị cho bệnh nhân","id":63,"idDiagnosisAndTreatment":"fe6ffd54-b64d-430a-9284-c5ef3b2df80f","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:11:59.000Z"},"timestamp":"2023-03-02 19:12:04"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc3NTkxMzgsImV4cCI6MTY3Nzg0NTUzOH0.JvVJfxMYJbLrBF4tc394vyHtVN-gVO-IFeCp62Kd3qO5O7gsUCKO_W_kfNlN_KBza0KraqlgUDn_5X2_qObhjnE5Bj1df_dJPintwqAKVX95OAFcWMITYBEBTF2gyk8Iftm2ve2fZrG_xaA0PyQZjmFe_JGVCRp4AN0T-mbo2k9HZhskEZQUQWGIJKsqWxn_mLAGyVY2LqwDimL1iemsxQsATlBJvKyGOTz88zCLf6t1PpTYrAeNSHcTHLAQbvdmszpFY4oazlo6DnLSZVrKuIRM6PuLyHbSwPv0JqCHSLBIIJNvFjpi8Vngf8jPvieiXcHgjf06h1MUpTYJAn6S8Q","timestamp":"2023-03-02 19:12:18"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 19:13:38"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 19:13:38"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 19:13:38"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-02 19:14:21"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-02 19:14:21"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-02 19:14:21"}
+{"level":"info","message":{"createdAt":"2023-02-21T11:35:22.000Z","diagnose":"điều trị cho bệnh nhân","id":63,"idDiagnosisAndTreatment":"fe6ffd54-b64d-430a-9284-c5ef3b2df80f","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:11:59.000Z"},"timestamp":"2023-03-02 19:14:58"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose cua benh nhan ds","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:05:03.000Z"},"timestamp":"2023-03-02 19:15:03"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose cua benh nhan ds","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:05:03.000Z"},"timestamp":"2023-03-02 19:15:15"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-02 19:15:33"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-02 19:15:37"}
+{"level":"info","message":{"createdAt":"2023-02-21T11:33:10.000Z","diagnose":null,"id":62,"idDiagnosisAndTreatment":"b85708af-d453-4662-b584-a30a235dac23","prognosisAndNotes":null,"updatedAt":"2023-02-21T11:33:10.000Z"},"timestamp":"2023-03-02 19:15:50"}
+{"level":"info","message":{"createdAt":"2023-02-21T11:33:10.000Z","diagnose":null,"id":62,"idDiagnosisAndTreatment":"b85708af-d453-4662-b584-a30a235dac23","prognosisAndNotes":null,"updatedAt":"2023-02-21T11:33:10.000Z"},"timestamp":"2023-03-02 19:15:59"}

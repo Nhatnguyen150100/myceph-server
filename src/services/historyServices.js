@@ -1,10 +1,12 @@
+import logger from "../config/winston"
+
 const db = require("../models")
 
 const historyServices = {
   getHistory: (idPatient) => {
     return new Promise(async (resolve,reject) => {
       try {
-        const history = await db.getHistory.findOne({
+        const history = await db.History.findOne({
           where: {
             idHistory: idPatient
           }
@@ -23,6 +25,7 @@ const historyServices = {
           })
         }
       } catch (error) {
+        logger.history.error(error);
         reject(error)
       }
     })
@@ -37,6 +40,7 @@ const historyServices = {
           otherMethodToEvaluate: data.otherMethodToEvaluate,
           respiration: data.respiration,
           habits: data.habits,
+          familyHistory: data.familyHistory,
           compliance: data.compliance
         }
         const updateNewHistory = await db.History.update(dataUpdate, {
@@ -45,17 +49,25 @@ const historyServices = {
           }
         })
         if(updateNewHistory){
+          const newHistory = await db.History.findOne({
+            where: {
+              idHistory: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'updated history successfully'
+            message: 'updated history successfully',
+            data: newHistory
           })
         }else{
           resolve({
             status: 202,
-            message: 'update history failed'
+            message: 'update history failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.history.error(error);
         reject(error);
       }
     })

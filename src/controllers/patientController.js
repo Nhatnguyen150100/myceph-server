@@ -1,3 +1,4 @@
+import logger from "../config/winston";
 import patientServices from "../services/patientServices";
 
 const patientController = {
@@ -8,19 +9,25 @@ const patientController = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
+      logger.patient.error(error);
+      res.status(500).json({
         message: 'server error'
       })
     }
   },
   getPatient: async (req, res) => {
     try {
+      const updateBydoctor = req.updateBydoctor;
+      const patient = req.patient;
+      const diagnose = req.diagnose;
+      const selectedPlan = req.selectedPlan;
       res.status(200).json({
         message: 'get patient information successfully',
-        data: req.patient
+        data: {...patient,...diagnose,...selectedPlan,...updateBydoctor}
       })
     } catch (error) {
-      res.status(400).json({
+      logger.patient.error(error);
+      res.status(500).json({
         message: 'server error'
       })
     }
@@ -34,7 +41,8 @@ const patientController = {
         count: count
       })
     } catch (error) {
-      res.status(400).json({
+      logger.patient.error(error);
+      res.status(500).json({
         message: 'server error'
       })
     }
@@ -48,7 +56,8 @@ const patientController = {
         count: count
       })
     } catch (error) {
-      res.status(400).json({
+      logger.patient.error(error);
+      res.status(500).json({
         message: 'server error'
       })
     }
@@ -62,7 +71,8 @@ const patientController = {
         count: count
       })
     } catch (error) {
-      res.status(400).json({
+      logger.patient.error(error);
+      res.status(500).json({
         message: 'server error'
       })
     }
@@ -76,7 +86,8 @@ const patientController = {
         count: count
       })
     } catch (error) {
-      res.status(400).json({
+      logger.patient.error(error);
+      res.status(500).json({
         message: 'server error'
       })
     }
@@ -88,19 +99,22 @@ const patientController = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
+      logger.patient.error(error);
+      res.status(500).json({
         message: 'server error'
       })
     }
   },
   updateInformationPatient: async (req, res) => {
     try {
-      const { status, message } = await patientServices.updateInformationPatient(req.params.id,req.body);
+      const { status, message, data } = await patientServices.updateInformationPatient(req.params.id,req.body);
       res.status(status).json({
-        message: message
+        message: message,
+        data: data
       })
     } catch (error) {
-      res.status(400).json({
+      logger.patient.error(error);
+      res.status(500).json({
         message: 'server error'
       })
     }

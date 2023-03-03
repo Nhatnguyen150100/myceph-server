@@ -1,3 +1,5 @@
+import logger from "../config/winston";
+
 const db = require("../models")
 const { Op } = require("sequelize");
 
@@ -299,23 +301,81 @@ const patientServices = {
           note: data.note,
           updateByDoctor: data.updateByDoctor
         }
+        if(data.diagnose) await db.DiagnosisAndTreatment.update({
+          diagnose: data.diagnose
+        },{
+          where: {
+            idDiagnosisAndTreatment: id
+          }
+        })
+        if(data.selectedPlan){
+          const isSelectedPlan = await db.TreatmentPlan.findOne({
+            where: {
+              idTreatmentPlan: id,
+              selected: true
+            }
+          })
+          if(isSelectedPlan === null) await db.TreatmentPlan.create({
+            idTreatmentPlan: id,
+            plan: data.selectedPlan,
+            selected: true
+          })
+          else await db.TreatmentPlan.update(
+            {
+              plan: data.selectedPlan
+            },
+            {
+              where: {
+                idTreatmentPlan: id,
+                selected: true
+              }
+            }
+          )
+        }
         const checkUpdatePatient = await db.Patient.update(dataUpdate,{
           where: {
             id: id
           }
         })
         if(checkUpdatePatient){
+          const patient = await db.Patient.findOne({
+            where: {
+              id: id
+            }
+          });
+          const getUpdateByDoctor = await db.Doctor.findOne({
+            attributes: [['fullName','fullNameDoctor'],'email'],
+            where: {
+              id: data.updateByDoctor
+            }
+          })
+          const diagnose = await db.DiagnosisAndTreatment.findOne({
+            attributes: ['diagnose'],
+            where: {
+              idDiagnosisAndTreatment: id
+            }
+          })
+          const selectedPlan = await db.TreatmentPlan.findOne({
+            attributes: ['plan'],
+            where: {
+              idTreatmentPlan: id,
+              selected: true
+            }
+          })
           resolve({
             status: 200,
-            message: 'update information patient successfully'
+            message: 'update information patient successfully',
+            data: {...patient,...diagnose,...selectedPlan,...getUpdateByDoctor}
           })
         }else{
+          logger.patient.error(checkUpdatePatient);
           resolve({
             status: 202,
             message: 'update information patient failed'
           })
         }
       } catch (error) {
+        logger.patient.error(error);
         reject(error);
       }
     })

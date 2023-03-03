@@ -39,6 +39,9 @@ module.exports = {
       habits: {
         type: Sequelize.STRING
       },
+      familyHistory: {
+        type: Sequelize.STRING
+      },
       compliance: {
         type: Sequelize.STRING
       },

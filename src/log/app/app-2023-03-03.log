@@ -1,0 +1,708 @@
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 00:12:29"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 00:12:29"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 00:12:29"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc3NzcxOTMsImV4cCI6MTY3Nzg2MzU5M30.VP-PIOd4ls5H_mrGaZSuksKgIQ7IHxlAJHgc2n55Wv3peV3QiWVzdUmUyyWgzreIEewp5ULdoMK_5SS6HncSckti97Y5GicznBQyj3AWI50ynWmWMHKGfB3bFojy1tAlH9Ajch5myyUpQVHiseYM40YZHnQck3LwuzY4CCB1ngh_7GgSOPhOzYX5kis2Id6L0DsUDZ8X4_GvFtUabszKc-4r-wEsAfh-bLk2Pse55HSMo1SNFvImuAaeA2QlXPm_IfMnk3779YWfCK_Wwvdcvue9Z2-IEX-asUgFSN5kQkNTBlVta3QQZnWcmgCgOZyE8fH4Yij1Alk4GcwvqOuOoQ","timestamp":"2023-03-03 00:13:13"}
+{"level":"info","message":{"createdAt":"2023-02-21T11:35:22.000Z","diagnose":"điều trị cho bệnh nhân","id":63,"idDiagnosisAndTreatment":"fe6ffd54-b64d-430a-9284-c5ef3b2df80f","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:11:59.000Z"},"timestamp":"2023-03-03 00:13:53"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 00:15:13"}
+{"level":"info","message":{"createdAt":"2023-02-21T04:13:36.000Z","diagnose":null,"id":40,"idDiagnosisAndTreatment":"d6d1ba64-7df6-4a9b-bdbb-a4f7455d9aab","prognosisAndNotes":null,"updatedAt":"2023-02-21T04:13:36.000Z"},"timestamp":"2023-03-03 00:15:20"}
+{"level":"info","message":{"createdAt":"2023-02-21T04:13:36.000Z","diagnose":null,"id":40,"idDiagnosisAndTreatment":"d6d1ba64-7df6-4a9b-bdbb-a4f7455d9aab","prognosisAndNotes":null,"updatedAt":"2023-02-21T04:13:36.000Z"},"timestamp":"2023-03-03 00:15:31"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 14:50:28"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 14:50:29"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 14:50:29"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 14:52:25"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 14:52:25"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 14:52:25"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 14:55:12"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 14:55:12"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 14:55:12"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 14:55:35"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 14:55:35"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 14:55:35"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzAxNDYsImV4cCI6MTY3NzkxNjU0Nn0.CYefJwGmQKrkDnVb4j_5XtGP4DTEN8UiFmpEgZUYNBtfuzPEPaavxc6PIhPBumBygJbDHEz4_334mVT-FgEwD9dg7PFJ5_7FPiGon_UcyLtVT6kHECZB7o4chj_PxOGoxmQjIFJmZEdvvGjc8QLYsBavAlRGPgKb4Pmuw0JdGYYltc66CEsUCuG-0E3UxVzS8q1MbkVlD5yEr8Hk-Yr8KgURPcxnuUUNfH-wrTTYrCCXt4Bm72moYZrkkQKQzZ9iX0EGxCoSh9af_5rex3ElGivI7yFLh4drgEKfUJYL89IPqbZeYAtToI5eaqRcA5aUVGiU3W0jmL8mQRjqzYxl8w","timestamp":"2023-03-03 14:55:46"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 14:56:52"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 14:59:15"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 14:59:15"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 14:59:15"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 14:59:21"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 14:59:21"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 14:59:21"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 14:59:24"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 14:59:35"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:01:58"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:01:58"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:01:58"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 15:02:00"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:02:44"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:02:44"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:02:44"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:03:36"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:03:37"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:03:37"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 15:03:41"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:05:13"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:05:13"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:05:13"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 15:05:14"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:06:22"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:06:22"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:06:22"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 15:06:28"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:07:58"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:07:59"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:07:59"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:13:38"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:13:39"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:13:39"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 15:13:42"}
+{"level":"info","message":{"avatar":"https://res.cloudinary.com/dvzgiho5t/image/upload/v1676890383/Myceph/avatar/ohetyhhqbrcorprvlpj3.png_Myceph/avatar/ohetyhhqbrcorprvlpj3","birthday":"2000-01-15T00:00:00.000Z","createdAt":"2023-02-15T12:33:18.000Z","description":"Description dfsafsd vcxavxvsdv","diploma":"Diploma ìds lfsdhn dsa","email":"nhat@gmail.com","fullName":"Nguyễn Xuân Nhất","gender":"male","id":"fd79dd08-6854-47fc-8355-52d75f54db38","password":"$2b$10$mLpdXMdzE2W8u0mfyRXtUejad7ai0qjA0G.V4L4J6tE/UG8iJXx0e","phoneNumber":"0866441507","position":"Position","speciality":"Speciality sdc","updatedAt":"2023-03-01T04:56:46.000Z"},"timestamp":"2023-03-03 15:13:42"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:15:42"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:15:42"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:15:42"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:15:56"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:15:56"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:15:56"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 15:16:03"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:16:29"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:16:29"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:16:29"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 15:16:33"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:18:01"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:18:01"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:18:01"}
+{"level":"info","message":{"createdAt":"2023-02-21T06:18:01.000Z","diagnose":"diagnose của bệnh nhân mẫu","id":48,"idDiagnosisAndTreatment":"29493e8f-1726-4e4b-b051-df384086305c","prognosisAndNotes":null,"updatedAt":"2023-03-02T12:15:15.000Z"},"timestamp":"2023-03-03 15:18:04"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:19:56"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:19:56"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:19:56"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:23:15"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:23:16"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:23:16"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:23:45"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:23:45"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:23:45"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:23:48"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:24:46"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzE5MTEsImV4cCI6MTY3NzkxODMxMX0.PaoUfPpv1dBM39CiWmXNK1C-WOwnvGFxuZpY7sXsbwOcGUGDhefkUM6gbiKABUO91IAfSJB5znPFID-Imvw2tHG_GhlUzT8Dl2HmAm65guXt0x4lpFsezmc5zugzHziWP5Pker8Dl0-FZ0bqPLAGNMVTWUbT9Z19Zk-MID-M3-LjkJcF3nIww_kUNbZx5-2WhYkKdMlSV3a81vKDF7ilKBA_WPItdb80H9kDvO5YTT85fq0bqyG-mc0HjZA3N_1Qpnv54SuzC-rb-XBfQKXkh92G-9SZKToa4MUHH-YAmk77i_hxqlUtsfjIgtCSIzWkIDzwmGMyyOZ9mKomhrEM2A","timestamp":"2023-03-03 15:25:11"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 15:25:29"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:27:53"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzIxMjEsImV4cCI6MTY3NzkxODUyMX0.dPZGy-QZw7kWjhr4XJTpWl6SLys7Lvijv3X3oiShtX69pRHLDN_0ClokXnxgaz85GZ9sgvh21Q48Wqjjh2afXwgh03aQmJWqZ-wCBqYZgpuhjQ-O5DCKB4h_ja2MglYQYKQ2vWE6MAvHue7MbhPjPebUf5wBmVb69WbREwUUdnMrw6xcefwwmCdX6Ne_e6p48JCYYVTESkK7Zipzn919H4G9398ksDIMzMbEct0pwp_V0K4oaFfFWIkLDWe8-7maX79LQwWopAsVnjY6-_jiXp6gY2GIPnJjOz2hNoaKrLQzfKICPuhTGx8UenftI9khGRJx9e2YfLEoxrfkDwnwWQ","timestamp":"2023-03-03 15:28:41"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 15:30:11"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 15:30:33"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:30:46"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:31:00"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:31:33"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:33:02"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:33:02"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:33:02"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:33:12"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:35:03"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:35:03"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:35:03"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:35:15"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:37:33"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:37:33"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:37:33"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:37:38"}
+{"level":"info","message":"29493e8f-1726-4e4b-b051-df384086305c","timestamp":"2023-03-03 15:38:14"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:38:54"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:38:54"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:38:54"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:39:44"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:39:45"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:39:45"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:39:49"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:40:51"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:42:19"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:42:58"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:42:58"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:42:58"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:50:27"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:50:27"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:50:27"}
+{"level":"info","message":{"createdAt":"2023-03-02T12:02:43.000Z","id":"90ef8512-40f1-42cd-8d97-0618848385dc","idTreatmentPlan":"29493e8f-1726-4e4b-b051-df384086305c","plan":null,"selected":1,"updatedAt":"2023-03-02T12:02:43.000Z"},"timestamp":"2023-03-03 15:50:33"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:51:12"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:51:12"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:51:12"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:51:42"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:51:42"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:51:42"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:52:41"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:52:41"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:52:41"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:54:17"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:54:18"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:54:18"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:54:24"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:54:24"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:54:24"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 15:56:51"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 15:56:51"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 15:56:51"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:57:49"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:59:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 15:59:33"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 16:00:56"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 16:00:56"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 16:00:56"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 16:01:04"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 16:01:04"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 16:01:04"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:01:07"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 16:01:38"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 16:01:38"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 16:01:38"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 16:01:44"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 16:01:44"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 16:01:44"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:01:46"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:06:52"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:10"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:11"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:12"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:13"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:14"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:15"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:15"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:15"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:15"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:15"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:15"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:15"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:15"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:15"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:15"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:15"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:16"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:16"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:16"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:16"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:16"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:16"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:16"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:16"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:16"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:16"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:17"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:18"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:19"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:20"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:21"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:23"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:24"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:25"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:25"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:25"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:25"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:25"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:25"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:25"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:25"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:25"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:26"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:26"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:27"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:09:53"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:10:05"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:10:25"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:10:55"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:11:22"}
+{"level":"info","message":{"diagnose":"diagnose của bệnh nhân mẫu"},"timestamp":"2023-03-03 16:11:59"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:13:24"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:13:57"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:14:15"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:14:30"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:14:49"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFlNDM0MDIzLTk2MWQtNGU5Ni1iOWZlLTNkMjIzOGRjNmFmYiIsImVtYWlsIjoibmhhdDJAZ21haWwuY29tIiwiaWF0IjoxNjc3ODM0OTAxLCJleHAiOjE2Nzc5MjEzMDF9.Ux0UjChcqd31mZoztvvhm9hIENV4c7BeoP0YbUIEibsIVYXjCxL6ei8hsoXL5CqkqTnrHx_0X556E9giO7rv8olyP4YhixvSY7Y55PY8U7kL_r8IovrHJFSh79n2eUs1ENoFjaWBn4nXQKkQzfGqaMKHxY5amY1yUNLIjrTOZ4taJP_NPVqT6ff0bXx8on57w4Ot83YtwMtYnOTwh7m8EPkVpAI9GxgE_gRUMDOChLM-sP29OHIY4_KggUoKFA5b0xKgqEykmvwLvJt4YAP4-tNyuX2JFBShbBW6X5PVIKVbxJX6WHtpURFmq4G42E6FvCtqu7W4lD3hRkw1kia2Ig","timestamp":"2023-03-03 16:15:01"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzQ5MTMsImV4cCI6MTY3NzkyMTMxM30.KSsvQgWQRxXR95sQ8ZDEnO6qIpiHRc0SJ6uiyptP-jMNjpdg-zciXZOZOG8Q-JvYh_kkBnlGiphdV_j3I8DO9XJ4zLxxAv5YGlyKbZTaLQoZNjacDDOt8o1FCodqJG_anf2escuhnW_-oNe8_h7xUVzY9a2HH_59NTGR17M7F0c-B3N5BvvSCTb_1pCK_pzPhgD91P6HZ_mDuA6LFUBo95KIsO-myjgpqC_tlNXEKOJKOu1moPd_QQLkuiUx1-4e-qW-QJl-T0qoULbJz-ksOwjcs9G36n01We1xzXhMYBV1qyHlRCejJsicAjD4NbtT5xcnAbwbhLymHXfcslnEGg","timestamp":"2023-03-03 16:15:13"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:15:17"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:16:45"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:17:44"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzUwNzMsImV4cCI6MTY3NzkyMTQ3M30.fhe25EZOmXU7lgBYWcIcDsoZG2GL5EMe3FFt5iO4RWrgRr4z3fRCRtUtxzLvDr7XqKfAbfm_izL7odTAkByiZCTwedIV2BfXwnzkFXPV4G5x6T96eM6pKmB0NvKPKmCtUEW2CpUScSt0sGOX6mVeRdeT2dLWvOUYryL7MvvjsWpJasBSK3ZM5jtHF4dnwRGOd1JMxJbwDluSTISa2c-frlWMnHFTOJBls8ftpIwWcX4cygBw3Fd2EWPU6k42aYtd8y2i12nx-J4CicOe8krYuzBykdm9T4Q4jAWav_f4JD1o3C-X6nzSPLzK_Ih7twSd8VBNI4K8QZCeL5T9Z1S12g","timestamp":"2023-03-03 16:17:53"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:17:56"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:22:06"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:22:10"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:23:56"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:25:23"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:26:36"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:27:26"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:27:28"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:27:38"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzU2NjUsImV4cCI6MTY3NzkyMjA2NX0.WHOkTvEtMwOhwbTjyfdXzCoSAUsscDvgY3M-g-etQyNtbLmRBj6qcdKokQRuAZHoxToaLfjNbttNWIE77bcd7ucJVJr4vxPgMVL26HEOIIYyuteh2yik0zb5LevP39z00sQChDnuqwbhSluYbwsmNhBJ-p8WpdnRU7TfLTKbbYx3iDsJzQQCK4Ktaa9MvxMraK0aa1Jq6EzsPRznJWDkA-INIoVS-NcpuhO6yCy88EGqYaP1Hta66Hqfaf28nd7R9-ZHXZCEkVuTrZebQy_5t4n7r3D3RFVHT4o50DpHOSIZY2TCNy_s5KqqAl5sKZRAjyaXRSqagrjcb99sZBK79g","timestamp":"2023-03-03 16:27:45"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzU2ODAsImV4cCI6MTY3NzkyMjA4MH0.oZb4NVYPTBca2ochrF5lnj5QiFv3poZ7p-Pg-STlje-G0Kev8diSqre-3GlNf787__YR9GcZKkUpoVXu0aI2GHPk475hsizsUjld7NxnlSsQZyhU-gNmPcsGS8irhQ8hL78nKmX8gCQeATU6j4pDp8eUo4e7Fyv0w8OIgQHnMcx7lpphNVQQISuSyd8k34Bcw8DRecIQXv7NCkfMCSrPK2XKE8q0UEhbQFoOYCanQD_KSBwKoX8ZW6n5Kn5H7dAD6967LXhromUehOtR19Jo_ug3_q5lpJFZ-cMySOf6WNvIRTl1e4olgm6ed2mDYOzYHp1vTww25OkDqzA-1QSjtA","timestamp":"2023-03-03 16:28:00"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:28:07"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzU3NDgsImV4cCI6MTY3NzkyMjE0OH0.AlOhwPeYa37hkOx-TBJ_HMqxN5nWlXEzl2O7c7V4D_kDMj7yXjyomEgoDmEjBRmCundXIF2mBxMiqtvQTTO1Oa-6CES703bfjKeHypN3Gg7mQVcW2qD7aoeiy7SiAjE6QH0D9tR3UWRda33sQyOcgPsyGuHkzGVojhtUsOwRjd4QdKIHYeeUCXt-J9RD_GMQ2naCEiloubsJS4xqDUxqrtj_UFgi_p5u1GPB3Up_qNIpM6LR6frqJBu4rXmJvE-JmEewciC-J-KYBJ6GDqb68EI2ZO-Ajq4xUvGl2UEPf1xDlES0pM82GrnTWYl10P08FzjsDf3zyanYyvXWailHHw","timestamp":"2023-03-03 16:29:08"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:29:12"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:29:48"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzU3OTUsImV4cCI6MTY3NzkyMjE5NX0.ABsglSwQ4hJnOzoWt7oPYTVTmp2wIYgeJJm77ZLyUPwZgiqF3FghO6INOe2gQ4daiQeNK30kn0c1Qbh924JM_v7TXNekMcszuXgDXsdkwuLuZUhMKoDWN4b08VHhh-fmDb71fhkSYg2Fom2OO7rEls24VDGmAEb8sa29YHM913ViHb4CM2ioyi5CXZrK0OM27jorOMXwuuLr-bX6x0uD4tQUvIlFEB8FVS_EsS8XrdEW6kcsQyjVyUA13EcTwSp_M79xzmS7_9-IDF5dZYAKfOrdZE9K4p_7FdH6Wy-87v2VGBsc8RP6Hml4wSiGQi_e88bPMYAmnfFzBnhTqmG0Qg","timestamp":"2023-03-03 16:29:55"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzU4MTgsImV4cCI6MTY3NzkyMjIxOH0.Qnu9ttDWZw0CGz2cEmnJ98wNErPaKFXUbmWWXoXfqigVsy1y27SfoHxLm4mjbY7G5GT84_OZY9yF7gpwsDnPP3DqOhaP5Z23k5oALKUelgG3J9LN936_IlNSxOljU8SaS7P-_fgD5DPdZDCFfGrLCComEWaj9LlJYIF1cOpivA28wsQA23p1YU0BjylywMsnDQq9Iegp6TLc1CVB22tQ0_B-Ry5Vm5VGP_bc1SUjFCS0kWbR5t8wNuq5CHtK94Tturq6_9jWNZSzcs401syCqZSxlv6WId-44QXqC6wtFGEWJTtYYJ6ysbLGMNxDDH8_Udi_Vf0yUea2ocMAnv0uiA","timestamp":"2023-03-03 16:30:18"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:30:45"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzU5MTEsImV4cCI6MTY3NzkyMjMxMX0.mJW5_iTWU3fyqiivORui7Y3IpNOopu1qsjPOt9YkrCSiPJcg9DewqeYgNgrOKU3KpDZ_n57q8u3_xu6TZA5_QZkGbvWdB9jIBKv87FOjOjAVyAjNQ3lDQjcjO5CPK3Wl5mUs1o-zIuN-1EGS1qQOBe4bitc5uUHngwcnlInsm6CBQu1fZ_XO1n2IuDasu2o5I-_1SIEVhfZaT8IeQiEqdI2w6uH5vcvmM3vvzOZvKeuNGT_pjnd_9Mh18KmLMh2-RoJ9k32bk7-zJ34qBw9UNtiEijpRW47y6CZY2VszDcGqCt5iof_VqNZJK24lSecHBrKDkHFMfyJFyXNbOB2kGg","timestamp":"2023-03-03 16:31:51"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:31:54"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:32:19"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:34:21"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:37:21"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:37:36"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:37:40"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:38:46"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:38:58"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:39:54"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:40:03"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:40:37"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:41:01"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:41:15"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:41:53"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:42:08"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:42:18"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:42:46"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:44:27"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:44:32"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:44:45"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:45:14"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:45:30"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:45:56"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:46:12"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:46:35"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:47:05"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:47:24"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:48:23"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:49:43"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFlNDM0MDIzLTk2MWQtNGU5Ni1iOWZlLTNkMjIzOGRjNmFmYiIsImVtYWlsIjoibmhhdDJAZ21haWwuY29tIiwiaWF0IjoxNjc3ODM3MDIxLCJleHAiOjE2Nzc5MjM0MjF9.HAZJ1l_a3qSv4VohLMHXW0y9y4skGwqibgoh2IBDv2qKAnZkHir9Sg3hlDeC9UryYA3aoQmSqPOzWU44F343PQqKfdGMiBlcHJ-f0GFhYl5nIA_MFCjcxm86wHb44NC9K3-URf-7-Wl5ON9GO1NPQ1s-jHyf1tsfrUanXfnCe9gEWEO9BZURBkPoCNdE0CqT9w5HtvexrPRvCeT_-C0tLwMmqAvNnAYADqgzUnP36NHD_LMkIVwC1LRXhyu9beTIC2oMjaqVk5IJiC1cRw7w4GWUIr8hyX1qNLU7m6a22FG1QBGljt-G-ZI6rZB9HS9DQc9qMeK-AVw4q223B1l5ZA","timestamp":"2023-03-03 16:50:21"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:50:40"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4MzcwODgsImV4cCI6MTY3NzkyMzQ4OH0.XHJxpLP4Wwix4ojSRaP5Z0wtpMjsfo-VeI_x_LL7ae7gXQHMrmMlcJOK4KNirBbkkeRuDySKRm-ephau-7kN_pOoZKjKjf5UORl2iN_dqHCqqEbE1YKhD2QcJhxOmi8s2FxrXMQTfumkezHylvW4eBP-5sn8pLLyu9ZuebYOomvLkT8nw5ckT0Bd0drLoVzW7e4X3tLz1ntQLs-8t0vNjcbAVn2wZyP_3VOYMeT_7gOvOnpYgGX102GvkocvvdxoLOoMQoLDzSKKmhzFqlrcGXw8iwgZt8kWoLbtaJkltjv4Z1sMz4JTaUwqrWdAtQ8J-TScUVHN-9JfYe2V9tphTg","timestamp":"2023-03-03 16:51:28"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:51:33"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:51:54"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:52:03"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:53:16"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:53:20"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:53:24"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:53:53"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 16:54:10"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 17:11:33"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 17:11:55"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 17:25:24"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 17:25:37"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 17:26:08"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 17:30:11"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 17:32:59"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 17:37:03"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 17:37:11"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 17:37:15"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 17:38:52"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 17:39:35"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-03 17:39:40"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 17:42:05"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 17:42:07"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 17:42:08"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:01:59"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:24:17"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:24:18"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:24:23"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:24:46"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:24:50"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:30:10"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:30:23"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:30:24"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:41:36"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:42:53"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:44:18"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:44:28"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:44:49"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:45:06"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:58:44"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:58:55"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 18:59:35"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 19:00:21"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 19:01:40"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 19:03:01"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 19:03:11"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 19:04:16"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 19:05:25"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 19:05:45"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:30:52"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:32:22"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:32:39"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:32:40"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:32:53"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:33:02"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:33:57"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:35:38"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:36:49"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:36:58"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:37:15"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 20:37:25"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 22:03:05"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 22:03:05"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 22:03:05"}
+{"level":"info","message":"eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZkNzlkZDA4LTY4NTQtNDdmYy04MzU1LTUyZDc1ZjU0ZGIzOCIsImVtYWlsIjoibmhhdEBnbWFpbC5jb20iLCJpYXQiOjE2Nzc4NTY5MDUsImV4cCI6MTY3Nzk0MzMwNX0.OnxpyOohdtiZsTFXa-i6yPDN8jHgNoqoihGmvnQNSIpss94qDDv0gyWE9FQs9mN8QiL6yiz_c7sZ1vBO9K2o6bRCBos8faPqJV3_qQYC7EPWC8wqetEC3RiC-zbVa4me7AmaNdBvPt-ZaX0kkQSUjAfr3KpnPNrA8_cHHfXoTgx7sqWXFKrUq3HDIblDuvc8IuRsvvZdVNl7J7OSCKq6QMdSII_pkaPZpRQ4XDCd0GhDOIrYK3j42CmR1pzN7jgxiyHNSdr9UpCco9Zo9qNFljobmF_wsxHboM6T4VcfgYubPW82sHPlb6KW9u_7q6F168ovj6xprN5n6MJdfFJR-w","timestamp":"2023-03-03 22:21:45"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 22:24:53"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 22:25:13"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 22:26:02"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 23:14:43"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 23:14:43"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 23:14:43"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 23:15:11"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 23:15:11"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 23:15:11"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 23:18:17"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 23:18:17"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 23:18:17"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 23:19:06"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 23:19:06"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 23:19:06"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 23:57:01"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 23:57:07"}
+{"level":"info","message":{"diagnose":"điều trị cho bệnh nhân"},"timestamp":"2023-03-03 23:57:35"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-03 23:59:42"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-03 23:59:42"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-03 23:59:42"}
