@@ -1,3 +1,5 @@
+import logger from "../config/winston"
+
 const db = require("../models")
 
 const intraoralServices = {
@@ -23,6 +25,7 @@ const intraoralServices = {
           })
         }
       } catch (error) {
+        logger.intraoral.error(error);
         reject(error)
       }
     })
@@ -51,6 +54,7 @@ const intraoralServices = {
           posteriorLeft: data.posteriorLeft,
           upperMidline: data.upperMidline,
           lowerMidline: data.lowerMidline,
+          deviate: data.deviate,
           crCoDiscrepancy: data.crCoDiscrepancy,
           maximumMouthOpening: data.maximumMouthOpening,
           guidanceOnProtrusion: data.guidanceOnProtrusion,
@@ -60,23 +64,31 @@ const intraoralServices = {
           swallowingPattern: data.swallowingPattern,
           historyOfTMD: data.historyOfTMD
         }
-        const intraoralUpdate = await db.Intraoral.update(dataUpdate,{
+        const intraoralUpdate = await db.IntraOral.update(dataUpdate,{
           where: {
-            idIntraOral: idPatient
+            idIntraoral: idPatient
           }
         })
         if(intraoralUpdate){
+          const newIntraoral = await db.IntraOral.findOne({
+            where: {
+              idIntraOral: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'update intra-oral successfully'
+            message: 'update intra-oral successfully',
+            data: newIntraoral
           })
         }else{
           resolve({
             status: 202,
-            message: 'update intra-oral failed'
+            message: 'update intra-oral failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.intraoral.error(error);
         reject(error);
       }
     })

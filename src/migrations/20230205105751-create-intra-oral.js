@@ -81,6 +81,9 @@ module.exports = {
       lowerMidline: {
         type: Sequelize.STRING
       },
+      deviate: {
+        type: Sequelize.STRING
+      },
       crCoDiscrepancy: {
         type: Sequelize.STRING
       },

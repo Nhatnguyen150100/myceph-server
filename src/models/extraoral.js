@@ -32,7 +32,8 @@ module.exports = (sequelize, DataTypes) => {
     obliqueAnalysis: DataTypes.STRING,
     teethDisplay: DataTypes.STRING,
     gingivalDisplayLevel: DataTypes.STRING,
-    incisalDisplay: DataTypes.STRING,
+    incisalDisplayMaxillary: DataTypes.STRING,
+    incisalDisplayMandibular: DataTypes.STRING,
     smileArc: DataTypes.STRING,
     restPositionIncisalDisplay: DataTypes.STRING
   }, {
