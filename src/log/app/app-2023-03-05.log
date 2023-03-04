@@ -69,3 +69,6 @@
 {"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-05 01:32:58"}
 {"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-05 01:32:58"}
 {"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-05 01:32:58"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-05 01:33:21"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-05 01:33:21"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-05 01:33:21"}
