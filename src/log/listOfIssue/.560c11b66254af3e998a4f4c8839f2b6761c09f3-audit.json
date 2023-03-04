@@ -29,6 +29,14 @@
             "date": 1677862834558,
             "name": "src\\log\\listOfIssue\\listOfIssue-2023-03-04.log",
             "hash": "fbc45008bfba622e905ed0a00647118c92088a097ee6922efb19ef195a950a1a"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1677950842015,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-03-05.log",
+            "hash": "ed1b2cbf98bb9f2ee9078a22bc230664bb675634e775004d0957b00144ec986c"
 >>>>>>> origin/master
         }
     ],

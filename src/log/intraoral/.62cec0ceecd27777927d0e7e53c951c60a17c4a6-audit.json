@@ -29,6 +29,14 @@
             "date": 1677862834554,
             "name": "src\\log\\intraoral\\intraoral-2023-03-04.log",
             "hash": "6badce83170006c62a4509163d0ff0a29e94b8e72ddd209ab55d5faf48144d88"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1677950842009,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-05.log",
+            "hash": "4e53d21efb1b5fd9275ad94d3407f7e6ffbe5ef718d23421443bc95cb90056a9"
 >>>>>>> origin/master
         }
     ],

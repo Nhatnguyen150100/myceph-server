@@ -69,7 +69,10 @@ module.exports = {
       gingivalDisplayLevel: {
         type: Sequelize.STRING
       },
-      incisalDisplay: {
+      incisalDisplayMaxillary: {
+        type: Sequelize.STRING
+      },
+      incisalDisplayMandibular: {
         type: Sequelize.STRING
       },
       smileArc: {

@@ -1,3 +1,5 @@
+import logger from "../config/winston"
+
 const db = require("../models")
 
 const extraoralServices = {
@@ -9,6 +11,7 @@ const extraoralServices = {
             idExtraOral:idPatient
           }
         })
+        delete extraoral.idExtraOral
         if(extraoral){
           resolve({
             status: 200,
@@ -19,10 +22,11 @@ const extraoralServices = {
           resolve({
             status: 202,
             message: 'get extra-oral failed',
-            data: {}
+            data: null
           })
         }
       } catch (error) {
+        logger.extraoral.error(error);
         reject(error)
       }
     })
@@ -47,7 +51,8 @@ const extraoralServices = {
           obliqueAnalysis: data.obliqueAnalysis,
           teethDisplay: data.teethDisplay,
           gingivalDisplayLevel: data.gingivalDisplayLevel,
-          incisalDisplay: data.incisalDisplay,
+          incisalDisplayMaxillary: data.incisalDisplayMaxillary,
+          incisalDisplayMandibular: data.incisalDisplayMandibular,
           smileArc: data.smileArc,
           restPositionIncisalDisplay: data.restPositionIncisalDisplay
         }
@@ -57,17 +62,25 @@ const extraoralServices = {
           }
         })
         if(extraoralUpdate){
+          const newExtraOral = await db.ExtraOral.findOne({
+            where: {
+              idExtraOral: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'update extra-oral successfully'
+            message: 'update extra-oral successfully',
+            data: newExtraOral
           })
         }else{
           resolve({
             status: 202,
-            message: 'update extra-oral failed'
+            message: 'update extra-oral failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.extraoral.error(error);
         reject(error);
       }
     })

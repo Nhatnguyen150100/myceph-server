@@ -1,3 +1,4 @@
+import logger from "../config/winston";
 import patientServices from "../services/patientServices";
 
 const { default: intraoralServices } = require("../services/intraoralServices")
@@ -11,14 +12,15 @@ const intraoralControllers = {
         data: data
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
+      logger.intraoral.error(error);
+      res.status(500).json({
+        message: 'server error'
       })
     }
   },
   updateIntraoral: async (req,res) => {
     try {
-      const { status, message } = await intraoralServices.updateIntraoral(req.params.id,req.body);
+      const { status, message, data } = await intraoralServices.updateIntraoral(req.params.id,req.body);
       patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
         res.status(status).json({
           message: message,
@@ -26,8 +28,9 @@ const intraoralControllers = {
         })
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
+      logger.intraoral.error(error);
+      res.status(500).json({
+        message: 'server error'
       })
     }
   }

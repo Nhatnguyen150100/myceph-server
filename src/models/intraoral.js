@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     posteriorLeft: DataTypes.STRING,
     upperMidline: DataTypes.STRING,
     lowerMidline: DataTypes.STRING,
+    deviate: DataTypes.STRING,
     crCoDiscrepancy: DataTypes.STRING,
     maximumMouthOpening: DataTypes.INTEGER,
     guidanceOnProtrusion: DataTypes.STRING,

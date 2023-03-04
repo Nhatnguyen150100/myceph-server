@@ -1,5 +1,6 @@
 import logger from "../../config/winston";
 import db from "../../models";
+import useragent from 'useragent';
 
 const { default: authServices } = require("../../services/authServices");
 const { default: tokenController } = require("../token/tokenController");
@@ -19,13 +20,16 @@ const authControllers = {
       const accessToken = tokenController.generateAccessToken(data);
       const refreshToken = tokenController.generateRefreshToken(data);
       logger.app.info(refreshToken)
+      const userAgentString = req.headers['user-agent'];
+      const user = useragent.parse(userAgentString);
       await db.RefreshToken.create({
         token: refreshToken,
         idDoctor: data.id,
-        nameDevice: 'lap top',
-        ipOfDevice: 'localhost',
+        nameDevice: user.toString(),
+        ipOfDevice: req.ip,
         isActive: true
       });
+      logger.app.info(req.ip);
       res.status(200).json({
         message: message,
         data: {

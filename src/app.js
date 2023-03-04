@@ -8,7 +8,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 import logger from './config/winston';
 import morgan from 'morgan';
-// import session from 'express-session';
+import helmet from 'helmet';
+import rateLimit from "express-rate-limit";
 
 import connectDB from './config/connectDB';
 import clinicRouter from './routes/clinicRoutes';
@@ -24,7 +25,6 @@ import listOfIssueRouter from './routes/listOfIssueRouters';
 import treatmentPlanRouter from './routes/treatmentPlanRouters';
 import treatmentHistoryRouter from './routes/treatmentHistoryRouters';
 import sharePatientRouters from './routes/sharePatientRouters';
-import passportJS from './controllers/token/passportJS';
 
 const app = express();
 
@@ -33,6 +33,15 @@ app.use(
     origin: process.env.BASE_URL_CLIENT
   })
 )
+
+app.use(helmet());
+const limiter = rateLimit({
+  windowMs: 5 * 60 * 1000, // 5 minutes
+  max: 500, // limit each IP to 1000 requests per windowMs
+  message: "Too many requests from this IP, please try again in 5 minutes"
+});
+
+app.use(limiter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -74,7 +83,9 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
+  if (err instanceof RateLimitError) {
+    res.status(429).send(err.message);
+  }
   // render the error page
   res.status(err.status || 500);
   res.render('error');

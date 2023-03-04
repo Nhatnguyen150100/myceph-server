@@ -29,6 +29,14 @@
             "date": 1677862834535,
             "name": "src\\log\\patient\\patient-2023-03-04.log",
             "hash": "e3eca6a21d07075abf0f1d15050c98f5458851d00121ddcfe39b70b5421119b6"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1677950841874,
+            "name": "src\\log\\patient\\patient-2023-03-05.log",
+            "hash": "d1a48afeddc485d4feac4cf5f5e01cdfc24b0ab77876c05f9471ac0a1f1d9a17"
 >>>>>>> origin/master
         }
     ],

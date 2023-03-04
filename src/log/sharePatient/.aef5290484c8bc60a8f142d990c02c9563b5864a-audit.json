@@ -29,6 +29,14 @@
             "date": 1677862834563,
             "name": "src\\log\\sharePatient\\sharePatient-2023-03-04.log",
             "hash": "e6b1b3a9e4da20647d7fd94c314039043dbf32f26ae4290ef3f3aaf5bef6949d"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1677950842022,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-03-05.log",
+            "hash": "106d68ed87cc740c81d60aa7fe15749cc319d5dec31bbe580fb9685e574bd2cc"
 >>>>>>> origin/master
         }
     ],

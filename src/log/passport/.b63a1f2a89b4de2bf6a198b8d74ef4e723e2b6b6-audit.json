@@ -29,6 +29,14 @@
             "date": 1677862834533,
             "name": "src\\log\\passport\\passport-2023-03-04.log",
             "hash": "57baff129121ab9f5a3cf435fdf678a2e9718e9d72c949ff2de5a083f1a70ae2"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1677950841868,
+            "name": "src\\log\\passport\\passport-2023-03-05.log",
+            "hash": "1d0d9c14fcea12c7fba09421800ac61455c07abd5e894540d150e48f9faca561"
 >>>>>>> origin/master
         }
     ],

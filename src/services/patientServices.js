@@ -98,6 +98,7 @@ const patientServices = {
           include: [{
             model: db.SharePatient,
             where: {
+              fullName: {[Op.substring]: `${nameSearch}`},
               idOwnerDoctor: idDoctor,
               idSharedPatientOfClinic: {
                 [Op.is] : null 
@@ -155,6 +156,7 @@ const patientServices = {
           include: [{
             model: db.SharePatient,
             where: {
+              fullName: {[Op.substring]: `${nameSearch}`},
               idOwnerDoctor: idDoctor,
               idSharedPatientOfClinic: idClinic
             }
@@ -206,6 +208,7 @@ const patientServices = {
       try {
         const count = await db.Patient.count({
           where: {
+            fullName: {[Op.substring]: `${nameSearch}`},
             idPatientOfDoctor: idDoctor
           }
         })
@@ -249,6 +252,7 @@ const patientServices = {
       try {
         const count = await db.Patient.count({
           where: {
+            fullName: {[Op.substring]: `${nameSearch}`},
             idPatientOfClinic: idClinic
           }
         })

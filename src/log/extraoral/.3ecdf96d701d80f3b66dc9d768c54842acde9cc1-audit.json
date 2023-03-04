@@ -29,6 +29,14 @@
             "date": 1677862834551,
             "name": "src\\log\\extraoral\\extraoral-2023-03-04.log",
             "hash": "6ff6df6ee3470a5faff651223e26af6a96e06ce63f56d70c13ab5738b020c635"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1677949601070,
+            "name": "src\\log\\extraoral\\extraoral-2023-03-05.log",
+            "hash": "d4fedd4643630785bd36a05eeb38ff34e37a652da9d68cc32eded69206de5cc9"
 >>>>>>> origin/master
         }
     ],
