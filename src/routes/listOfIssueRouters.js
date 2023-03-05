@@ -5,9 +5,9 @@ import patientMiddleware from '../middleware/patientMiddleware';
 
 const router = express.Router();
 
-router.get('/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists, listOfIssueControllers.getListOfIssue);
-router.post('/createIssue/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists ,listOfIssueControllers.createIssue);
-router.put('/updateIssue/:idIssue/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists ,listOfIssueControllers.updateIssue);
-router.delete('/deleteIssue/:idIssue/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists, listOfIssueControllers.deleteIssue);
+router.get('/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, listOfIssueControllers.getListOfIssue);
+router.post('/createIssue/:id', middlewareController.verifyToken, patientMiddleware.checkPatient ,listOfIssueControllers.createIssue);
+router.put('/updateIssue/:id', middlewareController.verifyToken, patientMiddleware.checkPatient ,listOfIssueControllers.updateIssue);
+router.delete('/deleteIssue/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, listOfIssueControllers.deleteIssue);
 
 export default router;

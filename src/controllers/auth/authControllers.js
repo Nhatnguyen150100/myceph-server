@@ -19,7 +19,6 @@ const authControllers = {
       })
       const accessToken = tokenController.generateAccessToken(data);
       const refreshToken = tokenController.generateRefreshToken(data);
-      logger.app.info(refreshToken)
       const userAgentString = req.headers['user-agent'];
       const user = useragent.parse(userAgentString);
       await db.RefreshToken.create({
@@ -29,7 +28,6 @@ const authControllers = {
         ipOfDevice: req.ip,
         isActive: true
       });
-      logger.app.info(req.ip);
       res.status(200).json({
         message: message,
         data: {

@@ -1,3 +1,5 @@
+import logger from "../config/winston";
+
 const db = require("../models")
 
 const treatmentPlanServices = {
@@ -24,6 +26,7 @@ const treatmentPlanServices = {
           })
         }
       } catch (error) {
+        logger.treatmentPlan.error(error);
         reject(error);
       }
     });
@@ -32,6 +35,9 @@ const treatmentPlanServices = {
     return new Promise(async (resolve, reject) => {
       try {
         const allTreatmentPlan = await db.TreatmentPlan.findAll({
+          order: [
+            ['createdAt', 'DESC']
+          ],
           where: {
             idTreatmentPlan: idPatient
           }
@@ -50,6 +56,7 @@ const treatmentPlanServices = {
           })
         }
       } catch (error) {
+        logger.treatmentPlan.error(error);
         reject(error);
       }
     });
@@ -57,25 +64,43 @@ const treatmentPlanServices = {
   createTreatmentPlan: (idPatient,data) => {
     return new Promise(async (resolve, reject) => {
       try {
+        if(data.selected){
+          await db.TreatmentPlan.update({
+            selected: false
+          },{
+            where: {
+              idTreatmentPlan: idPatient
+            }
+          })
+        }
         const treatmentPlan = await db.TreatmentPlan.create({
           idTreatmentPlan: idPatient,
           plan: data.plan,
           selected: data.selected
         })
         if(treatmentPlan){
+          const allTreatmentPlan = await db.TreatmentPlan.findAll({
+            order: [
+              ['createdAt', 'DESC']
+            ],
+            where: {
+              idTreatmentPlan: idPatient
+            }
+          })
           resolve({
             status: 200,
             message: 'create treatment plan successfully',
-            data: treatmentPlan.dataValues
+            data: allTreatmentPlan
           })
         }else{
           resolve({
             status: 202,
             message: 'create treatment plan failed',
-            data: {}
+            data: null
           })
         }
       } catch (error) {
+        logger.treatmentPlan.error(error);
         reject(error);
       }
     })
@@ -83,6 +108,15 @@ const treatmentPlanServices = {
   updateTreatmentPlan: (idPatient,idPlan,data) => {
     return new Promise(async (resolve, reject) => {
       try {
+        if(data.selected){
+          await db.TreatmentPlan.update({
+            selected: false
+          },{
+            where: {
+              idTreatmentPlan: idPatient
+            }
+          })
+        }
         const dataUpdate = {
           plan: data.plan,
           selected: data.selected
@@ -92,27 +126,29 @@ const treatmentPlanServices = {
             id: idPlan
           }
         })
-        if(data.selected){
-          await db.TreatmentPlan.update({
-            selected: false
-          },{
+        if(newPlan){
+          const allTreatmentPlan = await db.TreatmentPlan.findAll({
+            order: [
+              ['createdAt', 'DESC']
+            ],
             where: {
-              idTreatmentPlan: data.idPatient
+              idTreatmentPlan: idPatient
             }
           })
-        }
-        if(newPlan){
           resolve({
             status: 200,
-            message: 'update plan successfully'
+            message: 'update plan successfully',
+            data: allTreatmentPlan
           })
         }else{
           resolve({
             status: 202,
-            message: 'update plan failed'
+            message: 'update plan failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.treatmentPlan.error(error);
         reject(error);
       }
     })
@@ -127,17 +163,28 @@ const treatmentPlanServices = {
           force: true
         })
         if(deletePlan){
+          const allTreatmentPlan = await db.TreatmentPlan.findAll({
+            order: [
+              ['createdAt', 'DESC']
+            ],
+            where: {
+              idTreatmentPlan: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'Delete plan successfully'
+            message: 'Delete plan successfully',
+            data: allTreatmentPlan
           })
         }else{
           resolve({
             status: 200,
-            message: 'Delete plan failed'
+            message: 'Delete plan failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.treatmentPlan.error(error);
         reject(error)
       }
     })

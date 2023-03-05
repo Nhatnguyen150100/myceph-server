@@ -10,6 +10,7 @@ import logger from './config/winston';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import rateLimit from "express-rate-limit";
+import RateLimitError from 'express-rate-limit';
 
 import connectDB from './config/connectDB';
 import clinicRouter from './routes/clinicRoutes';
@@ -37,7 +38,8 @@ app.use(
 app.use(helmet());
 const limiter = rateLimit({
   windowMs: 5 * 60 * 1000, // 5 minutes
-  max: 500, // limit each IP to 1000 requests per windowMs
+  max: 1000, // limit each IP to 1000 requests per windowMs
+  legacyHeaders: true,
   message: "Too many requests from this IP, please try again in 5 minutes"
 });
 
