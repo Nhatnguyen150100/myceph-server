@@ -34,6 +34,16 @@
             "date": 1678037342709,
             "name": "src\\log\\clinic\\clinic-2023-03-06.log",
             "hash": "f80a4402b6b8753d57f2df80c36a38d4065a750b05ca1f5723fadb09b3ddc0a3"
+        },
+        {
+            "date": 1678164909801,
+            "name": "src\\log\\clinic\\clinic-2023-03-07.log",
+            "hash": "8aa1dce2049d8156c65c63da7be6400bf439b0afc6c23567f55a5cfba7bf5d44"
+        },
+        {
+            "date": 1678242627685,
+            "name": "src\\log\\clinic\\clinic-2023-03-08.log",
+            "hash": "2293ac6ae630bd6bff27d3d336170f7fe36dbe14460b4f0917672c716bc80d13"
         }
     ],
     "hashType": "sha256"

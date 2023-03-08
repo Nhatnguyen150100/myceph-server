@@ -34,6 +34,16 @@
             "date": 1678037342804,
             "name": "src\\log\\sharePatient\\sharePatient-2023-03-06.log",
             "hash": "98ced20be4aa60ede763ae034687ca8b121ecfd018fded005bc7c2d56238c6ee"
+        },
+        {
+            "date": 1678164910157,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-03-07.log",
+            "hash": "2488746e06341826cabf144e41d2277da8b9281d388d35e365f5aebaf338f5d0"
+        },
+        {
+            "date": 1678242627957,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-03-08.log",
+            "hash": "177a9b98239c0ce93b6fc55a63c234d881aa962e421be7f49428f3e9765116e6"
         }
     ],
     "hashType": "sha256"
