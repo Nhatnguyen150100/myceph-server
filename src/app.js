@@ -26,8 +26,10 @@ import listOfIssueRouter from './routes/listOfIssueRouters';
 import treatmentPlanRouter from './routes/treatmentPlanRouters';
 import treatmentHistoryRouter from './routes/treatmentHistoryRouters';
 import sharePatientRouters from './routes/sharePatientRouters';
+import libraryImagePatientRouter from './routes/libraryImagePatientRouters';
 
 const app = express();
+app.use(cookieParser());
 
 app.use(
   cors({
@@ -73,6 +75,7 @@ app.use('/v1/listOfIssue', listOfIssueRouter);
 app.use('/v1/treatmentPlan', treatmentPlanRouter);
 app.use('/v1/treatmentHistory', treatmentHistoryRouter);
 app.use('/v1/sharePatient',sharePatientRouters);
+app.use('/v1/libraryImagePatient', libraryImagePatientRouter);
 
 
 // catch 404 and forward to error handler

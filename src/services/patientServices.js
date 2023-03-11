@@ -67,6 +67,7 @@ const patientServices = {
         await db.ListOfIssue.destroy({where: {idListOfIssue: idPatient}, force: true});
         await db.TreatmentPlan.destroy({where: {idTreatmentPlan: idPatient}, force: true});
         await db.TreatmentHistory.destroy({where: {idTreatmentHistory: idPatient}, force: true});
+        await db.libraryImagePatients.destroy({where: {idPatientImage: idPatient}, force: true});
         await db.SharePatient.destroy({where: {idSharedPatient: idPatient}, force: true});
 
         const deletePatient = await db.Patient.destroy({

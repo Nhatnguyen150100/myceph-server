@@ -38,7 +38,7 @@ const authControllers = {
       });
     } catch (error) {
       logger.doctor.error(error);
-      res.status(400).json({message:'server error'});
+      res.status(500).json({message:'server error'});
     }
   },
   logout: async (req,res) => {

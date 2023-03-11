@@ -10,11 +10,7 @@ const passportJS = {
     try {
       const { data, message } = await authServices.login(email,password);
       logger.passport.info(data);
-      if(data){
-        return done(null, data, message);
-      }else{
-        return done(true, data, message);
-      }
+      return done(null, data, message);
     } catch (error) { 
       logger.passport.error(error);
       return done(error)

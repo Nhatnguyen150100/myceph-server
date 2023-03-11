@@ -255,6 +255,21 @@ const logger = {
         maxFiles: '14d',
       })
     ]
+  }),
+  libraryImagePatient : createLogger({
+    levels: customLevels.levels,
+    format: customFormat,
+    transports: [
+      new transports.Console({level: 'error'}),
+      new DailyRotateFile({
+        format: combine(format.json()),
+        filename: './src/log/libraryImagePatient/libraryImagePatient-%DATE%.log',
+        datePattern: 'YYYY-MM-DD',
+        zippedArchive: true,
+        maxSize: '20m',
+        maxFiles: '14d',
+      })
+    ]
   })
 }
 

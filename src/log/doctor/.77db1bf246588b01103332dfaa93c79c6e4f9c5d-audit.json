@@ -44,6 +44,16 @@
             "date": 1678242627669,
             "name": "src\\log\\doctor\\doctor-2023-03-08.log",
             "hash": "36adc7dafc4e20ecb0a46b8ac862493a8face367c3afcd88f1e83a4b48ed7a2e"
+        },
+        {
+            "date": 1678418721597,
+            "name": "src\\log\\doctor\\doctor-2023-03-10.log",
+            "hash": "af87b2dd9cc53d67e455dc6bd2c8eaedec8e1b2ce48e817654518861babed3d5"
+        },
+        {
+            "date": 1678467900517,
+            "name": "src\\log\\doctor\\doctor-2023-03-11.log",
+            "hash": "f4331a7080ba65fbdbb306b613f0242a67585d551b2bec3d7e744cebdf7bcd96"
         }
     ],
     "hashType": "sha256"

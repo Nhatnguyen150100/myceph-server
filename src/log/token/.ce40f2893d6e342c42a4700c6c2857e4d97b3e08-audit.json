@@ -44,6 +44,16 @@
             "date": 1678242627726,
             "name": "src\\log\\token\\token-2023-03-08.log",
             "hash": "0225606ca84b983a7bc6cd9b3ca16be114fa9157e600493f8c88869beb785350"
+        },
+        {
+            "date": 1678418721690,
+            "name": "src\\log\\token\\token-2023-03-10.log",
+            "hash": "13f5092be40f701b9be753199b71df31f66485530cf3211fc8fa2ea243b74ea8"
+        },
+        {
+            "date": 1678467900529,
+            "name": "src\\log\\token\\token-2023-03-11.log",
+            "hash": "13a0048d18c298f460dd6ec7804699bd5ef16648a035eca269e9743673c6924a"
         }
     ],
     "hashType": "sha256"

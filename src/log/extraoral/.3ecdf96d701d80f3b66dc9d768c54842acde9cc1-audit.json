@@ -44,6 +44,16 @@
             "date": 1678242627829,
             "name": "src\\log\\extraoral\\extraoral-2023-03-08.log",
             "hash": "0f526e7630999527c0a515b9ac4a98752a20176a33167db4ec24621b64373a88"
+        },
+        {
+            "date": 1678418721891,
+            "name": "src\\log\\extraoral\\extraoral-2023-03-10.log",
+            "hash": "f1f884857b609fc9c9e359c8653324b5201d1acf250cd46f0dc81babb8f72236"
+        },
+        {
+            "date": 1678467900546,
+            "name": "src\\log\\extraoral\\extraoral-2023-03-11.log",
+            "hash": "25fd06786fd1ffe057cce209f4a68a94ba4c90e20d3f93491fc676e1794a6a0a"
         }
     ],
     "hashType": "sha256"
