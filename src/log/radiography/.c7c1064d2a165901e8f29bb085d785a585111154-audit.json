@@ -54,6 +54,11 @@
             "date": 1678467900571,
             "name": "src\\log\\radiography\\radiography-2023-03-11.log",
             "hash": "44a647e27d635a1303c67fdab6c28a3b30912b2ca93360504eff3befc926cc6b"
+        },
+        {
+            "date": 1678556272943,
+            "name": "src\\log\\radiography\\radiography-2023-03-12.log",
+            "hash": "3ef18f0a5e5e8a4a8b74e45289cd728fdb3167e97267748ba8be6cd9e515af18"
         }
     ],
     "hashType": "sha256"

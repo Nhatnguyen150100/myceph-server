@@ -54,6 +54,11 @@
             "date": 1678467900566,
             "name": "src\\log\\listOfIssue\\listOfIssue-2023-03-11.log",
             "hash": "9bdc6edba0b698da7c59188d420347e6cf5c5362f78e69ec5cfb8294982c6bb0"
+        },
+        {
+            "date": 1678556272938,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-03-12.log",
+            "hash": "15ea4243f79b12ea51965d2ed1136f36b238c2caf75d3076f1aa2d2d0bc11028"
         }
     ],
     "hashType": "sha256"

@@ -8,6 +8,7 @@ const router = express.Router();
 router.get('/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, libraryImagePatientController.getListImage);
 router.post('/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, libraryImagePatientController.uploadImage);
 router.put('/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, libraryImagePatientController.updateImagePatient);
+router.put('/updateArrayImage/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, libraryImagePatientController.updateArrayImagePatient);
 router.delete('/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, libraryImagePatientController.deleteImagePatient);
 
 export default router;

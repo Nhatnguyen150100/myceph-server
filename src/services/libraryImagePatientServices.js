@@ -10,14 +10,14 @@ const libraryImagePatientServices = {
       try {
         const listImage = await db.LibraryImagePatient.findAll({
           order: [
-            ['createdAt', 'DESC']
+            ['consultationDate', 'DESC']
           ],
           where: {
             idPatientImage: idPatient
           }
         })
-        if(listImage.length > 0){
-          const listImageGroupByDate = _.groupBy(listImage, ({updatedAt}) => toISODateString(new Date(updatedAt)));
+        if(listImage.length >= 0){
+          const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
           logger.libraryImagePatient.info(listImageGroupByDate);
           resolve({
             status: 200,
@@ -48,13 +48,13 @@ const libraryImagePatientServices = {
         if(image){
           const listImage = await db.LibraryImagePatient.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['consultationDate', 'DESC']
             ],
             where: {
               idPatientImage: idPatient
             }
           })
-          const listImageGroupByDate = _.groupBy(listImage, ({updatedAt}) => toISODateString(new Date(updatedAt)));
+          const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
           logger.libraryImagePatient.info(listImageGroupByDate);
           resolve({
             status: 200,
@@ -86,13 +86,13 @@ const libraryImagePatientServices = {
         if(updateImagePatient){
           const listImage = await db.LibraryImagePatient.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['consultationDate', 'DESC']
             ],
             where: {
               idPatientImage: idPatient
             }
           })
-          const listImageGroupByDate = _.groupBy(listImage, ({updatedAt}) => toISODateString(new Date(updatedAt)));
+          const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
           logger.libraryImagePatient.info(listImageGroupByDate);
           resolve({
             status: 200,
@@ -105,7 +105,42 @@ const libraryImagePatientServices = {
         reject(error);
       }
     })
-  },   
+  },     
+  updateArrayImage: (idPatient,newDate,oldDate) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const updateArrayImage = await db.LibraryImagePatient.update(
+          {
+            consultationDate: new Date(newDate)
+          },{
+            where: {
+              consultationDate: new Date(oldDate)
+            }
+          }
+        )
+        if(updateArrayImage){
+          const listImage = await db.LibraryImagePatient.findAll({
+            order: [
+              ['consultationDate', 'DESC']
+            ],
+            where: {
+              idPatientImage: idPatient
+            }
+          })
+          const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
+          logger.libraryImagePatient.info(listImageGroupByDate);
+          resolve({
+            status: 200,
+            message:'upload image successfully',
+            data: listImageGroupByDate
+          })
+        }
+      } catch (error) {
+        logger.libraryImagePatient.error(error);
+        reject(error);
+      }
+    })
+  },  
   deleteImage: (idPatient,idImage) => {
     return new Promise(async (resolve, reject) => {
       try {
@@ -118,13 +153,13 @@ const libraryImagePatientServices = {
         if(deleteImagePatient){
           const listImage = await db.LibraryImagePatient.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['consultationDate', 'DESC']
             ],
             where: {
               idPatientImage: idPatient
             }
           })
-          const listImageGroupByDate = _.groupBy(listImage, ({updatedAt}) => toISODateString(new Date(updatedAt)));
+          const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
           logger.libraryImagePatient.info(listImageGroupByDate);
           resolve({
             status: 200,

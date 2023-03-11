@@ -33,6 +33,22 @@ const libraryImagePatientController = {
       })
     }
   },
+  updateArrayImagePatient: async (req, res) => {
+    try {
+      const { status, message, data } = await libraryImagePatientServices.updateArrayImage(req.params.id,req.body.newDate,req.body.oldDate);
+      patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
+        res.status(status).json({
+          message: message,
+          data: data
+        })
+      })
+    } catch (error) {
+      logger.libraryImagePatient.error(error);
+      res.status(500).json({
+        message: error
+      })
+    }
+  },
   updateImagePatient: async (req, res) => {
     try {
       const { status, message, data } = await libraryImagePatientServices.updateImage(req.params.id,req.body.idImage,req.body.consultationDate);
