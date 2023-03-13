@@ -59,6 +59,11 @@
             "date": 1678556272902,
             "name": "src\\log\\patient\\patient-2023-03-12.log",
             "hash": "9da8063e4a91c60150471a4c73fd05910fee951c23314bde7657c255ae857d66"
+        },
+        {
+            "date": 1678668560820,
+            "name": "src\\log\\patient\\patient-2023-03-13.log",
+            "hash": "c1cd085c3b30416ca345fd0d618488b00d3a8680c5f3aa134e5df69123972df1"
         }
     ],
     "hashType": "sha256"

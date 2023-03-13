@@ -73,11 +73,13 @@ const libraryImagePatientServices = {
       }
     })
   },
-  updateImage: (idPatient,idImage,consultationDate) => {
+  updateImage: (idPatient,idImage,consultationDate,typeImage,linkImage) => {
     return new Promise(async (resolve, reject) => {
       try {
         const updateImagePatient = await db.LibraryImagePatient.update({
-          consultationDate: consultationDate
+          consultationDate: new Date(consultationDate),
+          typeImage: typeImage,
+          linkImage: linkImage
         },{
           where: {
             id: idImage

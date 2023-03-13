@@ -51,7 +51,7 @@ const libraryImagePatientController = {
   },
   updateImagePatient: async (req, res) => {
     try {
-      const { status, message, data } = await libraryImagePatientServices.updateImage(req.params.id,req.body.idImage,req.body.consultationDate);
+      const { status, message, data } = await libraryImagePatientServices.updateImage(req.params.id,req.body.idImage,req.body.consultationDate,req.body.typeImage,req.body.linkImage);
       patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
         res.status(status).json({
           message: message,
@@ -67,7 +67,7 @@ const libraryImagePatientController = {
   },
   deleteImagePatient: async (req, res) => {
     try {
-      const { status, message, data } = await libraryImagePatientServices.deleteImage(req.params.id,req.body.idImage);
+      const { status, message, data } = await libraryImagePatientServices.deleteImage(req.params.id,req.query.idImage);
       patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
         res.status(status).json({
           message: message,
