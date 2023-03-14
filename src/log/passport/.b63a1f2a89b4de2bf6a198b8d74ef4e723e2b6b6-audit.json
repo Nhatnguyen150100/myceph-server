@@ -64,6 +64,11 @@
             "date": 1678668560734,
             "name": "src\\log\\passport\\passport-2023-03-13.log",
             "hash": "fa61c37477b29aa50302cf4c0e0f92595e983c6a1a0b83d71dfc59999ce7ef35"
+        },
+        {
+            "date": 1678757335584,
+            "name": "src\\log\\passport\\passport-2023-03-14.log",
+            "hash": "ee44bf27b58c829d47c5a5a08e822a816edb90d953e43781514fb3afb09211e6"
         }
     ],
     "hashType": "sha256"

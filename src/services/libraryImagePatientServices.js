@@ -1,11 +1,12 @@
 import toISODateString from "../common/utility";
 import _ from 'lodash';
+import { Op } from "sequelize";
 
 const { default: logger } = require("../config/winston");
 const db = require("../models");
 
 const libraryImagePatientServices = {
-  getListImage: (idPatient) => {
+  getListImage: (idPatient,type) => {
     return new Promise(async (resolve, reject) =>{
       try {
         const listImage = await db.LibraryImagePatient.findAll({
@@ -13,7 +14,10 @@ const libraryImagePatientServices = {
             ['consultationDate', 'DESC']
           ],
           where: {
-            idPatientImage: idPatient
+            idPatientImage: idPatient,
+            typeImage: {
+              [Op.or]: type
+            }
           }
         })
         if(listImage.length >= 0){
@@ -36,7 +40,7 @@ const libraryImagePatientServices = {
       }
     })
   },
-  upLoadImage: (idPatient,data) => {
+  upLoadImage: (idPatient,data,type) => {
     return new Promise(async (resolve, reject) =>{
       try {
         const image = await db.LibraryImagePatient.create({
@@ -51,7 +55,10 @@ const libraryImagePatientServices = {
               ['consultationDate', 'DESC']
             ],
             where: {
-              idPatientImage: idPatient
+              idPatientImage: idPatient,
+              typeImage: {
+                [Op.or]: type
+              }
             }
           })
           const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
@@ -73,7 +80,7 @@ const libraryImagePatientServices = {
       }
     })
   },
-  updateImage: (idPatient,idImage,consultationDate,typeImage,linkImage) => {
+  updateImage: (idPatient,idImage,consultationDate,typeImage,linkImage,type) => {
     return new Promise(async (resolve, reject) => {
       try {
         const updateImagePatient = await db.LibraryImagePatient.update({
@@ -91,7 +98,10 @@ const libraryImagePatientServices = {
               ['consultationDate', 'DESC']
             ],
             where: {
-              idPatientImage: idPatient
+              idPatientImage: idPatient,
+              typeImage: {
+                [Op.or]: type
+              }
             }
           })
           const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
@@ -108,7 +118,7 @@ const libraryImagePatientServices = {
       }
     })
   },     
-  updateArrayImage: (idPatient,newDate,oldDate) => {
+  updateArrayImage: (idPatient,newDate,oldDate,type) => {
     return new Promise(async (resolve, reject) => {
       try {
         const updateArrayImage = await db.LibraryImagePatient.update(
@@ -126,7 +136,10 @@ const libraryImagePatientServices = {
               ['consultationDate', 'DESC']
             ],
             where: {
-              idPatientImage: idPatient
+              idPatientImage: idPatient,
+              typeImage: {
+                [Op.or]: type
+              }
             }
           })
           const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
@@ -143,7 +156,7 @@ const libraryImagePatientServices = {
       }
     })
   },  
-  deleteImage: (idPatient,idImage) => {
+  deleteImage: (idPatient,idImage,type) => {
     return new Promise(async (resolve, reject) => {
       try {
         const deleteImagePatient = await db.LibraryImagePatient.destroy({
@@ -158,7 +171,10 @@ const libraryImagePatientServices = {
               ['consultationDate', 'DESC']
             ],
             where: {
-              idPatientImage: idPatient
+              idPatientImage: idPatient,
+              typeImage: {
+                [Op.or]: type
+              }
             }
           })
           const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
