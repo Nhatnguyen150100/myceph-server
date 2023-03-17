@@ -30,11 +30,7 @@ const authControllers = {
       });
       res.status(200).json({
         message: message,
-        data: {
-          ...data,
-          accessToken,
-          refreshToken
-        },
+        data: {...data,accessToken: accessToken, refreshToken: refreshToken},
       });
     } catch (error) {
       logger.doctor.error(error);

@@ -29,13 +29,12 @@ import sharePatientRouters from './routes/sharePatientRouters';
 import libraryImagePatientRouter from './routes/libraryImagePatientRouters';
 
 const app = express();
-app.use(cookieParser());
 
-app.use(
-  cors({
-    origin: process.env.BASE_URL_CLIENT
-  })
-)
+app.use(cors({
+  origin: process.env.BASE_URL_CLIENT
+}));
+
+app.use(cookieParser());
 
 app.use(helmet());
 const limiter = rateLimit({
