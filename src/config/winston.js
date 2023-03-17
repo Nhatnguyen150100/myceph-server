@@ -270,6 +270,51 @@ const logger = {
         maxFiles: '14d',
       })
     ]
+  }),
+  roomOfClinic : createLogger({
+    levels: customLevels.levels,
+    format: customFormat,
+    transports: [
+      new transports.Console({level: 'error'}),
+      new DailyRotateFile({
+        format: combine(format.json()),
+        filename: './src/log/roomOfClinic/roomOfClinic-%DATE%.log',
+        datePattern: 'YYYY-MM-DD',
+        zippedArchive: true,
+        maxSize: '20m',
+        maxFiles: '14d',
+      })
+    ]
+  }),
+  servicesOfClinic : createLogger({
+    levels: customLevels.levels,
+    format: customFormat,
+    transports: [
+      new transports.Console({level: 'error'}),
+      new DailyRotateFile({
+        format: combine(format.json()),
+        filename: './src/log/servicesOfClinic/servicesOfClinic-%DATE%.log',
+        datePattern: 'YYYY-MM-DD',
+        zippedArchive: true,
+        maxSize: '20m',
+        maxFiles: '14d',
+      })
+    ]
+  }),
+  statusOfClinic : createLogger({
+    levels: customLevels.levels,
+    format: customFormat,
+    transports: [
+      new transports.Console({level: 'error'}),
+      new DailyRotateFile({
+        format: combine(format.json()),
+        filename: './src/log/statusOfClinic/statusOfClinic-%DATE%.log',
+        datePattern: 'YYYY-MM-DD',
+        zippedArchive: true,
+        maxSize: '20m',
+        maxFiles: '14d',
+      })
+    ]
   })
 }
 

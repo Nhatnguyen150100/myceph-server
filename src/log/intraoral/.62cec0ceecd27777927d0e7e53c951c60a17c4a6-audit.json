@@ -6,11 +6,6 @@
     "auditLog": "src\\log\\intraoral\\.62cec0ceecd27777927d0e7e53c951c60a17c4a6-audit.json",
     "files": [
         {
-            "date": 1677777133415,
-            "name": "src\\log\\intraoral\\intraoral-2023-03-03.log",
-            "hash": "c4586dd78b72fb45314e6a6b4bc47c2da7d8fb82040f37fdcd0f2724092bfda7"
-        },
-        {
             "date": 1677862834554,
             "name": "src\\log\\intraoral\\intraoral-2023-03-04.log",
             "hash": "6badce83170006c62a4509163d0ff0a29e94b8e72ddd209ab55d5faf48144d88"
@@ -74,6 +69,11 @@
             "date": 1678986345279,
             "name": "src\\log\\intraoral\\intraoral-2023-03-17.log",
             "hash": "7a2dd6fc6a0cb021d3292231852354f9658276336240814b22b6e38bde49827a"
+        },
+        {
+            "date": 1679072417914,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-18.log",
+            "hash": "492368c2d56d3053a3999e82f9f34dc04fceb27359c8a416a23d747ac80c32fa"
         }
     ],
     "hashType": "sha256"
