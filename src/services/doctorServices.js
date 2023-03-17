@@ -194,6 +194,9 @@ const doctorServices = {
     return new Promise(async (resolve, reject) => {
       try {
         const listMember = await db.MemberOfClinic.findAll({
+          order: [
+            ['createdAt', 'DESC']
+          ],
           where: {
             idDoctor: idDoctor
           }

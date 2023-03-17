@@ -6,6 +6,7 @@
     "auditLog": "src\\log\\patient\\.dca32ed2111861ed7058cbf790a1346f2b5bf1a3-audit.json",
     "files": [
         {
+<<<<<<< HEAD
             "date": 1677609523995,
             "name": "src\\log\\patient\\patient-2023-03-01.log",
             "hash": "32daa754850b39b13b429065d37402ff85e1a677667520e5aa1f31c009962bf5"
@@ -26,6 +27,8 @@
             "hash": "6839c5137d591ddc5eca66978e9a475bf8caa989cdd4ddd0791a491744560de5"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1677862834535,
             "name": "src\\log\\patient\\patient-2023-03-04.log",
             "hash": "e3eca6a21d07075abf0f1d15050c98f5458851d00121ddcfe39b70b5421119b6"
@@ -37,6 +40,69 @@
             "date": 1677950841874,
             "name": "src\\log\\patient\\patient-2023-03-05.log",
             "hash": "d1a48afeddc485d4feac4cf5f5e01cdfc24b0ab77876c05f9471ac0a1f1d9a17"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1678037342738,
+            "name": "src\\log\\patient\\patient-2023-03-06.log",
+            "hash": "8ff6c381a7ac4600b9ef5076573a23e5fd2232987ae6534e616107cdf0105961"
+        },
+        {
+            "date": 1678164909960,
+            "name": "src\\log\\patient\\patient-2023-03-07.log",
+            "hash": "c457065831cfbf189ac4fc16c75979eb5d8fa4d326ce97c9c0684449cd0ded70"
+        },
+        {
+            "date": 1678242627772,
+            "name": "src\\log\\patient\\patient-2023-03-08.log",
+            "hash": "e10088ee80f8b107ba171c0812b308aa0bfa9772f611fd63ed64f63bb45a386d"
+        },
+        {
+            "date": 1678418721758,
+            "name": "src\\log\\patient\\patient-2023-03-10.log",
+            "hash": "9ea6013b0196bd06ac02432252e9832ccd3bd15b89706fe992bdfd12cf5befa8"
+        },
+        {
+            "date": 1678467900538,
+            "name": "src\\log\\patient\\patient-2023-03-11.log",
+            "hash": "862081308f797ea4c440d4aeabfceaaf99be719280e85346f6da99810ff6aafa"
+        },
+        {
+            "date": 1678556272902,
+            "name": "src\\log\\patient\\patient-2023-03-12.log",
+            "hash": "9da8063e4a91c60150471a4c73fd05910fee951c23314bde7657c255ae857d66"
+        },
+        {
+            "date": 1678668560820,
+            "name": "src\\log\\patient\\patient-2023-03-13.log",
+            "hash": "c1cd085c3b30416ca345fd0d618488b00d3a8680c5f3aa134e5df69123972df1"
+        },
+        {
+            "date": 1678757335592,
+            "name": "src\\log\\patient\\patient-2023-03-14.log",
+            "hash": "deed1d33dbecab1c083dbfc950f7865bdac3577734cc7e2e308a4a9a29444cb5"
+        },
+        {
+            "date": 1678817208836,
+            "name": "src\\log\\patient\\patient-2023-03-15.log",
+            "hash": "488d9eec7d9d894fb3f12303ff7e4f99f868567443cd9eeba0f93823089c7042"
+        },
+        {
+            "date": 1678961359893,
+            "name": "src\\log\\patient\\patient-2023-03-16.log",
+            "hash": "555d6e946d63750c3434d5f6332b0f4062a170d3faca13f291afaf40ef49abc8"
+        },
+        {
+            "date": 1678986345251,
+            "name": "src\\log\\patient\\patient-2023-03-17.log",
+            "hash": "47959b47d02a3cd6288422c73cf92c579f9fdc136cbc45366419deef65b23af1"
+        },
+        {
+            "date": 1679072417901,
+            "name": "src\\log\\patient\\patient-2023-03-18.log",
+            "hash": "182148e3d343eb8dbd3445a5b9ca8fafa9f66f17cceab01fe0b911422019e235"
 >>>>>>> origin/master
         }
     ],

@@ -1,3 +1,4 @@
+import logger from "../config/winston";
 import sharePatientServices from "../services/sharePatientServices";
 
 const sharePatientController = {
@@ -8,8 +9,9 @@ const sharePatientController = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
+      logger.sharePatient.error(error);
+      res.status(500).json({
+        message: 'server error'
       })
     }
   },
@@ -20,8 +22,9 @@ const sharePatientController = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
+      logger.sharePatient.error(error);
+      res.status(500).json({
+        message: 'server error'
       })
     }
   },
@@ -32,21 +35,23 @@ const sharePatientController = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
+      logger.sharePatient.error(error);
+      res.status(500).json({
+        message: 'server error'
       })
     }
   },
   getDoctorSharedPatient: async (req,res) => {
     try {
-      const { status, message, data } = await sharePatientServices.getDoctorSharedPatient(req.params.idSharedPatientOfDoctor,req.query.idSharedPatient);
+      const { status, message, data } = await sharePatientServices.getDoctorSharedPatient(req.params.id);
       res.status(status).json({
         message: message,
         data: data
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
+      logger.sharePatient.error(error);
+      res.status(500).json({
+        message: 'server error'
       })
     }
   },
@@ -59,8 +64,9 @@ const sharePatientController = {
         count: count
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
+      logger.sharePatient.error(error);
+      res.status(500).json({
+        message: 'server error'
       })
     }
   },
@@ -73,8 +79,9 @@ const sharePatientController = {
         count: count
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
+      logger.sharePatient.error(error);
+      res.status(500).json({
+        message: 'server error'
       })
     }
   },
@@ -85,8 +92,9 @@ const sharePatientController = {
         message: message
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
+      logger.sharePatient.error(error);
+      res.status(500).json({
+        message: 'server error'
       })
     }
   }
@@ -100,8 +108,9 @@ const sharePatientController = {
         count: count
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
+      logger.sharePatient.error(error);
+      res.status(500).json({
+        message: 'server error'
       })
     }
   },
@@ -114,8 +123,9 @@ const sharePatientController = {
         count: count
       })
     } catch (error) {
-      res.status(400).json({
-        message: error
+      logger.sharePatient.error(error);
+      res.status(500).json({
+        message: 'server error'
       })
     }
   },

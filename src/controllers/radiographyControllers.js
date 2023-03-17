@@ -1,3 +1,4 @@
+import logger from "../config/winston";
 import patientServices from "../services/patientServices";
 
 const { default: radiographyServices } = require("../services/radiographyServices")
@@ -14,21 +15,24 @@ const radiographyControllers = {
         })
       });
     } catch (error) {
-      res.status(400).json({
+      logger.radiography.error(error);
+      res.status(500).json({
         message: error
       })
     }
   },
   updateRadiography: async (req,res) => {
     try {
-      const { status, message } = await radiographyServices.updateRadiography(req.params.id, req.body);
+      const { status, message, data } = await radiographyServices.updateRadiography(req.params.id, req.body);
       patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
         res.status(status).json({
-          message: message
+          message: message,
+          data: data
         })
       })
     } catch (error) {
-      res.status(400).json({
+      logger.radiography.error(error);
+      res.status(500).json({
         message: error
       })
     }

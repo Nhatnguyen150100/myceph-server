@@ -13,7 +13,7 @@ const authServices = {
           where: { email: email},
           raw: true
         })
-        if(!doctor){
+        if(Object.keys(doctor).length === 0){
           resolve({
             data: null,
             message: 'Could not find your email'
@@ -23,7 +23,7 @@ const authServices = {
         if(!validPassword){
           resolve({
             data: null,
-            message: 'password mismatch'
+            message: 'password wrong'
           });
         }else{
           delete doctor.password;

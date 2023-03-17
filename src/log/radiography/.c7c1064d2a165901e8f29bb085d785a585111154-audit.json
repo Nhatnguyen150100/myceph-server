@@ -6,6 +6,7 @@
     "auditLog": "src\\log\\radiography\\.c7c1064d2a165901e8f29bb085d785a585111154-audit.json",
     "files": [
         {
+<<<<<<< HEAD
             "date": 1677609524024,
             "name": "src\\log\\radiography\\radiography-2023-03-01.log",
             "hash": "02f1bda5ae20c91226268feddb404271ab466916ee99f4c02d86109588a982b6"
@@ -26,6 +27,8 @@
             "hash": "3f65bf40018eadca5159ef40dfb9f19051c3fc02c8eb541c1a209d9749fdb4ed"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1677862834561,
             "name": "src\\log\\radiography\\radiography-2023-03-04.log",
             "hash": "e7c310e0ebebff667adb2c36c49ce55473ddb4a0656b456e6847508d0e3dbe8a"
@@ -37,6 +40,69 @@
             "date": 1677950842018,
             "name": "src\\log\\radiography\\radiography-2023-03-05.log",
             "hash": "2073c8a01c21340472160045062d2a658a5e0e58099ef440290e4a39fb1c9695"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1678037342793,
+            "name": "src\\log\\radiography\\radiography-2023-03-06.log",
+            "hash": "9f6c6864cec6f803b9c8ab7d645c85eccfd6fd0e1563caba7aa489ffa2866271"
+        },
+        {
+            "date": 1678164910141,
+            "name": "src\\log\\radiography\\radiography-2023-03-07.log",
+            "hash": "4f533051070352e8f08aa90f0e3fe1d2dcb5c1194d45f4910ea9f9bc5da883b1"
+        },
+        {
+            "date": 1678242627947,
+            "name": "src\\log\\radiography\\radiography-2023-03-08.log",
+            "hash": "a81ea3b6c9fa04e2f2528b511a6ccc92de0bca777693d21b249e7c1f198a8d33"
+        },
+        {
+            "date": 1678418721969,
+            "name": "src\\log\\radiography\\radiography-2023-03-10.log",
+            "hash": "1a2e4308383a65a19c8ae9917cfb35904e77551e2c1a217b431d235333a85c81"
+        },
+        {
+            "date": 1678467900571,
+            "name": "src\\log\\radiography\\radiography-2023-03-11.log",
+            "hash": "44a647e27d635a1303c67fdab6c28a3b30912b2ca93360504eff3befc926cc6b"
+        },
+        {
+            "date": 1678556272943,
+            "name": "src\\log\\radiography\\radiography-2023-03-12.log",
+            "hash": "3ef18f0a5e5e8a4a8b74e45289cd728fdb3167e97267748ba8be6cd9e515af18"
+        },
+        {
+            "date": 1678668561031,
+            "name": "src\\log\\radiography\\radiography-2023-03-13.log",
+            "hash": "20aecfa75501dc1fea5c949312a38911ee18566139e54883f1338371e4e4ce8a"
+        },
+        {
+            "date": 1678757335630,
+            "name": "src\\log\\radiography\\radiography-2023-03-14.log",
+            "hash": "f2d2dc1dd20fdc7caf0f4ca3af81b653a14e64207df8ea82ffebe1f24fcabd4c"
+        },
+        {
+            "date": 1678817350599,
+            "name": "src\\log\\radiography\\radiography-2023-03-15.log",
+            "hash": "32b35f3c35a977130549d7195a0ed3e2f61ae5b66c6ec51a3e545204a0899160"
+        },
+        {
+            "date": 1678961360068,
+            "name": "src\\log\\radiography\\radiography-2023-03-16.log",
+            "hash": "42e9e38d90448559ed7ccdb7f29e49edefcdfab7097466f89116a22eb80c48bb"
+        },
+        {
+            "date": 1678986345320,
+            "name": "src\\log\\radiography\\radiography-2023-03-17.log",
+            "hash": "c0ed1735090df9e154be35808faef0afcd93cdcf82764b7ff4476922f6421e24"
+        },
+        {
+            "date": 1679072417939,
+            "name": "src\\log\\radiography\\radiography-2023-03-18.log",
+            "hash": "2761bd02007fbb727bec0ae46ea0aac9a3482089ec1f4a7203d872d3a924d35d"
 >>>>>>> origin/master
         }
     ],

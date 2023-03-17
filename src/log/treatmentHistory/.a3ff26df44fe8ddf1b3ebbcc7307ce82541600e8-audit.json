@@ -6,6 +6,7 @@
     "auditLog": "src\\log\\treatmentHistory\\.a3ff26df44fe8ddf1b3ebbcc7307ce82541600e8-audit.json",
     "files": [
         {
+<<<<<<< HEAD
             "date": 1677609524029,
             "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-01.log",
             "hash": "acc38224ff3224be9b5939e9c917dc6c984a31c3f6b9ae0df4c9a67645be4bde"
@@ -26,6 +27,8 @@
             "hash": "b7a4849decf4b5308af177822860d66db12c7d7c9cc973a90316ab405733a86f"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1677862834565,
             "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-04.log",
             "hash": "09061c4107fbb11dbb853051827c7427c07ddc0cbba8a1c3f198b02653b277ed"
@@ -37,6 +40,69 @@
             "date": 1677950842024,
             "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-05.log",
             "hash": "40e99c57517afa15a52679cb8e4456491dc8a377fd71ea83ca25c1f6e4c69fdf"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1678037342815,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-06.log",
+            "hash": "3deb2fede504ddb3b91b4f1af0d3986a2ef0ced0f10dcbe5b348bb1e2649d23e"
+        },
+        {
+            "date": 1678164910168,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-07.log",
+            "hash": "95e8bdc27392cfc9950e6cb71f5f3e38e9888427a247b5bdd23e567a971c0e6d"
+        },
+        {
+            "date": 1678242627966,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-08.log",
+            "hash": "e83a22e06b2921afef5be469f7ebf50529db42f4936a1a0d967fbba0d8b66f06"
+        },
+        {
+            "date": 1678418722019,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-10.log",
+            "hash": "1bb5d5f103530301bc454da92d233573d6b25e3827403fdb485a5e67f5aa1994"
+        },
+        {
+            "date": 1678467900583,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-11.log",
+            "hash": "c90d1cc2441ccbd0cb9862b0ae96789139ba0a600d6190d15868a8bbc5480592"
+        },
+        {
+            "date": 1678556272962,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-12.log",
+            "hash": "31fc4f16580d83f4cfe63b2d6794dc1ebf9fd0d6becb3b0738dcf2de3c0b1a40"
+        },
+        {
+            "date": 1678668561126,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-13.log",
+            "hash": "24874df1fca435b1b38447272a0ac389c65793eab1cecffe5ff3aaa848edb36f"
+        },
+        {
+            "date": 1678757335647,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-14.log",
+            "hash": "36154dc62ee3a83da44d8142c9e9ae4b4a70541a87abc8c43a026d31298414e8"
+        },
+        {
+            "date": 1678817350641,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-15.log",
+            "hash": "e2b764b7e3661e2a962ee26f85a2fc1241f57609b489d0558019e16836b85058"
+        },
+        {
+            "date": 1678961360104,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-16.log",
+            "hash": "3b5e14a7e135f9aa724ecedd6fafa83ac82f440cd90437e485d81a11baa4cbd5"
+        },
+        {
+            "date": 1678986345328,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-17.log",
+            "hash": "4d8b01130115dc2649aa1daa788322805c68b74050d612afba4e7899ff81ef8d"
+        },
+        {
+            "date": 1679072417946,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-18.log",
+            "hash": "c0771b2cc43803d664e941d412db9680471c62fcda7191dfc24c16ca5fac0fd5"
 >>>>>>> origin/master
         }
     ],

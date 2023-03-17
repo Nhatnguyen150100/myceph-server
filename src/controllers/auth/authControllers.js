@@ -19,7 +19,6 @@ const authControllers = {
       })
       const accessToken = tokenController.generateAccessToken(data);
       const refreshToken = tokenController.generateRefreshToken(data);
-      logger.app.info(refreshToken)
       const userAgentString = req.headers['user-agent'];
       const user = useragent.parse(userAgentString);
       await db.RefreshToken.create({
@@ -29,18 +28,13 @@ const authControllers = {
         ipOfDevice: req.ip,
         isActive: true
       });
-      logger.app.info(req.ip);
       res.status(200).json({
         message: message,
-        data: {
-          ...data,
-          accessToken,
-          refreshToken
-        },
+        data: {...data,accessToken: accessToken, refreshToken: refreshToken},
       });
     } catch (error) {
       logger.doctor.error(error);
-      res.status(400).json({message:'server error'});
+      res.status(500).json({message:'server error'});
     }
   },
   logout: async (req,res) => {

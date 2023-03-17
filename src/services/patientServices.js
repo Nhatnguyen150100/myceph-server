@@ -67,8 +67,8 @@ const patientServices = {
         await db.ListOfIssue.destroy({where: {idListOfIssue: idPatient}, force: true});
         await db.TreatmentPlan.destroy({where: {idTreatmentPlan: idPatient}, force: true});
         await db.TreatmentHistory.destroy({where: {idTreatmentHistory: idPatient}, force: true});
+        await db.LibraryImagePatient.destroy({where: {idPatientImage: idPatient}, force: true});
         await db.SharePatient.destroy({where: {idSharedPatient: idPatient}, force: true});
-
         const deletePatient = await db.Patient.destroy({
           where: {
             id: idPatient
@@ -98,13 +98,15 @@ const patientServices = {
           include: [{
             model: db.SharePatient,
             where: {
-              fullName: {[Op.substring]: `${nameSearch}`},
               idOwnerDoctor: idDoctor,
               idSharedPatientOfClinic: {
                 [Op.is] : null 
               }
             }
-          }]
+          }],
+          where: {
+            fullName: {[Op.substring]: `${nameSearch}`}
+          }
         })
         const start = (page-1)*pageSize;
         const listPatient = await db.Patient.findAll(
@@ -156,11 +158,13 @@ const patientServices = {
           include: [{
             model: db.SharePatient,
             where: {
-              fullName: {[Op.substring]: `${nameSearch}`},
               idOwnerDoctor: idDoctor,
               idSharedPatientOfClinic: idClinic
             }
-          }]
+          }],
+          where: {
+            fullName: {[Op.substring]: `${nameSearch}`}
+          }
         })
         const start = (page-1)*pageSize;
         const listPatient = await db.Patient.findAll(

@@ -6,7 +6,7 @@ import patientMiddleware from '../middleware/patientMiddleware';
 
 const router = express.Router();
 
-router.get('/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists, diagnosisAndTreatmentControllers.getDiagnosisAndTreatment);
-router.put('/updateDiagnosisAndTreatment/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExistsFromQuery, doctorMiddleware.checkDoctorExistsById ,diagnosisAndTreatmentControllers.updateDiagnosisAndTreatment);
+router.get('/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, diagnosisAndTreatmentControllers.getDiagnosisAndTreatment);
+router.put('/updateDiagnosisAndTreatment/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, doctorMiddleware.checkDoctorExistsByIdFromBody ,diagnosisAndTreatmentControllers.updateDiagnosisAndTreatment);
 
 export default router;

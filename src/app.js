@@ -10,6 +10,7 @@ import logger from './config/winston';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import rateLimit from "express-rate-limit";
+import RateLimitError from 'express-rate-limit';
 
 import connectDB from './config/connectDB';
 import clinicRouter from './routes/clinicRoutes';
@@ -25,19 +26,21 @@ import listOfIssueRouter from './routes/listOfIssueRouters';
 import treatmentPlanRouter from './routes/treatmentPlanRouters';
 import treatmentHistoryRouter from './routes/treatmentHistoryRouters';
 import sharePatientRouters from './routes/sharePatientRouters';
+import libraryImagePatientRouter from './routes/libraryImagePatientRouters';
 
 const app = express();
 
-app.use(
-  cors({
-    origin: process.env.BASE_URL_CLIENT
-  })
-)
+app.use(cors({
+  origin: process.env.BASE_URL_CLIENT
+}));
+
+app.use(cookieParser());
 
 app.use(helmet());
 const limiter = rateLimit({
   windowMs: 5 * 60 * 1000, // 5 minutes
-  max: 500, // limit each IP to 1000 requests per windowMs
+  max: 500, // limit each IP to 500 requests per windowMs
+  legacyHeaders: true,
   message: "Too many requests from this IP, please try again in 5 minutes"
 });
 
@@ -69,8 +72,9 @@ app.use('/v1/radiography', radiographyRouter);
 app.use('/v1/diagnosis', diagnosisAndTreatmentRouters);
 app.use('/v1/listOfIssue', listOfIssueRouter);
 app.use('/v1/treatmentPlan', treatmentPlanRouter);
-app.use('/v1/treatmentHistor', treatmentHistoryRouter);
+app.use('/v1/treatmentHistory', treatmentHistoryRouter);
 app.use('/v1/sharePatient',sharePatientRouters);
+app.use('/v1/libraryImagePatient', libraryImagePatientRouter);
 
 
 // catch 404 and forward to error handler

@@ -6,6 +6,7 @@
     "auditLog": "src\\log\\doctor\\.77db1bf246588b01103332dfaa93c79c6e4f9c5d-audit.json",
     "files": [
         {
+<<<<<<< HEAD
             "date": 1677609437836,
             "name": "src\\log\\doctor\\doctor-2023-03-01.log",
             "hash": "47456834d7fb144da29c8335a88fd548934648390dc89228243c7e015b1eca1c"
@@ -26,6 +27,8 @@
             "hash": "783babdc18ecd81659b5701046a3d6fce05e6b8caaf43476242a622cb6ed444f"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1677862834509,
             "name": "src\\log\\doctor\\doctor-2023-03-04.log",
             "hash": "47ab20c150dc9b4b2879c208aefd9cc85519fda79b17f9995102dcb873b59129"
@@ -37,6 +40,69 @@
             "date": 1677950841856,
             "name": "src\\log\\doctor\\doctor-2023-03-05.log",
             "hash": "ed3f53945cda998d3d8edf158e86bf737d037dcd75b26be1e0702c856e3bf000"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1678037342697,
+            "name": "src\\log\\doctor\\doctor-2023-03-06.log",
+            "hash": "ebc508262f5c1f50dbf1256bef2d73572da788b24b6b75d1bfd12920b9742148"
+        },
+        {
+            "date": 1678164909787,
+            "name": "src\\log\\doctor\\doctor-2023-03-07.log",
+            "hash": "8f42a31af1e328bd45557e23a1128154a540dc11a12a3d118eddd361d1d9b4af"
+        },
+        {
+            "date": 1678242627669,
+            "name": "src\\log\\doctor\\doctor-2023-03-08.log",
+            "hash": "36adc7dafc4e20ecb0a46b8ac862493a8face367c3afcd88f1e83a4b48ed7a2e"
+        },
+        {
+            "date": 1678418721597,
+            "name": "src\\log\\doctor\\doctor-2023-03-10.log",
+            "hash": "af87b2dd9cc53d67e455dc6bd2c8eaedec8e1b2ce48e817654518861babed3d5"
+        },
+        {
+            "date": 1678467900517,
+            "name": "src\\log\\doctor\\doctor-2023-03-11.log",
+            "hash": "f4331a7080ba65fbdbb306b613f0242a67585d551b2bec3d7e744cebdf7bcd96"
+        },
+        {
+            "date": 1678556272875,
+            "name": "src\\log\\doctor\\doctor-2023-03-12.log",
+            "hash": "57d05abd395679068a745602779a7c21d7e1b414fcc3f6b785f9f5082679dc4e"
+        },
+        {
+            "date": 1678668560609,
+            "name": "src\\log\\doctor\\doctor-2023-03-13.log",
+            "hash": "a1bc6a27c4d42567354035d81a96d3db1fd2fb75869e5ae2a1d632e35a171086"
+        },
+        {
+            "date": 1678757335554,
+            "name": "src\\log\\doctor\\doctor-2023-03-14.log",
+            "hash": "61a643c4518c4159a74c1f38253db34b6a4dfe063c0f14bbe22848eaf9f25333"
+        },
+        {
+            "date": 1678817350453,
+            "name": "src\\log\\doctor\\doctor-2023-03-15.log",
+            "hash": "5ee601c285985636abb038700e43cc9ca3a175f6f5c87cec734c103903119ac9"
+        },
+        {
+            "date": 1678961359675,
+            "name": "src\\log\\doctor\\doctor-2023-03-16.log",
+            "hash": "11d6d7bb558e4abb9097ce0cb404eb7a0ce560859a5762c9d3572c47e34a2289"
+        },
+        {
+            "date": 1678986345158,
+            "name": "src\\log\\doctor\\doctor-2023-03-17.log",
+            "hash": "f0056b1246febd1b2c4c68a8bf1df1cd036ddb702e82dba4fae03678299f5760"
+        },
+        {
+            "date": 1679072417881,
+            "name": "src\\log\\doctor\\doctor-2023-03-18.log",
+            "hash": "42460c04d5c9c78aa91775e5895b138f72ce45434bc2ad59eab9b45b9ab2ecb1"
 >>>>>>> origin/master
         }
     ],

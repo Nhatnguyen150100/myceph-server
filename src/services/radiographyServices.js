@@ -1,3 +1,5 @@
+import logger from "../config/winston";
+
 const db = require("../models");
 
 const radiographyServices = {
@@ -23,6 +25,7 @@ const radiographyServices = {
           })
         }
       } catch (error) {
+        logger.radiography.error(error);
         reject(error)
       }
     })
@@ -46,17 +49,25 @@ const radiographyServices = {
           }
         })
         if(radiographyUpdate){
+          const newRadiography = await db.Radiography.findOne({
+            where: {
+              idRadiography: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'update radiography successfully'
+            message: 'update radiography successfully',
+            data: newRadiography
           })
         }else{
           resolve({
             status: 202,
-            message: 'update radiography failed'
+            message: 'update radiography failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.radiography.error(error);
         reject(error);
       }
     });

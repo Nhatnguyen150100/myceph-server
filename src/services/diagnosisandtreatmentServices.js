@@ -1,3 +1,5 @@
+import logger from "../config/winston"
+
 const db = require("../models")
 
 const diagnosisandtreatmentServices = {
@@ -19,10 +21,11 @@ const diagnosisandtreatmentServices = {
           resolve({
             status: 202,
             message: 'get diagnosisAndTreatment failed',
-            data: {}
+            data: null
           })
         }
       } catch (error) {
+        logger.diagnosis.error(error);
         reject(error)
       }
     })
@@ -40,17 +43,25 @@ const diagnosisandtreatmentServices = {
           }
         })
         if(diagnosisUpdate){
+          const newDiagnosis = await db.DiagnosisAndTreatment.findOne({
+            where: {
+              idDiagnosisAndTreatment: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'update diagnosisAndTreatment successfully'
+            message: 'update diagnosisAndTreatment successfully',
+            data: newDiagnosis
           })
         }else{
           resolve({
             status: 202,
-            message: 'update diagnosisAndTreatment failed'
+            message: 'update diagnosisAndTreatment failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.diagnosis.error(error);
         reject(error);
       }
     })

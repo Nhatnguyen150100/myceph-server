@@ -1,10 +1,15 @@
+import logger from "../config/winston";
+
 const db = require("../models");
 
 const listOfIssueServices = {
   getListOfIssue: (idPatient) => {
-    return new Promise((resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
       try {
-        const listOfIssue = db.ListOfIssue.findAll({
+        const listOfIssue = await db.ListOfIssue.findAll({
+          order: [
+            ['createdAt', 'DESC']
+          ],
           where: {
             idListOfIssue: idPatient
           }
@@ -23,6 +28,7 @@ const listOfIssueServices = {
           })
         }
       } catch (error) {
+        logger.listOfIssue.error(error);
         reject(error);
       }
     })
@@ -38,22 +44,33 @@ const listOfIssueServices = {
           priotized: data.priotized
         })
         if(newIssue){
+          const listOfIssue = await db.ListOfIssue.findAll({
+            order: [
+              ['createdAt', 'DESC']
+            ],
+            where: {
+              idListOfIssue: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'create issue successfully'
+            message: 'create issue successfully',
+            data: listOfIssue
           })
         }else{
           resolve({
             status: 202,
-            message: 'create issue failed'
+            message: 'create issue failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.listOfIssue.error(error);
         reject(error);
       }
     });
   },
-  updateIssue: (idIssue,data) => {
+  updateIssue: (idPatient,idIssue,data) => {
     return new Promise(async (resolve, reject) => {
       try {
         const dataUpdate = {
@@ -68,22 +85,33 @@ const listOfIssueServices = {
           }
         })
         if(newIssue){
+          const listOfIssue = await db.ListOfIssue.findAll({
+            order: [
+              ['createdAt', 'DESC']
+            ],
+            where: {
+              idListOfIssue: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'update issue successfully'
+            message: 'update issue successfully',
+            data: listOfIssue
           })
         }else{
           resolve({
             status: 202,
-            message: 'update issue failed'
+            message: 'update issue failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.listOfIssue.error(error);
         reject(error);
       }
     })
   },
-  deleteIssue: (idIssue) => {
+  deleteIssue: (idPatient,idIssue) => {
     return new Promise(async (resolve, reject) => {
       try {
         const deleteIssue = await db.ListOfIssue.destroy({
@@ -93,17 +121,28 @@ const listOfIssueServices = {
           force: true
         });
         if(deleteIssue){
+          const listOfIssue = await db.ListOfIssue.findAll({
+            order: [
+              ['createdAt', 'DESC']
+            ],
+            where: {
+              idListOfIssue: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'Delete issue successfully'
+            message: 'Delete issue successfully',
+            data: listOfIssue
           })
         }else{
           resolve({
             status: 200,
-            message: 'Delete issue failed'
+            message: 'Delete issue failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.listOfIssue.error(error);
         reject(error);
       }
     })

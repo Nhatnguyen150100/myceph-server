@@ -1,5 +1,6 @@
 import { sequelize } from "../models";
 import QueryTypes, { Op } from "sequelize";
+import logger from "../config/winston";
 const db = require("../models");
 
 const sharePatientServices = {
@@ -195,23 +196,22 @@ const sharePatientServices = {
       }
     })
   },
-  getDoctorSharedPatient: (idSharedPatient,idSharedPatientOfDoctor) => {
+  getDoctorSharedPatient: (idSharedPatient) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const listDoctor = await db.Doctor.findAll({
-          include: [{
-            model: db.SharePatient,
-            where: {
-              idSharedPatient: idSharedPatient,
-              idSharedPatientOfDoctor: idSharedPatientOfDoctor
-            }
-          }]
-        })
+        logger.app.info(idSharedPatient)
+        const listDoctor = await sequelize.query('select myceph.doctors.id, myceph.doctors.email, myceph.doctors.fullName from myceph.doctors, myceph.sharepatients where myceph.doctors.id = myceph.sharepatients.idOwnerDoctor and myceph.sharepatients.idSharedPatient = ?',
+        {
+          replacements: [idSharedPatient],
+          type: QueryTypes.SELECT
+        }
+      );
+        logger.sharePatient.info(listDoctor);
         if(listDoctor.length>=0){
           resolve({
             status: 200,
             message: 'get doctor share patient successfully',
-            data: listDoctor
+            data: listDoctor[0]
           })
         }else{
           resolve({

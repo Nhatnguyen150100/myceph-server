@@ -21,10 +21,11 @@ const diagnosisAndTreatmentControllers = {
   },
   updateDiagnosisAndTreatment: async (req,res) => {
     try {
-      const { status, message } = await diagnosisandtreatmentServices.updateDiagnosisAndTreatment(req.query.idPatient,req.body);
+      const { status, message, data } = await diagnosisandtreatmentServices.updateDiagnosisAndTreatment(req.params.id,req.body);
       patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
         res.status(status).json({
-          message: message
+          message: message,
+          data: data
         })
       })
     } catch (error) {

@@ -5,10 +5,10 @@ import patientMiddleware from '../middleware/patientMiddleware';
 
 const router = express.Router();
 
-router.get('/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists, treatmentPlanControllers.getAllTreatmentPlan);
-router.get('/getSelectedTreatmentPlan/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists, treatmentPlanControllers.getSelectedTreatmentPlan);
-router.post('/createPlan/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists ,treatmentPlanControllers.createTreatmentPlan);
-router.put('/updatePlan/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists ,treatmentPlanControllers.updateTreatmentPlan);
-router.delete('/deletePlan/:id', middlewareController.verifyToken, patientMiddleware.checkPatientExists, treatmentPlanControllers.deleteTreatmentPlan);
+router.get('/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, treatmentPlanControllers.getAllTreatmentPlan);
+router.get('/getSelectedTreatmentPlan/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, treatmentPlanControllers.getSelectedTreatmentPlan);
+router.post('/createPlan/:id', middlewareController.verifyToken, patientMiddleware.checkPatient ,treatmentPlanControllers.createTreatmentPlan);
+router.put('/updatePlan/:id', middlewareController.verifyToken, patientMiddleware.checkPatient ,treatmentPlanControllers.updateTreatmentPlan);
+router.delete('/deletePlan/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, treatmentPlanControllers.deleteTreatmentPlan);
 
 export default router;

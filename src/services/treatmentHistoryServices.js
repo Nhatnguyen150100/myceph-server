@@ -1,3 +1,5 @@
+import logger from "../config/winston"
+
 const db = require("../models")
 
 const treatmentHistoryServices = {
@@ -5,8 +7,11 @@ const treatmentHistoryServices = {
     return new Promise(async (resolve, reject) =>{
       try {
         const treatmentHistory = await db.TreatmentHistory.findAll({
+          order: [
+            ['createdAt', 'DESC']
+          ],
           where: {
-            id: idPatient
+            idTreatmentHistory: idPatient
           }
         })
         if(treatmentHistory.length>=0){
@@ -23,6 +28,7 @@ const treatmentHistoryServices = {
           })
         }
       } catch (error) {
+        logger.treatmentHistory.error(error);
         reject(error);
       }
     })
@@ -37,22 +43,33 @@ const treatmentHistoryServices = {
           consultationDate: new Date(data.consultationDate)
         })
         if(treatmentHistory){
+          const treatmentHistoryData = await db.TreatmentHistory.findAll({
+            order: [
+              ['createdAt', 'DESC']
+            ],
+            where: {
+              idTreatmentHistory: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'create treatment history successfully'
+            message: 'create treatment history successfully',
+            data: treatmentHistoryData
           })
         }else{
           resolve({
             status: 202,
-            message: 'create treatment history failed'
+            message: 'create treatment history failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.treatmentHistory.error(error);
         reject(error);
       }
     });
   },
-  updateTreatmentHistory: (idHistory,data) => {
+  updateTreatmentHistory: (idPatient,idHistory,data) => {
     return new Promise(async (resolve, reject) => {
       try {
         const dataUpdate = {
@@ -66,22 +83,33 @@ const treatmentHistoryServices = {
           }
         })
         if(updateTreatmentHistory){
+          const treatmentHistoryData = await db.TreatmentHistory.findAll({
+            order: [
+              ['createdAt', 'DESC']
+            ],
+            where: {
+              idTreatmentHistory: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'update treatment history successfully'
+            message: 'update treatment history successfully',
+            data: treatmentHistoryData
           })
         }else{
           resolve({
             status: 202,
-            message: 'update treatment history failed'
+            message: 'update treatment history failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.treatmentHistory.error(error);
         reject(error);
       }
     })
   },
-  deleteTreatmentHistory: (idHistory) => {
+  deleteTreatmentHistory: (idPatient,idHistory) => {
     return new Promise(async (resolve, reject) => {
       try {
         const deleteTreatmentHistory = await db.TreatmentHistory.destroy({
@@ -91,17 +119,28 @@ const treatmentHistoryServices = {
           force: true
         })
         if(deleteTreatmentHistory){
+          const treatmentHistoryData = await db.TreatmentHistory.findAll({
+            order: [
+              ['createdAt', 'DESC']
+            ],
+            where: {
+              idTreatmentHistory: idPatient
+            }
+          })
           resolve({
             status: 200,
-            message: 'delete treatment history successfully'
+            message: 'delete treatment history successfully',
+            data: treatmentHistoryData
           })
         }else{
           resolve({
             status: 202,
-            message: 'delete treatment history failed'
+            message: 'delete treatment history failed',
+            data: null
           })
         }
       } catch (error) {
+        logger.treatmentHistory.error(error);
         reject(error)
       }
     })
