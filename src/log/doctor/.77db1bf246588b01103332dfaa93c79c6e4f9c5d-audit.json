@@ -6,16 +6,6 @@
     "auditLog": "src\\log\\doctor\\.77db1bf246588b01103332dfaa93c79c6e4f9c5d-audit.json",
     "files": [
         {
-            "date": 1677862834509,
-            "name": "src\\log\\doctor\\doctor-2023-03-04.log",
-            "hash": "47ab20c150dc9b4b2879c208aefd9cc85519fda79b17f9995102dcb873b59129"
-        },
-        {
-            "date": 1677950841856,
-            "name": "src\\log\\doctor\\doctor-2023-03-05.log",
-            "hash": "ed3f53945cda998d3d8edf158e86bf737d037dcd75b26be1e0702c856e3bf000"
-        },
-        {
             "date": 1678037342697,
             "name": "src\\log\\doctor\\doctor-2023-03-06.log",
             "hash": "ebc508262f5c1f50dbf1256bef2d73572da788b24b6b75d1bfd12920b9742148"
@@ -74,6 +64,16 @@
             "date": 1679072417881,
             "name": "src\\log\\doctor\\doctor-2023-03-18.log",
             "hash": "42460c04d5c9c78aa91775e5895b138f72ce45434bc2ad59eab9b45b9ab2ecb1"
+        },
+        {
+            "date": 1679220012191,
+            "name": "src\\log\\doctor\\doctor-2023-03-19.log",
+            "hash": "d437960d3c482d832dfabd9a96ed2b733e5280fe51de02f0100bc71fdda1051c"
+        },
+        {
+            "date": 1679246675835,
+            "name": "src\\log\\doctor\\doctor-2023-03-20.log",
+            "hash": "3dbc8a99c2e299d555b8814febdb7b399afd24d5d11b0c587449c0eb5404f868"
         }
     ],
     "hashType": "sha256"

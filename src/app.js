@@ -27,6 +27,7 @@ import treatmentPlanRouter from './routes/treatmentPlanRouters';
 import treatmentHistoryRouter from './routes/treatmentHistoryRouters';
 import sharePatientRouters from './routes/sharePatientRouters';
 import libraryImagePatientRouter from './routes/libraryImagePatientRouters';
+import roomOfClinicRouter from './routes/roomOfClinicRouters';
 
 const app = express();
 
@@ -75,6 +76,8 @@ app.use('/v1/treatmentPlan', treatmentPlanRouter);
 app.use('/v1/treatmentHistory', treatmentHistoryRouter);
 app.use('/v1/sharePatient',sharePatientRouters);
 app.use('/v1/libraryImagePatient', libraryImagePatientRouter);
+app.use('/v1/roomOfClinic', roomOfClinicRouter);
+
 
 
 // catch 404 and forward to error handler
