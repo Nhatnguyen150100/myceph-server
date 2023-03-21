@@ -36,11 +36,9 @@ const roomOfClinicServices = {
     return new Promise(async (resolve, reject) => {
       try {
         const createRoomClinic = await db.RoomOfClinic.create({
-          where : {
-            idClinicRoom: idClinic,
-            nameRoom: data.nameRoom,
-            colorRoom: data.colorRoom
-          }
+          idClinicRoom: idClinic,
+          nameRoom: data.nameRoom,
+          colorRoom: data.colorRoom
         })
         if(createRoomClinic){
           const listRoom = await db.RoomOfClinic.findAll({

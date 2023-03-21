@@ -46,7 +46,7 @@ const roomOfClinicControllers = {
   },
   deleteRoom: async (req,res) => {
     try {
-      const { status, message, data } = await roomOfClinicServices.deleteRoom(req.params.id,req.body.idRoom);
+      const { status, message, data } = await roomOfClinicServices.deleteRoom(req.params.id,req.query.idRoom);
       res.status(status).json({
         message: message,
         data: data

@@ -9,13 +9,13 @@ module.exports = {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4
       },
-      idPatientSchdule: {
+      idPatientSchedule: {
         allowNull: false,
         type: Sequelize.UUID,
         references:{
           model: {
             tableName: 'patients',
-            name: 'idPatientSchdule',
+            name: 'idPatientSchedule',
           },
           key: 'id',
         }
@@ -32,12 +32,45 @@ module.exports = {
         }
       },
       idClinicSchedule: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.UUID,
         references:{
           model: {
             tableName: 'clinics',
             name: 'idClinicSchedule',
+          },
+          key: 'id',
+        }
+      },
+      idStatus: {
+        allowNull: true,
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'statusOfClinics',
+            name: 'idStatus',
+          },
+          key: 'id',
+        }
+      },
+      idService: {
+        allowNull: true,
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'servicesOfClinics',
+            name: 'idService',
+          },
+          key: 'id',
+        }
+      },
+      idRoom: {
+        allowNull: true,
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'roomOfClinics',
+            name: 'idRoom',
           },
           key: 'id',
         }

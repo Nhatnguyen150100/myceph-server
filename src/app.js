@@ -21,13 +21,16 @@ import historyRouter from './routes/historyRouters';
 import extraoralRouter from './routes/extraoralRouters';
 import intraoralRouter from './routes/intraoralRouters';
 import radiographyRouter from './routes/radiographyRouters';
-import diagnosisAndTreatmentRouters from './routes/diagnosisAndTreatmentRouters';
+import diagnosisAndTreatmentRouter from './routes/diagnosisAndTreatmentRouters';
 import listOfIssueRouter from './routes/listOfIssueRouters';
 import treatmentPlanRouter from './routes/treatmentPlanRouters';
 import treatmentHistoryRouter from './routes/treatmentHistoryRouters';
-import sharePatientRouters from './routes/sharePatientRouters';
+import sharePatientRouter from './routes/sharePatientRouters';
 import libraryImagePatientRouter from './routes/libraryImagePatientRouters';
 import roomOfClinicRouter from './routes/roomOfClinicRouters';
+import servicesOfClinicRouter from './routes/servicesOfClinicRouters';
+import statusOfClinicRouter from './routes/statusOfClinicRouters';
+import scheduleRouter from './routes/scheduleRouters';
 
 const app = express();
 
@@ -70,14 +73,16 @@ app.use('/v1/history', historyRouter);
 app.use('/v1/extraoral', extraoralRouter);
 app.use('/v1/intraoral', intraoralRouter);
 app.use('/v1/radiography', radiographyRouter);
-app.use('/v1/diagnosis', diagnosisAndTreatmentRouters);
+app.use('/v1/diagnosis', diagnosisAndTreatmentRouter);
 app.use('/v1/listOfIssue', listOfIssueRouter);
 app.use('/v1/treatmentPlan', treatmentPlanRouter);
 app.use('/v1/treatmentHistory', treatmentHistoryRouter);
-app.use('/v1/sharePatient',sharePatientRouters);
+app.use('/v1/sharePatient',sharePatientRouter);
 app.use('/v1/libraryImagePatient', libraryImagePatientRouter);
 app.use('/v1/roomOfClinic', roomOfClinicRouter);
-
+app.use('/v1/servicesOfClinic', servicesOfClinicRouter);
+app.use('/v1/statusOfClinic', statusOfClinicRouter);
+app.use('/v1/schedule', scheduleRouter);
 
 
 // catch 404 and forward to error handler

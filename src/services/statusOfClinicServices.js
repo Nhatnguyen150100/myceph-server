@@ -36,11 +36,9 @@ const statusOfClinicServices = {
     return new Promise(async (resolve, reject) => {
       try {
         const createStatusClinic = await db.StatusOfClinic.create({
-          where : {
-            idClinicStatus: idClinic,
-            nameStatus: data.nameStatus,
-            colorStatus: data.colorStatus
-          }
+          idClinicStatus: idClinic,
+          nameStatus: data.nameStatus,
+          colorStatus: data.colorStatus
         })
         if(createStatusClinic){
           const listStatus = await db.StatusOfClinic.findAll({

@@ -36,11 +36,9 @@ const servicesOfClinicServices = {
     return new Promise(async (resolve, reject) => {
       try {
         const createServicesClinic = await db.ServicesOfClinic.create({
-          where : {
-            idClinicService: idClinic,
-            nameService: data.nameService,
-            colorService: data.colorService
-          }
+          idClinicService: idClinic,
+          nameService: data.nameService,
+          colorService: data.colorService
         })
         if(createServicesClinic){
           const listServices = await db.ServicesOfClinic.findAll({

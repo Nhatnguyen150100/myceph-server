@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Schedule.belongsTo(models.Patient, {foreignKey: {name: 'idPatientSchdule', allowNull: false}, targetKey: 'id'});
+      Schedule.belongsTo(models.Patient, {foreignKey: {name: 'idPatientSchedule', allowNull: false}, targetKey: 'id'});
       Schedule.belongsTo(models.Doctor, {foreignKey: {name: 'idDoctorSchedule', allowNull: false}, targetKey: 'id'});
       Schedule.belongsTo(models.Clinic, {foreignKey: {name: 'idClinicSchedule', allowNull: false}, targetKey: 'id'});
     }
@@ -23,10 +23,13 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.UUID
     },
-    idPatientSchdule: DataTypes.UUID,
+    idPatientSchedule: DataTypes.UUID,
     idDoctorSchedule: DataTypes.UUID,
     idClinicSchedule: DataTypes.UUID,
     appointmentDate: DataTypes.DATE,
+    idStatus: DataTypes.UUID,
+    idService: DataTypes.UUID,
+    idRoom: DataTypes.UUID,
     startTime: DataTypes.TIME,
     endTime: DataTypes.TIME,
     note: DataTypes.STRING
