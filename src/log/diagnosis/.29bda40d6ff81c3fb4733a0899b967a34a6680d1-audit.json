@@ -7,6 +7,7 @@
     "files": [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609524008,
             "name": "src\\log\\diagnosis\\diagnosis-2023-03-01.log",
             "hash": "3f3e01540315d3cdf10210953f04b827da53098e7596f790b9c3455670bb5417"
@@ -60,6 +61,8 @@
             "hash": "49965978c7d5828bd1c656cc0d569a14755ff7f59a067fcc9d7ec80ee4cd0e88"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1678418721822,
             "name": "src\\log\\diagnosis\\diagnosis-2023-03-10.log",
             "hash": "b7fe635db12bb4d57b53ba8e6a78350ede53b0304bbb4ef1288cea7213dcf96b"
@@ -103,6 +106,39 @@
             "date": 1679072417909,
             "name": "src\\log\\diagnosis\\diagnosis-2023-03-18.log",
             "hash": "f82e971faa625a076da96d10b32a4314ed9decda4fbdb48fd4cc4cf86a6bd45b"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1679220012217,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-03-19.log",
+            "hash": "e5c6fd6b8443444a286e528f49c2ffa70c5f5c756a1a4dbe367d82958dab423e"
+        },
+        {
+            "date": 1679246675988,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-03-20.log",
+            "hash": "3ba662b3aad525e1e356cd4b11767c6356691afb051c9b19eaa1669fb60b87bf"
+        },
+        {
+            "date": 1679365360981,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-03-21.log",
+            "hash": "28877eb030a8f197b20eeadf7bf1098d20768daf76cdc658a5634114530a6081"
+        },
+        {
+            "date": 1679418513239,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-03-22.log",
+            "hash": "ec7df5b1538afce66ab7f9d7c03e5e065c34c2c1a33edab7a6ebbd6d23285c2e"
+        },
+        {
+            "date": 1679504470110,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-03-23.log",
+            "hash": "84ffaf1fbb289f663a106379ba4f5a6914387ae7489eba744f28aff6c8fa8d5d"
+        },
+        {
+            "date": 1679591037465,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-03-24.log",
+            "hash": "3b7113473e0c1350ffdf40ce65ff0af27d085f28fa9825a126257ea0f94ad14b"
 >>>>>>> origin/master
         }
     ],

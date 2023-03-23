@@ -7,7 +7,7 @@ const statusOfClinicServices = {
       try {
         const listStatus = await db.StatusOfClinic.findAll({
           order: [
-            ['createdAt', 'DESC']
+            ['createdAt', 'ASC']
           ],
           where: {
             idClinicStatus: idClinic
@@ -36,16 +36,14 @@ const statusOfClinicServices = {
     return new Promise(async (resolve, reject) => {
       try {
         const createStatusClinic = await db.StatusOfClinic.create({
-          where : {
-            idClinicStatus: idClinic,
-            nameStatus: data.nameStatus,
-            colorStatus: data.colorStatus
-          }
+          idClinicStatus: idClinic,
+          nameStatus: data.nameStatus,
+          colorStatus: data.colorStatus
         })
         if(createStatusClinic){
           const listStatus = await db.StatusOfClinic.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['createdAt', 'ASC']
             ],
             where: {
               idClinicStatus: idClinic
@@ -83,7 +81,7 @@ const statusOfClinicServices = {
         if(updateStatusClinic){
           const listStatus = await db.StatusOfClinic.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['createdAt', 'ASC']
             ],
             where: {
               idClinicStatus: idClinic
@@ -110,6 +108,17 @@ const statusOfClinicServices = {
   deleteStatus: (idClinic,idStatus) => {
     return new Promise(async (resolve, reject) => {
       try {
+        const checkAppointmentWithStatus = await db.Schedule.findOne({
+          where: {
+            idStatus: idStatus
+          }
+        })
+        if(checkAppointmentWithStatus) {
+          return resolve({
+            status: 202,
+            message: "This status cannot be deleted because it is being used to create an appointment"
+          })
+        }
         const deleteStatusClinic = await db.StatusOfClinic.destroy({
           where: {
             id: idStatus
@@ -119,7 +128,7 @@ const statusOfClinicServices = {
         if(deleteStatusClinic){
           const listStatus = await db.StatusOfClinic.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['createdAt', 'ASC']
             ],
             where: {
               idClinicStatus: idClinic

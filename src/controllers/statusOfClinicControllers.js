@@ -46,7 +46,7 @@ const statusOfClinicControllers ={
   },
   deleteStatus: async (req,res) => {
     try {
-      const { status, message, data } = await statusOfClinicServices.deleteStatus(req.params.id,req.body.idStatus);
+      const { status, message, data } = await statusOfClinicServices.deleteStatus(req.params.id,req.query.idStatus);
       res.status(status).json({
         message: message,
         data: data

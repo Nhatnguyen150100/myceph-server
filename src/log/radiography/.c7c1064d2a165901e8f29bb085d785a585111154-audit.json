@@ -7,6 +7,7 @@
     "files": [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609524024,
             "name": "src\\log\\radiography\\radiography-2023-03-01.log",
             "hash": "02f1bda5ae20c91226268feddb404271ab466916ee99f4c02d86109588a982b6"
@@ -60,6 +61,8 @@
             "hash": "a81ea3b6c9fa04e2f2528b511a6ccc92de0bca777693d21b249e7c1f198a8d33"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1678418721969,
             "name": "src\\log\\radiography\\radiography-2023-03-10.log",
             "hash": "1a2e4308383a65a19c8ae9917cfb35904e77551e2c1a217b431d235333a85c81"
@@ -103,6 +106,39 @@
             "date": 1679072417939,
             "name": "src\\log\\radiography\\radiography-2023-03-18.log",
             "hash": "2761bd02007fbb727bec0ae46ea0aac9a3482089ec1f4a7203d872d3a924d35d"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1679220012248,
+            "name": "src\\log\\radiography\\radiography-2023-03-19.log",
+            "hash": "a1b54e6732e5429801d77ed5c680b3be35b8360f1ea131e3390649219ce70eeb"
+        },
+        {
+            "date": 1679246676212,
+            "name": "src\\log\\radiography\\radiography-2023-03-20.log",
+            "hash": "860fcb044f92d052516cc5657bd0eaa23ab1ec5fbd6cb949043b746c7096ccd7"
+        },
+        {
+            "date": 1679365361173,
+            "name": "src\\log\\radiography\\radiography-2023-03-21.log",
+            "hash": "9c2a7a02e2dc32a013a4d9bd5decaea18d875c79c25e4d59424b09376093a928"
+        },
+        {
+            "date": 1679418513357,
+            "name": "src\\log\\radiography\\radiography-2023-03-22.log",
+            "hash": "705349bae049e8b81cc02935c369595d5f97198c58151693411821beb3990f3c"
+        },
+        {
+            "date": 1679504470212,
+            "name": "src\\log\\radiography\\radiography-2023-03-23.log",
+            "hash": "f5f47ec2fdf87e6d8642ace86f5d4d5b8e8489204621da51a7a6c151fc027c50"
+        },
+        {
+            "date": 1679591037481,
+            "name": "src\\log\\radiography\\radiography-2023-03-24.log",
+            "hash": "12917f34aabe81f9ecd0dd64db04f279d020f79961ad1f8a8a261cae9d3aa058"
 >>>>>>> origin/master
         }
     ],

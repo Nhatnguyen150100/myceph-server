@@ -7,6 +7,7 @@
     "files": [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609523981,
             "name": "src\\log\\passport\\passport-2023-03-01.log",
             "hash": "73ff3732f9ef90caf60ac1fc07bce64afda1f8b35324880b13d1757d29fcdd75"
@@ -60,6 +61,8 @@
             "hash": "f87c3538fefc5ad8d0cad4c0cd4444237c992f4f87e23730e0ee7bffa3bd607c"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1678418721730,
             "name": "src\\log\\passport\\passport-2023-03-10.log",
             "hash": "feead537e40cb71399379c00de3ff450ac001f39c854e4f5c02855391ec520ae"
@@ -103,6 +106,39 @@
             "date": 1679072417898,
             "name": "src\\log\\passport\\passport-2023-03-18.log",
             "hash": "39c43a26ed4f4821a3b0a4cea7702b87a1017cb30db1321790b074d4f0ed3332"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1679220012203,
+            "name": "src\\log\\passport\\passport-2023-03-19.log",
+            "hash": "5dc1fbf574a379e14dafbf5f7decc562b9233e50ae3759a106de6fad524a69ea"
+        },
+        {
+            "date": 1679246675929,
+            "name": "src\\log\\passport\\passport-2023-03-20.log",
+            "hash": "630497926464766a013d18901d27505f8c33c7e0e90474854722ab112f2e2e08"
+        },
+        {
+            "date": 1679365360855,
+            "name": "src\\log\\passport\\passport-2023-03-21.log",
+            "hash": "9c1c05e97e37b695c56fd37021b2c2bb58eb172ebf5fead824b095c7575cc228"
+        },
+        {
+            "date": 1679418513232,
+            "name": "src\\log\\passport\\passport-2023-03-22.log",
+            "hash": "e5c9c7e126412fe49604739b6688f698543b19fa196914b99ce48ebcc97dcfc0"
+        },
+        {
+            "date": 1679504470084,
+            "name": "src\\log\\passport\\passport-2023-03-23.log",
+            "hash": "b4b8013d6d9c7e3307f955f2648d83c4664f3cc20300da1043f521fcce16810b"
+        },
+        {
+            "date": 1679591037457,
+            "name": "src\\log\\passport\\passport-2023-03-24.log",
+            "hash": "8e1b70cf02ece7aa926bf1aa180e25b160f2aa0e86eeff291d35aef706e92720"
 >>>>>>> origin/master
         }
     ],

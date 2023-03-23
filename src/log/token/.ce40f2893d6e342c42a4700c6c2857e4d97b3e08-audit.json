@@ -7,6 +7,7 @@
     "files": [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609523969,
             "name": "src\\log\\token\\token-2023-03-01.log",
             "hash": "4a753d0089492f4ecd383e4c2068a8fb2375c43578569920738c5bec58203dc8"
@@ -60,6 +61,8 @@
             "hash": "0225606ca84b983a7bc6cd9b3ca16be114fa9157e600493f8c88869beb785350"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1678418721690,
             "name": "src\\log\\token\\token-2023-03-10.log",
             "hash": "13f5092be40f701b9be753199b71df31f66485530cf3211fc8fa2ea243b74ea8"
@@ -103,6 +106,39 @@
             "date": 1679072417894,
             "name": "src\\log\\token\\token-2023-03-18.log",
             "hash": "438f607bd98d1a2013c3c8b5b22668e643607734f339aa8d47f81f1786901b23"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1679220012199,
+            "name": "src\\log\\token\\token-2023-03-19.log",
+            "hash": "8fd6d9e8681d1d0f52f257d592f0ad85b67ea33a1d0ae41b68e17cb2595072e3"
+        },
+        {
+            "date": 1679246675889,
+            "name": "src\\log\\token\\token-2023-03-20.log",
+            "hash": "7379d9fed1731614739e1a462cd48de2eecce73e687f9625f2f73b1dbc9107f6"
+        },
+        {
+            "date": 1679365360799,
+            "name": "src\\log\\token\\token-2023-03-21.log",
+            "hash": "68c30d3bfb35fc101e13d96ca0ebb36e59ca56f42a0ac7fbd107a975fae31201"
+        },
+        {
+            "date": 1679418513229,
+            "name": "src\\log\\token\\token-2023-03-22.log",
+            "hash": "7576cef6ce236e3bbf2dc48267c5a9a115de636aa998c6a324d77157396be816"
+        },
+        {
+            "date": 1679504470063,
+            "name": "src\\log\\token\\token-2023-03-23.log",
+            "hash": "c3da3f88d89dc4c15159a100f30da763f821e078d7bfb971066abc8b6a0eac74"
+        },
+        {
+            "date": 1679591037455,
+            "name": "src\\log\\token\\token-2023-03-24.log",
+            "hash": "81ef2877e14268653fbc53ef9df9b205a55f61ecdd56a389c4fe8ce4eca0bb28"
 >>>>>>> origin/master
         }
     ],

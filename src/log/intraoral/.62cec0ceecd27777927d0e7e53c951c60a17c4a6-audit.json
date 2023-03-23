@@ -7,6 +7,7 @@
     "files": [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609524016,
             "name": "src\\log\\intraoral\\intraoral-2023-03-01.log",
             "hash": "3185f97dd52a34b67d235033d35466b1c86026d84c8bd295ee2c2d030db0e991"
@@ -60,6 +61,8 @@
             "hash": "f9db4b5206acb43c57a426fe4b6f326913a5026976e46095676ba7b47dd187d9"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1678418721921,
             "name": "src\\log\\intraoral\\intraoral-2023-03-10.log",
             "hash": "120107f9b2684956abb02246a01e7f3c437f89b868e48e3657ad07198909a7a5"
@@ -103,6 +106,39 @@
             "date": 1679072417914,
             "name": "src\\log\\intraoral\\intraoral-2023-03-18.log",
             "hash": "492368c2d56d3053a3999e82f9f34dc04fceb27359c8a416a23d747ac80c32fa"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1679220012228,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-19.log",
+            "hash": "452122c8d60bb8e2d52ad69bd19f72eac392a9a012ec5eca3a362e5bb4b19f88"
+        },
+        {
+            "date": 1679246676085,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-20.log",
+            "hash": "3dea3424a23adffacda4aff26735e7da80a8f9966be0d275b9fa7652d594527b"
+        },
+        {
+            "date": 1679365361068,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-21.log",
+            "hash": "489204dee416efdadefc01b8fa9270e80a74b5c35dc1446a388fad23472f6f3d"
+        },
+        {
+            "date": 1679418513347,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-22.log",
+            "hash": "29a815d53a5ffa10af882659240e0bbf7d22e37082943a3d63983330788a3037"
+        },
+        {
+            "date": 1679504470166,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-23.log",
+            "hash": "24619887f958f87689c0786c34f20df2ac439b04fb92ab0b6ffd6c7caf2f7e01"
+        },
+        {
+            "date": 1679591037471,
+            "name": "src\\log\\intraoral\\intraoral-2023-03-24.log",
+            "hash": "4bd6e3e8d359863148279d25d8e158e5c051d0a2d5c577a111603a17bbba6455"
 >>>>>>> origin/master
         }
     ],

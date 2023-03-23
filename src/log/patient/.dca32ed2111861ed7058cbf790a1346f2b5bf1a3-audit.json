@@ -7,6 +7,7 @@
     "files": [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609523995,
             "name": "src\\log\\patient\\patient-2023-03-01.log",
             "hash": "32daa754850b39b13b429065d37402ff85e1a677667520e5aa1f31c009962bf5"
@@ -60,6 +61,8 @@
             "hash": "e10088ee80f8b107ba171c0812b308aa0bfa9772f611fd63ed64f63bb45a386d"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1678418721758,
             "name": "src\\log\\patient\\patient-2023-03-10.log",
             "hash": "9ea6013b0196bd06ac02432252e9832ccd3bd15b89706fe992bdfd12cf5befa8"
@@ -103,6 +106,39 @@
             "date": 1679072417901,
             "name": "src\\log\\patient\\patient-2023-03-18.log",
             "hash": "182148e3d343eb8dbd3445a5b9ca8fafa9f66f17cceab01fe0b911422019e235"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1679220012212,
+            "name": "src\\log\\patient\\patient-2023-03-19.log",
+            "hash": "b0e6df14560e22b27d667096c3526dfeb5d60441205899089b4545162aa8f9a4"
+        },
+        {
+            "date": 1679246675946,
+            "name": "src\\log\\patient\\patient-2023-03-20.log",
+            "hash": "5db3f704cf7bd0e48dd68b6fdc13fa3c5597ed361d2f4936e6b64afdc8ff431e"
+        },
+        {
+            "date": 1679365360946,
+            "name": "src\\log\\patient\\patient-2023-03-21.log",
+            "hash": "6a6d8aece5fbd0dd2ae713da2cd272ff88bef93c2071ee10d40c2f275fe7e9e1"
+        },
+        {
+            "date": 1679418513236,
+            "name": "src\\log\\patient\\patient-2023-03-22.log",
+            "hash": "bcc92a538432fd3a22d28e10fc1c0eb1113d40db929599575cd70ff03c758d29"
+        },
+        {
+            "date": 1679504470095,
+            "name": "src\\log\\patient\\patient-2023-03-23.log",
+            "hash": "0e531400f943365f8fd40fc3e1c54ccf96feb73aeb8331444b5662f36f1fcb4c"
+        },
+        {
+            "date": 1679591037462,
+            "name": "src\\log\\patient\\patient-2023-03-24.log",
+            "hash": "a5a85fdea2419e697f138579bc1e5b03d9fc0a075002a32c5571e91e1f4b2009"
 >>>>>>> origin/master
         }
     ],

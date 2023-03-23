@@ -7,6 +7,7 @@
     "files": [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609523952,
             "name": "src\\log\\clinic\\clinic-2023-03-01.log",
             "hash": "0e82262547de62415128e4fa63322852eb4ec9000e6492b631caf4b15fe771c4"
@@ -60,6 +61,8 @@
             "hash": "2293ac6ae630bd6bff27d3d336170f7fe36dbe14460b4f0917672c716bc80d13"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1678418721642,
             "name": "src\\log\\clinic\\clinic-2023-03-10.log",
             "hash": "0a8b2476045ee0567376358c7ba217f899e92bbe55325bbb1a557c13a84baeb4"
@@ -103,6 +106,39 @@
             "date": 1679072417889,
             "name": "src\\log\\clinic\\clinic-2023-03-18.log",
             "hash": "9b4d8707dc6dfe1c17e29584d29ae409c94ee903ce7645f6f9b80c8da3d916dc"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1679220012195,
+            "name": "src\\log\\clinic\\clinic-2023-03-19.log",
+            "hash": "6112ad60efa1020614b6236541706ec751b1e99de85770f0fdf4a96b8521dea8"
+        },
+        {
+            "date": 1679246675876,
+            "name": "src\\log\\clinic\\clinic-2023-03-20.log",
+            "hash": "432608c9240dc1c10cbedeb9d8e49fd605ac2f460e7753a7fe2c6d155191112b"
+        },
+        {
+            "date": 1679365360723,
+            "name": "src\\log\\clinic\\clinic-2023-03-21.log",
+            "hash": "995395c7fe1dcb46854df369173650d72f2a0e705dd737739fd7a584e1036454"
+        },
+        {
+            "date": 1679418513226,
+            "name": "src\\log\\clinic\\clinic-2023-03-22.log",
+            "hash": "6bd0474da3a9a8c6db2aaa22b8d653f5e5ddfa51472244e4917ccf7d3a5e15ed"
+        },
+        {
+            "date": 1679504470042,
+            "name": "src\\log\\clinic\\clinic-2023-03-23.log",
+            "hash": "434278316a2587a6283795a520543df198305214cc5bf2eb4924f31ec5949404"
+        },
+        {
+            "date": 1679591037452,
+            "name": "src\\log\\clinic\\clinic-2023-03-24.log",
+            "hash": "edccf5e50dde4e995909e628842a83edcbd13f033c9712be4b7958575e4f74a5"
 >>>>>>> origin/master
         }
     ],

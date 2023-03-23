@@ -7,6 +7,7 @@
     "files": [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609523943,
             "name": "src\\log\\app\\app-2023-03-01.log",
             "hash": "d817588fdb1a8f05e7035a33ab0d51e7b56d8863e7a204b609787d2b96ae1221"
@@ -60,6 +61,8 @@
             "hash": "297c94bcbf5b929ab73589123d63e28b4fa8aa95c68d29d925a4d4936ebf9291"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1678418721434,
             "name": "src\\log\\app\\app-2023-03-10.log",
             "hash": "66c6fc15416bd6bf235e5c155923477086436950eab6e314cbe7102d364046cb"
@@ -103,6 +106,39 @@
             "date": 1679072417872,
             "name": "src\\log\\app\\app-2023-03-18.log",
             "hash": "804f0375b0b8cc5b1ab4c7bcdc041c52e6c16d92eea9eee3dbae337ed56540e7"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1679220012162,
+            "name": "src\\log\\app\\app-2023-03-19.log",
+            "hash": "e0f229fc6f5beddce6b444247c286bd24c40f0cb83cc0a5e0c3fd66a181a4c4b"
+        },
+        {
+            "date": 1679246675759,
+            "name": "src\\log\\app\\app-2023-03-20.log",
+            "hash": "5ccebaa564ab6ec9c26caade0a3cf874860a5ebe2e5a5ccb9df5d4afef960ae3"
+        },
+        {
+            "date": 1679365360517,
+            "name": "src\\log\\app\\app-2023-03-21.log",
+            "hash": "926ad2bd1195be5cdc505c6c3a9fcdf95f57fedd60b6d900307aec3be4a96468"
+        },
+        {
+            "date": 1679418513217,
+            "name": "src\\log\\app\\app-2023-03-22.log",
+            "hash": "cd5f220f16695b6b288290abc42b51b3bbc19f56c8aecf0e332412e4e8aa5270"
+        },
+        {
+            "date": 1679504469992,
+            "name": "src\\log\\app\\app-2023-03-23.log",
+            "hash": "245aee6f792c459a172217c8a9cc91668901c2b63256a5f5daacd0d8924019fe"
+        },
+        {
+            "date": 1679591037402,
+            "name": "src\\log\\app\\app-2023-03-24.log",
+            "hash": "4fcb6376275fdea195c0eea586f8b57418daf193e4e5bad9ce0b0c18ed45fda7"
 >>>>>>> origin/master
         }
     ],

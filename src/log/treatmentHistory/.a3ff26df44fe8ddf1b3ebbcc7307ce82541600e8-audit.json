@@ -7,6 +7,7 @@
     "files": [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609524029,
             "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-01.log",
             "hash": "acc38224ff3224be9b5939e9c917dc6c984a31c3f6b9ae0df4c9a67645be4bde"
@@ -60,6 +61,8 @@
             "hash": "e83a22e06b2921afef5be469f7ebf50529db42f4936a1a0d967fbba0d8b66f06"
         },
         {
+=======
+>>>>>>> origin/master
             "date": 1678418722019,
             "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-10.log",
             "hash": "1bb5d5f103530301bc454da92d233573d6b25e3827403fdb485a5e67f5aa1994"
@@ -103,6 +106,39 @@
             "date": 1679072417946,
             "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-18.log",
             "hash": "c0771b2cc43803d664e941d412db9680471c62fcda7191dfc24c16ca5fac0fd5"
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+        },
+        {
+            "date": 1679220012255,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-19.log",
+            "hash": "96a2220958d6e915fc4b7198ce1438c6a21acaf70d5b45864014de99ba6d6985"
+        },
+        {
+            "date": 1679246676387,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-20.log",
+            "hash": "bb431f83a79c0530e375baecec7d6fcb9882bf5f4af62ec59fea61bb83bede30"
+        },
+        {
+            "date": 1679365361318,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-21.log",
+            "hash": "82fa4bd1be331e5962cdad28581f4c6c8132346c028490c92d896dd972e6aac0"
+        },
+        {
+            "date": 1679418513363,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-22.log",
+            "hash": "b7b3e5207193abcdbca511812719df765655380c74d2172463ccff8d04b63c2c"
+        },
+        {
+            "date": 1679504470230,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-23.log",
+            "hash": "12d79519a55e18f841f5d474840fb15e4d33ae6a8c9e02e7b85042a740009bc4"
+        },
+        {
+            "date": 1679591037486,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-24.log",
+            "hash": "5f889da44b40f23092c1923fb358139003cc95770b8e691cfc9ab01fde75e120"
 >>>>>>> origin/master
         }
     ],
