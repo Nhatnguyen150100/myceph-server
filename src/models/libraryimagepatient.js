@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      LibraryImagePatient.belongsTo(models.Patient, {foreignKey: {name: 'idPatientImage', allowNull: false}, targetKey: 'id'});
     }
   }
   LibraryImagePatient.init({

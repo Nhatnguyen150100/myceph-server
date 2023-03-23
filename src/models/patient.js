@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       Patient.hasMany(models.TreatmentPlan, {foreignKey:'idTreatmentPlan', sourceKey:'id'});
       Patient.hasMany(models.TreatmentHistory, {foreignKey:'idTreatmentHistory', sourceKey:'id'});
       Patient.hasMany(models.SharePatient, {foreignKey:'idSharedPatient', sourceKey:'id'});
-      Patient.hasMany(models.Schedule, {foreignKey:'idPatientSchdule', sourceKey:'id'});
+      Patient.hasMany(models.Schedule, {foreignKey:'idPatientSchedule', sourceKey:'id'});
 
       Patient.belongsTo(models.Doctor, {foreignKey:{name: 'idPatientOfDoctor', allowNull:false}, targetKey:'id'});
       Patient.belongsTo(models.Clinic, {foreignKey:{name: 'idPatientOfClinic', allowNull:false}, targetKey:'id'});

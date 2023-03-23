@@ -18,7 +18,7 @@ const scheduleControllers = {
   },
   getAllAppointments: async (req,res) => {
     try {
-      const { status, message, data } = await scheduleServices.getAllAppointments(req.params.id);
+      const { status, message, data } = await scheduleServices.getAllAppointments(req.params.id,req.query.idDoctor);
       res.status(status).json({
         message: message,
         data: data
@@ -46,7 +46,7 @@ const scheduleControllers = {
   },
   updateAppointment: async (req,res) => {
     try {
-      const { status, message, data } = await scheduleServices.updateAppointment(req.params.id.req.query.idAppointment,req.body);
+      const { status, message, data } = await scheduleServices.updateAppointment(req.params.id,req.query.idAppointment,req.body);
       res.status(status).json({
         message: message,
         data: data
@@ -60,7 +60,7 @@ const scheduleControllers = {
   },
   deleteAppointment: async (req,res) => {
     try {
-      const { status, message, data } = await scheduleServices.deleteAppointment(req.params.id.req.query.idAppointment);
+      const { status, message, data } = await scheduleServices.deleteAppointment(req.params.id,req.query.idAppointment);
       res.status(status).json({
         message: message,
         data: data

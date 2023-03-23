@@ -6,11 +6,6 @@
     "auditLog": "src\\log\\treatmentHistory\\.a3ff26df44fe8ddf1b3ebbcc7307ce82541600e8-audit.json",
     "files": [
         {
-            "date": 1678242627966,
-            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-08.log",
-            "hash": "e83a22e06b2921afef5be469f7ebf50529db42f4936a1a0d967fbba0d8b66f06"
-        },
-        {
             "date": 1678418722019,
             "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-10.log",
             "hash": "1bb5d5f103530301bc454da92d233573d6b25e3827403fdb485a5e67f5aa1994"
@@ -74,6 +69,16 @@
             "date": 1679418513363,
             "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-22.log",
             "hash": "b7b3e5207193abcdbca511812719df765655380c74d2172463ccff8d04b63c2c"
+        },
+        {
+            "date": 1679504470230,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-23.log",
+            "hash": "12d79519a55e18f841f5d474840fb15e4d33ae6a8c9e02e7b85042a740009bc4"
+        },
+        {
+            "date": 1679591037486,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-03-24.log",
+            "hash": "5f889da44b40f23092c1923fb358139003cc95770b8e691cfc9ab01fde75e120"
         }
     ],
     "hashType": "sha256"

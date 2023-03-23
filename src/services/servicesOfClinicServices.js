@@ -7,7 +7,7 @@ const servicesOfClinicServices = {
       try {
         const listServices = await db.ServicesOfClinic.findAll({
           order: [
-            ['createdAt', 'DESC']
+            ['createdAt', 'ASC']
           ],
           where: {
             idClinicService: idClinic
@@ -43,7 +43,7 @@ const servicesOfClinicServices = {
         if(createServicesClinic){
           const listServices = await db.ServicesOfClinic.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['createdAt', 'ASC']
             ],
             where: {
               idClinicService: idClinic
@@ -81,7 +81,7 @@ const servicesOfClinicServices = {
         if(updateServiceClinic){
           const listServices = await db.ServicesOfClinic.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['createdAt', 'ASC']
             ],
             where: {
               idClinicService: idClinic
@@ -108,6 +108,17 @@ const servicesOfClinicServices = {
   deleteService: (idClinic,idService) => {
     return new Promise(async (resolve, reject) => {
       try {
+        const checkAppointmentWithService = await db.Schedule.findOne({
+          where: {
+            idService: idService
+          }
+        })
+        if(checkAppointmentWithService) {
+          return resolve({
+            status: 202,
+            message: "This service cannot be deleted because it is being used to create an appointment"
+          })
+        }
         const deleteServiceClinic = await db.ServicesOfClinic.destroy({
           where: {
             id: idService
@@ -117,7 +128,7 @@ const servicesOfClinicServices = {
         if(deleteServiceClinic){
           const listServices = await db.ServicesOfClinic.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['createdAt', 'ASC']
             ],
             where: {
               idClinicService: idClinic

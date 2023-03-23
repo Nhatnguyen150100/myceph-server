@@ -7,7 +7,7 @@ const roomOfClinicServices = {
       try {
         const listRoom = await db.RoomOfClinic.findAll({
           order: [
-            ['createdAt', 'DESC']
+            ['createdAt', 'ASC']
           ],
           where: {
             idClinicRoom: idClinic
@@ -43,7 +43,7 @@ const roomOfClinicServices = {
         if(createRoomClinic){
           const listRoom = await db.RoomOfClinic.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['createdAt', 'ASC']
             ],
             where: {
               idClinicRoom: idClinic
@@ -81,7 +81,7 @@ const roomOfClinicServices = {
         if(updateRoomClinic){
           const listRoom = await db.RoomOfClinic.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['createdAt', 'ASC']
             ],
             where: {
               idClinicRoom: idClinic
@@ -108,6 +108,17 @@ const roomOfClinicServices = {
   deleteRoom: (idClinic,idRoom) => {
     return new Promise(async (resolve, reject) => {
       try {
+        const checkAppointmentWithRoom = await db.Schedule.findOne({
+          where: {
+            idRoom: idRoom
+          }
+        })
+        if(checkAppointmentWithRoom) {
+          return resolve({
+            status: 202,
+            message: "This room cannot be deleted because it is being used to create an appointment"
+          })
+        }
         const deleteRoomClinic = await db.RoomOfClinic.destroy({
           where: {
             id: idRoom
@@ -117,7 +128,7 @@ const roomOfClinicServices = {
         if(deleteRoomClinic){
           const listRoom = await db.RoomOfClinic.findAll({
             order: [
-              ['createdAt', 'DESC']
+              ['createdAt', 'ASC']
             ],
             where: {
               idClinicRoom: idClinic

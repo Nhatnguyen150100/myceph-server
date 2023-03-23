@@ -1,4 +1,4 @@
-import { QueryTypes } from "sequelize";
+import { Op, QueryTypes } from "sequelize";
 import logger from "../config/winston";
 import db, { sequelize } from "../models";
 
@@ -12,16 +12,25 @@ const scheduleServices = {
           type: QueryTypes.SELECT
         });
         const statusOfClinic = await db.StatusOfClinic.findAll({
+          order: [
+            ['createdAt', 'ASC']
+          ],
           where: {
             idClinicStatus: idClinic
           }
         });
         const serviceOfClinic = await db.ServicesOfClinic.findAll({
+          order: [
+            ['createdAt', 'ASC']
+          ],
           where: {
             idClinicService: idClinic
           }
         });
         const roomOfClinic = await db.RoomOfClinic.findAll({
+          order: [
+            ['createdAt', 'ASC']
+          ],
           where: {
             idClinicRoom: idClinic
           }
@@ -50,37 +59,38 @@ const scheduleServices = {
       }
     })
   },
-  getAllAppointments: (idClinic,messageSuccess,messageFailed) => {
+  getAllAppointments: (idClinic,idDoctor,messageSuccess,messageFailed) => {
     return new Promise(async (resolve, reject) => {
       try {
         const allAppointments = await db.Schedule.findAll({
-          order: [
-            ['createdAt', 'DESC']
-          ],
           where : {
-            idClinicSchedule: idClinic
-          },
-          include: [{
+            idClinicSchedule: idClinic,
+            idDoctorSchedule: idDoctor?idDoctor:{[Op.not] : null}
+          },      
+          include: [
+            {
+              model: db.Doctor,
+              attributes: ['email','fullName']
+              },
+            {
             model: db.ServicesOfClinic,
-            attributes: ['nameService','colorService'],
-            where: {
-              idClinicService: idClinic
+            attributes: ['nameService','colorService']
+            },
+            {
+              model: db.RoomOfClinic,
+              attributes: ['nameRoom','colorRoom']
+            },
+            {
+              model: db.StatusOfClinic,
+              attributes: ['nameStatus','colorStatus']
+            },
+            {
+              model: db.Patient,
+              attributes: ['fullName']
             }
-          }],
-          include: [{
-            model: db.RoomOfClinic,
-            attributes: ['nameRoom','colorRoom'],
-            where: {
-              idClinicRoom: idClinic
-            }
-          }],
-          include: [{
-            model: db.StatusOfClinic,
-            attributes: ['nameStatus','colorStatus'],
-            where: {
-              idClinicStatus: idClinic
-            }
-          }]
+          ],
+          raw : true ,
+          nest : true
         })
         if(allAppointments.length >= 0){
           resolve({
@@ -117,11 +127,12 @@ const scheduleServices = {
           note: data.note
         })
         if(create){
-          scheduleServices.getAllAppointments(idClinic,'create appointment successfully','create appointment failed'); 
+          const result = await scheduleServices.getAllAppointments(idClinic,'','create appointment successfully','create appointment failed');
+          resolve(result);
         }else{
           resolve({
             status: 202,
-            message: 'create appointments failed',
+            message: 'create appointment failed',
             data: []
           })
         }
@@ -151,7 +162,8 @@ const scheduleServices = {
           }
         })
         if(update){
-          scheduleServices.getAllAppointments(idClinic,'update appointment successfully','update appointment failed'); 
+          const result = await scheduleServices.getAllAppointments(idClinic,'','update appointment successfully','update appointment failed');
+          resolve(result); 
         }else{
           resolve({
             status: 202,
@@ -171,10 +183,12 @@ const scheduleServices = {
         const deleteAppoint = await db.Schedule.destroy({
           where: {
             id: idAppointment
-          }
+          },
+          force: true
         });
         if(deleteAppoint){
-          scheduleServices.getAllAppointments(idClinic,'delete appointment successfully','delete appointment failed'); 
+          const result = await scheduleServices.getAllAppointments(idClinic,'','delete appointment successfully','delete appointment failed');
+          resolve(result);
         }else{
           resolve({
             status: 202,
