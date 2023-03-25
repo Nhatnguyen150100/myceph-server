@@ -1,3 +1,4 @@
+'use strict';
 import toISODateString from "../common/utility";
 import _ from 'lodash';
 import { Op } from "sequelize";

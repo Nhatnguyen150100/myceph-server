@@ -6,16 +6,6 @@
     "auditLog": "src\\log\\sharePatient\\.aef5290484c8bc60a8f142d990c02c9563b5864a-audit.json",
     "files": [
         {
-            "date": 1678418721989,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-03-10.log",
-            "hash": "dcef7f6375b606fbb09c179add4b7c9a6a672d8a02e84ea220043278f0f91035"
-        },
-        {
-            "date": 1678467900576,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-03-11.log",
-            "hash": "726c8e98b8ac71aaef580833735676b47964c1bd7238b3efbd7242b213d0739b"
-        },
-        {
             "date": 1678556272959,
             "name": "src\\log\\sharePatient\\sharePatient-2023-03-12.log",
             "hash": "391b24dd44ad115c8fc7e41522799c6e69fb2cd413068c3185d12431a464db0b"
@@ -79,6 +69,11 @@
             "date": 1679591037484,
             "name": "src\\log\\sharePatient\\sharePatient-2023-03-24.log",
             "hash": "998fc71daccea7372cdbf888a5691558b2f650cd382b69fc36587aec084ea292"
+        },
+        {
+            "date": 1679709012234,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-03-25.log",
+            "hash": "fab80634aab5ccd040f24c861b926667b09c1eec066cb99a1b0207e2d37322ba"
         }
     ],
     "hashType": "sha256"

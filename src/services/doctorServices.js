@@ -1,3 +1,4 @@
+'use strict';
 import bcrypt from 'bcrypt';
 import db, { sequelize } from '../models';
 import mailerServices from './mailerServices';

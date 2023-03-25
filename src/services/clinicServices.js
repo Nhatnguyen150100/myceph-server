@@ -1,5 +1,7 @@
+'use strict';
 import db, { sequelize } from "../models";
 import QueryTypes from "sequelize";
+import patientServices from "./patientServices";
 
 const clinicServices = {
   getAllClinic : () => {
@@ -269,6 +271,17 @@ const clinicServices = {
             idClinic: idClinic
           }
         })
+        const listPatientOfClinic = await db.Patient.findAll({
+          where: {
+            idPatientOfClinic: idClinic
+          }
+        })
+        if(listPatientOfClinic.length > 0) {
+          for (let index = 0; index < listPatientOfClinic.length; index++) {
+            const element = listPatientOfClinic[index];
+            await patientServices.deletePatient(element.id);
+          }
+        }
         if(deleteMemberOfClinic){
           const deleteClinic = await db.Clinic.destroy({
             where: {

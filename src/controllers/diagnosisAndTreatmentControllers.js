@@ -1,3 +1,4 @@
+'use strict';
 import patientServices from "../services/patientServices";
 
 const { default: diagnosisandtreatmentServices } = require("../services/diagnosisandtreatmentServices")

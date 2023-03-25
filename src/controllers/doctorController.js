@@ -1,3 +1,4 @@
+'use strict';
 const { default: doctorServices } = require("../services/doctorServices")
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';

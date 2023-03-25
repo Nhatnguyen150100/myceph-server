@@ -6,11 +6,6 @@
     "auditLog": "src\\log\\passport\\.b63a1f2a89b4de2bf6a198b8d74ef4e723e2b6b6-audit.json",
     "files": [
         {
-            "date": 1678418721730,
-            "name": "src\\log\\passport\\passport-2023-03-10.log",
-            "hash": "feead537e40cb71399379c00de3ff450ac001f39c854e4f5c02855391ec520ae"
-        },
-        {
             "date": 1678467900534,
             "name": "src\\log\\passport\\passport-2023-03-11.log",
             "hash": "e32091afeca6ddbe65284433437b53145a16173248b8181563978ad8b9775726"
@@ -79,6 +74,11 @@
             "date": 1679591037457,
             "name": "src\\log\\passport\\passport-2023-03-24.log",
             "hash": "8e1b70cf02ece7aa926bf1aa180e25b160f2aa0e86eeff291d35aef706e92720"
+        },
+        {
+            "date": 1679677244826,
+            "name": "src\\log\\passport\\passport-2023-03-25.log",
+            "hash": "d55aac78c6e9239fb37768e6e0da11394d808c45133559d46161801df9a3f9a6"
         }
     ],
     "hashType": "sha256"

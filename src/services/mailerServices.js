@@ -1,3 +1,4 @@
+'use strict';
 import nodeMailer from 'nodemailer';
 import mailConfig from '../config/mail.config';
 

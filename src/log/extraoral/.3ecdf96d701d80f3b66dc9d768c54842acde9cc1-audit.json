@@ -6,16 +6,6 @@
     "auditLog": "src\\log\\extraoral\\.3ecdf96d701d80f3b66dc9d768c54842acde9cc1-audit.json",
     "files": [
         {
-            "date": 1678418721891,
-            "name": "src\\log\\extraoral\\extraoral-2023-03-10.log",
-            "hash": "f1f884857b609fc9c9e359c8653324b5201d1acf250cd46f0dc81babb8f72236"
-        },
-        {
-            "date": 1678467900546,
-            "name": "src\\log\\extraoral\\extraoral-2023-03-11.log",
-            "hash": "25fd06786fd1ffe057cce209f4a68a94ba4c90e20d3f93491fc676e1794a6a0a"
-        },
-        {
             "date": 1678556272917,
             "name": "src\\log\\extraoral\\extraoral-2023-03-12.log",
             "hash": "60baddaefe1c014587bb7a649e5311bcaaa32a481e6e79809f63f785a08fc852"
@@ -79,6 +69,11 @@
             "date": 1679591037468,
             "name": "src\\log\\extraoral\\extraoral-2023-03-24.log",
             "hash": "f477924ec33fa384bf233c1ebe7e658f5a1244183ec1d2f54aa0e561f6cc7f69"
+        },
+        {
+            "date": 1679709012214,
+            "name": "src\\log\\extraoral\\extraoral-2023-03-25.log",
+            "hash": "76b1c3a8f286d4d4200b708afe10b3c0fcf5af03b2d3aac3b6d0e7ba5842e3cf"
         }
     ],
     "hashType": "sha256"

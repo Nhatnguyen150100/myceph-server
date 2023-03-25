@@ -1,3 +1,4 @@
+'use strict';
 import { sequelize } from "../models";
 import QueryTypes, { Op } from "sequelize";
 import logger from "../config/winston";

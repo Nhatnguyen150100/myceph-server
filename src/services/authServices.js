@@ -1,3 +1,4 @@
+'use strict';
 const db = require("../models");
 import bcrypt from 'bcrypt';
 import logger from '../config/winston';
