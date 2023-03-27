@@ -6,8 +6,15 @@ import jwt from 'jsonwebtoken';
 import mailConfig from '../config/mail.config';
 import { QueryTypes } from 'sequelize';
 import logger from '../config/winston';
+import fs from 'fs';
+import path from 'path';
 
 const salt = bcrypt.genSaltSync(10);
+
+
+const parentDir = path.join(__dirname, '..');
+
+const privateKey = fs.readFileSync(path.join(parentDir, './controllers/token/private.pem'));
 
 const doctorServices = {
   createNewDoctor: (email,password) => {
@@ -87,9 +94,9 @@ const doctorServices = {
   sendVerifyEmailResetPassword: (data) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-        let hashEmail = jwt.sign({email:data.email},process.env.JWT_ACCESS_KEY,{expiresIn:60*3});
+        let hashEmail = jwt.sign({email:data.email},privateKey,{expiresIn:60*3});
         let hashPassword = await bcrypt.hash(data.password, salt);
-        mailerServices.sendMail(data.email,mailConfig.HTML_CONTENT_RESETPASSWOR,`${process.env.BASE_URL_SERVER}/v1/doctor/resetPassword?email=${data.email}&password=${hashPassword}&token=${hashEmail}`).then(sendMail =>{
+        mailerServices.sendMail(data.email,mailConfig.HTML_CONTENT_RESETPASSWOR,`${process.env.BASE_URL_SERVER}/v1/doctor/resetPassword?email=${data.email}&password=${hashPassword}&token=${hashEmail}`).then(() =>{
           resolve({
             status: 200,
             message:'send verify mail successfully'
@@ -107,9 +114,9 @@ const doctorServices = {
   sendVerifyEmail: (data) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-        let hashEmail = jwt.sign({email:data.email},process.env.JWT_ACCESS_KEY,{expiresIn:60*3});
+        let hashEmail = jwt.sign({email:data.email},privateKey,{expiresIn:60*3});
         let hashPassword = await bcrypt.hash(data.password, salt);
-        mailerServices.sendMail(data.email,mailConfig.HTML_CONTENT,`${process.env.BASE_URL_SERVER}/v1/doctor/verify?email=${data.email}&password=${hashPassword}&token=${hashEmail}`).then(sendMail =>{
+        mailerServices.sendMail(data.email,mailConfig.HTML_CONTENT,`${process.env.BASE_URL_SERVER}/v1/doctor/verify?email=${data.email}&password=${hashPassword}&token=${hashEmail}`).then(() =>{
           resolve({
             status: 200,
             message:'send verify mail successfully'

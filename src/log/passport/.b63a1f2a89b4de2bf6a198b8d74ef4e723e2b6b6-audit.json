@@ -6,16 +6,6 @@
     "auditLog": "src\\log\\passport\\.b63a1f2a89b4de2bf6a198b8d74ef4e723e2b6b6-audit.json",
     "files": [
         {
-            "date": 1678467900534,
-            "name": "src\\log\\passport\\passport-2023-03-11.log",
-            "hash": "e32091afeca6ddbe65284433437b53145a16173248b8181563978ad8b9775726"
-        },
-        {
-            "date": 1678556272899,
-            "name": "src\\log\\passport\\passport-2023-03-12.log",
-            "hash": "a3a1d5b2b3ac6f7d6fba09e3a4159b4c28b7aacb89d913209998bb23cf6238a3"
-        },
-        {
             "date": 1678668560734,
             "name": "src\\log\\passport\\passport-2023-03-13.log",
             "hash": "fa61c37477b29aa50302cf4c0e0f92595e983c6a1a0b83d71dfc59999ce7ef35"
@@ -79,6 +69,16 @@
             "date": 1679677244826,
             "name": "src\\log\\passport\\passport-2023-03-25.log",
             "hash": "d55aac78c6e9239fb37768e6e0da11394d808c45133559d46161801df9a3f9a6"
+        },
+        {
+            "date": 1679803364240,
+            "name": "src\\log\\passport\\passport-2023-03-26.log",
+            "hash": "7abb1502e22e5e539e3bff036ec051b80dbbd53c49d72014d8b0a0ddffce7719"
+        },
+        {
+            "date": 1679856833321,
+            "name": "src\\log\\passport\\passport-2023-03-27.log",
+            "hash": "1cc7f4916481d931b07890079275340cb15b6ceb91bb91e4a44a97cf264305ba"
         }
     ],
     "hashType": "sha256"

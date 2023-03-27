@@ -3,6 +3,10 @@ const { default: doctorServices } = require("../services/doctorServices")
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import logger from '../config/winston';
+import path from 'path';
+import fs from 'fs';
+
+const publicKey = fs.readFileSync(path.join(__dirname, '/token/public.pem'));
 
 const salt = bcrypt.genSaltSync(10);
 
@@ -62,7 +66,7 @@ const doctorController = {
   },
   verifyResetEmailDoctor: async (req,res) => {
     try {
-      jwt.verify(req.query.token, process.env.JWT_ACCESS_KEY, async (err, email) => {
+      jwt.verify(req.query.token, publicKey, async (err, email) => {
 				if (err) {
           res.status(500).send("The check email has expired, please go back to the registration page");
 				}else{
@@ -94,7 +98,7 @@ const doctorController = {
   },
   verifyEmailDoctor: async (req,res) => {
     try {
-      const doctor = jwt.verify(req.query.token, process.env.JWT_ACCESS_KEY);
+      const doctor = jwt.verify(req.query.token, publicKey);
       if(doctor){
           const { status, message } = await doctorServices.createNewDoctor(req.query.email, req.query.password);
           if(status === 200) res.status(status).redirect(`${process.env.BASE_URL_CLIENT}/login`);

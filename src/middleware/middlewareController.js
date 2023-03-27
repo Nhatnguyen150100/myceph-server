@@ -1,7 +1,6 @@
 import jwt from 'jsonwebtoken';
 import path from 'path';
 import fs from 'fs';
-import logger from '../config/winston';
 
 const parentDir = path.join(__dirname, '..');
 
