@@ -20,7 +20,7 @@ const passportJS = {
     passport.authenticate('local', (error, data, message) => {
       if(error){
         return res.status(500).json({
-          message: 'server error'
+          message: 'Oops somethings wrong is happen. Please check your account!'
         })
       }
       if(!data){

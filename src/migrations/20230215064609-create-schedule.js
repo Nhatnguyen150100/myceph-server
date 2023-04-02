@@ -14,7 +14,7 @@ module.exports = {
         type: Sequelize.UUID,
         references:{
           model: {
-            tableName: 'patients',
+            tableName: 'Patients',
             name: 'idPatientSchedule',
           },
           key: 'id',
@@ -25,7 +25,7 @@ module.exports = {
         type: Sequelize.UUID,
         references:{
           model: {
-            tableName: 'doctors',
+            tableName: 'Doctors',
             name: 'idDoctorSchedule',
           },
           key: 'id',
@@ -36,7 +36,7 @@ module.exports = {
         type: Sequelize.UUID,
         references:{
           model: {
-            tableName: 'clinics',
+            tableName: 'Clinics',
             name: 'idClinicSchedule',
           },
           key: 'id',
@@ -47,7 +47,7 @@ module.exports = {
         type: Sequelize.UUID,
         references:{
           model: {
-            tableName: 'statusOfClinics',
+            tableName: 'StatusOfClinics',
             name: 'idStatus',
           },
           key: 'id',
@@ -58,7 +58,7 @@ module.exports = {
         type: Sequelize.UUID,
         references:{
           model: {
-            tableName: 'servicesOfClinics',
+            tableName: 'ServicesOfClinics',
             name: 'idService',
           },
           key: 'id',
@@ -69,7 +69,7 @@ module.exports = {
         type: Sequelize.UUID,
         references:{
           model: {
-            tableName: 'roomOfClinics',
+            tableName: 'RoomOfClinics',
             name: 'idRoom',
           },
           key: 'id',

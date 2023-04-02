@@ -15,6 +15,8 @@ const salt = bcrypt.genSaltSync(10);
 const parentDir = path.join(__dirname, '..');
 
 const privateKey = fs.readFileSync(path.join(parentDir, './controllers/token/private.pem'));
+console.log("🚀 ~ file: doctorServices.js:18 ~ parentDir:", path.join(parentDir, './controllers/token/private.pem'))
+// console.log("🚀 ~ file: doctorServices.js:18 ~ privateKey:", privateKey)
 
 const doctorServices = {
   createNewDoctor: (email,password) => {
@@ -66,7 +68,7 @@ const doctorServices = {
   getAllDoctorByEmailSearch: (emailDoctor,currentEmailDoctor) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const listDoctor = await sequelize.query("select id,email,fullName,avatar from myceph.doctors where myceph.doctors.email like ? and myceph.doctors.email != ? limit 5",
+        const listDoctor = await sequelize.query("select id,email,fullName,avatar from Doctors where Doctors.email like ? and Doctors.email != ? limit 5",
           {
             replacements: ['%'+emailDoctor+'%',currentEmailDoctor],
             type: QueryTypes.SELECT

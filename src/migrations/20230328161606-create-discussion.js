@@ -2,35 +2,35 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('ListOfIssues', {
+    await queryInterface.createTable('Discussions', {
       id: {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4
       },
-      idListOfIssue: {
+      idRoomDiscussionOfPatient: {
         type: Sequelize.UUID,
         references:{
           model: {
             tableName: 'Patients',
-            name: 'idListOfIssue',
+            name: 'idRoomDiscussionOfPatient',
           },
           key: 'id',
         }
       },
-      issue: {
-        type: Sequelize.STRING
+      idDoctorSendMessage: {
+        type: Sequelize.UUID,
+        references:{
+          model: {
+            tableName: 'Doctors',
+            name: 'idDoctorSendMessage',
+          },
+          key: 'id',
+        }
       },
-      treatmentObject: {
+      message: {
         type: Sequelize.STRING
-      },
-      treatmentMethod: {
-        type: Sequelize.STRING
-      },
-      priotized: {
-        defaultValue: false,
-        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
@@ -43,7 +43,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('ListOfIssues');
+    await queryInterface.dropTable('Discussions');
   }
 };
-

@@ -123,8 +123,7 @@ const servicesOfClinicServices = {
         const deleteServiceClinic = await db.ServicesOfClinic.destroy({
           where: {
             id: idService
-          },
-          force: true
+          }
         })
         if(deleteServiceClinic){
           const listServices = await db.ServicesOfClinic.findAll({

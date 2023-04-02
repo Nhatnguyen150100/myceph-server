@@ -23,13 +23,13 @@ const clinicServices = {
       try {
         if(!nameSearch){
           const start = (page-1)*pageSize;
-          const count = await sequelize.query("select * from myceph.memberofclinics, myceph.doctors where myceph.memberofclinics.idClinic = ? and myceph.memberofclinics.idDoctor = myceph.doctors.id",
+          const count = await sequelize.query("select * from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id",
             {
               replacements: [idClinic],
               type: QueryTypes.SELECT
             }
           );
-          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,speciality,avatar,roleOfDoctor from myceph.memberofclinics, myceph.doctors where myceph.memberofclinics.idClinic = ? and myceph.memberofclinics.idDoctor = myceph.doctors.id limit ?,?",
+          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,speciality,avatar,roleOfDoctor from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id limit ?,?",
             {
               replacements: [idClinic,start,Number(pageSize)],
               type: QueryTypes.SELECT
@@ -52,13 +52,13 @@ const clinicServices = {
           }
         }else{
           const start = (page-1)*pageSize;
-          const count = await sequelize.query("select * from myceph.memberofclinics, myceph.doctors where myceph.memberofclinics.idClinic = ? and myceph.memberofclinics.idDoctor = myceph.doctors.id and myceph.doctors.fullName like ?",
+          const count = await sequelize.query("select * from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id and Doctors.fullName like ?",
             {
               replacements: [idClinic,('%'+nameSearch+'%')],
               type: QueryTypes.SELECT
             }
           );
-          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,speciality,avatar,roleOfDoctor from myceph.memberofclinics, myceph.doctors where myceph.memberofclinics.idClinic = ? and myceph.memberofclinics.idDoctor = myceph.doctors.id and myceph.doctors.fullName like ? limit ?,?",
+          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,speciality,avatar,roleOfDoctor from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id and Doctors.fullName like ? limit ?,?",
             {
               replacements: [idClinic,('%'+nameSearch+'%'),start,Number(pageSize)],
               type: QueryTypes.SELECT
@@ -245,7 +245,7 @@ const clinicServices = {
           where : {
             idClinic: idClinic,
             idDoctor: idDoctor
-          }, force: true
+          }
         })
         if(deleteDoctor){
           resolve({
@@ -266,9 +266,24 @@ const clinicServices = {
   deleteClinic: (idClinic) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const deleteMemberOfClinic = await db.MemberOfClinic.destroy({
+        await db.Schedule.destroy({
+          where : {
+            idClinicSchedule: idClinic
+          }
+        })
+        await db.RoomOfClinic.destroy({
           where: {
-            idClinic: idClinic
+            idClinicRoom: idClinic
+          }
+        })
+        await db.ServicesOfClinic.destroy({
+          where: {
+            idClinicService: idClinic
+          }
+        })
+        await db.StatusOfClinic.destroy({
+          where: {
+            idClinicStatus: idClinic
           }
         })
         const listPatientOfClinic = await db.Patient.findAll({
@@ -282,10 +297,15 @@ const clinicServices = {
             await patientServices.deletePatient(element.id);
           }
         }
+        const deleteMemberOfClinic = await db.MemberOfClinic.destroy({
+          where: {
+            idClinic: idClinic
+          }
+        })
         if(deleteMemberOfClinic){
           const deleteClinic = await db.Clinic.destroy({
             where: {
-              id: idClinic
+              idClinicRoom: idClinic
             }
           })
           if(deleteClinic){

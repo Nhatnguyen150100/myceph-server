@@ -15,7 +15,7 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4,
         references:{
           model: {
-            tableName: 'patients',
+            tableName: 'Patients',
             name: 'idDiagnosisAndTreatment',
           },
           key: 'id',

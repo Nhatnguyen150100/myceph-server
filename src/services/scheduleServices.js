@@ -7,7 +7,7 @@ const scheduleServices = {
   getPropertiesClinic: (idClinic) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const allDoctorInClinic = await sequelize.query("select idDoctor,email,fullName from myceph.memberofclinics, myceph.doctors where myceph.memberofclinics.idClinic = ? and myceph.memberofclinics.idDoctor = myceph.doctors.id",
+        const allDoctorInClinic = await sequelize.query("select idDoctor,email,fullName from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id",
         {
           replacements: [idClinic],
           type: QueryTypes.SELECT
@@ -39,7 +39,7 @@ const scheduleServices = {
         if(allDoctorInClinic.length >=0 && statusOfClinic.length >=0 && serviceOfClinic.length >=0 && roomOfClinic.length >=0){
           resolve({
             status: 200,
-            message: 'get attribute of clinic successfully',
+            message:'get attribute of clinic successfully',
             data: {
               doctor: [...allDoctorInClinic],
               statusOfClinic: [...statusOfClinic],
@@ -60,7 +60,7 @@ const scheduleServices = {
       }
     })
   },
-  getAllAppointments: (idClinic,idDoctor,idPatient,messageSuccess,messageFailed) => {
+  getAllAppointments: (idClinic,idDoctor,idPatient,messageSuccess='',messageFailed='') => {
     return new Promise(async (resolve, reject) => {
       try {
         const allAppointments = await db.Schedule.findAll({
@@ -185,8 +185,7 @@ const scheduleServices = {
         const deleteAppoint = await db.Schedule.destroy({
           where: {
             id: idAppointment
-          },
-          force: true
+          }
         });
         if(deleteAppoint){
           const result = await scheduleServices.getAllAppointments(idClinic,'','','delete appointment successfully','delete appointment failed');
