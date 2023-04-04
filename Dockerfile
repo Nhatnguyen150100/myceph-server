@@ -1,12 +1,10 @@
-FROM node:14-alpine
+FROM node:18.14.2-alpine
 ENV NODE_ENV=production
-WORKDIR /myceph/src/app
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+ENV NODE_PATH="/usr/local/lib/node_modules:/myceph/backend/node_modules"
+WORKDIR /myceph-server/backend
+COPY "package*.json" ./
 RUN npm install
-RUN npm install -g @babel/core @babel/cli @babel/plugin-transform-runtime
+RUN npm install -g @babel/cli @babel/core@7.20.12 @babel/preset-env@7.20.2
 COPY . .
-EXPOSE 3000
-RUN chown -R node /myceph/src/app
-RUN npm run production
-USER node
-CMD ["npm", "run", "production","build","build-babel","clean"]
+RUN npm run build
+CMD ["npm", "run", "production"]

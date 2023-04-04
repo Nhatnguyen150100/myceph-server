@@ -1,3 +1,4 @@
+'use-strict'
 import express from 'express';
 import diagnosisAndTreatmentControllers from '../controllers/diagnosisAndTreatmentControllers';
 import doctorMiddleware from '../middleware/doctorMiddleware';

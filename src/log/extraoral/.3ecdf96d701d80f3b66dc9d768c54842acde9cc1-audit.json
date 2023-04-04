@@ -6,26 +6,6 @@
     "auditLog": "src\\log\\extraoral\\.3ecdf96d701d80f3b66dc9d768c54842acde9cc1-audit.json",
     "files": [
         {
-            "date": 1679220012223,
-            "name": "src\\log\\extraoral\\extraoral-2023-03-19.log",
-            "hash": "a5bd443ac46dae520251dddc30cf1886e8e0541576c1f2067d7760e4318f7c75"
-        },
-        {
-            "date": 1679246676035,
-            "name": "src\\log\\extraoral\\extraoral-2023-03-20.log",
-            "hash": "1166c2878280934860b49bfc8307b894ecfcb6250013919c50ea3f883d244c70"
-        },
-        {
-            "date": 1679365361022,
-            "name": "src\\log\\extraoral\\extraoral-2023-03-21.log",
-            "hash": "27b75a37d77712be927ffe7f40ed127f831c0e702d796c7260025de10472bcc3"
-        },
-        {
-            "date": 1679418513242,
-            "name": "src\\log\\extraoral\\extraoral-2023-03-22.log",
-            "hash": "57be53f9ad88bf3e435ba4861b59f4675956c0f0b5d68827be7110cddf68a255"
-        },
-        {
             "date": 1679504470145,
             "name": "src\\log\\extraoral\\extraoral-2023-03-23.log",
             "hash": "e9c250f1f02ad0627d6df76c642b260a02b5c4938e75ccbe4132beee00f9e256"
@@ -79,6 +59,21 @@
             "date": 1680368799340,
             "name": "src\\log\\extraoral\\extraoral-2023-04-02.log",
             "hash": "9ab4ab2712b74368dff9931f185d0db28b05b68037468c7eb71dbd60ad49fb5a"
+        },
+        {
+            "date": 1680494129882,
+            "name": "src\\log\\extraoral\\extraoral-2023-04-03.log",
+            "hash": "700863d0c5051814c6fe7c52fe5a4251578da5e54b28420d5dec8837f18739f3"
+        },
+        {
+            "date": 1680543435224,
+            "name": "src\\log\\extraoral\\extraoral-2023-04-04.log",
+            "hash": "4c856768d4ba9987f726f5150f06e09b5c5f9d816437940eff2742f49b9ea6a8"
+        },
+        {
+            "date": 1680628565005,
+            "name": "src\\log\\extraoral\\extraoral-2023-04-05.log",
+            "hash": "e53165ad30a49e56eec7b7d56c5156ac295ba18eaaaa080b3f83f41e73105509"
         }
     ],
     "hashType": "sha256"

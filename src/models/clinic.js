@@ -33,7 +33,8 @@ module.exports = (sequelize, DataTypes) => {
     phoneNumberClinic: DataTypes.STRING,
     avatarClinic: DataTypes.STRING,
     addressClinic: DataTypes.STRING,
-    description: DataTypes.STRING
+    description: DataTypes.STRING,
+    encryptedBy: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Clinic',

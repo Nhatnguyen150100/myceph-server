@@ -1,6 +1,6 @@
 {
-  "name": "test4",
-  "version": "0.0.0",
+  "name": "myceph-server",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
@@ -8,7 +8,7 @@
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel ./src -d ./build/src --copy-files",
     "build": "npm run clean && npm run build-babel",
-    "production": "npm run build && node ./build/src/app.js",
+    "production": "node ./build/src/app.js",
     "dev": "nodemon --exec ./node_modules/.bin/babel-node ./src/app.js"
   },
   "dependencies": {
@@ -41,7 +41,7 @@
     "passport-local": "^1.0.0",
     "pug": "2.0.0-beta11",
     "redis": "^4.6.5",
-    "sequelize": "^6.28.0",
+    "sequelize": "^6.30.0",
     "tough-cookie": "^4.1.2",
     "useragent": "^2.3.0",
     "uuid": "^9.0.0",

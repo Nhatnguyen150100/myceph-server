@@ -26,4 +26,5 @@ const middlewareController = {
 		}
 	}
 };
+
 export default middlewareController;

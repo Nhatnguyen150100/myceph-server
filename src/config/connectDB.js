@@ -1,3 +1,4 @@
+'use-strict'
 import logger from './winston';
 require('dotenv').config()
 

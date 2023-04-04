@@ -1,3 +1,4 @@
+'use-strict'
 const db = require("../../models");
 const { default: tokenController } = require("./tokenController");
 import jwt from 'jsonwebtoken';

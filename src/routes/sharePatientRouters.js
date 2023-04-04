@@ -1,3 +1,4 @@
+'use-strict'
 import express from 'express';
 import sharePatientController from '../controllers/sharePatientController';
 import middlewareController from '../middleware/middlewareController';

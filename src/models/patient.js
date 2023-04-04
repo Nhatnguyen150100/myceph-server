@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Patient.hasOne(models.History, {foreignKey:'idHistory', sourceKey:'id'});
-      Patient.hasOne(models.ExtraOral, {foreignKey:'idExtraOral', sourceKey:'id'});
-      Patient.hasOne(models.IntraOral, {foreignKey:'idIntraOral', sourceKey:'id'});
-      Patient.hasOne(models.Radiography, {foreignKey:'idRadiography', sourceKey:'id'});
-      Patient.hasOne(models.DiagnosisAndTreatment, {foreignKey:'idDiagnosisAndTreatment', sourceKey:'id'});
+      Patient.hasOne(models.History, {foreignKey:'idHistory', as:'histories' ,sourceKey:'id'});
+      Patient.hasOne(models.ExtraOral, {foreignKey:'idExtraOral', as:'extraOrals', sourceKey:'id'});
+      Patient.hasOne(models.IntraOral, {foreignKey:'idIntraOral', as:'intraOrals', sourceKey:'id'});
+      Patient.hasOne(models.Radiography, {foreignKey:'idRadiography', as:'radiographies', sourceKey:'id'});
+      Patient.hasOne(models.DiagnosisAndTreatment, {foreignKey:'idDiagnosisAndTreatment', as:'diagnosisAndTreatments', sourceKey:'id'});
 
       Patient.hasMany(models.ListOfIssue, {foreignKey:'idListOfIssue', sourceKey:'id'});
       Patient.hasMany(models.TreatmentPlan, {foreignKey:'idTreatmentPlan', sourceKey:'id'});

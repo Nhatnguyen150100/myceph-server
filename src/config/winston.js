@@ -1,3 +1,4 @@
+'use-strict'
 import chalk from 'chalk';
 import { createLogger, format, transports } from 'winston';
 import DailyRotateFile from 'winston-daily-rotate-file';
@@ -324,6 +325,21 @@ const logger = {
       new DailyRotateFile({
         format: combine(format.json()),
         filename: './src/log/schedule/schedule-%DATE%.log',
+        datePattern: 'YYYY-MM-DD',
+        zippedArchive: true,
+        maxSize: '20m',
+        maxFiles: '14d',
+      })
+    ]
+  }),
+  encryption : createLogger({
+    levels: customLevels.levels,
+    format: customFormat,
+    transports: [
+      new transports.Console({level: 'error'}),
+      new DailyRotateFile({
+        format: combine(format.json()),
+        filename: './src/log/encryption/encryption-%DATE%.log',
         datePattern: 'YYYY-MM-DD',
         zippedArchive: true,
         maxSize: '20m',

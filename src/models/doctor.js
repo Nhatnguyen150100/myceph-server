@@ -35,7 +35,8 @@ module.exports = (sequelize, DataTypes) => {
     speciality:DataTypes.STRING,
     diploma: DataTypes.STRING,
     position :DataTypes.STRING,
-    description: DataTypes.STRING
+    description: DataTypes.STRING,
+    encryptionKey: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Doctor',

@@ -31,6 +31,7 @@ import roomOfClinicRouter from './routes/roomOfClinicRouters';
 import servicesOfClinicRouter from './routes/servicesOfClinicRouters';
 import statusOfClinicRouter from './routes/statusOfClinicRouters';
 import scheduleRouter from './routes/scheduleRouters';
+import encryptionRouter from './routes/encryptionRouters';
 
 const app = express();
 
@@ -83,6 +84,7 @@ app.use('/v1/roomOfClinic', roomOfClinicRouter);
 app.use('/v1/servicesOfClinic', servicesOfClinicRouter);
 app.use('/v1/statusOfClinic', statusOfClinicRouter);
 app.use('/v1/schedule', scheduleRouter);
+app.use('/v1/encryption', encryptionRouter);
 
 
 // catch 404 and forward to error handler

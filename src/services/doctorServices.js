@@ -15,8 +15,6 @@ const salt = bcrypt.genSaltSync(10);
 const parentDir = path.join(__dirname, '..');
 
 const privateKey = fs.readFileSync(path.join(parentDir, './controllers/token/private.pem'));
-console.log("🚀 ~ file: doctorServices.js:18 ~ parentDir:", path.join(parentDir, './controllers/token/private.pem'))
-// console.log("🚀 ~ file: doctorServices.js:18 ~ privateKey:", privateKey)
 
 const doctorServices = {
   createNewDoctor: (email,password) => {
@@ -213,11 +211,13 @@ const doctorServices = {
         })
         let listClinic = [];
         for (let i = 0; i < listMember.length; i++) {
-          listClinic.push(Object.assign(await db.Clinic.findOne({
+          let clinic = await db.Clinic.findOne({
             where: {
               id: listMember[i].idClinic
             }
-          }),{roleOfDoctor: listMember[i].roleOfDoctor}))
+          });
+          clinic.encryptedBy = JSON.parse(clinic.encryptedBy);
+          listClinic.push(Object.assign(clinic,{roleOfDoctor: listMember[i].roleOfDoctor}));
         }
         if(listClinic.length >= 0) {
           resolve({

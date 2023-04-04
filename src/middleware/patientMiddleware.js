@@ -18,7 +18,6 @@ const patientMiddleware = {
             idDiagnosisAndTreatment: idPatient
           }
         })
-        logger.app.info(diagnose);
         const selectedPlan = await db.TreatmentPlan.findOne({
           attributes: ['plan'],
           where: {

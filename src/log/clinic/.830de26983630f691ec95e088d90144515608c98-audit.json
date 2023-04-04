@@ -6,26 +6,6 @@
     "auditLog": "src\\log\\clinic\\.830de26983630f691ec95e088d90144515608c98-audit.json",
     "files": [
         {
-            "date": 1679220012195,
-            "name": "src\\log\\clinic\\clinic-2023-03-19.log",
-            "hash": "6112ad60efa1020614b6236541706ec751b1e99de85770f0fdf4a96b8521dea8"
-        },
-        {
-            "date": 1679246675876,
-            "name": "src\\log\\clinic\\clinic-2023-03-20.log",
-            "hash": "432608c9240dc1c10cbedeb9d8e49fd605ac2f460e7753a7fe2c6d155191112b"
-        },
-        {
-            "date": 1679365360723,
-            "name": "src\\log\\clinic\\clinic-2023-03-21.log",
-            "hash": "995395c7fe1dcb46854df369173650d72f2a0e705dd737739fd7a584e1036454"
-        },
-        {
-            "date": 1679418513226,
-            "name": "src\\log\\clinic\\clinic-2023-03-22.log",
-            "hash": "6bd0474da3a9a8c6db2aaa22b8d653f5e5ddfa51472244e4917ccf7d3a5e15ed"
-        },
-        {
             "date": 1679504470042,
             "name": "src\\log\\clinic\\clinic-2023-03-23.log",
             "hash": "434278316a2587a6283795a520543df198305214cc5bf2eb4924f31ec5949404"
@@ -79,6 +59,21 @@
             "date": 1680368799284,
             "name": "src\\log\\clinic\\clinic-2023-04-02.log",
             "hash": "635ba2d654d8bfaf7ce746123bda306bd90c38f8e709fe18c7c481f76f741c7d"
+        },
+        {
+            "date": 1680494129691,
+            "name": "src\\log\\clinic\\clinic-2023-04-03.log",
+            "hash": "496dd94a50da8136cfdf6dbcb03f15a77ef9a9895993f01fef6795e7f2b9cafd"
+        },
+        {
+            "date": 1680543435124,
+            "name": "src\\log\\clinic\\clinic-2023-04-04.log",
+            "hash": "0620f6c544da1853d8af4e551a69ed6b4070cfbd79d2310db1b586a3b4dceadc"
+        },
+        {
+            "date": 1680628564961,
+            "name": "src\\log\\clinic\\clinic-2023-04-05.log",
+            "hash": "d33e98525bb0ff91091a826ca68d1f518450dbffc411a57c48c6e861b0d6fca0"
         }
     ],
     "hashType": "sha256"

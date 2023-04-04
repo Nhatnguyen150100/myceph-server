@@ -1,3 +1,4 @@
+'use-strict'
 import express from 'express';
 import statusOfClinicControllers from '../controllers/statusOfClinicControllers';
 import clinicMiddleware from '../middleware/clinicMiddleware';

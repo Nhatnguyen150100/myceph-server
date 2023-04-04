@@ -6,26 +6,6 @@
     "auditLog": "src\\log\\intraoral\\.62cec0ceecd27777927d0e7e53c951c60a17c4a6-audit.json",
     "files": [
         {
-            "date": 1679220012228,
-            "name": "src\\log\\intraoral\\intraoral-2023-03-19.log",
-            "hash": "452122c8d60bb8e2d52ad69bd19f72eac392a9a012ec5eca3a362e5bb4b19f88"
-        },
-        {
-            "date": 1679246676085,
-            "name": "src\\log\\intraoral\\intraoral-2023-03-20.log",
-            "hash": "3dea3424a23adffacda4aff26735e7da80a8f9966be0d275b9fa7652d594527b"
-        },
-        {
-            "date": 1679365361068,
-            "name": "src\\log\\intraoral\\intraoral-2023-03-21.log",
-            "hash": "489204dee416efdadefc01b8fa9270e80a74b5c35dc1446a388fad23472f6f3d"
-        },
-        {
-            "date": 1679418513347,
-            "name": "src\\log\\intraoral\\intraoral-2023-03-22.log",
-            "hash": "29a815d53a5ffa10af882659240e0bbf7d22e37082943a3d63983330788a3037"
-        },
-        {
             "date": 1679504470166,
             "name": "src\\log\\intraoral\\intraoral-2023-03-23.log",
             "hash": "24619887f958f87689c0786c34f20df2ac439b04fb92ab0b6ffd6c7caf2f7e01"
@@ -79,6 +59,21 @@
             "date": 1680368799351,
             "name": "src\\log\\intraoral\\intraoral-2023-04-02.log",
             "hash": "e03c76018b7ba430ec87cb7eb585ec9afc1288fdbdfa24bd429041b6cfb04684"
+        },
+        {
+            "date": 1680494129916,
+            "name": "src\\log\\intraoral\\intraoral-2023-04-03.log",
+            "hash": "20d47594b7c988897a9b0eee84c88d680346a4c3fcf1abb3bced4e0583066092"
+        },
+        {
+            "date": 1680543435235,
+            "name": "src\\log\\intraoral\\intraoral-2023-04-04.log",
+            "hash": "8c57af9aaab5a5cbd5f547a066542cf79d90ae42b066dfaf75b91cd15cbe862a"
+        },
+        {
+            "date": 1680628565009,
+            "name": "src\\log\\intraoral\\intraoral-2023-04-05.log",
+            "hash": "97378f6a60faeff1f59790cf7b3a0c99a7b74e9e1ae5711b3d15f2c0d5b3e15a"
         }
     ],
     "hashType": "sha256"
