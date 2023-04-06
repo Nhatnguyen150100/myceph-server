@@ -212,11 +212,6 @@ const encryptionServices = {
             idTreatmentHistory: idPatient
           }
         })
-        const libraryImagePatient = await db.LibraryImagePatient.findAll({
-          where: {
-            idPatientImage: idPatient
-          }
-        })
         if(infoOfPatient){
           return resolve({
             status: 200,
@@ -226,8 +221,7 @@ const encryptionServices = {
               otherInformation: {
                 listOfIssue: listOfIssue,
                 treatmentPlan: treatmentPlan,
-                treatmentHistory: treatmentHistory,
-                libraryImagePatient: libraryImagePatient
+                treatmentHistory: treatmentHistory
               }
             }
           })
@@ -246,70 +240,60 @@ const encryptionServices = {
   setAllInformationPatient: (idPatient,data) => {
     return new Promise(async (resolve, reject) => {
       try {
-        await db.Patient.update(data.informationEncrypted,{
+        await db.Patient.update(data.informationData,{
           where: {
             id: idPatient
           }
         })
-        await db.History.update(data.historyEncrypted,{
+        await db.History.update(data.historyData,{
           where: {
             idHistory: idPatient
           }
         })
-        await db.ExtraOral.update(data.extraOralEncrypted,{
+        await db.ExtraOral.update(data.extraOralData,{
           where: {
             idExtraoral: idPatient
           }
         })
-        await db.IntraOral.update(data.intralOralEncrypted,{
+        await db.IntraOral.update(data.intralOralData,{
           where: {
             idIntraoral: idPatient
           }
         })
-        await db.Radiography.update(data.radiographyEncrypted,{
+        await db.Radiography.update(data.radiographyData,{
           where: {
             idRadiography: idPatient
           }
         })
-        await db.DiagnosisAndTreatment.update(data.diagnosisAndTreatmentEncrypted,{
+        await db.DiagnosisAndTreatment.update(data.diagnosisAndTreatmentData,{
           where: {
             idDiagnosisAndTreatment: idPatient
           }
         })
-        if(data.listOfIssueEncrypted.length > 0) for (let index = 0; index < data.listOfIssueEncrypted.length; index++) {
-          const element = {...data.listOfIssueEncrypted[index]};
+        if(data.listOfIssueData?.length > 0) for (let index = 0; index < data.listOfIssueData.length; index++) {
+          const element = {...data.listOfIssueData[index]};
           delete element.id;
-          console.log("🚀 ~ file: encryptionServices.js:284 ~ returnnewPromise ~ data.listOfIssueEncrypted[index].id:", data.listOfIssueEncrypted[index].id)
           await db.ListOfIssue.update(element,{
             where: {
-              id: data.listOfIssueEncrypted[index].id
+              id: data.listOfIssueData[index].id
             }
           })
         }
-        if(data.treatmentHistoryEncrypted.length > 0) for (let index = 0; index < data.treatmentHistoryEncrypted.length; index++) {
-          const element = {...data.treatmentHistoryEncrypted[index]};
+        if(data.treatmentHistoryData?.length > 0) for (let index = 0; index < data.treatmentHistoryData.length; index++) {
+          const element = {...data.treatmentHistoryData[index]};
           delete element.id;
           await db.TreatmentHistory.update(element,{
             where: {
-              id: data.treatmentHistoryEncrypted[index].id
+              id: data.treatmentHistoryData[index].id
             }
           })
         }
-        if(data.treatmentPlanEncrypted.length > 0) for (let index = 0; index < data.treatmentPlanEncrypted.length; index++) {
-          const element = {...data.treatmentPlanEncrypted[index]};
+        if(data.treatmentPlanData?.length > 0) for (let index = 0; index < data.treatmentPlanData.length; index++) {
+          const element = {...data.treatmentPlanData[index]};
           delete element.id;
           await db.TreatmentPlan.update(element,{
             where: {
-              id: data.treatmentPlanEncrypted[index].id
-            }
-          })
-        }
-        if(data.libraryImagePatientEncrypted.length > 0) for (let index = 0; index < data.libraryImagePatientEncrypted.length; index++) {
-          const element = {...data.libraryImagePatientEncrypted[index]};
-          delete element.id;
-          await db.LibraryImagePatient.update(element,{
-            where: {
-              id: data.libraryImagePatientEncrypted[index].id
+              id: data.treatmentPlanData[index].id
             }
           })
         }

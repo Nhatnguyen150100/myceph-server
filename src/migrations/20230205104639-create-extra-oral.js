@@ -31,7 +31,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       lipPostureApart: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       normalNaresExposure: {
         type: Sequelize.STRING

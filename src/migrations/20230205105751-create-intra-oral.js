@@ -58,13 +58,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       overjet: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       overbite: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       curveOfSpee: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       cant: {
         type: Sequelize.STRING
@@ -88,7 +88,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       maximumMouthOpening: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       guidanceOnProtrusion: {
         type: Sequelize.STRING
