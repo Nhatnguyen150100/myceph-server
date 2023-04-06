@@ -8,6 +8,7 @@ import patientMiddleware from '../middleware/patientMiddleware';
 const router = express.Router();
 
 router.get('/getAllInformationPatient/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, encryptionControllers.getAllInformationPatient);
+router.post('/setDataToPatient/:id', middlewareController.verifyToken, patientMiddleware.checkPatient, encryptionControllers.setAllInformationPatient);
 
 router.post('/encryptionForClinic/:id', middlewareController.verifyToken, clinicMiddleware.checkClinicExists, encryptionControllers.setEncryptionForClinic);
 router.delete('/encryptionForClinic/:id', middlewareController.verifyToken, clinicMiddleware.checkClinicExists, encryptionControllers.deleteEncryptionForClinic);

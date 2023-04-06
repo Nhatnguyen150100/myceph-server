@@ -58,6 +58,10 @@ module.exports = {
       updateByDoctor: {
         type: Sequelize.STRING
       },
+      isEncrypted: {
+        defaultValue: false,
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

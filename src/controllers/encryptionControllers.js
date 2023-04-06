@@ -71,6 +71,19 @@ const encryptionControllers = {
         message: 'server error'
       })
     }
+  },
+  setAllInformationPatient: async (req, res) => {
+    try {
+      const { status, message } = await encryptionServices.setAllInformationPatient(req.params.id,req.body);
+      res.status(status).json({
+        message: message
+      })
+    } catch (error) {
+      logger.encryption.error(error);
+      res.status(500).json({
+        message: 'server error'
+      })
+    }
   }
 }
 

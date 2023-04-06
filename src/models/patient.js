@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       Patient.hasOne(models.Radiography, {foreignKey:'idRadiography', as:'radiographies', sourceKey:'id'});
       Patient.hasOne(models.DiagnosisAndTreatment, {foreignKey:'idDiagnosisAndTreatment', as:'diagnosisAndTreatments', sourceKey:'id'});
 
+      Patient.hasMany(models.LibraryImagePatient, {foreignKey:'idPatientImage', sourceKey:'id'});
       Patient.hasMany(models.ListOfIssue, {foreignKey:'idListOfIssue', sourceKey:'id'});
       Patient.hasMany(models.TreatmentPlan, {foreignKey:'idTreatmentPlan', sourceKey:'id'});
       Patient.hasMany(models.TreatmentHistory, {foreignKey:'idTreatmentHistory', sourceKey:'id'});
@@ -45,7 +46,8 @@ module.exports = (sequelize, DataTypes) => {
     address: DataTypes.STRING,
     chiefcomplaint: DataTypes.STRING,
     note:DataTypes.STRING,
-    updateByDoctor: DataTypes.STRING
+    updateByDoctor: DataTypes.STRING,
+    isEncrypted: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Patient',
