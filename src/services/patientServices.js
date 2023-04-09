@@ -220,6 +220,14 @@ const patientServices = {
         const start = (page-1)*pageSize;
         const listPatient = await db.Patient.findAll(
           {
+            include: [{
+              model: db.LibraryImagePatient,
+              attributes: ['linkImage'],
+              where: {
+                typeImage: 6
+              },
+              required: false
+            }],
             offset: start,
             limit: Number(pageSize),
             order: [

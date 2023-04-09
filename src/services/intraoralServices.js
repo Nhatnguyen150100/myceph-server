@@ -12,11 +12,49 @@ const intraoralServices = {
             idIntraOral: idPatient
           }
         })
+        const typesToSearch = [
+          {
+            id: 10,
+            nameImage: 'rightBuccalImage'
+          },
+          {
+            id: 11,
+            nameImage: 'leftBuccalImage'
+          },
+          {
+            id: 12,
+            nameImage: 'anteriorImage'
+          },
+          {
+            id: 13,
+            nameImage: 'maxillaryImage'
+          },
+          {
+            id: 14,
+            nameImage: 'mandibularImage'
+          },
+          {
+            id: 8,
+            nameImage: 'smileyFace'
+          }
+        ];
+        const listImage = {};
+        for (const type of typesToSearch) {
+          const image = await db.LibraryImagePatient.findOne({
+            attributes: ['linkImage'],
+            where: {
+              typeImage: type.id,
+              idPatientImage: idPatient
+            }
+          });
+
+          listImage[type.nameImage] = image ? image.linkImage : null;
+        }
         if(intraoral){
           resolve({
             status: 200,
             message: 'get intra-oral successfully',
-            data: intraoral
+            data: {...intraoral,listImage}
           })
         }else{
           resolve({

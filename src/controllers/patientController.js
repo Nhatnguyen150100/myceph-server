@@ -22,9 +22,10 @@ const patientController = {
       const patient = req.patient;
       const diagnose = req.diagnose;
       const selectedPlan = req.selectedPlan;
+      const sideFaceImage = req.sideFaceImage;
       res.status(200).json({
         message: 'get patient information successfully',
-        data: {...patient,...diagnose,...selectedPlan,...updateBydoctor}
+        data: {...patient,...diagnose,...selectedPlan,...updateBydoctor,sideFaceImage}
       })
     } catch (error) {
       logger.patient.error(error);
