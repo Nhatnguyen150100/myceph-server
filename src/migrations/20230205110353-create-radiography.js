@@ -39,7 +39,7 @@ module.exports = {
       others: {
         type: Sequelize.STRING
       },
-      laterakCephalometricRadiography: {
+      lateralCephalometricRadiography: {
         type: Sequelize.STRING
       },
       otherRadiography: {

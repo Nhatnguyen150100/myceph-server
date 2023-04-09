@@ -41,7 +41,7 @@ const radiographyServices = {
           alveolarBoneHeights: data.alveolarBoneHeights,
           crownRootRatio: data.crownRootRatio,
           others: data.others,
-          laterakCephalometricRadiography: data.laterakCephalometricRadiography,
+          lateralCephalometricRadiography: data.lateralCephalometricRadiography,
           otherRadiography: data.otherRadiography
         }
         const radiographyUpdate = await db.Radiography.update(dataUpdate,{
