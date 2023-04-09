@@ -1,0 +1,3 @@
+{"level":"error","message":null,"timestamp":"2023-03-30 10:09:05"}
+{"level":"error","name":"SequelizeConnectionError","original":{"code":"ETIMEDOUT","errorno":"ETIMEDOUT","fatal":true,"syscall":"connect"},"parent":{"code":"ETIMEDOUT","errorno":"ETIMEDOUT","fatal":true,"syscall":"connect"},"timestamp":"2023-03-30 21:36:51"}
+{"level":"error","name":"SequelizeConnectionError","original":{"code":"ETIMEDOUT","errorno":"ETIMEDOUT","fatal":true,"syscall":"connect"},"parent":{"code":"ETIMEDOUT","errorno":"ETIMEDOUT","fatal":true,"syscall":"connect"},"timestamp":"2023-03-30 21:36:51"}

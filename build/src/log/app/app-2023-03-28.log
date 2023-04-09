@@ -1,0 +1,73 @@
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 10:05:46"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 10:05:48"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 10:05:48"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 10:07:19"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 10:07:19"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 10:07:19"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 10:22:57"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 10:22:57"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 10:22:57"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 10:24:40"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 10:24:40"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 10:24:40"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:29:37"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:29:48"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:30:25"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:32:36"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:32:47"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 14:33:41"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 14:33:41"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 14:33:41"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:33:47"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:33:59"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:34:26"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 14:35:01"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 14:35:01"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 14:35:01"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 14:36:24"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 14:36:24"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 14:36:24"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 14:37:45"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 14:37:46"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 14:37:46"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:43:48"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 14:44:30"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 14:44:30"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 14:44:30"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:48:55"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:52:46"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:52:56"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:52:59"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:54:56"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:55:34"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 14:55:44"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 15:00:48"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 15:00:53"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 23:11:15"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 23:11:15"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 23:11:15"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 23:16:09"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 23:16:09"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 23:16:10"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 23:18:04"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 23:18:04"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 23:18:04"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 23:18:25"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 23:18:25"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 23:18:25"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 23:20:20"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 23:20:20"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 23:20:20"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 23:20:51"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 23:20:51"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 23:20:51"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 23:21:26"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 23:21:27"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 23:21:27"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 23:21:59"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 23:21:59"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 23:21:59"}
+{"level":"info","message":"server listening on port: 8080","timestamp":"2023-03-28 23:24:13"}
+{"level":"info","message":"Executing (default): SELECT 1+1 AS result","timestamp":"2023-03-28 23:24:13"}
+{"level":"info","message":"Connection has been established successfully.","timestamp":"2023-03-28 23:24:13"}
+{"level":"info","message":{"diagnose":null},"timestamp":"2023-03-28 23:39:15"}

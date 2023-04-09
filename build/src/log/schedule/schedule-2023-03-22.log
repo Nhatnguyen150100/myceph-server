@@ -1,0 +1,15 @@
+{"level":"error","timestamp":"2023-03-22 00:48:34"}
+{"level":"error","timestamp":"2023-03-22 00:48:34"}
+{"level":"error","timestamp":"2023-03-22 00:51:22"}
+{"level":"error","timestamp":"2023-03-22 00:51:22"}
+{"level":"error","timestamp":"2023-03-22 00:52:27"}
+{"level":"error","timestamp":"2023-03-22 00:52:27"}
+{"level":"error","timestamp":"2023-03-22 00:54:47"}
+{"level":"error","timestamp":"2023-03-22 00:54:47"}
+{"level":"error","name":"SequelizeDatabaseError","original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sql":"SELECT `id`, `idClinicStatus`, `nameStatus`, `colorStatus`, `createdAt`, `updatedAt` FROM `StatusOfClinics` AS `StatusOfClinic` WHERE `StatusOfClinic`.`idClinicService` = '143449e3-1d87-49aa-8a85-dbf1c6b81f90';","sqlMessage":"Unknown column 'StatusOfClinic.idClinicService' in 'where clause'","sqlState":"42S22"},"parameters":{},"parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sql":"SELECT `id`, `idClinicStatus`, `nameStatus`, `colorStatus`, `createdAt`, `updatedAt` FROM `StatusOfClinics` AS `StatusOfClinic` WHERE `StatusOfClinic`.`idClinicService` = '143449e3-1d87-49aa-8a85-dbf1c6b81f90';","sqlMessage":"Unknown column 'StatusOfClinic.idClinicService' in 'where clause'","sqlState":"42S22"},"sql":"SELECT `id`, `idClinicStatus`, `nameStatus`, `colorStatus`, `createdAt`, `updatedAt` FROM `StatusOfClinics` AS `StatusOfClinic` WHERE `StatusOfClinic`.`idClinicService` = '143449e3-1d87-49aa-8a85-dbf1c6b81f90';","timestamp":"2023-03-22 01:02:52"}
+{"level":"error","name":"SequelizeDatabaseError","original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sql":"SELECT `id`, `idClinicStatus`, `nameStatus`, `colorStatus`, `createdAt`, `updatedAt` FROM `StatusOfClinics` AS `StatusOfClinic` WHERE `StatusOfClinic`.`idClinicService` = '143449e3-1d87-49aa-8a85-dbf1c6b81f90';","sqlMessage":"Unknown column 'StatusOfClinic.idClinicService' in 'where clause'","sqlState":"42S22"},"parameters":{},"parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sql":"SELECT `id`, `idClinicStatus`, `nameStatus`, `colorStatus`, `createdAt`, `updatedAt` FROM `StatusOfClinics` AS `StatusOfClinic` WHERE `StatusOfClinic`.`idClinicService` = '143449e3-1d87-49aa-8a85-dbf1c6b81f90';","sqlMessage":"Unknown column 'StatusOfClinic.idClinicService' in 'where clause'","sqlState":"42S22"},"sql":"SELECT `id`, `idClinicStatus`, `nameStatus`, `colorStatus`, `createdAt`, `updatedAt` FROM `StatusOfClinics` AS `StatusOfClinic` WHERE `StatusOfClinic`.`idClinicService` = '143449e3-1d87-49aa-8a85-dbf1c6b81f90';","timestamp":"2023-03-22 01:02:52"}
+{"level":"error","timestamp":"2023-03-22 01:03:13"}
+{"level":"error","timestamp":"2023-03-22 01:03:13"}
+{"level":"error","timestamp":"2023-03-22 01:03:51"}
+{"level":"error","timestamp":"2023-03-22 01:03:51"}
+{"level":"error","name":"SequelizeEagerLoadingError","timestamp":"2023-03-22 23:53:01"}
