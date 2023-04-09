@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     faceAsymetry: DataTypes.STRING,
     chin: DataTypes.STRING,
     lipCompetence: DataTypes.STRING,
-    lipPostureApart: DataTypes.INTEGER,
+    lipPostureApart: DataTypes.STRING,
     normalNaresExposure: DataTypes.STRING,
     alarBaseWidth: DataTypes.STRING,
     lipWidth: DataTypes.STRING,

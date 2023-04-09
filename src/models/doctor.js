@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       Doctor.hasMany(models.SharePatient, {foreignKey:'idSharedPatientOfDoctor', sourceKey: 'id'});
       Doctor.hasMany(models.Patient, {foreignKey:'idPatientOfDoctor', sourceKey: 'id'});
       Doctor.hasMany(models.Schedule, {foreignKey:'idDoctorSchedule', sourceKey: 'id'});
+      Doctor.hasMany(models.Discussion, {foreignKey:'idDoctorSendMessage', sourceKey: 'id'});
     }
   }
   Doctor.init({
@@ -34,7 +35,8 @@ module.exports = (sequelize, DataTypes) => {
     speciality:DataTypes.STRING,
     diploma: DataTypes.STRING,
     position :DataTypes.STRING,
-    description: DataTypes.STRING
+    description: DataTypes.STRING,
+    encryptionKey: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Doctor',

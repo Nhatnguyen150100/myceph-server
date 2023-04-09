@@ -1,3 +1,4 @@
+'use-strict'
 import express from 'express';
 import historyControllers from '../controllers/historyControllers';
 import doctorMiddleware from '../middleware/doctorMiddleware';

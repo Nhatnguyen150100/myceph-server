@@ -1,3 +1,4 @@
+'use strict';
 import logger from "../config/winston"
 
 const db = require("../models")
@@ -115,8 +116,7 @@ const treatmentHistoryServices = {
         const deleteTreatmentHistory = await db.TreatmentHistory.destroy({
           where: {
             id: idHistory
-          },
-          force: true
+          }
         })
         if(deleteTreatmentHistory){
           const treatmentHistoryData = await db.TreatmentHistory.findAll({

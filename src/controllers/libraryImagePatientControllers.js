@@ -1,3 +1,4 @@
+'use strict';
 import logger from "../config/winston";
 import libraryImagePatientServices from "../services/libraryImagePatientServices"
 import patientServices from "../services/patientServices";

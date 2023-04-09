@@ -15,7 +15,7 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4,
         references:{
           model: {
-            tableName: 'patients',
+            tableName: 'Patients',
             name: 'idExtraoral',
           },
           key: 'id',
@@ -31,7 +31,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       lipPostureApart: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       normalNaresExposure: {
         type: Sequelize.STRING

@@ -1,9 +1,19 @@
+'use-strict'
 import logger from "../../config/winston";
 import db from "../../models";
 import useragent from 'useragent';
+import path from 'path';
+import fs from 'fs';
+import NodeRSA from 'node-rsa';
+
 
 const { default: authServices } = require("../../services/authServices");
 const { default: tokenController } = require("../token/tokenController");
+
+const parentDir = path.join(__dirname, '..');
+
+const publicKey = fs.readFileSync(path.join(parentDir, './token/rsaPublicToken.pem'));
+const keyPublicToken = new NodeRSA(publicKey);
 
 const authControllers = {
   login: async (req, res) => {
@@ -28,6 +38,9 @@ const authControllers = {
         ipOfDevice: req.ip,
         isActive: true
       });
+      // mã hóa token bằng ASE 256 - chưa xong do không thể lưu dữ liệu quá dài vào cookie
+      const encryptedAccessToken = keyPublicToken.encrypt(accessToken, 'base64');
+      const encryptedRefreshToken = keyPublicToken.encrypt(refreshToken, 'base64');
       res.status(200).json({
         message: message,
         data: {...data,accessToken: accessToken, refreshToken: refreshToken},

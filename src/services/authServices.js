@@ -1,9 +1,7 @@
+'use strict';
 const db = require("../models");
 import bcrypt from 'bcrypt';
 import logger from '../config/winston';
-import refreshToken from '../controllers/token/refreshTokenController';
-
-const salt = bcrypt.genSaltSync(10);
 
 const authServices = {
   login: (email,password) => {
@@ -13,7 +11,7 @@ const authServices = {
           where: { email: email},
           raw: true
         })
-        if(Object.keys(doctor).length === 0){
+        if(!doctor || Object.keys(doctor).length === 0){
           resolve({
             data: null,
             message: 'Could not find your email'

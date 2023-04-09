@@ -1,3 +1,4 @@
+'use-strict'
 import express from 'express';
 import listOfIssueControllers from '../controllers/listOfIssueController';
 import middlewareController from '../middleware/middlewareController';

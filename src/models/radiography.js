@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     alveolarBoneHeights: DataTypes.STRING,
     crownRootRatio: DataTypes.STRING,
     others: DataTypes.STRING,
-    laterakCephalometricRadiography: DataTypes.STRING,
+    lateralCephalometricRadiography: DataTypes.STRING,
     otherRadiography: DataTypes.STRING
   }, {
     sequelize,

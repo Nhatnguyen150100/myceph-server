@@ -1,3 +1,4 @@
+'use-strict'
 import passport from 'passport';
 import localStrategy from 'passport-local';
 const LocalStrategy = localStrategy.Strategy;
@@ -5,7 +6,7 @@ const LocalStrategy = localStrategy.Strategy;
 const { default: logger } = require("../../config/winston");
 const { default: authServices } = require("../../services/authServices");
 
-const passportJS = {
+const passportJsVerify = {
   verifyAccount: async (email, password, done) => {
     try {
       const { data, message } = await authServices.login(email,password);
@@ -20,7 +21,7 @@ const passportJS = {
     passport.authenticate('local', (error, data, message) => {
       if(error){
         return res.status(500).json({
-          message: 'server error'
+          message: 'Oops somethings wrong is happen. Please check your account!'
         })
       }
       if(!data){
@@ -35,9 +36,9 @@ const passportJS = {
   }
 }
 
+export default passportJsVerify;
+
 passport.use(new LocalStrategy({
   usernameField : 'email',
   passwordField : 'password'
-}, passportJS.verifyAccount));
-
-export default passportJS;
+}, passportJsVerify.verifyAccount));

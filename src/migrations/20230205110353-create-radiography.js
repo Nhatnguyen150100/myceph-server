@@ -15,7 +15,7 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4,
         references:{
           model: {
-            tableName: 'patients',
+            tableName: 'Patients',
             name: 'idRadiography',
           },
           key: 'id',
@@ -39,7 +39,7 @@ module.exports = {
       others: {
         type: Sequelize.STRING
       },
-      laterakCephalometricRadiography: {
+      lateralCephalometricRadiography: {
         type: Sequelize.STRING
       },
       otherRadiography: {

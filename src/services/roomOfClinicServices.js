@@ -1,3 +1,4 @@
+'use strict';
 import logger from "../config/winston"
 import db from "../models"
 
@@ -122,8 +123,7 @@ const roomOfClinicServices = {
         const deleteRoomClinic = await db.RoomOfClinic.destroy({
           where: {
             id: idRoom
-          },
-          force: true
+          }
         })
         if(deleteRoomClinic){
           const listRoom = await db.RoomOfClinic.findAll({

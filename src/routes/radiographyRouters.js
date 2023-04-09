@@ -1,3 +1,4 @@
+'use-strict'
 import express from 'express';
 import radiographyControllers from '../controllers/radiographyControllers';
 import doctorMiddleware from '../middleware/doctorMiddleware';

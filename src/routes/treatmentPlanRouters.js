@@ -1,3 +1,4 @@
+'use-strict'
 import express from 'express';
 import treatmentPlanControllers from '../controllers/treatmentPlanControllers';
 import middlewareController from '../middleware/middlewareController';

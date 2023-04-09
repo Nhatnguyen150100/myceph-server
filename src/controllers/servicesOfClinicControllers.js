@@ -1,3 +1,4 @@
+'use strict';
 import logger from "../config/winston";
 import servicesOfClinicServices from "../services/servicesOfClinicServices";
 
@@ -46,7 +47,6 @@ const servicesOfClinicControllers = {
   },
   deleteService: async (req,res) => {
     try {
-      console.log(req.query.idService);
       const { status, message, data } = await servicesOfClinicServices.deleteService(req.params.id,req.query.idService);
       res.status(status).json({
         message: message,

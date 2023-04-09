@@ -1,3 +1,4 @@
+'use strict';
 import logger from "../config/winston";
 import scheduleServices from "../services/scheduleServices";
 
@@ -18,7 +19,7 @@ const scheduleControllers = {
   },
   getAllAppointments: async (req,res) => {
     try {
-      const { status, message, data } = await scheduleServices.getAllAppointments(req.params.id,req.query.idDoctor);
+      const { status, message, data } = await scheduleServices.getAllAppointments(req.params.id,req.query.idDoctor,req.query.idPatient);
       res.status(status).json({
         message: message,
         data: data

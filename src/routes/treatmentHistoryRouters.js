@@ -1,3 +1,4 @@
+'use-strict'
 import express from 'express';
 import treatmentHistoryControllers from '../controllers/treatmentHistoryControllers';
 import middlewareController from '../middleware/middlewareController';

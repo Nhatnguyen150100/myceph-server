@@ -1,3 +1,4 @@
+'use strict';
 import logger from "../config/winston";
 
 const { default: patientServices } = require("../services/patientServices");
@@ -52,10 +53,11 @@ const treatmentHistoryControllers = {
   },
   deleteTreatmentHistory: async (req,res) => {
     try {
-      const { status, message } = await treatmentHistoryServices.deleteTreatmentHistory(req.params.id,req.query.idHistory);
-      patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
+      const { status, message, data } = await treatmentHistoryServices.deleteTreatmentHistory(req.params.id,req.query.idHistory);
+      patientServices.saveUpdateDoctor(req.params.id,req.query.idDoctor).finally(()=>{
         res.status(status).json({
-          message: message
+          message: message,
+          data: data
         })
       })
     } catch (error) {

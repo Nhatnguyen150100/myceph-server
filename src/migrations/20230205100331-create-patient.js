@@ -14,7 +14,7 @@ module.exports = {
         type: Sequelize.UUID,
         references:{
           model: {
-            tableName: 'doctors',
+            tableName: 'Doctors',
             name: 'idPatientOfDoctor'
           },
           key: 'id',
@@ -25,7 +25,7 @@ module.exports = {
         type: Sequelize.UUID,
         references:{
           model: {
-            tableName: 'clinics',
+            tableName: 'Clinics',
             name: 'idPatientOfClinic'
           },
           key: 'id',
@@ -57,6 +57,10 @@ module.exports = {
       },
       updateByDoctor: {
         type: Sequelize.STRING
+      },
+      isEncrypted: {
+        defaultValue: false,
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,

@@ -1,3 +1,4 @@
+'use strict';
 import { sequelize } from "../models";
 import QueryTypes, { Op } from "sequelize";
 import logger from "../config/winston";
@@ -88,8 +89,7 @@ const sharePatientServices = {
                 idSharedPatient: idSharedPatient,
                 idSharedPatientOfDoctor: data.idSharedPatientOfDoctor,
                 idOwnerDoctor: idOwnerDoctor
-              },
-              force: true
+              }
             })
             resolve({
               status: 200,
@@ -115,8 +115,7 @@ const sharePatientServices = {
                 idSharedPatient: idSharedPatient,
                 idSharedPatientOfClinic: data.idSharedPatientOfClinic,
                 idOwnerDoctor: idOwnerDoctor
-              },
-              force: true
+              }
             })
             resolve({
               status: 200,
@@ -200,7 +199,7 @@ const sharePatientServices = {
     return new Promise(async (resolve, reject) => {
       try {
         logger.app.info(idSharedPatient)
-        const listDoctor = await sequelize.query('select myceph.doctors.id, myceph.doctors.email, myceph.doctors.fullName from myceph.doctors, myceph.sharepatients where myceph.doctors.id = myceph.sharepatients.idOwnerDoctor and myceph.sharepatients.idSharedPatient = ?',
+        const listDoctor = await sequelize.query('select Doctors.id, Doctors.email, Doctors.fullName from Doctors, Sharepatients where Doctors.id = Sharepatients.idOwnerDoctor and Sharepatients.idSharedPatient = ?',
         {
           replacements: [idSharedPatient],
           type: QueryTypes.SELECT
@@ -228,7 +227,7 @@ const sharePatientServices = {
   getAllDoctorSharePatient: (idSharedPatientOfDoctor,page,pageSize) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const count = await sequelize.query('select distinct myceph.doctors.id from myceph.doctors, myceph.sharepatients where myceph.doctors.id = myceph.sharepatients.idOwnerDoctor and myceph.sharepatients.idSharedPatientOfDoctor = ?',
+        const count = await sequelize.query('select distinct Doctors.id from Doctors, Sharepatients where Doctors.id = Sharepatients.idOwnerDoctor and Sharepatients.idSharedPatientOfDoctor = ?',
           {
             replacements: [idSharedPatientOfDoctor],
             type: QueryTypes.SELECT
@@ -236,7 +235,7 @@ const sharePatientServices = {
         );
         if(count[0].length>0){
           const start = (page-1)*pageSize;
-          const listDoctor = await sequelize.query('select distinct myceph.doctors.id,fullName,email,avatar,gender,birthday from myceph.doctors, myceph.sharepatients where myceph.doctors.id = myceph.sharepatients.idOwnerDoctor and myceph.sharepatients.idSharedPatientOfDoctor = ? limit ?, ?',
+          const listDoctor = await sequelize.query('select distinct Doctors.id,fullName,email,avatar,gender,birthday from Doctors, Sharepatients where Doctors.id = Sharepatients.idOwnerDoctor and Sharepatients.idSharedPatientOfDoctor = ? limit ?, ?',
             {
               replacements: [idSharedPatientOfDoctor,start,Number(pageSize)],
               type: QueryTypes.SELECT
@@ -479,8 +478,7 @@ const sharePatientServices = {
             where: {
               idSharedPatientOfDoctor: idSharedPatientOfDoctor,
               idOwnerDoctor: idOwnerDoctor
-            },
-            force: true
+            }
           })
           resolve({
             status: 200,

@@ -1,3 +1,4 @@
+'use strict';
 import logger from "../config/winston";
 import clinicServices from "../services/clinicServices"
 import doctorServices from "../services/doctorServices";

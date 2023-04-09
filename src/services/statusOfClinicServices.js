@@ -1,3 +1,4 @@
+'use strict';
 import logger from "../config/winston"
 import db from "../models"
 
