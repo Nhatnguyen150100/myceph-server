@@ -346,6 +346,21 @@ const logger = {
         maxFiles: '14d',
       })
     ]
+  }),
+  discussion : createLogger({
+    levels: customLevels.levels,
+    format: customFormat,
+    transports: [
+      new transports.Console({level: 'error'}),
+      new DailyRotateFile({
+        format: combine(format.json()),
+        filename: './src/log/discussion/discussion-%DATE%.log',
+        datePattern: 'YYYY-MM-DD',
+        zippedArchive: true,
+        maxSize: '20m',
+        maxFiles: '14d',
+      })
+    ]
   })
 }
 

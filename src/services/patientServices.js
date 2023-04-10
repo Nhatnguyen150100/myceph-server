@@ -379,10 +379,17 @@ const patientServices = {
               selected: true
             }
           })
+          const sideFaceImage = await db.LibraryImagePatient.findOne({
+            attributes: ['linkImage'],
+            where: {
+              typeImage: 5,
+              idPatientImage: id
+            }
+          })
           resolve({
             status: 200,
             message: 'update information patient successfully',
-            data: {...patient,...diagnose,...selectedPlan,...getUpdateByDoctor}
+            data: {...patient,...diagnose,...selectedPlan,...getUpdateByDoctor,sideFaceImage}
           })
         }else{
           logger.patient.error(checkUpdatePatient);

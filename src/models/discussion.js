@@ -16,6 +16,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Discussion.init({
+    id: {
+      allowNull: false,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+      type: DataTypes.UUID
+    },
     idRoomDiscussionOfPatient: DataTypes.UUIDV4,
     idDoctorSendMessage: DataTypes.UUIDV4,
     message: DataTypes.STRING

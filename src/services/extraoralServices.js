@@ -39,7 +39,6 @@ const extraoralServices = {
               idPatientImage: idPatient
             }
           });
-
           listImage[type.nameImage] = image ? image.linkImage : null;
         }
         delete extraoral.idExtraOral
@@ -98,10 +97,39 @@ const extraoralServices = {
               idExtraOral: idPatient
             }
           })
+          const typesToSearch = [
+            {
+              id: 5,
+              nameImage: 'sideFace'
+            },
+            {
+              id: 6,
+              nameImage: 'frontalFace'
+            },
+            {
+              id: 7,
+              nameImage: 'obliqueFace'
+            },
+            {
+              id: 8,
+              nameImage: 'smileyFace'
+            }
+          ];
+          const listImage = {};
+          for (const type of typesToSearch) {
+            const image = await db.LibraryImagePatient.findOne({
+              attributes: ['linkImage'],
+              where: {
+                typeImage: type.id,
+                idPatientImage: idPatient
+              }
+            });
+            listImage[type.nameImage] = image ? image.linkImage : null;
+          }
           resolve({
             status: 200,
             message: 'update extra-oral successfully',
-            data: newExtraOral
+            data: {...newExtraOral,listImage}
           })
         }else{
           resolve({
