@@ -143,6 +143,7 @@ io.on('connect',(socket) => {
   socket.on("send_message", async ({idRoom,idDoctor,message}) => {
     try {
       const newMessage = await discussionServices.setMessage(idRoom,idDoctor,message);
+      socket.broadcast.emit("receive_message", newMessage);
       socket.emit("receive_message", newMessage);
     } catch (error) {
       logger.discussion.error(error);

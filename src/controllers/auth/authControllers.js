@@ -20,12 +20,11 @@ const authControllers = {
     try {
       const data = req.data;
       const message = req.message;
-      await db.RefreshToken.update({
-        isActive: false
-      },{
+      await db.RefreshToken.destroy({
         where: {
           idDoctor: data.id
-        }
+        },
+        force: true
       })
       const accessToken = tokenController.generateAccessToken(data);
       const refreshToken = tokenController.generateRefreshToken(data);

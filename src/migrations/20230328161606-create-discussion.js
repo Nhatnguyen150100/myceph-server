@@ -41,6 +41,7 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    await queryInterface.addIndex('Discussions', ['id'], { name: 'idx_discussions_id' });
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Discussions');

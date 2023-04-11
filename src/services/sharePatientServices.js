@@ -350,20 +350,29 @@ const sharePatientServices = {
           const start = (page-1)*pageSize;
           const listPatient = await db.Patient.findAll(
             {
-              include: [{
+              include: [
+                {
                 model: db.SharePatient,
-                where: {
-                  idSharedPatientOfClinic: {
-                    [Op.is] : null 
+                  where: {
+                    idSharedPatientOfClinic: {
+                      [Op.is] : null 
+                    },
+                    idOwnerDoctor: idOwnerDoctor
+                  }
+                },
+                {
+                  model: db.Doctor,
+                  attributes: ['fullName','email']
+                },
+                {
+                  model: db.LibraryImagePatient,
+                  attributes: ['linkImage'],
+                  where: {
+                    typeImage: 6
                   },
-                  idOwnerDoctor: idOwnerDoctor
+                  required: false
                 }
-              },
-              {
-                model: db.Doctor,
-                attributes: ['fullName','email']
-              }
-            ],
+              ],
               offset: start,
               limit: Number(pageSize),
               order: [

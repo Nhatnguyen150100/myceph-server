@@ -70,6 +70,7 @@ const patientServices = {
         await db.TreatmentHistory.destroy({where: {idTreatmentHistory: idPatient}, force: true});
         await db.LibraryImagePatient.destroy({where: {idPatientImage: idPatient}, force: true});
         await db.SharePatient.destroy({where: {idSharedPatient: idPatient}, force: true});
+        await db.Discussion.destroy({where: {idRoomDiscussionOfPatient: idPatient}, force: true});
         const deletePatient = await db.Patient.destroy({
           where: {
             id: idPatient
@@ -112,15 +113,25 @@ const patientServices = {
         const start = (page-1)*pageSize;
         const listPatient = await db.Patient.findAll(
           {
-            include: [{
-              model: db.SharePatient,
-              where: {
-                idOwnerDoctor: idDoctor,
-                idSharedPatientOfClinic: {
-                  [Op.is] : null 
+            include: [
+              {
+                model: db.SharePatient,
+                where: {
+                  idOwnerDoctor: idDoctor,
+                  idSharedPatientOfClinic: {
+                    [Op.is] : null 
+                  }
                 }
+              },
+              {
+                model: db.LibraryImagePatient,
+                attributes: ['linkImage'],
+                where: {
+                  typeImage: 6
+                },
+                required: false
               }
-            }],
+            ],
             offset: start,
             limit: Number(pageSize),
             order: [
@@ -170,13 +181,23 @@ const patientServices = {
         const start = (page-1)*pageSize;
         const listPatient = await db.Patient.findAll(
           {
-            include: [{
-              model: db.SharePatient,
-              where: {
-                idOwnerDoctor: idDoctor,
-                idSharedPatientOfClinic: idClinic
+            include: [
+              {
+                model: db.SharePatient,
+                where: {
+                  idOwnerDoctor: idDoctor,
+                  idSharedPatientOfClinic: idClinic
+                }
+              },
+              {
+                model: db.LibraryImagePatient,
+                attributes: ['linkImage'],
+                where: {
+                  typeImage: 6
+                },
+                required: false
               }
-            }],
+            ],
             offset: start,
             limit: Number(pageSize),
             order: [
@@ -272,6 +293,14 @@ const patientServices = {
         const start = (page-1)*pageSize;
         const listPatient = await db.Patient.findAll(
           {
+            include: [{
+              model: db.LibraryImagePatient,
+              attributes: ['linkImage'],
+              where: {
+                typeImage: 6
+              },
+              required: false
+            }],
             offset: start,
             limit: Number(pageSize),
             order: [

@@ -57,6 +57,7 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    await queryInterface.addIndex('Doctors', ['id','email'], { name: 'idx_doctors_id_email' });
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Doctors');

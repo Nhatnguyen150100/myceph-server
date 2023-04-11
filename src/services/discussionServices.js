@@ -14,7 +14,7 @@ const discussionServices = {
           offset: skip,
           limit: 10,
           order: [
-            ['createdAt', 'ASC']
+            ['createdAt', 'DESC']
           ],
           where: {
             idRoomDiscussionOfPatient: idRoom
@@ -36,7 +36,17 @@ const discussionServices = {
           idDoctorSendMessage: idDoctor,
           message: message
         })
-        return resolve(newMessage);
+        const getNewMessage = await db.Discussion.findOne({
+          include: [{
+            model: db.Doctor,
+            attributes: ['email','fullName']
+          }],
+          where: {
+            id: newMessage.dataValues.id
+          },
+          raw: true
+        })
+        return resolve(getNewMessage);
       } catch (error) {
         logger.discussion.error(error);
         reject(error)
