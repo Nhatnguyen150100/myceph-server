@@ -168,7 +168,7 @@ const doctorServices = {
           birthday: new Date(data.birthday),
           avatar: data.avatar,
           phoneNumber: data.phoneNumber,
-          speciality:data.speciality,
+          specialty:data.specialty,
           diploma: data.diploma,
           position :data.position,
           description: data.description

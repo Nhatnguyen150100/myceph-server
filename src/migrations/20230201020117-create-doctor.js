@@ -32,7 +32,7 @@ module.exports = {
       phoneNumber: {
         type: Sequelize.STRING
       },
-      speciality: {
+      specialty: {
         type: Sequelize.STRING
       },
       diploma: {

@@ -29,7 +29,7 @@ const clinicServices = {
               type: QueryTypes.SELECT
             }
           );
-          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,speciality,avatar,roleOfDoctor from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id limit ?,?",
+          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,specialty,avatar,roleOfDoctor from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id limit ?,?",
             {
               replacements: [idClinic,start,Number(pageSize)],
               type: QueryTypes.SELECT
@@ -58,7 +58,7 @@ const clinicServices = {
               type: QueryTypes.SELECT
             }
           );
-          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,speciality,avatar,roleOfDoctor from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id and Doctors.fullName like ? limit ?,?",
+          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,specialty,avatar,roleOfDoctor from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id and Doctors.fullName like ? limit ?,?",
             {
               replacements: [idClinic,('%'+nameSearch+'%'),start,Number(pageSize)],
               type: QueryTypes.SELECT
