@@ -34,8 +34,8 @@ import servicesOfClinicRouter from './routes/servicesOfClinicRouters';
 import statusOfClinicRouter from './routes/statusOfClinicRouters';
 import scheduleRouter from './routes/scheduleRouters';
 import encryptionRouter from './routes/encryptionRouters';
-
 import discussionServices from './services/discussionServices';
+import lateralCephRouter from './routes/lateralCephRouters';
 
 const app = express();
 
@@ -89,6 +89,7 @@ app.use('/v1/servicesOfClinic', servicesOfClinicRouter);
 app.use('/v1/statusOfClinic', statusOfClinicRouter);
 app.use('/v1/schedule', scheduleRouter);
 app.use('/v1/encryption', encryptionRouter);
+app.use('/v1/lateralCeph', lateralCephRouter);
 
 
 // catch 404 and forward to error handler
