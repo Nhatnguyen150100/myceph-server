@@ -24,7 +24,8 @@ module.exports = (sequelize, DataTypes) => {
     idImageAnalysis: DataTypes.UUID,
     markerPoints: DataTypes.TEXT,
     scaleImage: DataTypes.FLOAT,
-    lengthOfRuler: DataTypes.INTEGER
+    lengthOfRuler: DataTypes.INTEGER,
+    noteAnalysis: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'LateralCeph',

@@ -6,16 +6,6 @@
     "auditLog": "src\\log\\radiography\\.c7c1064d2a165901e8f29bb085d785a585111154-audit.json",
     "files": [
         {
-            "date": 1680945564925,
-            "name": "src\\log\\radiography\\radiography-2023-04-08.log",
-            "hash": "f10b4c8842cddb203f53ac238f47b72a54748ea716c0d9cd5620206613dccbfe"
-        },
-        {
-            "date": 1681007100389,
-            "name": "src\\log\\radiography\\radiography-2023-04-09.log",
-            "hash": "e0248dac623a8d46b5e509eb313dd5da308582a906a332ab82fbee0b68dd1307"
-        },
-        {
             "date": 1681067911117,
             "name": "src\\log\\radiography\\radiography-2023-04-10.log",
             "hash": "d1a92d14a9900716cf5477922b567e424f9c1246f1b879af1a02144c84f4c126"
@@ -69,6 +59,16 @@
             "date": 1682101917297,
             "name": "src\\log\\radiography\\radiography-2023-04-22.log",
             "hash": "5cfb12a2c02be3de8c201cfc105f3eff157e4b3e5c5a9cf12d3ebf180f49af86"
+        },
+        {
+            "date": 1682226749318,
+            "name": "src\\log\\radiography\\radiography-2023-04-23.log",
+            "hash": "81e73fe11a6d3293c2f4bf3769421b5c54dfbefbae571e35a212fd02bcf7b4e3"
+        },
+        {
+            "date": 1682273272271,
+            "name": "src\\log\\radiography\\radiography-2023-04-24.log",
+            "hash": "62d08374e4d9889ce2eecb3dd9a2c1d234a72e372291f0f1bc1a23b04d274874"
         }
     ],
     "hashType": "sha256"

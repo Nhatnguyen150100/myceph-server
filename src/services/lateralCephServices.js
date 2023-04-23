@@ -60,7 +60,8 @@ const lateralCephServices = {
           const dataUpdate = {
             markerPoints: JSON.stringify(data.markerPoints),
             scaleImage: data.scaleImage,
-            lengthOfRuler: data.lengthOfRuler
+            lengthOfRuler: data.lengthOfRuler,
+            noteAnalysis: data.noteAnalysis
           }
           const updateImageAnalysis = await db.LateralCeph.update(dataUpdate,{
             where: {
@@ -83,7 +84,8 @@ const lateralCephServices = {
             idImageAnalysis: data.idImageAnalysis,
             markerPoints: JSON.stringify(data.markerPoints),
             scaleImage: data.scaleImage,
-            lengthOfRuler: data.lengthOfRuler
+            lengthOfRuler: data.lengthOfRuler,
+            noteAnalysis: data.noteAnalysis
           })
           if(newAnalysis){
             resolve({

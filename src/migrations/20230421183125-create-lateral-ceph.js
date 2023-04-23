@@ -28,6 +28,9 @@ module.exports = {
       lengthOfRuler: {
         type: Sequelize.INTEGER
       },
+      noteAnalysis: {
+        type: Sequelize.TEXT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
