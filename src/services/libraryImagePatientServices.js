@@ -160,6 +160,12 @@ const libraryImagePatientServices = {
   deleteImage: (idPatient,idImage,type) => {
     return new Promise(async (resolve, reject) => {
       try {
+        await db.LateralCeph.destroy({
+          where : {
+            idImageAnalysis: idImage
+          },
+          force: true
+        })
         const deleteImagePatient = await db.LibraryImagePatient.destroy({
           where: {
             id: idImage
