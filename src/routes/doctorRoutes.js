@@ -15,7 +15,7 @@ router.put('/updateInformation/:id', middlewareController.verifyToken, doctorMid
 router.get('/verify', doctorController.verifyEmailDoctor);
 router.post('/registerDev', recaptchaMiddleware.verifyRecaptcha, doctorMiddleware.checkDoctorDontExistsByEmail, doctorController.createDoctorDev);
 router.get('/resetPassword', doctorController.verifyResetEmailDoctor);
-router.post('/resetPassword', doctorController.sendVerifyEmailResetPasswordDoctor);
+router.post('/resetPassword', recaptchaMiddleware.verifyRecaptcha, doctorController.sendVerifyEmailResetPasswordDoctor);
 router.post('/findDoctorEmail/:email', recaptchaMiddleware.verifyRecaptcha, doctorMiddleware.checkDoctorExistsByEmail, doctorController.findDoctorEmail);
 router.get('/getAllDoctorFromEmailSearch/:email', middlewareController.verifyToken, doctorController.getAllDoctorByEmailSearch);
 

@@ -12,6 +12,7 @@ import helmet from 'helmet';
 import rateLimit from "express-rate-limit";
 import RateLimitError from 'express-rate-limit';
 import http from 'http';
+import passport from 'passport';
 import { Server } from 'socket.io'
 
 import connectDB from './config/connectDB';
@@ -38,6 +39,7 @@ import discussionServices from './services/discussionServices';
 import lateralCephRouter from './routes/lateralCephRouters';
 
 const app = express();
+app.use(passport.initialize());
 
 app.use(cors({
   origin: process.env.BASE_URL_CLIENT

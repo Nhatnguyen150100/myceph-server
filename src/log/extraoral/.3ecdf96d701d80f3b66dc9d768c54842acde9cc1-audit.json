@@ -6,69 +6,39 @@
     "auditLog": "src\\log\\extraoral\\.3ecdf96d701d80f3b66dc9d768c54842acde9cc1-audit.json",
     "files": [
         {
-            "date": 1681236244236,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-12.log",
-            "hash": "4dd337de3fd61ff2f0e40d82587500248b7f3ca626c99439e697309dc7891537"
+            "date": 1683603081681,
+            "name": "src\\log\\extraoral\\extraoral-2023-05-09.log",
+            "hash": "be86899f54c404168b1ff257f47c63bd7b089242f504f038be2b68cd1b49a8d6"
         },
         {
-            "date": 1681361891041,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-13.log",
-            "hash": "07a1c0b5fdceccc2527d24ad70ae7d0b946b3c359164ff532aa492fd650fa289"
+            "date": 1683688720185,
+            "name": "src\\log\\extraoral\\extraoral-2023-05-10.log",
+            "hash": "3398b665b26c378a2e5daf57d4ce5f9cdf10fb7188453f70250d1f8e098cdc5c"
         },
         {
-            "date": 1681470210374,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-14.log",
-            "hash": "335648bdcd53a6714526a38cf69127deda23946242d88b6582d3bbb4f59c9a80"
+            "date": 1684418120085,
+            "name": "src\\log\\extraoral\\extraoral-2023-05-18.log",
+            "hash": "fb90dcb9681af3103597e681554de317ed2167d9915f5b3748e6cac9eb7caa16"
         },
         {
-            "date": 1681529413852,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-15.log",
-            "hash": "415e24d58d102cbe86e8b454af514fe42bd21ede475aa58cf7715a0ddfb65817"
+            "date": 1684575289490,
+            "name": "src\\log\\extraoral\\extraoral-2023-05-20.log",
+            "hash": "29c74fe4e948caae107a5f007ab3ad52399fc5bf2dcdfdf15ac6e3dc6ca984cf"
         },
         {
-            "date": 1681666793483,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-17.log",
-            "hash": "cd57362706c7c8c96e89fcb42316c1b92a684bf303467b2fbb243f34a5f974b6"
+            "date": 1684663504693,
+            "name": "src\\log\\extraoral\\extraoral-2023-05-21.log",
+            "hash": "e66e391dbebba0199677dc712c53b209953b529cbc1a8664b4e2c26c6b1ebb82"
         },
         {
-            "date": 1681756095223,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-18.log",
-            "hash": "2689c3441ac7ee7e4519a53310e35813c4becc7468e6444d81257dd282804577"
+            "date": 1684689727992,
+            "name": "src\\log\\extraoral\\extraoral-2023-05-22.log",
+            "hash": "fa8e0d1c28115e0ca344cc0e40a6455fc95cd2a6c68cf98607afeff406c1639f"
         },
         {
-            "date": 1681982818762,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-20.log",
-            "hash": "2fe75445136dde2965e547fc131e588d18e4cdd6ee62dc7ffd8794927cc262a3"
-        },
-        {
-            "date": 1682052600111,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-21.log",
-            "hash": "5a778e353d49183ba48c6f3b6e5b64c73a38420efbabfd22970b066f764ce1bd"
-        },
-        {
-            "date": 1682101917257,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-22.log",
-            "hash": "e98aee55e6528ef820f3561e8a57ebe275a79d3c705f71938fe7448936a1efa6"
-        },
-        {
-            "date": 1682226749196,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-23.log",
-            "hash": "901a63a670b0c144ff379182e4b6ec3cae742da6941388342cd0814998525209"
-        },
-        {
-            "date": 1682273272150,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-24.log",
-            "hash": "8ca10c787ce90ab3fda390c71e2e93b54ab964fe68515481d08a3721ea2bc8ad"
-        },
-        {
-            "date": 1682411248362,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-25.log",
-            "hash": "cd37ab5590dcfa0cde105fb7519f1315dae54767aea1d1c15b125d883871b1df"
-        },
-        {
-            "date": 1682442115044,
-            "name": "src\\log\\extraoral\\extraoral-2023-04-26.log",
-            "hash": "2315367dc7157e99bf00b92aaa82bbef086c9a2355665db78270c7677ef0e41d"
+            "date": 1684775654428,
+            "name": "src\\log\\extraoral\\extraoral-2023-05-23.log",
+            "hash": "dede1a1a2b09d042840c235a04b392b727cb924b91f58706bf97029e5bb678a7"
         }
     ],
     "hashType": "sha256"

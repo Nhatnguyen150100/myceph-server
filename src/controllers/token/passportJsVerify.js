@@ -1,6 +1,9 @@
 'use-strict'
 import passport from 'passport';
 import localStrategy from 'passport-local';
+import doctorServices from '../../services/doctorServices';
+import googleStrategy from 'passport-google-oauth2';
+const GoogleStrategy = googleStrategy.Strategy;
 const LocalStrategy = localStrategy.Strategy;
 
 const { default: logger } = require("../../config/winston");
@@ -33,6 +36,24 @@ const passportJsVerify = {
       req.message = message;
       next();
     })(req, res, next);
+  },
+  authenticateByGoogle: (req, res, next) => {
+    passport.authenticate('google',  {
+      scope: ['email', 'profile']
+    })(req, res, next);
+  },
+  authenticateCallback: (req, res, next) => {
+    passport.authenticate('google', {
+      failureRedirect: `${process.env.BASE_URL_CLIENT}/login?status=error&message=login_with_google_failed`
+    },async () => {
+      const email = req.userProfile.email;
+      const name = req.userProfile.name;
+      const { tempPassword } = await doctorServices.findDoctorOrCreateDoctorFromEmailGoogle({
+        email: email,
+        fullName: name
+      })
+      res.redirect(`${process.env.BASE_URL_CLIENT}/login?status=ok&email=${email}&accessToken=${tempPassword}`);
+    })(req, res, next);
   }
 }
 
@@ -42,3 +63,15 @@ passport.use(new LocalStrategy({
   usernameField : 'email',
   passwordField : 'password'
 }, passportJsVerify.verifyAccount));
+
+passport.use(new GoogleStrategy({
+  clientID: process.env.GOOGLE_CLIENT_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  callbackURL: `${process.env.BASE_URL_SERVER}/v1/auth/google/callback`,
+  passReqToCallback: true
+},(req,accessToken,refreshToken,profile,done) => {
+  const email = profile.email;
+  const name = profile.displayName;
+  req.userProfile = { email, name, profile };
+  return done(null, profile);
+}))

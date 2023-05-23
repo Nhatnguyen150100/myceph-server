@@ -1,3 +1,5 @@
+import doctorServices from "../services/doctorServices";
+
 const db = require("../models")
 
 const doctorMiddleware = {
@@ -68,6 +70,19 @@ const doctorMiddleware = {
       return res.status(500).json({
         message: 'server error'
       })
+    }
+  },
+  changeTempPasswordFromGoogleAccount: async (req,res,next) => {
+    try {
+      const email  = req.body.email;
+      const { status } = await doctorServices.changeTempPasswordFromGoogleAccount(email);
+      if(status == 200) next()
+      else res.status(status).json({
+        message: 'can not login with your account google'
+      })
+    } catch (error) {
+      logger.doctor.error(error);
+      res.status(500).json({message:'server error'});
     }
   },
   checkDoctorDontExistsByEmail: async (req,res,next) => {

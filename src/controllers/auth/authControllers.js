@@ -6,7 +6,6 @@ import path from 'path';
 import fs from 'fs';
 import NodeRSA from 'node-rsa';
 
-
 const { default: authServices } = require("../../services/authServices");
 const { default: tokenController } = require("../token/tokenController");
 
