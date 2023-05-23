@@ -8,6 +8,7 @@ import { QueryTypes } from 'sequelize';
 import logger from '../config/winston';
 import fs from 'fs';
 import path from 'path';
+import { generatePassword } from '../common/utility';
 
 const salt = bcrypt.genSaltSync(10);
 
@@ -94,7 +95,7 @@ const doctorServices = {
   sendVerifyEmailResetPassword: (data) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-        let hashEmail = jwt.sign({email:data.email},privateKey,{expiresIn:60*3});
+        let hashEmail = jwt.sign({email:data.email},privateKey,{expiresIn:60*3,algorithm: 'RS512'});
         let hashPassword = await bcrypt.hash(data.password, salt);
         mailerServices.sendMail(data.email,mailConfig.HTML_CONTENT_RESETPASSWOR,`${process.env.BASE_URL_SERVER}/v1/doctor/resetPassword?email=${data.email}&password=${hashPassword}&token=${hashEmail}`).then(() =>{
           resolve({
@@ -114,7 +115,7 @@ const doctorServices = {
   sendVerifyEmail: (data) => {
 		return new Promise(async (resolve, reject) => {
 			try {
-        let hashEmail = jwt.sign({email:data.email},privateKey,{expiresIn:60*3});
+        let hashEmail = jwt.sign({email:data.email},privateKey,{expiresIn:60*3,algorithm: 'RS512'});
         let hashPassword = await bcrypt.hash(data.password, salt);
         mailerServices.sendMail(data.email,mailConfig.HTML_CONTENT,`${process.env.BASE_URL_SERVER}/v1/doctor/verify?email=${data.email}&password=${hashPassword}&token=${hashEmail}`).then(() =>{
           resolve({
@@ -131,6 +132,70 @@ const doctorServices = {
 			}
 		});
 	},
+  findDoctorOrCreateDoctorFromEmailGoogle: ({email, fullName}) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const tempPassword = generatePassword();
+        let hashPassword = await bcrypt.hash(tempPassword, salt);
+        const doctor = await db.Doctor.findOne({
+          where: {
+            email: email
+          }
+        })
+        if(doctor){
+          await db.Doctor.update({
+            password: hashPassword
+          },{
+            where: {
+              email: email
+            }
+          })
+          resolve({
+            tempPassword: tempPassword
+          })
+        }else{
+          await db.Doctor.create({
+            email: email,
+            fullName: fullName,
+            password: hashPassword,
+          });
+          resolve({
+            tempPassword: tempPassword
+          })
+        }
+      } catch (error) {
+        logger.doctor.error(error);
+        reject(error);
+      }
+    })
+  },
+  changeTempPasswordFromGoogleAccount: (email) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const tempPassword = generatePassword();
+        let hashPassword = await bcrypt.hash(tempPassword, salt);
+        const newTempPassword = await db.Doctor.update({
+          password: hashPassword
+        },{
+          where: {
+            email: email
+          }
+        })
+        if(newTempPassword){
+          resolve({
+            status: 200
+          })
+        }else{
+          reject({
+            status: 400
+          })
+        }
+      } catch (error) {
+        logger.doctor.error(error);
+        reject(error)
+      }
+    })
+  },
   getDoctorFromEmail: (email) => {
     return new Promise(async (resolve, reject) => {
       try {
@@ -168,7 +233,7 @@ const doctorServices = {
           birthday: new Date(data.birthday),
           avatar: data.avatar,
           phoneNumber: data.phoneNumber,
-          speciality:data.speciality,
+          specialty:data.specialty,
           diploma: data.diploma,
           position :data.position,
           description: data.description

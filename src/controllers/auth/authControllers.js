@@ -6,7 +6,6 @@ import path from 'path';
 import fs from 'fs';
 import NodeRSA from 'node-rsa';
 
-
 const { default: authServices } = require("../../services/authServices");
 const { default: tokenController } = require("../token/tokenController");
 
@@ -20,12 +19,11 @@ const authControllers = {
     try {
       const data = req.data;
       const message = req.message;
-      await db.RefreshToken.update({
-        isActive: false
-      },{
+      await db.RefreshToken.destroy({
         where: {
           idDoctor: data.id
-        }
+        },
+        force: true
       })
       const accessToken = tokenController.generateAccessToken(data);
       const refreshToken = tokenController.generateRefreshToken(data);

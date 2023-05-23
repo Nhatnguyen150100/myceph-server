@@ -12,11 +12,32 @@ const radiographyServices = {
             idRadiography: idPatient
           }
         })
+        const typesToSearch = [
+          {
+            id: 1,
+            nameImage: 'lateralImage'
+          },
+          {
+            id: 3,
+            nameImage: 'panoramaImage'
+          }
+        ];
+        const listImage = {};
+        for (const type of typesToSearch) {
+          const image = await db.LibraryImagePatient.findOne({
+            attributes: ['linkImage'],
+            where: {
+              typeImage: type.id,
+              idPatientImage: idPatient
+            }
+          });
+          listImage[type.nameImage] = image ? image.linkImage : null;
+        }
         if(radiography){
           resolve({
             status: 200,
             message: 'get radiography successfully',
-            data: radiography
+            data: {...radiography,listImage}
           })
         }else{
           resolve({
@@ -55,10 +76,31 @@ const radiographyServices = {
               idRadiography: idPatient
             }
           })
+          const typesToSearch = [
+            {
+              id: 1,
+              nameImage: 'lateralImage'
+            },
+            {
+              id: 3,
+              nameImage: 'panoramaImage'
+            }
+          ];
+          const listImage = {};
+          for (const type of typesToSearch) {
+            const image = await db.LibraryImagePatient.findOne({
+              attributes: ['linkImage'],
+              where: {
+                typeImage: type.id,
+                idPatientImage: idPatient
+              }
+            });
+            listImage[type.nameImage] = image ? image.linkImage : null;
+          }
           resolve({
             status: 200,
             message: 'update radiography successfully',
-            data: newRadiography
+            data: {...newRadiography,listImage}
           })
         }else{
           resolve({

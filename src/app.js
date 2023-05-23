@@ -11,6 +11,9 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import rateLimit from "express-rate-limit";
 import RateLimitError from 'express-rate-limit';
+import http from 'http';
+import passport from 'passport';
+import { Server } from 'socket.io'
 
 import connectDB from './config/connectDB';
 import clinicRouter from './routes/clinicRoutes';
@@ -32,8 +35,11 @@ import servicesOfClinicRouter from './routes/servicesOfClinicRouters';
 import statusOfClinicRouter from './routes/statusOfClinicRouters';
 import scheduleRouter from './routes/scheduleRouters';
 import encryptionRouter from './routes/encryptionRouters';
+import discussionServices from './services/discussionServices';
+import lateralCephRouter from './routes/lateralCephRouters';
 
 const app = express();
+app.use(passport.initialize());
 
 app.use(cors({
   origin: process.env.BASE_URL_CLIENT
@@ -85,6 +91,7 @@ app.use('/v1/servicesOfClinic', servicesOfClinicRouter);
 app.use('/v1/statusOfClinic', statusOfClinicRouter);
 app.use('/v1/schedule', scheduleRouter);
 app.use('/v1/encryption', encryptionRouter);
+app.use('/v1/lateralCeph', lateralCephRouter);
 
 
 // catch 404 and forward to error handler
@@ -107,7 +114,58 @@ app.use(function(err, req, res, next) {
 
 connectDB();
 
-app.listen(process.env.PORT || 3000, ()=>{
+const server = http.createServer(app);
+const io = new Server(server,{
+  cors: {
+    origin: process.env.BASE_URL_CLIENT,
+    methods: ['GET', 'POST']
+  }
+});
+
+
+let onlineUser = [];
+/**
+ * todo: tạo socket kết nối để chat realtime với client
+ */
+io.on('connect',(socket) => {
+  logger.app.info(`User connected to with: ${socket.id}`);
+
+  socket.on("join_room", async ({idRoom,dataClient}) => {
+    try {
+      socket.join(idRoom);
+      onlineUser.push({...dataClient,id: socket.id});
+      socket.broadcast.emit('online_user',onlineUser);
+      socket.emit('online_user',onlineUser);
+      const listMessage = await discussionServices.getMessage(idRoom,0);
+      socket.emit("load_message",listMessage);
+    } catch (error) {
+      logger.discussion.error(error);
+    }
+  })
+
+  socket.on("send_message", async ({idRoom,idDoctor,message}) => {
+    try {
+      const newMessage = await discussionServices.setMessage(idRoom,idDoctor,message);
+      socket.broadcast.emit("receive_message", newMessage);
+      socket.emit("receive_message", newMessage);
+    } catch (error) {
+      logger.discussion.error(error);
+    }
+  })
+
+  socket.on("load_more_messages", async ({idRoom, skip}) => {
+    const listMessage = await discussionServices.getMessage(idRoom,skip);
+    socket.emit("load_message",listMessage);
+  })
+
+  socket.on("disconnect_socket", ({idRoom})=>{
+    onlineUser = onlineUser.filter((user) => user.id !== socket.id);
+    socket.broadcast.to(idRoom).emit('update_users', onlineUser);
+    logger.app.warning('User disconnected', socket.id);
+  })
+})
+
+server.listen(process.env.PORT || 3000, ()=>{
   logger.app.info('server listening on port: ' + process.env.PORT || 3000);
 })
 

@@ -2,35 +2,34 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Discussions', {
+    await queryInterface.createTable('LateralCephs', {
       id: {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4
       },
-      idRoomDiscussionOfPatient: {
+      idImageAnalysis: {
         type: Sequelize.UUID,
         references:{
           model: {
-            tableName: 'Patients',
-            name: 'idRoomDiscussionOfPatient',
+            tableName: 'LibraryImagePatients',
+            name: 'idImageAnalysis',
           },
           key: 'id',
         }
       },
-      idDoctorSendMessage: {
-        type: Sequelize.UUID,
-        references:{
-          model: {
-            tableName: 'Doctors',
-            name: 'idDoctorSendMessage',
-          },
-          key: 'id',
-        }
+      markerPoints: {
+        type: Sequelize.TEXT
       },
-      message: {
-        type: Sequelize.STRING
+      scaleImage: {
+        type: Sequelize.FLOAT
+      },
+      lengthOfRuler: {
+        type: Sequelize.INTEGER
+      },
+      noteAnalysis: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
@@ -41,9 +40,8 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
-    await queryInterface.addIndex('Discussions', ['id'], { name: 'idx_discussions_id' });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Discussions');
+    await queryInterface.dropTable('LateralCephs');
   }
 };

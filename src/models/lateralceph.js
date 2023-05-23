@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Discussion extends Model {
+  class LateralCeph extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,23 +11,24 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Discussion.belongsTo(models.Patient, {foreignKey: {name: 'idRoomDiscussionOfPatient', allowNull: false}, targetKey: 'id'});
-      Discussion.belongsTo(models.Doctor, {foreignKey: {name: 'idDoctorSendMessage', allowNull: false}, targetKey: 'id'});
+      LateralCeph.belongsTo(models.LibraryImagePatient, {foreignKey:{name: 'idImageAnalysis', allowNull:false}, targetKey:'id'});
     }
   }
-  Discussion.init({
+  LateralCeph.init({
     id: {
       allowNull: false,
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
       type: DataTypes.UUID
     },
-    idRoomDiscussionOfPatient: DataTypes.UUIDV4,
-    idDoctorSendMessage: DataTypes.UUIDV4,
-    message: DataTypes.STRING
+    idImageAnalysis: DataTypes.UUID,
+    markerPoints: DataTypes.TEXT,
+    scaleImage: DataTypes.FLOAT,
+    lengthOfRuler: DataTypes.INTEGER,
+    noteAnalysis: DataTypes.TEXT
   }, {
     sequelize,
-    modelName: 'Discussion',
+    modelName: 'LateralCeph',
   });
-  return Discussion;
+  return LateralCeph;
 };

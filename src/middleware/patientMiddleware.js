@@ -31,10 +31,18 @@ const patientMiddleware = {
             id: req.query.updateBydoctor
           }
         })
+        const sideFaceImage = await db.LibraryImagePatient.findOne({
+          attributes: ['linkImage'],
+          where: {
+            typeImage: 5,
+            idPatientImage: idPatient
+          }
+        })
         req.updateBydoctor = updateBydoctor;
         req.diagnose = diagnose;
         req.selectedPlan = selectedPlan;
         req.patient = patient;
+        req.sideFaceImage = sideFaceImage;
         next();
       }else{
         return res.status(404).json({
