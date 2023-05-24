@@ -14,7 +14,7 @@ export default function toISODateString(dateObject) {
 }
 
 export const generatePassword = () =>  {
-    const length = 8;
+    const length = 10;
     const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     let password = '';
     for (let i = 0; i < length; i++) {

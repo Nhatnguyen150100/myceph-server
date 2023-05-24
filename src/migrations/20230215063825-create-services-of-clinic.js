@@ -26,6 +26,9 @@ module.exports = {
       colorService: {
         type: Sequelize.STRING
       },
+      priceService: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

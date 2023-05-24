@@ -39,6 +39,7 @@ const servicesOfClinicServices = {
         const createServicesClinic = await db.ServicesOfClinic.create({
           idClinicService: idClinic,
           nameService: data.nameService,
+          priceService: data.priceService,
           colorService: data.colorService
         })
         if(createServicesClinic){
@@ -73,7 +74,8 @@ const servicesOfClinicServices = {
       try {
         const updateServiceClinic = await db.ServicesOfClinic.update({
           nameService: data.nameService,
-          colorService: data.colorService
+          colorService: data.colorService,
+          priceService: data.priceService
         },{
           where: {
             id: idService

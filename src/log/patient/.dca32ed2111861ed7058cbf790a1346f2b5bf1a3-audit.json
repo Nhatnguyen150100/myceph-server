@@ -6,11 +6,6 @@
     "auditLog": "src\\log\\patient\\.dca32ed2111861ed7058cbf790a1346f2b5bf1a3-audit.json",
     "files": [
         {
-            "date": 1683603081647,
-            "name": "src\\log\\patient\\patient-2023-05-09.log",
-            "hash": "515101f8a5b0dcc315d4959315e074fa4b31433e14fc373715b83e74fedaecd9"
-        },
-        {
             "date": 1683688720047,
             "name": "src\\log\\patient\\patient-2023-05-10.log",
             "hash": "9aad2b0405da5baccf1a2234cffdd3172c1623b0178100b96ab469834189996d"
@@ -39,6 +34,11 @@
             "date": 1684775654410,
             "name": "src\\log\\patient\\patient-2023-05-23.log",
             "hash": "2e9d46cd6ae370c828de89b68cf6789852344a7c31ff959fe3a4e26b8aa47ecc"
+        },
+        {
+            "date": 1684863842851,
+            "name": "src\\log\\patient\\patient-2023-05-24.log",
+            "hash": "b288f1f9b3ff617af01969de99a49eeb1b9dfce562692a5f8d5a31a3563fa955"
         }
     ],
     "hashType": "sha256"

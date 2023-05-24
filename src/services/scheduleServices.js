@@ -76,7 +76,7 @@ const scheduleServices = {
               },
             {
             model: db.ServicesOfClinic,
-            attributes: ['nameService','colorService']
+            attributes: ['nameService','colorService','priceService']
             },
             {
               model: db.RoomOfClinic,

@@ -6,11 +6,6 @@
     "auditLog": "src\\log\\token\\.ce40f2893d6e342c42a4700c6c2857e4d97b3e08-audit.json",
     "files": [
         {
-            "date": 1683603081608,
-            "name": "src\\log\\token\\token-2023-05-09.log",
-            "hash": "980de9bb2900182f654931b9eb15f623714bcda70c95270c10b7f006c4a50ad4"
-        },
-        {
             "date": 1683688719939,
             "name": "src\\log\\token\\token-2023-05-10.log",
             "hash": "c334416da07bd725ad4cf072bacf36954f17c46e95735ea4d1161784baad135b"
@@ -39,6 +34,11 @@
             "date": 1684775654397,
             "name": "src\\log\\token\\token-2023-05-23.log",
             "hash": "8fc87d31005aca78736916ac0af9fdc45dc187578ee42c23ea67c787f31535d2"
+        },
+        {
+            "date": 1684863842808,
+            "name": "src\\log\\token\\token-2023-05-24.log",
+            "hash": "340c55187b845429bf670a6255b35626b7c87254ed871ebcf680c1118b92f5f5"
         }
     ],
     "hashType": "sha256"

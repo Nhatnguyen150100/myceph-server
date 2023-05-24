@@ -24,7 +24,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     idClinicService: DataTypes.UUID,
     nameService: DataTypes.STRING,
-    colorService: DataTypes.STRING
+    colorService: DataTypes.STRING,
+    priceService: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'ServicesOfClinic',
