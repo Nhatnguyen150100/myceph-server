@@ -162,7 +162,7 @@ const encryptionServices = {
                 as: 'extraOrals',
                 timestamps: false,
                 where: {
-                  idExtraoral: idPatient
+                  idExtraOral: idPatient
                 }
               },
               {
@@ -170,7 +170,7 @@ const encryptionServices = {
                 as: 'intraOrals',
                 timestamps: false,
                 where: {
-                  idIntraoral: idPatient
+                  idIntraOral: idPatient
                 }
               },
               {
@@ -252,12 +252,12 @@ const encryptionServices = {
         })
         await db.ExtraOral.update(data.extraOralData,{
           where: {
-            idExtraoral: idPatient
+            idExtraOral: idPatient
           }
         })
         await db.IntraOral.update(data.intralOralData,{
           where: {
-            idIntraoral: idPatient
+            idIntraOral: idPatient
           }
         })
         await db.Radiography.update(data.radiographyData,{

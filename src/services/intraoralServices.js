@@ -104,7 +104,7 @@ const intraoralServices = {
         }
         const intraoralUpdate = await db.IntraOral.update(dataUpdate,{
           where: {
-            idIntraoral: idPatient
+            idIntraOral: idPatient
           }
         })
         if(intraoralUpdate){

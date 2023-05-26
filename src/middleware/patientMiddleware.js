@@ -25,11 +25,11 @@ const patientMiddleware = {
             selected: true
           }
         })
-        const updateBydoctor = await db.Doctor.findOne({
+        const updateBydoctor = req.query.updateBydoctor ? null : await db.Doctor.findOne({
           attributes: [['fullName','fullNameDoctor'],'email'],
           where: {
             id: req.query.updateBydoctor
-          }
+          } 
         })
         const sideFaceImage = await db.LibraryImagePatient.findOne({
           attributes: ['linkImage'],

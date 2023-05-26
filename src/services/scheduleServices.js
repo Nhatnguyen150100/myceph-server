@@ -7,7 +7,11 @@ const scheduleServices = {
   getPropertiesClinic: (idClinic) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const allDoctorInClinic = await sequelize.query("select idDoctor,email,fullName from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id",
+        const allDoctorInClinic = await sequelize.query(`
+        select \"idDoctor\",\"email\",\"fullName\" 
+        from \"MemberOfClinics\", \"Doctors\" 
+        where \"MemberOfClinics\".\"idClinic\" = ? 
+        and \"MemberOfClinics\".\"idDoctor\" = \"Doctors\".\"id\"`,
         {
           replacements: [idClinic],
           type: QueryTypes.SELECT

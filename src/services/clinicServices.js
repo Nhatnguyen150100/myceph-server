@@ -2,6 +2,7 @@
 import db, { sequelize } from "../models";
 import QueryTypes from "sequelize";
 import patientServices from "./patientServices";
+import logger from "../config/winston";
 
 const clinicServices = {
   getAllClinic : () => {
@@ -23,25 +24,33 @@ const clinicServices = {
       try {
         if(!nameSearch){
           const start = (page-1)*pageSize;
-          const count = await sequelize.query("select * from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id",
+          const count = await sequelize.query(`
+            select * from \"MemberOfClinics\", \"Doctors\" 
+            where \"MemberOfClinics\".\"idClinic\" = ? 
+            and \"MemberOfClinics\".\"idDoctor\" = \"Doctors\".\"id\"`,
             {
               replacements: [idClinic],
               type: QueryTypes.SELECT
             }
           );
-          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,specialty,avatar,roleOfDoctor from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id limit ?,?",
+          const listDoctor = await sequelize.query(`
+            select \"idDoctor\",\"email\",\"fullName\",\"gender\",\"birthday\",\"specialty\",\"avatar\",\"roleOfDoctor\" 
+            from \"MemberOfClinics\", \"Doctors\" 
+            where \"MemberOfClinics\".\"idClinic\" = ? 
+            and \"MemberOfClinics\".\"idDoctor\" = \"Doctors\".\"id\" 
+            limit ? offset ?`,
             {
-              replacements: [idClinic,start,Number(pageSize)],
+              replacements: [idClinic,Number(pageSize),start],
               type: QueryTypes.SELECT
             }
           )
           if(listDoctor.length > 0) {
-            resolve({
-              status: 200,
-              message: "Get all doctor successfully",
-              data: listDoctor[0],
-              count: count[0].length
-            })
+          resolve({
+            status: 200,
+            message: "Get all doctor successfully",
+            data: listDoctor[0],
+            count: count[0].length
+          })
           }else{
             resolve({
               status: 202,
@@ -52,15 +61,25 @@ const clinicServices = {
           }
         }else{
           const start = (page-1)*pageSize;
-          const count = await sequelize.query("select * from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id and Doctors.fullName like ?",
+          const count = await sequelize.query(`
+          select * from \"MemberOfClinics\", \"Doctors\" 
+          where \"MemberOfClinics\".\"idClinic\" = ? 
+          and \"MemberOfClinics\".\"idDoctor\" = \"Doctors\".\"id\"
+          and \"Doctors\".\"fullName\" ilike ?`,
+          {
+            replacements: [idClinic,('%'+nameSearch+'%')],
+            type: QueryTypes.SELECT
+          }
+        );
+          const listDoctor = await sequelize.query(`
+            select \"idDoctor\",\"email\",\"fullName\",\"gender\",\"birthday\",\"specialty\",\"avatar\",\"roleOfDoctor\" 
+            from \"MemberOfClinics\", \"Doctors\" 
+            where \"MemberOfClinics\".\"idClinic\" = ? 
+            and \"MemberOfClinics\".\"idDoctor\" = \"Doctors\".\"id\" 
+            and \"Doctors\".\"fullName\" ilike ?
+            limit ? offset ?`,  
             {
-              replacements: [idClinic,('%'+nameSearch+'%')],
-              type: QueryTypes.SELECT
-            }
-          );
-          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,specialty,avatar,roleOfDoctor from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id and Doctors.fullName like ? limit ?,?",
-            {
-              replacements: [idClinic,('%'+nameSearch+'%'),start,Number(pageSize)],
+              replacements: [idClinic,('%'+nameSearch+'%'),Number(pageSize),start],
               type: QueryTypes.SELECT
             }
           )

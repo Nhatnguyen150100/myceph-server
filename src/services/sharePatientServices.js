@@ -199,7 +199,11 @@ const sharePatientServices = {
     return new Promise(async (resolve, reject) => {
       try {
         logger.app.info(idSharedPatient)
-        const listDoctor = await sequelize.query('select Doctors.id, Doctors.email, Doctors.fullName from Doctors, Sharepatients where Doctors.id = Sharepatients.idOwnerDoctor and Sharepatients.idSharedPatient = ?',
+        const listDoctor = await sequelize.query(`
+        select \"Doctors\".\"id\", \"Doctors\".\"email\", \"Doctors\".\"fullName\" 
+        from \"Doctors\", \"Sharepatients\" 
+        where \"Doctors\".\"id\" = \"Sharepatients\".\"idOwnerDoctor\" 
+        and \"Sharepatients\".\"idSharedPatient\" = ?`,
         {
           replacements: [idSharedPatient],
           type: QueryTypes.SELECT
@@ -227,7 +231,11 @@ const sharePatientServices = {
   getAllDoctorSharePatient: (idSharedPatientOfDoctor,page,pageSize) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const count = await sequelize.query('select distinct Doctors.id from Doctors, Sharepatients where Doctors.id = Sharepatients.idOwnerDoctor and Sharepatients.idSharedPatientOfDoctor = ?',
+        const count = await sequelize.query(`
+        select distinct \"Doctors\".\"id\" 
+        from \"Doctors\", \"Sharepatients\" 
+        where \"Doctors\".\"id\" = \"Sharepatients\".\"idOwnerDoctor\" 
+        and \"Sharepatients\".\"idSharedPatientOfDoctor\" = ?`,
           {
             replacements: [idSharedPatientOfDoctor],
             type: QueryTypes.SELECT
@@ -235,9 +243,13 @@ const sharePatientServices = {
         );
         if(count[0].length>0){
           const start = (page-1)*pageSize;
-          const listDoctor = await sequelize.query('select distinct Doctors.id,fullName,email,avatar,gender,birthday from Doctors, Sharepatients where Doctors.id = Sharepatients.idOwnerDoctor and Sharepatients.idSharedPatientOfDoctor = ? limit ?, ?',
+          const listDoctor = await sequelize.query(`
+          select distinct \"Doctors\".\"id\",\"fullName\",\"email\",\"avatar\",\"gender\",\"birthday\" 
+          from \"Doctors\", \"Sharepatients\" 
+          where \"Doctors\".\"id\" = \"Sharepatients\".\"idOwnerDoctor\" 
+          and \"Sharepatients\".\"idSharedPatientOfDoctor\" = ? limit ?, ?`,
             {
-              replacements: [idSharedPatientOfDoctor,start,Number(pageSize)],
+              replacements: [idSharedPatientOfDoctor,Number(pageSize),start],
               type: QueryTypes.SELECT
             }
           );

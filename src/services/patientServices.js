@@ -18,8 +18,8 @@ const patientServices = {
           });
           if(newPatient){
             const patientHistory = await db.History.create({idHistory: newPatient.id});
-            const patientExtraOral = await db.ExtraOral.create({idExtraoral: newPatient.id});
-            const patientIntraOral = await db.IntraOral.create({idIntraoral: newPatient.id});
+            const patientExtraOral = await db.ExtraOral.create({idExtraOral: newPatient.id});
+            const patientIntraOral = await db.IntraOral.create({idIntraOral: newPatient.id});
             const patientRadiography = await db.Radiography.create({idRadiography: newPatient.id});
             const patientDiagnosisAndTreatment = await db.DiagnosisAndTreatment.create({idDiagnosisAndTreatment: newPatient.id});
             if(patientHistory && patientExtraOral && patientIntraOral && patientRadiography && patientDiagnosisAndTreatment) resolve({
@@ -37,8 +37,8 @@ const patientServices = {
           });
           if(newPatient){
             const patientHistory = await db.History.create({idHistory: newPatient.id});
-            const patientExtraOral = await db.ExtraOral.create({idExtraoral: newPatient.id});
-            const patientIntraOral = await db.IntraOral.create({idIntraoral: newPatient.id});
+            const patientExtraOral = await db.ExtraOral.create({idExtraOral: newPatient.id});
+            const patientIntraOral = await db.IntraOral.create({idIntraOral: newPatient.id});
             const patientRadiography = await db.Radiography.create({idRadiography: newPatient.id});
             const patientDiagnosisAndTreatment = await db.DiagnosisAndTreatment.create({idDiagnosisAndTreatment: newPatient.id});
             if(patientHistory && patientExtraOral && patientIntraOral && patientRadiography && patientDiagnosisAndTreatment) resolve({

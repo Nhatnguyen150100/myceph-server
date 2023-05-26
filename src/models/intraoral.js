@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      IntraOral.belongsTo(models.Patient, {foreignKey:{name: 'idIntraoral', allowNull:false}, targetKey:'id'});
+      IntraOral.belongsTo(models.Patient, {foreignKey:{name: 'idIntraOral', allowNull:false}, targetKey:'id'});
     }
   }
   IntraOral.init({
