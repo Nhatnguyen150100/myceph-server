@@ -42,6 +42,7 @@ const app = express();
 app.use(passport.initialize());
 
 app.use(cors({
+  allowedHeaders: process.env.BASE_URL_CLIENT,
   origin: process.env.BASE_URL_CLIENT
 }));
 logger.app.info("🚀 ~ file: app.js:47 ~ process.env.BASE_URL_CLIENT:" + process.env.BASE_URL_CLIENT)
