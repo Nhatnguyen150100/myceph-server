@@ -43,7 +43,8 @@ app.use(passport.initialize());
 
 app.use(cors({
   origin: process.env.BASE_URL_CLIENT,
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization', 'token'],
+  exposedHeaders: ['X-Total-Count', 'token']
 }));
 logger.app.info("🚀 ~ file: app.js:47 ~ process.env.BASE_URL_CLIENT:" + process.env.BASE_URL_CLIENT)
 
