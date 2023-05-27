@@ -39,6 +39,11 @@
             "date": 1685038029607,
             "name": "src\\log\\intraoral\\intraoral-2023-05-26.log",
             "hash": "c444e5c5511bb240fda7e2482299465aa5495cd591e56b4bad860c2dae52e4b7"
+        },
+        {
+            "date": 1685121216759,
+            "name": "src\\log\\intraoral\\intraoral-2023-05-27.log",
+            "hash": "bd519a67a2dc4abc3fcfcea5046c94aac1052b8f7da62a1e89eb56af5349870e"
         }
     ],
     "hashType": "sha256"
