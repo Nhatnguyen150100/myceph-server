@@ -285,6 +285,7 @@ const clinicServices = {
   deleteClinic: (idClinic) => {
     return new Promise(async (resolve, reject) => {
       try {
+        console.log("🚀 ~ file: clinicServices.js:353 ~ clinicServices.idClinic:", idClinic)
         await db.Schedule.destroy({
           where : {
             idClinicSchedule: idClinic
@@ -324,7 +325,7 @@ const clinicServices = {
         if(deleteMemberOfClinic){
           const deleteClinic = await db.Clinic.destroy({
             where: {
-              idClinicRoom: idClinic
+              id: idClinic
             }
           })
           if(deleteClinic){

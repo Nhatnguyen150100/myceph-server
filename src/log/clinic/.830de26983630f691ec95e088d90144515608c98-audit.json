@@ -44,6 +44,11 @@
             "date": 1685121216399,
             "name": "src\\log\\clinic\\clinic-2023-05-27.log",
             "hash": "706c60703eaf4c3cc9b5a69c47918373af3667cded43d3e857b904dc41cfb4cd"
+        },
+        {
+            "date": 1685245934310,
+            "name": "src\\log\\clinic\\clinic-2023-05-28.log",
+            "hash": "daaf84fceac27da952e50596e5056b815d2c0282fa6e486049904b627017845b"
         }
     ],
     "hashType": "sha256"

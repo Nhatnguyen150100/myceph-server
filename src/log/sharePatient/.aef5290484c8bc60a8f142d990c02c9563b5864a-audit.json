@@ -44,6 +44,11 @@
             "date": 1685121216926,
             "name": "src\\log\\sharePatient\\sharePatient-2023-05-27.log",
             "hash": "fec7e5bcca5734885e992986ae4364c22f51d37155917d8679b9e2196825a8f7"
+        },
+        {
+            "date": 1685245934369,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-05-28.log",
+            "hash": "c60e3655b5246debe3c0d863b67f3cb5596782a6cfc17902ef30f7cd1d6334d7"
         }
     ],
     "hashType": "sha256"
