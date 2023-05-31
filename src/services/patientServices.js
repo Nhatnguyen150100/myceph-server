@@ -14,7 +14,8 @@ const patientServices = {
             birthday: new Date(data.birthday),
             gender: data.gender,
             note: data.note,
-            idPatientOfDoctor: data.idDoctor
+            idPatientOfDoctor: data.idDoctor,
+            isEncrypted: data.isEncrypted
           });
           if(newPatient){
             const patientHistory = await db.History.create({idHistory: newPatient.id});
@@ -24,7 +25,8 @@ const patientServices = {
             const patientDiagnosisAndTreatment = await db.DiagnosisAndTreatment.create({idDiagnosisAndTreatment: newPatient.id});
             if(patientHistory && patientExtraOral && patientIntraOral && patientRadiography && patientDiagnosisAndTreatment) resolve({
               status: 200,
-              message: 'create patient successfully'
+              message: 'create patient successfully',
+              data: newPatient.dataValues
             })
           }
         }else{
@@ -43,7 +45,8 @@ const patientServices = {
             const patientDiagnosisAndTreatment = await db.DiagnosisAndTreatment.create({idDiagnosisAndTreatment: newPatient.id});
             if(patientHistory && patientExtraOral && patientIntraOral && patientRadiography && patientDiagnosisAndTreatment) resolve({
               status: 200,
-              message: 'create patient successfully'
+              message: 'create patient successfully',
+              data: newPatient.dataValues
             })
           }
         }

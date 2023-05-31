@@ -49,6 +49,11 @@
             "date": 1685245934305,
             "name": "src\\log\\doctor\\doctor-2023-05-28.log",
             "hash": "a335fcb71141c8cc3931e7b3b9f942d8af03f93358815247c2418707b4a7af35"
+        },
+        {
+            "date": 1685431094204,
+            "name": "src\\log\\doctor\\doctor-2023-05-30.log",
+            "hash": "5690471df5f5397fde6df7c7513cf0a6f236f03e7edb20d90fe91d1ff250000b"
         }
     ],
     "hashType": "sha256"

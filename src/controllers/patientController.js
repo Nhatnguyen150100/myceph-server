@@ -5,9 +5,10 @@ import patientServices from "../services/patientServices";
 const patientController = {
   createPatient: async (req, res) => {
     try {
-      const { status, message } = await patientServices.createNewPatient(req.body);
+      const { status, message, data } = await patientServices.createNewPatient(req.body);
       res.status(status).json({
-        message: message
+        message: message,
+        data: data
       })
     } catch (error) {
       logger.patient.error(error);

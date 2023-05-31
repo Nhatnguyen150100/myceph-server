@@ -49,6 +49,11 @@
             "date": 1685245934337,
             "name": "src\\log\\diagnosis\\diagnosis-2023-05-28.log",
             "hash": "ab97674a2bd6fe003d9e15fa23e7fc764a052fb666596393784de332191bbe81"
+        },
+        {
+            "date": 1685431094299,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-05-30.log",
+            "hash": "ef5af05781b65fed58b18683c3209c554aa64ac68468214cb122ec07d89d1328"
         }
     ],
     "hashType": "sha256"
