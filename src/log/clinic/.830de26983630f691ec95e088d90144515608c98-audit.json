@@ -6,54 +6,39 @@
     "auditLog": "src\\log\\clinic\\.830de26983630f691ec95e088d90144515608c98-audit.json",
     "files": [
         {
-            "date": 1684418119895,
-            "name": "src\\log\\clinic\\clinic-2023-05-18.log",
-            "hash": "ea482c27c5db68dc30d7f971a18d499cee81d4ce803311ec77edf746e12f7fee"
-        },
-        {
-            "date": 1684575289414,
-            "name": "src\\log\\clinic\\clinic-2023-05-20.log",
-            "hash": "f39650485aca6bb3beaa20160f192935e4eb94eaa224cad66adaf8caf88581d4"
-        },
-        {
-            "date": 1684663504543,
-            "name": "src\\log\\clinic\\clinic-2023-05-21.log",
-            "hash": "b553028c833dc7ddf10993a69ea90105d31e8453f2490abe654b8eaeb5932a69"
-        },
-        {
-            "date": 1684689727780,
-            "name": "src\\log\\clinic\\clinic-2023-05-22.log",
-            "hash": "736bed43f0930e39c99e5d6e48f7fedf6018b93f2320eca5bfa3005e5befec33"
-        },
-        {
-            "date": 1684775654391,
-            "name": "src\\log\\clinic\\clinic-2023-05-23.log",
-            "hash": "48544d61f6d608ec3f8a4cefa79ec61a6b1d39904d7ae0d1c342fe0b724f466a"
-        },
-        {
-            "date": 1684863842778,
-            "name": "src\\log\\clinic\\clinic-2023-05-24.log",
-            "hash": "cb3cd492d066e88471d73e39820e0fe6ded84c17bbcdb98ed36634f97b45d7cf"
-        },
-        {
-            "date": 1685038029589,
-            "name": "src\\log\\clinic\\clinic-2023-05-26.log",
-            "hash": "a116bea9682388f0e40035eb8e3671518580fdbdbcf9224b41a484ce21be03c5"
-        },
-        {
-            "date": 1685121216399,
-            "name": "src\\log\\clinic\\clinic-2023-05-27.log",
-            "hash": "706c60703eaf4c3cc9b5a69c47918373af3667cded43d3e857b904dc41cfb4cd"
-        },
-        {
-            "date": 1685245934310,
-            "name": "src\\log\\clinic\\clinic-2023-05-28.log",
-            "hash": "daaf84fceac27da952e50596e5056b815d2c0282fa6e486049904b627017845b"
-        },
-        {
             "date": 1685431094226,
             "name": "src\\log\\clinic\\clinic-2023-05-30.log",
             "hash": "70df4b20612c361da5439b82573f50e1fc6119f59e328a2de8903607001b104c"
+        },
+        {
+            "date": 1686033970340,
+            "name": "src\\log\\clinic\\clinic-2023-06-06.log",
+            "hash": "2225a6f9d85655fde6a3ef896bb9d3de21043943c75a933ce40cf616ef62f896"
+        },
+        {
+            "date": 1686121291851,
+            "name": "src\\log\\clinic\\clinic-2023-06-07.log",
+            "hash": "069ecb723092142cd1e7476deeda6152c18d7178ad2d0c4a53023fc6457efc5c"
+        },
+        {
+            "date": 1686186370059,
+            "name": "src\\log\\clinic\\clinic-2023-06-08.log",
+            "hash": "361a540eb565784fc9b8d27e120e2d98c955e5de27ab529e16a33624c36c6222"
+        },
+        {
+            "date": 1686278017757,
+            "name": "src\\log\\clinic\\clinic-2023-06-09.log",
+            "hash": "2347453835212e98dc4e3eff3f33273b705960cc6abff4bcda6fcc7c10612390"
+        },
+        {
+            "date": 1686370564344,
+            "name": "src\\log\\clinic\\clinic-2023-06-10.log",
+            "hash": "c990544ba51d0e7df0da6ff0dda920a75736458943fe7d6a5594a339cbe50a91"
+        },
+        {
+            "date": 1686540169731,
+            "name": "src\\log\\clinic\\clinic-2023-06-12.log",
+            "hash": "815b51f7feb7d9b14569d91f8a120a785e39e430ff8d4b2569e41c981a8557d4"
         }
     ],
     "hashType": "sha256"

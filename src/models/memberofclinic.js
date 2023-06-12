@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class MemberOfClinic extends Model {
     /**
@@ -11,17 +9,28 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      MemberOfClinic.belongsTo(models.Clinic, {foreignKey: {name: 'idClinic', allowNull: false}, targetKey: 'id', as:'clinicData'});
-      MemberOfClinic.belongsTo(models.Doctor, {foreignKey: {name: 'idDoctor', allowNull: false}, targetKey: 'id', as:'doctorData'});
+      MemberOfClinic.belongsTo(models.Clinic, {
+        foreignKey: { name: "idClinic", allowNull: false },
+        targetKey: "id",
+        as: "clinicData",
+      });
+      MemberOfClinic.belongsTo(models.Doctor, {
+        foreignKey: { name: "idDoctor", allowNull: false },
+        targetKey: "id",
+        as: "doctorData",
+      });
     }
   }
-  MemberOfClinic.init({
-    idClinic: DataTypes.UUID,
-    idDoctor: DataTypes.UUID,
-    roleOfDoctor: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'MemberOfClinic',
-  });
+  MemberOfClinic.init(
+    {
+      idClinic: DataTypes.UUID,
+      idDoctor: DataTypes.UUID,
+      roleOfDoctor: DataTypes.STRING,
+    },
+    {
+      sequelize,
+      modelName: "MemberOfClinic",
+    }
+  );
   return MemberOfClinic;
 };

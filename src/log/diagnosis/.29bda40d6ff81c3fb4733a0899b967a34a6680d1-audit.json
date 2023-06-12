@@ -6,54 +6,39 @@
     "auditLog": "src\\log\\diagnosis\\.29bda40d6ff81c3fb4733a0899b967a34a6680d1-audit.json",
     "files": [
         {
-            "date": 1684418120063,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-18.log",
-            "hash": "0afb7ffbd0e2ec832997f73730e05b59564d1200b010ce066ccffb3d0b8b6a6e"
-        },
-        {
-            "date": 1684575289477,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-20.log",
-            "hash": "d80c62cbbefe5b82b0331c0c146a13c238bd8225f88825256d36388fe6298581"
-        },
-        {
-            "date": 1684663504678,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-21.log",
-            "hash": "78603bab766100fca9b0738d8268057332f6e4147adb7e958c9fe740218e428f"
-        },
-        {
-            "date": 1684689727909,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-22.log",
-            "hash": "4bb8ad239afb4f080029b3a7ca5a94c540731899fafb0e7088ceec50b7267b61"
-        },
-        {
-            "date": 1684775654425,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-23.log",
-            "hash": "cfa42bd4fe272d97956a6b936fb814034eba50bdc2ee2f75070e5466cb8d1226"
-        },
-        {
-            "date": 1684863842894,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-24.log",
-            "hash": "cb8f465b96bb682128546f93d0da3da5b83c7c4c83200c8165f3f66540d006b1"
-        },
-        {
-            "date": 1685038029601,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-26.log",
-            "hash": "e0b296909901b8da666895d0ae8813b5c2b89dc2020ccc048e05d1fc3d20e61d"
-        },
-        {
-            "date": 1685121216675,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-27.log",
-            "hash": "db26a701eead68ee8383072ddadcf6539edf9f1c1cf2b371c3112b432f7c08cf"
-        },
-        {
-            "date": 1685245934337,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-28.log",
-            "hash": "ab97674a2bd6fe003d9e15fa23e7fc764a052fb666596393784de332191bbe81"
-        },
-        {
             "date": 1685431094299,
             "name": "src\\log\\diagnosis\\diagnosis-2023-05-30.log",
             "hash": "ef5af05781b65fed58b18683c3209c554aa64ac68468214cb122ec07d89d1328"
+        },
+        {
+            "date": 1686033970566,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-06.log",
+            "hash": "4e6353c452d040e5d570e886e7ef2b10086f5dced21f14f868684e85b47474de"
+        },
+        {
+            "date": 1686121291999,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-07.log",
+            "hash": "5975c85d225247580c9e9d6fc0d061c908aee51298c4b163d371fb4b46a560c6"
+        },
+        {
+            "date": 1686186370206,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-08.log",
+            "hash": "6fc36b07a365aa59f4fc23c43b9b429e3c9e33c1f44f322ee7a7ed42aeeb9f80"
+        },
+        {
+            "date": 1686278017878,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-09.log",
+            "hash": "98e08a24dd1817e6d4d4a56a869ac9cb43cd4e029fe4f691ec970c21c28feac2"
+        },
+        {
+            "date": 1686370564541,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-10.log",
+            "hash": "81f5808fd699949079de866a494a4edd155c29f869ff153634f92e230322f1a2"
+        },
+        {
+            "date": 1686540169894,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-12.log",
+            "hash": "8bae9556dbb0501357e89326cfda6768e6e23fa43c0268f182a41405dea3ff2a"
         }
     ],
     "hashType": "sha256"

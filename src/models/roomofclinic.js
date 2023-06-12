@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class RoomOfClinic extends Model {
     /**
@@ -11,23 +9,32 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      RoomOfClinic.belongsTo(models.Clinic, {foreignKey: {name: 'idClinicRoom', allowNull: false}, targetKey: 'id'});
-      RoomOfClinic.hasMany(models.Schedule, {foreignKey:'idRoom', sourceKey:'id'});
+      RoomOfClinic.belongsTo(models.Clinic, {
+        foreignKey: { name: "idClinicRoom", allowNull: false },
+        targetKey: "id",
+      });
+      RoomOfClinic.hasMany(models.Schedule, {
+        foreignKey: "idRoom",
+        sourceKey: "id",
+      });
     }
   }
-  RoomOfClinic.init({
-    id: {
-      allowNull: false,
-      defaultValue: DataTypes.UUIDV4,
-      primaryKey: true,
-      type: DataTypes.UUID
+  RoomOfClinic.init(
+    {
+      id: {
+        allowNull: false,
+        defaultValue: DataTypes.UUIDV4,
+        primaryKey: true,
+        type: DataTypes.UUID,
+      },
+      idClinicRoom: DataTypes.UUID,
+      nameRoom: DataTypes.STRING,
+      colorRoom: DataTypes.STRING,
     },
-    idClinicRoom: DataTypes.UUID,
-    nameRoom: DataTypes.STRING,
-    colorRoom: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'RoomOfClinic',
-  });
+    {
+      sequelize,
+      modelName: "RoomOfClinic",
+    }
+  );
   return RoomOfClinic;
 };

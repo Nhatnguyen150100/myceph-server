@@ -6,54 +6,39 @@
     "auditLog": "src\\log\\token\\.ce40f2893d6e342c42a4700c6c2857e4d97b3e08-audit.json",
     "files": [
         {
-            "date": 1684418119949,
-            "name": "src\\log\\token\\token-2023-05-18.log",
-            "hash": "10bc078c687553f1faa9d0b9ef47214febcef8f4f8d8f78c602442c8a3ce4a48"
-        },
-        {
-            "date": 1684575289425,
-            "name": "src\\log\\token\\token-2023-05-20.log",
-            "hash": "2b91cf823d1c0a571bc6ede0964227ee6fb7ac00cd90b409f560b5dcec48e30d"
-        },
-        {
-            "date": 1684663504574,
-            "name": "src\\log\\token\\token-2023-05-21.log",
-            "hash": "03911ee6812e1687be5ad69f175895a8605f073fb24494f46bcf6d862acfa067"
-        },
-        {
-            "date": 1684689727825,
-            "name": "src\\log\\token\\token-2023-05-22.log",
-            "hash": "3dcb1c34a517ba0d8d82a78fba06adb8f83c089f64155a49ffa887a5b6dde28f"
-        },
-        {
-            "date": 1684775654397,
-            "name": "src\\log\\token\\token-2023-05-23.log",
-            "hash": "8fc87d31005aca78736916ac0af9fdc45dc187578ee42c23ea67c787f31535d2"
-        },
-        {
-            "date": 1684863842808,
-            "name": "src\\log\\token\\token-2023-05-24.log",
-            "hash": "340c55187b845429bf670a6255b35626b7c87254ed871ebcf680c1118b92f5f5"
-        },
-        {
-            "date": 1685038029592,
-            "name": "src\\log\\token\\token-2023-05-26.log",
-            "hash": "43550fcf0176c38e4dfa52e701c9b5f13efb07557bf61f6cebbb00484f20733e"
-        },
-        {
-            "date": 1685121216575,
-            "name": "src\\log\\token\\token-2023-05-27.log",
-            "hash": "2b85951eb316bd51899421008164c4b1ab00c1fa9edb275ea1dba61ab2703fd6"
-        },
-        {
-            "date": 1685245934315,
-            "name": "src\\log\\token\\token-2023-05-28.log",
-            "hash": "5f179c84e0c6b0ddc76fb7832cbc8e941df073f7693b9c965bb9e6e8abeea8e2"
-        },
-        {
             "date": 1685431094249,
             "name": "src\\log\\token\\token-2023-05-30.log",
             "hash": "28db88887d5d2aff2080da5602ae095744a815cdd31fddbd06d7e1bb884ccc47"
+        },
+        {
+            "date": 1686033970377,
+            "name": "src\\log\\token\\token-2023-06-06.log",
+            "hash": "e679e136edf218797b44db0a7000d5384103169175123da18bbe537e465c57f3"
+        },
+        {
+            "date": 1686121291905,
+            "name": "src\\log\\token\\token-2023-06-07.log",
+            "hash": "de8380bb4a9b8e4be1d2c56bab2a005647cb9316f53c4f755edfbca20f76caca"
+        },
+        {
+            "date": 1686186370103,
+            "name": "src\\log\\token\\token-2023-06-08.log",
+            "hash": "fa5ffca38a389c4cfc282bcea0cb75ab7b8ab7688d9642182288122b853993af"
+        },
+        {
+            "date": 1686278017778,
+            "name": "src\\log\\token\\token-2023-06-09.log",
+            "hash": "705d8bb610d2f686845d9821213bc3d9088e2373eb643015994dc2b1938d69f1"
+        },
+        {
+            "date": 1686370564463,
+            "name": "src\\log\\token\\token-2023-06-10.log",
+            "hash": "93c10d312a76a15c286564efd3f9df14cecbf0304fd8614ed7a6179b3d3d2abf"
+        },
+        {
+            "date": 1686540169784,
+            "name": "src\\log\\token\\token-2023-06-12.log",
+            "hash": "be4d16fec2d24df0c467427d1b945b2d45e8129b86b7a2aa3b8d1ff81bc7d2a8"
         }
     ],
     "hashType": "sha256"

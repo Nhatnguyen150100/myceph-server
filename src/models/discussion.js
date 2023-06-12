@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Discussion extends Model {
     /**
@@ -11,23 +9,32 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Discussion.belongsTo(models.Patient, {foreignKey: {name: 'idRoomDiscussionOfPatient', allowNull: false}, targetKey: 'id'});
-      Discussion.belongsTo(models.Doctor, {foreignKey: {name: 'idDoctorSendMessage', allowNull: false}, targetKey: 'id'});
+      Discussion.belongsTo(models.Patient, {
+        foreignKey: { name: "idRoomDiscussionOfPatient", allowNull: false },
+        targetKey: "id",
+      });
+      Discussion.belongsTo(models.Doctor, {
+        foreignKey: { name: "idDoctorSendMessage", allowNull: false },
+        targetKey: "id",
+      });
     }
   }
-  Discussion.init({
-    id: {
-      allowNull: false,
-      defaultValue: DataTypes.UUIDV4,
-      primaryKey: true,
-      type: DataTypes.UUID
+  Discussion.init(
+    {
+      id: {
+        allowNull: false,
+        defaultValue: DataTypes.UUIDV4,
+        primaryKey: true,
+        type: DataTypes.UUID,
+      },
+      idRoomDiscussionOfPatient: DataTypes.UUIDV4,
+      idDoctorSendMessage: DataTypes.UUIDV4,
+      message: DataTypes.STRING,
     },
-    idRoomDiscussionOfPatient: DataTypes.UUIDV4,
-    idDoctorSendMessage: DataTypes.UUIDV4,
-    message: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'Discussion',
-  });
+    {
+      sequelize,
+      modelName: "Discussion",
+    }
+  );
   return Discussion;
 };

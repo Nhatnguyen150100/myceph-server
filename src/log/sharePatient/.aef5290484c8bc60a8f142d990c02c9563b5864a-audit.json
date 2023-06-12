@@ -6,54 +6,39 @@
     "auditLog": "src\\log\\sharePatient\\.aef5290484c8bc60a8f142d990c02c9563b5864a-audit.json",
     "files": [
         {
-            "date": 1684418120223,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-18.log",
-            "hash": "f6492668c8b1034c043e28de1a40fdc276a0b7ddea95708fa5d0889c95411d8d"
-        },
-        {
-            "date": 1684575289786,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-20.log",
-            "hash": "b80a938c722b16128ba92556b4fa52d91e58aafc2a2131bd8a1e6e0243f84395"
-        },
-        {
-            "date": 1684663504799,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-21.log",
-            "hash": "0cea94974ad2b135d4bb6f5613048283848d2a5653e434aa4b62fd5fe9fa9fa1"
-        },
-        {
-            "date": 1684689728101,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-22.log",
-            "hash": "abe49f79069787da32fadfde6b91e5076197ccb23a469204706d820b2ee9a606"
-        },
-        {
-            "date": 1684775654473,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-23.log",
-            "hash": "a5643e5ae928e8bd0c0201451a8ebf7c8b9a77a2e94e58c7c0434c30b794e37e"
-        },
-        {
-            "date": 1684863842965,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-24.log",
-            "hash": "3d0e8849efc57406015593f562d14714944036c551c41d25487372e06adf1a75"
-        },
-        {
-            "date": 1685038029623,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-26.log",
-            "hash": "27be49da2608aa739aa4906d3d71761b6851890b0e8ad583c431a915e7ea605e"
-        },
-        {
-            "date": 1685121216926,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-27.log",
-            "hash": "fec7e5bcca5734885e992986ae4364c22f51d37155917d8679b9e2196825a8f7"
-        },
-        {
-            "date": 1685245934369,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-28.log",
-            "hash": "c60e3655b5246debe3c0d863b67f3cb5596782a6cfc17902ef30f7cd1d6334d7"
-        },
-        {
             "date": 1685431094439,
             "name": "src\\log\\sharePatient\\sharePatient-2023-05-30.log",
             "hash": "9614f1cef3881a72db99bfee1cd3e28171258667bda14efd4cdb5f0d703d38e8"
+        },
+        {
+            "date": 1686033970810,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-06.log",
+            "hash": "fea8773f53b28d066959d27038eb99402bcab39119a720ed2a9689287306db2d"
+        },
+        {
+            "date": 1686121292081,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-07.log",
+            "hash": "7363d0969a3d41234179e711d9d81b294affbdf004eb90b236f088bd5c479749"
+        },
+        {
+            "date": 1686186370357,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-08.log",
+            "hash": "4ef8082ec354a0fe2267da52e81484f197a551558e889299aae28ba626a9e396"
+        },
+        {
+            "date": 1686278018002,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-09.log",
+            "hash": "fa98b84d1e9ce13cca479981cee45a53fb9362084f4c04c262accc29dc8867d6"
+        },
+        {
+            "date": 1686370564753,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-10.log",
+            "hash": "0cf726687005b02288706f57fd895d0e3c638319b3535361958746baa569be7e"
+        },
+        {
+            "date": 1686540170319,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-12.log",
+            "hash": "68f96ade4f6b1efa25fd3f57b6137baf083e6647cdacb4c773b4f484ec199959"
         }
     ],
     "hashType": "sha256"
