@@ -1,33 +1,33 @@
-'use strict';
+"use strict";
 const db = require("../models");
-import bcrypt from 'bcrypt';
-import logger from '../config/winston';
+import bcrypt from "bcrypt";
+import logger from "../config/winston";
 
 const authServices = {
-  login: (email,password) => {
+  login: (email, password) => {
     return new Promise(async (resolve, reject) => {
       try {
         const doctor = await db.Doctor.findOne({
-          where: { email: email},
-          raw: true
-        })
-        if(!doctor || Object.keys(doctor).length === 0){
+          where: { email: email },
+          raw: true,
+        });
+        if (!doctor || Object.keys(doctor).length === 0) {
           resolve({
             data: null,
-            message: 'Could not find your email'
+            message: "Could not find your email",
           });
         }
         let validPassword = await bcrypt.compare(password, doctor.password);
-        if(!validPassword){
+        if (!validPassword) {
           resolve({
             data: null,
-            message: 'password wrong'
+            message: "password wrong",
           });
-        }else{
+        } else {
           delete doctor.password;
           resolve({
             data: doctor,
-            message: 'login successfully'
+            message: "login successfully",
           });
         }
       } catch (error) {
@@ -36,42 +36,44 @@ const authServices = {
       }
     });
   },
-  logout: (idDoctor,refreshToken) => {
+  logout: (idDoctor, refreshToken) => {
     return new Promise(async (resolve, reject) => {
       try {
         const token = await db.RefreshToken.findOne({
           where: {
             idDoctor: idDoctor,
-            token: refreshToken
-          }
-        })
-        if(token){
-          await db.RefreshToken.update({
-            isActive: false
+            token: refreshToken,
           },
-          {
-            where: {
-              idDoctor: idDoctor,
-              token: refreshToken
+        });
+        if (token) {
+          await db.RefreshToken.update(
+            {
+              isActive: false,
             },
-            force: true
-          })
+            {
+              where: {
+                idDoctor: idDoctor,
+                token: refreshToken,
+              },
+              force: true,
+            }
+          );
           resolve({
             status: 200,
-            message: 'logout successfully'
-          })
-        }else{
+            message: "logout successfully",
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'logout failed'
-          })
+            message: "logout failed",
+          });
         }
       } catch (error) {
         logger.token.error(error);
         reject(error);
       }
-    })
-  }
-}
+    });
+  },
+};
 
 export default authServices;

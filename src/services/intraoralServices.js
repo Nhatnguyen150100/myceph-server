@@ -1,7 +1,7 @@
-'use strict';
-import logger from "../config/winston"
+"use strict";
+import logger from "../config/winston";
 
-const db = require("../models")
+const db = require("../models");
 
 const intraoralServices = {
   getIntraoral: (idPatient) => {
@@ -9,67 +9,67 @@ const intraoralServices = {
       try {
         const intraoral = await db.IntraOral.findOne({
           where: {
-            idIntraOral: idPatient
-          }
-        })
+            idIntraOral: idPatient,
+          },
+        });
         const typesToSearch = [
           {
             id: 10,
-            nameImage: 'rightBuccalImage'
+            nameImage: "rightBuccalImage",
           },
           {
             id: 11,
-            nameImage: 'leftBuccalImage'
+            nameImage: "leftBuccalImage",
           },
           {
             id: 12,
-            nameImage: 'anteriorImage'
+            nameImage: "anteriorImage",
           },
           {
             id: 13,
-            nameImage: 'maxillaryImage'
+            nameImage: "maxillaryImage",
           },
           {
             id: 14,
-            nameImage: 'mandibularImage'
+            nameImage: "mandibularImage",
           },
           {
             id: 8,
-            nameImage: 'smileyFace'
-          }
+            nameImage: "smileyFace",
+          },
         ];
         const listImage = {};
         for (const type of typesToSearch) {
           const image = await db.LibraryImagePatient.findOne({
-            attributes: ['linkImage'],
+            attributes: ["linkImage"],
             where: {
               typeImage: type.id,
-              idPatientImage: idPatient
-            }
+              idPatientImage: idPatient,
+            },
           });
           listImage[type.nameImage] = image ? image.linkImage : null;
         }
-        if(intraoral){
+        if (intraoral) {
           resolve({
             status: 200,
-            message: 'get intra-oral successfully',
-            data: {...intraoral,listImage}
-          })
-        }else{
+            message: "get intra-oral successfully",
+            data: { ...intraoral, listImage },
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'get intra-oral failed',
-            data: {}
-          })
+            message: "get intra-oral failed",
+            data: {},
+          });
         }
       } catch (error) {
         logger.intraoral.error(error);
-        reject(error)
+        reject(error);
       }
-    })
+    });
   },
-  updateIntraoral: (idPatient,data) => {
-    return new Promise(async (resolve, reject) =>{
+  updateIntraoral: (idPatient, data) => {
+    return new Promise(async (resolve, reject) => {
       try {
         const dataUpdate = {
           oralHygiene: data.oralHygiene,
@@ -100,74 +100,74 @@ const intraoralServices = {
           guidanceOnLeft: data.guidanceOnLeft,
           musculature: data.musculature,
           swallowingPattern: data.swallowingPattern,
-          historyOfTMD: data.historyOfTMD
-        }
-        const intraoralUpdate = await db.IntraOral.update(dataUpdate,{
+          historyOfTMD: data.historyOfTMD,
+        };
+        const intraoralUpdate = await db.IntraOral.update(dataUpdate, {
           where: {
-            idIntraOral: idPatient
-          }
-        })
-        if(intraoralUpdate){
+            idIntraOral: idPatient,
+          },
+        });
+        if (intraoralUpdate) {
           const newIntraoral = await db.IntraOral.findOne({
             where: {
-              idIntraOral: idPatient
-            }
-          })
+              idIntraOral: idPatient,
+            },
+          });
           const typesToSearch = [
             {
               id: 10,
-              nameImage: 'rightBuccalImage'
+              nameImage: "rightBuccalImage",
             },
             {
               id: 11,
-              nameImage: 'leftBuccalImage'
+              nameImage: "leftBuccalImage",
             },
             {
               id: 12,
-              nameImage: 'anteriorImage'
+              nameImage: "anteriorImage",
             },
             {
               id: 13,
-              nameImage: 'maxillaryImage'
+              nameImage: "maxillaryImage",
             },
             {
               id: 14,
-              nameImage: 'mandibularImage'
+              nameImage: "mandibularImage",
             },
             {
               id: 8,
-              nameImage: 'smileyFace'
-            }
+              nameImage: "smileyFace",
+            },
           ];
           const listImage = {};
           for (const type of typesToSearch) {
             const image = await db.LibraryImagePatient.findOne({
-              attributes: ['linkImage'],
+              attributes: ["linkImage"],
               where: {
                 typeImage: type.id,
-                idPatientImage: idPatient
-              }
+                idPatientImage: idPatient,
+              },
             });
             listImage[type.nameImage] = image ? image.linkImage : null;
           }
           resolve({
             status: 200,
-            message: 'update intra-oral successfully',
-            data: {...newIntraoral,listImage}
-          })
-        }else{
+            message: "update intra-oral successfully",
+            data: { ...newIntraoral, listImage },
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'update intra-oral failed',
-            data: null
-          })
+            message: "update intra-oral failed",
+            data: null,
+          });
         }
       } catch (error) {
         logger.intraoral.error(error);
         reject(error);
       }
-    })
-  }
-}
+    });
+  },
+};
 
 export default intraoralServices;

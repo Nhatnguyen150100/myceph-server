@@ -1,58 +1,60 @@
-import logger from "../config/winston"
+import logger from "../config/winston";
 
-const db = require("../models")
+const db = require("../models");
 
 const discussionServices = {
-  getMessage: (idRoom,skip) => {
-    return new Promise(async (resolve, reject) =>{
+  getMessage: (idRoom, skip) => {
+    return new Promise(async (resolve, reject) => {
       try {
         const listMessage = await db.Discussion.findAll({
-          include: [{
-            model: db.Doctor,
-            attributes: ['email','fullName']
-          }],
+          include: [
+            {
+              model: db.Doctor,
+              attributes: ["email", "fullName"],
+            },
+          ],
           offset: skip,
           limit: 10,
-          order: [
-            ['createdAt', 'DESC']
-          ],
+          order: [["createdAt", "DESC"]],
           where: {
-            idRoomDiscussionOfPatient: idRoom
+            idRoomDiscussionOfPatient: idRoom,
           },
-          raw: true
-        })
+          raw: true,
+        });
         return resolve(listMessage);
       } catch (error) {
         logger.discussion.error(error);
-        reject(error)
+        reject(error);
       }
-    })
+    });
   },
-  setMessage: (idRoom, idDoctor,message) => {
+  setMessage: (idRoom, idDoctor, message) => {
     return new Promise(async (resolve, reject) => {
       try {
         const newMessage = await db.Discussion.create({
           idRoomDiscussionOfPatient: idRoom,
           idDoctorSendMessage: idDoctor,
-          message: message
-        })
+          message: message,
+        });
         const getNewMessage = await db.Discussion.findOne({
-          include: [{
-            model: db.Doctor,
-            attributes: ['email','fullName']
-          }],
+          include: [
+            {
+              model: db.Doctor,
+              attributes: ["email", "fullName"],
+            },
+          ],
           where: {
-            id: newMessage.dataValues.id
+            id: newMessage.dataValues.id,
           },
-          raw: true
-        })
+          raw: true,
+        });
         return resolve(getNewMessage);
       } catch (error) {
         logger.discussion.error(error);
-        reject(error)
+        reject(error);
       }
-    })
-  }
-}
+    });
+  },
+};
 
 export default discussionServices;
