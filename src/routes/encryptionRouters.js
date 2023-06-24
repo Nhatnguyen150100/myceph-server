@@ -38,14 +38,12 @@ router.post(
   "/encryptionForDoctor/:id",
   middlewareController.verifyToken,
   doctorMiddleware.checkDoctorExistsById,
-  clinicMiddleware.checkAdminOfClinic,
   encryptionControllers.setEncryptionForDoctor
 );
 router.delete(
   "/encryptionForDoctor/:id",
   middlewareController.verifyToken,
   doctorMiddleware.checkDoctorExistsById,
-  clinicMiddleware.checkAdminOfClinic,
   encryptionControllers.deleteEncryptionForDoctor
 );
 

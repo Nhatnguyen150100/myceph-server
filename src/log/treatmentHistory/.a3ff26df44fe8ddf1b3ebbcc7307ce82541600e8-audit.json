@@ -54,6 +54,11 @@
             "date": 1687509593024,
             "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-06-23.log",
             "hash": "b251c38c9a66373c2402f622754959b3d7a318115aece4d9ddeb9eafd1a12cef"
+        },
+        {
+            "date": 1687576840273,
+            "name": "src\\log\\treatmentHistory\\treatmentHistory-2023-06-24.log",
+            "hash": "d095102fb45701bf62662d5d8d26b18094dbdde066aa057d9252d0fcb1812afa"
         }
     ],
     "hashType": "sha256"

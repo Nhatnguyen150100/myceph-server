@@ -48,14 +48,14 @@ const clinicMiddleware = {
     try {
       const idDoctor = req.query.idDoctor;
       const idClinic = req.params.id;
-      const roleOfDoctor = await db.MemberOfClinic.findOne({
+      const doctor = await db.MemberOfClinic.findOne({
         where: {
           idClinic: idClinic,
           idDoctor: idDoctor,
         },
         attributes: ["roleOfDoctor"],
       });
-      if (roleOfDoctor === "admin") next();
+      if (doctor.roleOfDoctor === "admin") next();
       else
         res.status(500).json({
           message: "You are not allowed to edit this",

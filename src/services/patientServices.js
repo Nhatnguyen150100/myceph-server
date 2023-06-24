@@ -54,6 +54,7 @@ const patientServices = {
             gender: data.gender,
             note: data.note,
             idPatientOfClinic: data.idClinic,
+            isEncrypted: data.isEncrypted,
           });
           if (newPatient) {
             const patientHistory = await db.History.create({

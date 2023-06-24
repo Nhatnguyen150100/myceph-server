@@ -54,6 +54,11 @@
             "date": 1687509592848,
             "name": "src\\log\\token\\token-2023-06-23.log",
             "hash": "21097bb822c8f59aa37330681c7d0310ed524d1ed4d4ebe3746736baa146d01e"
+        },
+        {
+            "date": 1687576839930,
+            "name": "src\\log\\token\\token-2023-06-24.log",
+            "hash": "534c43b79865a4e97d94b304b52edd748e5395747734bd3c0580356ffd983ade"
         }
     ],
     "hashType": "sha256"
