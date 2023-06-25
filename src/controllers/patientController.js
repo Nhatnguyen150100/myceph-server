@@ -1,20 +1,22 @@
-'use strict';
+"use strict";
 import logger from "../config/winston";
 import patientServices from "../services/patientServices";
 
 const patientController = {
   createPatient: async (req, res) => {
     try {
-      const { status, message, data } = await patientServices.createNewPatient(req.body);
+      const { status, message, data } = await patientServices.createNewPatient(
+        req.body
+      );
       res.status(status).json({
         message: message,
-        data: data
-      })
+        data: data,
+      });
     } catch (error) {
       logger.patient.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
   },
   getPatient: async (req, res) => {
@@ -25,103 +27,138 @@ const patientController = {
       const selectedPlan = req.selectedPlan;
       const sideFaceImage = req.sideFaceImage;
       res.status(200).json({
-        message: 'get patient information successfully',
-        data: {...patient,...diagnose,...selectedPlan,...updateBydoctor,sideFaceImage}
-      })
+        message: "get patient information successfully",
+        data: {
+          ...patient,
+          ...diagnose,
+          ...selectedPlan,
+          ...updateBydoctor,
+          sideFaceImage,
+        },
+        roleOfDoctor: req.checkRole,
+      });
     } catch (error) {
       logger.patient.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
   },
   getSharedPatientOfDoctor: async (req, res) => {
     try {
-      const { status, message, data, count } = await patientServices.getSharedPatientOfDoctor(req.params.id,req.query.page,req.query.pageSize,req.query.nameSearch);
+      const { status, message, data, count } =
+        await patientServices.getSharedPatientOfDoctor(
+          req.params.id,
+          req.query.page,
+          req.query.pageSize,
+          req.query.nameSearch
+        );
       res.status(status).json({
         message: message,
         data: data,
-        count: count
-      })
+        count: count,
+      });
     } catch (error) {
       logger.patient.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
   },
   getSharedPatientOfDoctorInClinic: async (req, res) => {
     try {
-      const { status, message, data, count } = await patientServices.getSharedPatientOfDoctorInClinic(req.params.id,req.query.idClinic,req.query.page,req.query.pageSize,req.query.nameSearch);
+      const { status, message, data, count } =
+        await patientServices.getSharedPatientOfDoctorInClinic(
+          req.params.id,
+          req.query.idClinic,
+          req.query.page,
+          req.query.pageSize,
+          req.query.nameSearch
+        );
       res.status(status).json({
         message: message,
         data: data,
-        count: count
-      })
+        count: count,
+      });
     } catch (error) {
       logger.patient.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
   },
   getPatientListForDoctor: async (req, res) => {
     try {
-      const { status, message, data, count } = await patientServices.getPatientListForDoctor(req.params.id,req.query.page,req.query.pageSize,req.query.nameSearch);
+      const { status, message, data, count } =
+        await patientServices.getPatientListForDoctor(
+          req.params.id,
+          req.query.page,
+          req.query.pageSize,
+          req.query.nameSearch
+        );
       res.status(status).json({
         message: message,
         data: data,
-        count: count
-      })
+        count: count,
+      });
     } catch (error) {
       logger.patient.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
   },
   getPatientListForClinic: async (req, res) => {
     try {
-      const { status, message, data, count } = await patientServices.getPatientListForClinic(req.params.id,req.query.page,req.query.pageSize,req.query.nameSearch);
+      const { status, message, data, count } =
+        await patientServices.getPatientListForClinic(
+          req.params.id,
+          req.query.page,
+          req.query.pageSize,
+          req.query.nameSearch
+        );
       res.status(status).json({
         message: message,
         data: data,
-        count: count
-      })
+        count: count,
+      });
     } catch (error) {
       logger.patient.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
   },
   deletePatient: async (req, res) => {
     try {
-      const { status, message } = await patientServices.deletePatient(req.params.id);
+      const { status, message } = await patientServices.deletePatient(
+        req.params.id
+      );
       res.status(status).json({
-        message: message
-      })
+        message: message,
+      });
     } catch (error) {
       logger.patient.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
   },
   updateInformationPatient: async (req, res) => {
     try {
-      const { status, message, data } = await patientServices.updateInformationPatient(req.params.id,req.body);
+      const { status, message, data } =
+        await patientServices.updateInformationPatient(req.params.id, req.body);
       res.status(status).json({
         message: message,
-        data: data
-      })
+        data: data,
+      });
     } catch (error) {
       logger.patient.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
   },
-}
+};
 
 export default patientController;

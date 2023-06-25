@@ -1,41 +1,49 @@
-'use strict';
+"use strict";
 import logger from "../config/winston";
 import patientServices from "../services/patientServices";
 
-const { default: extraoralServices } = require("../services/extraoralServices")
+const { default: extraoralServices } = require("../services/extraoralServices");
 
 const extraoralControllers = {
-  getExtraoral: async (req,res) => {
+  getExtraoral: async (req, res) => {
     try {
-      const { status, message, data } = await extraoralServices.getExtraoral(req.params.id);
+      const { status, message, data } = await extraoralServices.getExtraoral(
+        req.params.id
+      );
       logger.extraoral.info(data);
       res.status(status).json({
         message: message,
-        data: data
-      })
+        data: data,
+        roleOfDoctor: req.checkRole,
+      });
     } catch (error) {
       logger.extraoral.error(error);
       res.status(500).json({
-        message: error
-      })
+        message: error,
+      });
     }
   },
-  updateExtraoral: async (req,res) => {
+  updateExtraoral: async (req, res) => {
     try {
-      const { status, message, data } = await extraoralServices.updateExtraoral(req.params.id,req.body);
-      patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
-        res.status(status).json({
-          message: message,
-          data: data
-        })
-      })
+      const { status, message, data } = await extraoralServices.updateExtraoral(
+        req.params.id,
+        req.body
+      );
+      patientServices
+        .saveUpdateDoctor(req.params.id, req.body.idDoctor)
+        .finally(() => {
+          res.status(status).json({
+            message: message,
+            data: data,
+          });
+        });
     } catch (error) {
       logger.extraoral.error(error);
       res.status(500).json({
-        message: error
-      })
+        message: error,
+      });
     }
-  }
-}
+  },
+};
 
 export default extraoralControllers;

@@ -1,6 +1,7 @@
 "use-strict";
 import express from "express";
 import treatmentPlanControllers from "../controllers/treatmentPlanControllers";
+import doctorMiddleware from "../middleware/doctorMiddleware";
 import middlewareController from "../middleware/middlewareController";
 import patientMiddleware from "../middleware/patientMiddleware";
 
@@ -10,6 +11,7 @@ router.get(
   "/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   treatmentPlanControllers.getAllTreatmentPlan
 );
 router.get(

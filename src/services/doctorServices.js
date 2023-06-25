@@ -341,6 +341,35 @@ const doctorServices = {
       }
     });
   },
+  checkRoleDoctor: (idPatient, idDoctor) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const role = await db.SharePatient.findOne({
+          where: {
+            idSharedPatient: idPatient,
+            idOwnerDoctor: idDoctor,
+          },
+          attributes: ["roleOfOwnerDoctor"],
+        });
+        if (role) {
+          resolve({
+            status: 200,
+            message: "Check role of owner doctor successfully",
+            data: role.roleOfOwnerDoctor,
+          });
+        } else {
+          resolve({
+            status: 202,
+            message: "Check role of owner doctor failed",
+            data: null,
+          });
+        }
+      } catch (error) {
+        logger.doctor.error(error);
+        reject(error);
+      }
+    });
+  },
 };
 
 export default doctorServices;

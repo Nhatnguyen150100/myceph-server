@@ -11,6 +11,7 @@ router.get(
   "/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   diagnosisAndTreatmentControllers.getDiagnosisAndTreatment
 );
 router.put(
