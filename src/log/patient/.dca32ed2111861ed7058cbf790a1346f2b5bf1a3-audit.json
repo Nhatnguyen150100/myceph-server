@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609523995,
             "name": "src\\log\\patient\\patient-2023-03-01.log",
             "hash": "32daa754850b39b13b429065d37402ff85e1a677667520e5aa1f31c009962bf5"
@@ -78,33 +79,39 @@
             "name": "src\\log\\patient\\patient-2023-05-09.log",
             "hash": "515101f8a5b0dcc315d4959315e074fa4b31433e14fc373715b83e74fedaecd9"
 >>>>>>> master
+=======
+            "date": 1686540169846,
+            "name": "src\\log\\patient\\patient-2023-06-12.log",
+            "hash": "d21b2be9f6e5d7fe1d7c2e7ac433b823e07ccc4009b6d737e6a71a615c45135d"
+>>>>>>> origin/master
         },
         {
-            "date": 1683688720047,
-            "name": "src\\log\\patient\\patient-2023-05-10.log",
-            "hash": "9aad2b0405da5baccf1a2234cffdd3172c1623b0178100b96ab469834189996d"
+            "date": 1686627219928,
+            "name": "src\\log\\patient\\patient-2023-06-13.log",
+            "hash": "68b55b46e7e4c6ccb931c46cae46a1461b1ffe41104bbcdd765440eea7d3a7ce"
         },
         {
-            "date": 1684418120030,
-            "name": "src\\log\\patient\\patient-2023-05-18.log",
-            "hash": "9ee5a4b66712ebb74cc67197f6633368075dba4b2a0c94f4f9b12d8fa2876648"
+            "date": 1686711499721,
+            "name": "src\\log\\patient\\patient-2023-06-14.log",
+            "hash": "4bffb38891038852c29a5440f96a22b96eaec80311d8caa25bd0c8fb0388ddf7"
         },
         {
-            "date": 1684575289451,
-            "name": "src\\log\\patient\\patient-2023-05-20.log",
-            "hash": "c0604ac5fb3b26b78f6b685104cecb15a5382390c84040ba33fe698784e6b85b"
+            "date": 1686786719013,
+            "name": "src\\log\\patient\\patient-2023-06-15.log",
+            "hash": "0e328262ee78ed6f8e029b362d65f6411b10b332cf861e90eeb418cb8e423e95"
         },
         {
-            "date": 1684663504643,
-            "name": "src\\log\\patient\\patient-2023-05-21.log",
-            "hash": "66186865181154c01bc10d864b69796dfb0e2ea34d23a3566431c1132ba4053d"
+            "date": 1686971568809,
+            "name": "src\\log\\patient\\patient-2023-06-17.log",
+            "hash": "5837f72b1aab93219a8d95d85444dae966747261ae45071aeddb6b4a5f3efa99"
         },
         {
-            "date": 1684689727902,
-            "name": "src\\log\\patient\\patient-2023-05-22.log",
-            "hash": "f5bc898d50953bdb3c62b8d8443f0afe5c9f41fbe81068c53930c9e39b50a25e"
+            "date": 1687059323938,
+            "name": "src\\log\\patient\\patient-2023-06-18.log",
+            "hash": "35a1709df61dafe2a9f4765266aa6566b13b6bcfcc0bb428d25a52122c1ad6af"
         },
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             "date": 1680365348869,
             "name": "src\\log\\patient\\patient-2023-04-01.log",
@@ -170,6 +177,31 @@
             "name": "src\\log\\patient\\patient-2023-05-23.log",
             "hash": "2e9d46cd6ae370c828de89b68cf6789852344a7c31ff959fe3a4e26b8aa47ecc"
 >>>>>>> master
+=======
+            "date": 1687161913300,
+            "name": "src\\log\\patient\\patient-2023-06-19.log",
+            "hash": "39436ed98d02bcfe34e1f093d7455107a5e341ef7bbad4496d3ce367bb72fc5d"
+        },
+        {
+            "date": 1687422158921,
+            "name": "src\\log\\patient\\patient-2023-06-22.log",
+            "hash": "ca391e0316eee68e3df00a24c80d3cc9551f68167ff296797db08926d8e77a6b"
+        },
+        {
+            "date": 1687509592903,
+            "name": "src\\log\\patient\\patient-2023-06-23.log",
+            "hash": "2149df3e4ba31214dad63e172b0d114e11833a9adc105cdb4e0bb01cf3b73bf9"
+        },
+        {
+            "date": 1687576840013,
+            "name": "src\\log\\patient\\patient-2023-06-24.log",
+            "hash": "bc42dee9053659d754bf5f82024011b5deb1dd55965675dcc89dd94e2d30a61b"
+        },
+        {
+            "date": 1687681751444,
+            "name": "src\\log\\patient\\patient-2023-06-25.log",
+            "hash": "870cefd651e8852fb1230b19b0bbd5acd88c23ce97f47f3260e2739a3818287a"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"

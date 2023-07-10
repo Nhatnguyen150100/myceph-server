@@ -9,12 +9,12 @@ const sequelize = new Sequelize(process.env.DB_DATABASE, process.env.DB_USERNAME
 	port: process.env.DB_PORT,
 	dialect: process.env.DB_DIALECT,
 	logging: (message) => {logger.app.info(message)},
-	dialectOptions: {
+	dialectOptions: process.env.DB_SSL === 'true' ? {
 		ssl: {
 			require: true,
 			rejectUnauthorized: false,
 		},
-	},
+	} : {},
 });
 
 let connectDB = async () => {

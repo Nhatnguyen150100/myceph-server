@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609524008,
             "name": "src\\log\\diagnosis\\diagnosis-2023-03-01.log",
             "hash": "3f3e01540315d3cdf10210953f04b827da53098e7596f790b9c3455670bb5417"
@@ -78,33 +79,39 @@
             "name": "src\\log\\diagnosis\\diagnosis-2023-05-09.log",
             "hash": "4486fc7cb9b6ac7165706758f92f1146f2076ba97bdce38438f0b189a2c9cf4d"
 >>>>>>> master
+=======
+            "date": 1686540169894,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-12.log",
+            "hash": "8bae9556dbb0501357e89326cfda6768e6e23fa43c0268f182a41405dea3ff2a"
+>>>>>>> origin/master
         },
         {
-            "date": 1683688720130,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-10.log",
-            "hash": "89814f7e339c3c2c2ce6e016d7e3a5aac54d935b30e8d61818c17604533101cc"
+            "date": 1686627219956,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-13.log",
+            "hash": "3602112ce52216f546709b3f65d3b601ffbd35122e8ad7576eb481c1dc9ed41d"
         },
         {
-            "date": 1684418120063,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-18.log",
-            "hash": "0afb7ffbd0e2ec832997f73730e05b59564d1200b010ce066ccffb3d0b8b6a6e"
+            "date": 1686711499759,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-14.log",
+            "hash": "d8685ae99348190f48756070899f1c7eee2cee6e30812337045ab2dcca05e201"
         },
         {
-            "date": 1684575289477,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-20.log",
-            "hash": "d80c62cbbefe5b82b0331c0c146a13c238bd8225f88825256d36388fe6298581"
+            "date": 1686786719016,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-15.log",
+            "hash": "7082b29c6ec2e401b010babaa85422f7ff0f9d73b619a414c8f92c35ad326116"
         },
         {
-            "date": 1684663504678,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-21.log",
-            "hash": "78603bab766100fca9b0738d8268057332f6e4147adb7e958c9fe740218e428f"
+            "date": 1686971568836,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-17.log",
+            "hash": "468e31d93fa8def4b8cf152a28fdc44e17717701941269d5276069a9f9d55668"
         },
         {
-            "date": 1684689727909,
-            "name": "src\\log\\diagnosis\\diagnosis-2023-05-22.log",
-            "hash": "4bb8ad239afb4f080029b3a7ca5a94c540731899fafb0e7088ceec50b7267b61"
+            "date": 1687059324052,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-18.log",
+            "hash": "48a031bd85200f1f066cf4f308a949e9fec5d68f180a6dd733e0f30ed38d72e4"
         },
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             "date": 1680365348881,
             "name": "src\\log\\diagnosis\\diagnosis-2023-04-01.log",
@@ -170,6 +177,31 @@
             "name": "src\\log\\diagnosis\\diagnosis-2023-05-23.log",
             "hash": "cfa42bd4fe272d97956a6b936fb814034eba50bdc2ee2f75070e5466cb8d1226"
 >>>>>>> master
+=======
+            "date": 1687161913355,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-19.log",
+            "hash": "7ab34dd95a08953c845394ea665e979e2ffc97f90be9c4a188e94075e72753c7"
+        },
+        {
+            "date": 1687422158961,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-22.log",
+            "hash": "b3ea180b5bc5185a40b44185a0ef4578df377d6ded9e57915d4d46d9ed3e56fa"
+        },
+        {
+            "date": 1687509592937,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-23.log",
+            "hash": "bdb704bc9c4c9d25da07a5add86ff9124cf82ecaa0a22c9acd1cac104b4566c1"
+        },
+        {
+            "date": 1687576840072,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-24.log",
+            "hash": "67078a5f05a03360ca35d2dc36afe37133b5e71fbe88bf2e9887a26fe9d0fa74"
+        },
+        {
+            "date": 1687681751466,
+            "name": "src\\log\\diagnosis\\diagnosis-2023-06-25.log",
+            "hash": "6b985a4911d6064fb8f0f97626387f9afb784e5fd33c999cac47e3ffc2166448"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"

@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class LateralCeph extends Model {
     /**
@@ -11,24 +9,30 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      LateralCeph.belongsTo(models.LibraryImagePatient, {foreignKey:{name: 'idImageAnalysis', allowNull:false}, targetKey:'id'});
+      LateralCeph.belongsTo(models.LibraryImagePatient, {
+        foreignKey: { name: "idImageAnalysis", allowNull: false },
+        targetKey: "id",
+      });
     }
   }
-  LateralCeph.init({
-    id: {
-      allowNull: false,
-      defaultValue: DataTypes.UUIDV4,
-      primaryKey: true,
-      type: DataTypes.UUID
+  LateralCeph.init(
+    {
+      id: {
+        allowNull: false,
+        defaultValue: DataTypes.UUIDV4,
+        primaryKey: true,
+        type: DataTypes.UUID,
+      },
+      idImageAnalysis: DataTypes.UUID,
+      markerPoints: DataTypes.TEXT,
+      scaleImage: DataTypes.FLOAT,
+      lengthOfRuler: DataTypes.INTEGER,
+      noteAnalysis: DataTypes.TEXT,
     },
-    idImageAnalysis: DataTypes.UUID,
-    markerPoints: DataTypes.TEXT,
-    scaleImage: DataTypes.FLOAT,
-    lengthOfRuler: DataTypes.INTEGER,
-    noteAnalysis: DataTypes.TEXT
-  }, {
-    sequelize,
-    modelName: 'LateralCeph',
-  });
+    {
+      sequelize,
+      modelName: "LateralCeph",
+    }
+  );
   return LateralCeph;
 };

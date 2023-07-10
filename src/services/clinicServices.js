@@ -1,91 +1,119 @@
-'use strict';
+"use strict";
 import db, { sequelize } from "../models";
 import QueryTypes from "sequelize";
 import patientServices from "./patientServices";
+import logger from "../config/winston";
 
 const clinicServices = {
-  getAllClinic : () => {
+  getAllClinic: () => {
     return new Promise(async (resolve, reject) => {
       try {
         const listClinic = await db.Clinic.findAll();
         resolve({
           message: "Get all clinic successfully",
-          data: listClinic
-        })
+          data: listClinic,
+        });
       } catch (error) {
         console.log(error);
         reject(error);
       }
     });
   },
-  getAllDoctorInClinic: (idClinic,page,pageSize,nameSearch) => {
+  getAllDoctorInClinic: (idClinic, page, pageSize, nameSearch) => {
     return new Promise(async (resolve, reject) => {
       try {
-        if(!nameSearch){
-          const start = (page-1)*pageSize;
-          const count = await sequelize.query("select * from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id",
+        if (!nameSearch) {
+          const start = (page - 1) * pageSize;
+          const count = await sequelize.query(
+            `
+            select * from \"MemberOfClinics\", \"Doctors\" 
+            where \"MemberOfClinics\".\"idClinic\" = ? 
+            and \"MemberOfClinics\".\"idDoctor\" = \"Doctors\".\"id\"`,
             {
               replacements: [idClinic],
-              type: QueryTypes.SELECT
+              type: QueryTypes.SELECT,
             }
           );
-          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,specialty,avatar,roleOfDoctor from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id limit ?,?",
+          const listDoctor = await sequelize.query(
+            `
+            select \"idDoctor\",\"email\",\"fullName\",\"gender\",\"birthday\",\"specialty\",\"avatar\",\"roleOfDoctor\" 
+            from \"MemberOfClinics\", \"Doctors\" 
+            where \"MemberOfClinics\".\"idClinic\" = ? 
+            and \"MemberOfClinics\".\"idDoctor\" = \"Doctors\".\"id\" 
+            limit ? offset ?`,
             {
-              replacements: [idClinic,start,Number(pageSize)],
-              type: QueryTypes.SELECT
+              replacements: [idClinic, Number(pageSize), start],
+              type: QueryTypes.SELECT,
             }
-          )
-          if(listDoctor.length > 0) {
+          );
+          if (listDoctor.length > 0) {
             resolve({
               status: 200,
               message: "Get all doctor successfully",
               data: listDoctor[0],
-              count: count[0].length
-            })
-          }else{
+              count: count[0].length,
+            });
+          } else {
             resolve({
               status: 202,
               message: "Get all doctor failed",
               data: listDoctor,
-              count: null
-            })
+              count: null,
+            });
           }
-        }else{
-          const start = (page-1)*pageSize;
-          const count = await sequelize.query("select * from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id and Doctors.fullName like ?",
+        } else {
+          const start = (page - 1) * pageSize;
+          const count = await sequelize.query(
+            `
+          select * from \"MemberOfClinics\", \"Doctors\" 
+          where \"MemberOfClinics\".\"idClinic\" = ? 
+          and \"MemberOfClinics\".\"idDoctor\" = \"Doctors\".\"id\"
+          and \"Doctors\".\"fullName\" ilike ?`,
             {
-              replacements: [idClinic,('%'+nameSearch+'%')],
-              type: QueryTypes.SELECT
+              replacements: [idClinic, "%" + nameSearch + "%"],
+              type: QueryTypes.SELECT,
             }
           );
-          const listDoctor = await sequelize.query("select idDoctor,email,fullName,gender,birthday,specialty,avatar,roleOfDoctor from Memberofclinics, Doctors where Memberofclinics.idClinic = ? and Memberofclinics.idDoctor = Doctors.id and Doctors.fullName like ? limit ?,?",
+          const listDoctor = await sequelize.query(
+            `
+            select \"idDoctor\",\"email\",\"fullName\",\"gender\",\"birthday\",\"specialty\",\"avatar\",\"roleOfDoctor\" 
+            from \"MemberOfClinics\", \"Doctors\" 
+            where \"MemberOfClinics\".\"idClinic\" = ? 
+            and \"MemberOfClinics\".\"idDoctor\" = \"Doctors\".\"id\" 
+            and \"Doctors\".\"fullName\" ilike ?
+            limit ? offset ?`,
             {
-              replacements: [idClinic,('%'+nameSearch+'%'),start,Number(pageSize)],
-              type: QueryTypes.SELECT
+              replacements: [
+                idClinic,
+                "%" + nameSearch + "%",
+                Number(pageSize),
+                start,
+              ],
+              type: QueryTypes.SELECT,
             }
-          )
-          if(listDoctor.length > 0) {
+          );
+          if (listDoctor.length > 0) {
             resolve({
               status: 200,
               message: "Get all doctor successfully",
               data: listDoctor[0],
-              count: count[0].length
-            })
-          }else{
+              count: count[0].length,
+            });
+          } else {
             resolve({
               status: 202,
               message: "Get all doctor failed",
               data: listDoctor,
-              count: null
-            })
+              count: null,
+            });
           }
         }
       } catch (error) {
-        reject(error);        
+        reject(error);
       }
-    })
+    });
   },
-  createNewClinic: (idAdminDoctor,data) =>{
+  createNewClinic: (idAdminDoctor, data) => {
     return new Promise(async (resolve, reject) => {
       try {
         const newClinic = await db.Clinic.create({
@@ -94,88 +122,93 @@ const clinicServices = {
           phoneNumberClinic: data.phoneNumberClinic,
           avatarClinic: data.avatarClinic,
           addressClinic: data.addressClinic,
-          description: data.description
+          description: data.description,
         });
-        const { status } = await clinicServices.addDoctorToClinic(newClinic.dataValues.id,idAdminDoctor,"admin");
-        if(status){
+        const { status } = await clinicServices.addDoctorToClinic(
+          newClinic.dataValues.id,
+          idAdminDoctor,
+          "admin"
+        );
+        if (status) {
           resolve({
             status: 200,
-            message: 'create new clinic successfully',
-            idClinic: newClinic.dataValues.id
-          })
-        }else{
+            message: "create new clinic successfully",
+            idClinic: newClinic.dataValues.id,
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'create new clinic failed',
-            idClinic: null
-          })
+            message: "create new clinic failed",
+            idClinic: null,
+          });
         }
       } catch (error) {
-        reject({error});
+        reject({ error });
       }
-    })
+    });
   },
-  addDoctorToClinic: (idClinic,idDoctor,roleOfDoctor) => {
+  addDoctorToClinic: (idClinic, idDoctor, roleOfDoctor) => {
     return new Promise(async (resolve, reject) => {
       try {
         // console.log({idClinic,idDoctor,roleOfDoctor});
         const checkDoctorInClinic = await db.MemberOfClinic.findOne({
-          where : {
+          where: {
             idClinic: idClinic,
-            idDoctor: idDoctor
-          }
-        })
-        if(checkDoctorInClinic) resolve({status: 202, message:'doctor is already in this clinic'})
-        else{
+            idDoctor: idDoctor,
+          },
+        });
+        if (checkDoctorInClinic)
+          resolve({ status: 202, message: "doctor is already in this clinic" });
+        else {
           const addMemberToClinic = await db.MemberOfClinic.create({
             idClinic: idClinic,
             idDoctor: idDoctor,
-            roleOfDoctor: roleOfDoctor
-          })
-          if(addMemberToClinic){
+            roleOfDoctor: roleOfDoctor,
+          });
+          if (addMemberToClinic) {
             resolve({
               status: 200,
-              message: 'Add member to clinic successfully'
-            })
-          }else{
+              message: "Add member to clinic successfully",
+            });
+          } else {
             resolve({
               status: 202,
-              message: 'Add member to clinic failed'
-            })
+              message: "Add member to clinic failed",
+            });
           }
         }
       } catch (error) {
-        reject(error)
+        reject(error);
       }
-    })
+    });
   },
   getInformationClinic: (id) => {
     return new Promise(async (resolve, reject) => {
       try {
         const clinic = await db.Clinic.findOne({
           where: {
-            id: id
-          }
-        })        
-        if(clinic){
+            id: id,
+          },
+        });
+        if (clinic) {
           resolve({
             status: 200,
-            message: 'get information of clinic successfully',
-            data: clinic
-          })
-        }else{
+            message: "get information of clinic successfully",
+            data: clinic,
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'get information of clinic failed',
-            data: {}
-          })
+            message: "get information of clinic failed",
+            data: {},
+          });
         }
       } catch (error) {
         reject(error);
       }
-    })
+    });
   },
-  updateClinicInformation: (idClinic,data) => {
+  updateClinicInformation: (idClinic, data) => {
     return new Promise(async (resolve, reject) => {
       try {
         const dataUpdate = {
@@ -185,113 +218,122 @@ const clinicServices = {
           avatarClinic: data.avatarClinic,
           addressClinic: data.addressClinic,
           description: data.description,
-        }
-        const clinicUpdate = await db.Clinic.update(dataUpdate, {where: {id : idClinic}});
-        if(clinicUpdate){
+        };
+        const clinicUpdate = await db.Clinic.update(dataUpdate, {
+          where: { id: idClinic },
+        });
+        if (clinicUpdate) {
           resolve({
             status: 200,
-            message: 'Update information of clinic successfully'
-          })
-        }else{
+            message: "Update information of clinic successfully",
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'Update information of clinic failed'
-          })
+            message: "Update information of clinic failed",
+          });
         }
       } catch (error) {
         reject(error);
       }
-    })
+    });
   },
-  updateRoleOfDoctor: (idClinic,idDoctor,roleOfDoctor) => {
+  updateRoleOfDoctor: (idClinic, idDoctor, roleOfDoctor) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const updateRoleOfDoctorRequest = await db.MemberOfClinic.update({
-          roleOfDoctor: roleOfDoctor
-        },
-        {
-          where: {
-            idClinic: idClinic,
-            idDoctor: idDoctor
+        const updateRoleOfDoctorRequest = await db.MemberOfClinic.update(
+          {
+            roleOfDoctor: roleOfDoctor,
+          },
+          {
+            where: {
+              idClinic: idClinic,
+              idDoctor: idDoctor,
+            },
           }
-        })
-        if(updateRoleOfDoctorRequest){
+        );
+        if (updateRoleOfDoctorRequest) {
           resolve({
             status: 200,
-            message: 'Update role of doctor successfully'
-          })
-        }else{
+            message: "Update role of doctor successfully",
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'Update role of doctor failed'
-          })
+            message: "Update role of doctor failed",
+          });
         }
       } catch (error) {
         reject(error);
       }
-    })
+    });
   },
-  deleteDoctorFromClinic: (idClinic,idDoctor) => {
+  deleteDoctorFromClinic: (idClinic, idDoctor) => {
     return new Promise(async (resolve, reject) => {
       try {
         const checkDoctorInClinic = await db.MemberOfClinic.findOne({
-          where : {
+          where: {
             idClinic: idClinic,
-            idDoctor: idDoctor
-          }
-        })
-        if(!checkDoctorInClinic) resolve({status: 202, message:'doctor is not in this clinic'});
+            idDoctor: idDoctor,
+          },
+        });
+        if (!checkDoctorInClinic)
+          resolve({ status: 202, message: "doctor is not in this clinic" });
         const deleteDoctor = await db.MemberOfClinic.destroy({
-          where : {
+          where: {
             idClinic: idClinic,
-            idDoctor: idDoctor
-          }
-        })
-        if(deleteDoctor){
+            idDoctor: idDoctor,
+          },
+        });
+        if (deleteDoctor) {
           resolve({
             status: 200,
-            message: 'doctor deleted successfully'
-          })
-        }else{
+            message: "doctor deleted successfully",
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'doctor deleted successfully'
-          })
+            message: "doctor deleted successfully",
+          });
         }
       } catch (error) {
         reject(error);
       }
-    })
+    });
   },
   deleteClinic: (idClinic) => {
     return new Promise(async (resolve, reject) => {
       try {
+        console.log(
+          "🚀 ~ file: clinicServices.js:353 ~ clinicServices.idClinic:",
+          idClinic
+        );
         await db.Schedule.destroy({
-          where : {
-            idClinicSchedule: idClinic
-          }
-        })
+          where: {
+            idClinicSchedule: idClinic,
+          },
+        });
         await db.RoomOfClinic.destroy({
           where: {
-            idClinicRoom: idClinic
-          }
-        })
+            idClinicRoom: idClinic,
+          },
+        });
         await db.ServicesOfClinic.destroy({
           where: {
-            idClinicService: idClinic
-          }
-        })
+            idClinicService: idClinic,
+          },
+        });
         await db.StatusOfClinic.destroy({
           where: {
-            idClinicStatus: idClinic
-          }
-        })
+            idClinicStatus: idClinic,
+          },
+        });
         const listPatientOfClinic = await db.Patient.findAll({
           where: {
-            idPatientOfClinic: idClinic
-          }
-        })
-        if(listPatientOfClinic.length > 0) {
+            idPatientOfClinic: idClinic,
+          },
+        });
+        if (listPatientOfClinic.length > 0) {
           for (let index = 0; index < listPatientOfClinic.length; index++) {
             const element = listPatientOfClinic[index];
             await patientServices.deletePatient(element.id);
@@ -299,37 +341,37 @@ const clinicServices = {
         }
         const deleteMemberOfClinic = await db.MemberOfClinic.destroy({
           where: {
-            idClinic: idClinic
-          }
-        })
-        if(deleteMemberOfClinic){
+            idClinic: idClinic,
+          },
+        });
+        if (deleteMemberOfClinic) {
           const deleteClinic = await db.Clinic.destroy({
             where: {
-              idClinicRoom: idClinic
-            }
-          })
-          if(deleteClinic){
+              id: idClinic,
+            },
+          });
+          if (deleteClinic) {
             resolve({
               status: 200,
-              message: 'Clinic deleted successfully'
-            })
-          }else{
+              message: "Clinic deleted successfully",
+            });
+          } else {
             resolve({
               status: 202,
-              message: 'Clinic deleted failed'
-            })
+              message: "Clinic deleted failed",
+            });
           }
-        }else{
+        } else {
           resolve({
             status: 202,
-            message: 'Clinic deleted failed'
-          })
+            message: "Clinic deleted failed",
+          });
         }
       } catch (error) {
         reject(error);
       }
-    })
-  }
-}
+    });
+  },
+};
 
 export default clinicServices;

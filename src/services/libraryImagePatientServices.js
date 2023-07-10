@@ -1,203 +1,224 @@
-'use strict';
+"use strict";
 import toISODateString from "../common/utility";
-import _ from 'lodash';
+import _ from "lodash";
 import { Op } from "sequelize";
 
 const { default: logger } = require("../config/winston");
 const db = require("../models");
 
 const libraryImagePatientServices = {
-  getListImage: (idPatient,type) => {
-    return new Promise(async (resolve, reject) =>{
+  getListImage: (idPatient, type) => {
+    return new Promise(async (resolve, reject) => {
       try {
         const listImage = await db.LibraryImagePatient.findAll({
-          order: [
-            ['consultationDate', 'DESC']
-          ],
+          order: [["consultationDate", "DESC"]],
           where: {
             idPatientImage: idPatient,
             typeImage: {
-              [Op.or]: type
-            }
-          }
-        })
-        if(listImage.length >= 0){
-          const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
+              [Op.or]: type,
+            },
+          },
+        });
+        if (listImage.length >= 0) {
+          const listImageGroupByDate = _.groupBy(
+            listImage,
+            ({ consultationDate }) =>
+              toISODateString(new Date(consultationDate))
+          );
           logger.libraryImagePatient.info(listImageGroupByDate);
           resolve({
             status: 200,
-            message: 'get list image successfully',
-            data: listImageGroupByDate
-          })
-        }else{
+            message: "get list image successfully",
+            data: listImageGroupByDate,
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'get list image failed'
-          })
+            message: "get list image failed",
+          });
         }
       } catch (error) {
         logger.libraryImagePatient.error(error);
         reject(error);
       }
-    })
+    });
   },
-  upLoadImage: (idPatient,data,type) => {
-    return new Promise(async (resolve, reject) =>{
+  upLoadImage: (idPatient, data, type) => {
+    return new Promise(async (resolve, reject) => {
       try {
         const image = await db.LibraryImagePatient.create({
           idPatientImage: idPatient,
           linkImage: data.linkImage,
           typeImage: data.typeImage,
-          consultationDate: new Date(data.consultationDate)
+          consultationDate: new Date(data.consultationDate),
         });
-        if(image){
+        if (image) {
           const listImage = await db.LibraryImagePatient.findAll({
-            order: [
-              ['consultationDate', 'DESC']
-            ],
+            order: [["consultationDate", "DESC"]],
             where: {
               idPatientImage: idPatient,
               typeImage: {
-                [Op.or]: type
-              }
-            }
-          })
-          const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
+                [Op.or]: type,
+              },
+            },
+          });
+          const listImageGroupByDate = _.groupBy(
+            listImage,
+            ({ consultationDate }) =>
+              toISODateString(new Date(consultationDate))
+          );
           logger.libraryImagePatient.info(listImageGroupByDate);
           resolve({
             status: 200,
-            message:'upload image successfully',
-            data: listImageGroupByDate
-          })
-        }else{
+            message: "upload image successfully",
+            data: listImageGroupByDate,
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'upload image failed'
-          })
+            message: "upload image failed",
+          });
         }
       } catch (error) {
         logger.libraryImagePatient.error(error);
         reject(error);
       }
-    })
+    });
   },
-  updateImage: (idPatient,idImage,consultationDate,typeImage,linkImage,type) => {
+  updateImage: (
+    idPatient,
+    idImage,
+    consultationDate,
+    typeImage,
+    linkImage,
+    type
+  ) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const updateImagePatient = await db.LibraryImagePatient.update({
-          consultationDate: new Date(consultationDate),
-          typeImage: typeImage,
-          linkImage: linkImage
-        },{
-          where: {
-            id: idImage
+        const updateImagePatient = await db.LibraryImagePatient.update(
+          {
+            consultationDate: new Date(consultationDate),
+            typeImage: typeImage,
+            linkImage: linkImage,
+          },
+          {
+            where: {
+              id: idImage,
+            },
           }
-        })
-        if(updateImagePatient){
+        );
+        if (updateImagePatient) {
           const listImage = await db.LibraryImagePatient.findAll({
-            order: [
-              ['consultationDate', 'DESC']
-            ],
+            order: [["consultationDate", "DESC"]],
             where: {
               idPatientImage: idPatient,
               typeImage: {
-                [Op.or]: type
-              }
-            }
-          })
-          const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
+                [Op.or]: type,
+              },
+            },
+          });
+          const listImageGroupByDate = _.groupBy(
+            listImage,
+            ({ consultationDate }) =>
+              toISODateString(new Date(consultationDate))
+          );
           logger.libraryImagePatient.info(listImageGroupByDate);
           resolve({
             status: 200,
-            message:'upload image successfully',
-            data: listImageGroupByDate
-          })
+            message: "upload image successfully",
+            data: listImageGroupByDate,
+          });
         }
       } catch (error) {
         logger.libraryImagePatient.error(error);
         reject(error);
       }
-    })
-  },     
-  updateArrayImage: (idPatient,newDate,oldDate,type) => {
+    });
+  },
+  updateArrayImage: (idPatient, newDate, oldDate, type) => {
     return new Promise(async (resolve, reject) => {
       try {
         const updateArrayImage = await db.LibraryImagePatient.update(
           {
-            consultationDate: new Date(newDate)
-          },{
+            consultationDate: new Date(newDate),
+          },
+          {
             where: {
-              consultationDate: new Date(oldDate)
-            }
+              consultationDate: new Date(oldDate),
+            },
           }
-        )
-        if(updateArrayImage){
+        );
+        if (updateArrayImage) {
           const listImage = await db.LibraryImagePatient.findAll({
-            order: [
-              ['consultationDate', 'DESC']
-            ],
+            order: [["consultationDate", "DESC"]],
             where: {
               idPatientImage: idPatient,
               typeImage: {
-                [Op.or]: type
-              }
-            }
-          })
-          const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
+                [Op.or]: type,
+              },
+            },
+          });
+          const listImageGroupByDate = _.groupBy(
+            listImage,
+            ({ consultationDate }) =>
+              toISODateString(new Date(consultationDate))
+          );
           logger.libraryImagePatient.info(listImageGroupByDate);
           resolve({
             status: 200,
-            message:'upload image successfully',
-            data: listImageGroupByDate
-          })
+            message: "upload image successfully",
+            data: listImageGroupByDate,
+          });
         }
       } catch (error) {
         logger.libraryImagePatient.error(error);
         reject(error);
       }
-    })
-  },  
-  deleteImage: (idPatient,idImage,type) => {
+    });
+  },
+  deleteImage: (idPatient, idImage, type) => {
     return new Promise(async (resolve, reject) => {
       try {
         await db.LateralCeph.destroy({
-          where : {
-            idImageAnalysis: idImage
+          where: {
+            idImageAnalysis: idImage,
           },
-          force: true
-        })
+          force: true,
+        });
         const deleteImagePatient = await db.LibraryImagePatient.destroy({
           where: {
-            id: idImage
+            id: idImage,
           },
-          force: true
-        })
-        if(deleteImagePatient){
+          force: true,
+        });
+        if (deleteImagePatient) {
           const listImage = await db.LibraryImagePatient.findAll({
-            order: [
-              ['consultationDate', 'DESC']
-            ],
+            order: [["consultationDate", "DESC"]],
             where: {
               idPatientImage: idPatient,
               typeImage: {
-                [Op.or]: type
-              }
-            }
-          })
-          const listImageGroupByDate = _.groupBy(listImage, ({consultationDate}) => toISODateString(new Date(consultationDate)));
+                [Op.or]: type,
+              },
+            },
+          });
+          const listImageGroupByDate = _.groupBy(
+            listImage,
+            ({ consultationDate }) =>
+              toISODateString(new Date(consultationDate))
+          );
           logger.libraryImagePatient.info(listImageGroupByDate);
           resolve({
             status: 200,
-            message:'delete image successfully',
-            data: listImageGroupByDate
-          })
+            message: "delete image successfully",
+            data: listImageGroupByDate,
+          });
         }
       } catch (error) {
         logger.libraryImagePatient.error(error);
         reject(error);
       }
-    })
-  } 
-}
+    });
+  },
+};
 
-export default libraryImagePatientServices
+export default libraryImagePatientServices;

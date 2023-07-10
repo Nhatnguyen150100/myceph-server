@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609524027,
             "name": "src\\log\\sharePatient\\sharePatient-2023-03-01.log",
             "hash": "4892251ca03988efec5df2c5235e5f5efc0ef2e4712130c248ce71ca7eda2486"
@@ -78,33 +79,39 @@
             "name": "src\\log\\sharePatient\\sharePatient-2023-05-09.log",
             "hash": "a8d8cf70aac18a8396252bc701957a8102530f238569f82d73780e3408298edf"
 >>>>>>> master
+=======
+            "date": 1686540170319,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-12.log",
+            "hash": "68f96ade4f6b1efa25fd3f57b6137baf083e6647cdacb4c773b4f484ec199959"
+>>>>>>> origin/master
         },
         {
-            "date": 1683688720546,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-10.log",
-            "hash": "8179a5a7781b9d4b2b92825905e1f85eecd323deae4f0e0a9bf2ecf16e143af8"
+            "date": 1686627220260,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-13.log",
+            "hash": "26cb6097538699812985c2aa0295f38a5ad7f6ee79bcd84cdae16eb5eeab2ca4"
         },
         {
-            "date": 1684418120223,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-18.log",
-            "hash": "f6492668c8b1034c043e28de1a40fdc276a0b7ddea95708fa5d0889c95411d8d"
+            "date": 1686711499871,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-14.log",
+            "hash": "60c62b11bfa03bf916f8b651fedc0f68811180ce06283f416161f1338b91607d"
         },
         {
-            "date": 1684575289786,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-20.log",
-            "hash": "b80a938c722b16128ba92556b4fa52d91e58aafc2a2131bd8a1e6e0243f84395"
+            "date": 1686786719070,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-15.log",
+            "hash": "beed0d17939b420ee63de82a730711ea5ee677fb6ba3c7efd6894882e9da2bdf"
         },
         {
-            "date": 1684663504799,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-21.log",
-            "hash": "0cea94974ad2b135d4bb6f5613048283848d2a5653e434aa4b62fd5fe9fa9fa1"
+            "date": 1686971569190,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-17.log",
+            "hash": "ee30996d62ba1eac76640ee2609f8874b2cccbe3bec29d72b7475cd943a6b61c"
         },
         {
-            "date": 1684689728101,
-            "name": "src\\log\\sharePatient\\sharePatient-2023-05-22.log",
-            "hash": "abe49f79069787da32fadfde6b91e5076197ccb23a469204706d820b2ee9a606"
+            "date": 1687059324275,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-18.log",
+            "hash": "3735ab37b6f33efabc2c7a350b99bd744a93ed6b7cb21a653cd4b72d5f75bac6"
         },
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             "date": 1680365348901,
             "name": "src\\log\\sharePatient\\sharePatient-2023-04-01.log",
@@ -170,6 +177,31 @@
             "name": "src\\log\\sharePatient\\sharePatient-2023-05-23.log",
             "hash": "a5643e5ae928e8bd0c0201451a8ebf7c8b9a77a2e94e58c7c0434c30b794e37e"
 >>>>>>> master
+=======
+            "date": 1687161913670,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-19.log",
+            "hash": "6cfdd60e75ecfba34d615389aee8ccade4500681ba4fc1709b179f397fd3e8f2"
+        },
+        {
+            "date": 1687422159147,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-22.log",
+            "hash": "fd7c7d48d0bd93bc9af87ae1604ffe921d97f2e96babae3ba1557d12c2c7f81f"
+        },
+        {
+            "date": 1687509593007,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-23.log",
+            "hash": "4d6235cc1c96acf0b7ff8f7ace3726e2e19a9ae275849ecff58fdb4d69ee886e"
+        },
+        {
+            "date": 1687576840252,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-24.log",
+            "hash": "906462932928c93a1641ef203e43a4c19b91412ad585d32a9cbe750c914d4a6d"
+        },
+        {
+            "date": 1687681751655,
+            "name": "src\\log\\sharePatient\\sharePatient-2023-06-25.log",
+            "hash": "4361d83d935b730f340350f142af80bbc2d948a1113a9a39f1828772a7cc542f"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"

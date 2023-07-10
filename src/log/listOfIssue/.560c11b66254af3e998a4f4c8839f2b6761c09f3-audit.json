@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609524021,
             "name": "src\\log\\listOfIssue\\listOfIssue-2023-03-01.log",
             "hash": "ee4ba8403b128248d25e11f0e37f6985d869000b115c90b7008ea6d09730ba7d"
@@ -78,33 +79,39 @@
             "name": "src\\log\\listOfIssue\\listOfIssue-2023-05-09.log",
             "hash": "30dc5e954a7e47f5d2cbc8d6d254cfcc5f503c289c42ca3704ae069fb8b3a0a0"
 >>>>>>> master
+=======
+            "date": 1686540170234,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-06-12.log",
+            "hash": "b8ef40dc55e7411fcb87969a9ed3d7e29443661990385446633cee90b9e20afd"
+>>>>>>> origin/master
         },
         {
-            "date": 1683688720395,
-            "name": "src\\log\\listOfIssue\\listOfIssue-2023-05-10.log",
-            "hash": "3f83b3dbe0546f0d32f78658aec4571e434319fdc77b32e8cbc7ed054e4af6a9"
+            "date": 1686627220205,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-06-13.log",
+            "hash": "912ac5b4c8ec69dc6abff97bca964597d5655721119d9b16711a8daa819a476c"
         },
         {
-            "date": 1684418120169,
-            "name": "src\\log\\listOfIssue\\listOfIssue-2023-05-18.log",
-            "hash": "47aa8c8a00232f7745fa3638b56ddd1af4fe939f0a3babb79d7bacaaf4639a12"
+            "date": 1686711499808,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-06-14.log",
+            "hash": "c934bf952d0f47c7f94dc216afc69c499a3a6f24a24569b3fd5201ea186e9df1"
         },
         {
-            "date": 1684575289528,
-            "name": "src\\log\\listOfIssue\\listOfIssue-2023-05-20.log",
-            "hash": "1958902052ad9c0d85756ac28e24645947ef5851f93db53737c224a862ed960f"
+            "date": 1686786719065,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-06-15.log",
+            "hash": "57226dc1806db37361ec0149c71501f9464fb28ddd85c77468bf71c1cb763160"
         },
         {
-            "date": 1684663504762,
-            "name": "src\\log\\listOfIssue\\listOfIssue-2023-05-21.log",
-            "hash": "b0fb22b22cd6811378222cec64dedc50fcf00036b0f5731d3cf33d9c7ad8bd14"
+            "date": 1686971569094,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-06-17.log",
+            "hash": "f56dd7b6c320cab60f7018cf3373a3bb52a70ce2a6d7388468e06b2a2551e7a0"
         },
         {
-            "date": 1684689728053,
-            "name": "src\\log\\listOfIssue\\listOfIssue-2023-05-22.log",
-            "hash": "18d770dd263bc103e7dae8288745bc93b051bb8d8bfafe70fd76a3cc7bafe6a9"
+            "date": 1687059324192,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-06-18.log",
+            "hash": "93fce285cc66f0d7044ac82da10120fc817d93ae84692c963970cbc8eda7c8d8"
         },
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             "date": 1680365348895,
             "name": "src\\log\\listOfIssue\\listOfIssue-2023-04-01.log",
@@ -170,6 +177,31 @@
             "name": "src\\log\\listOfIssue\\listOfIssue-2023-05-23.log",
             "hash": "95ed0608d34a28b6c9a97cedc9c55c3467a5473b6bc6cb7acfd062b24d5d7abe"
 >>>>>>> master
+=======
+            "date": 1687161913601,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-06-19.log",
+            "hash": "91a998323db0728ec0841700d9b48103e1edc45e6a8398472b6f263a0ca58ed4"
+        },
+        {
+            "date": 1687422159084,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-06-22.log",
+            "hash": "bde0043fae74d5517efbab91a326cb667b4f41783446445b00b19e846929d4fb"
+        },
+        {
+            "date": 1687509592986,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-06-23.log",
+            "hash": "ee6eb2aeed19b59e3eee2018dbd4f16c1cb5ada91989ad0fc6d9b0ff711cc0ed"
+        },
+        {
+            "date": 1687576840213,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-06-24.log",
+            "hash": "bd425350501336353434d98fbbef745db260831c4f58c7790d5336bf60b2e96c"
+        },
+        {
+            "date": 1687681751571,
+            "name": "src\\log\\listOfIssue\\listOfIssue-2023-06-25.log",
+            "hash": "14a1dd300ec8a3858abe08b76d6a99a016bfd880f85a818c3aa85d69a714b130"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"

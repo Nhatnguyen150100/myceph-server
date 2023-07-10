@@ -1,38 +1,40 @@
-'use-strict'
-import jwt from 'jsonwebtoken';
-import path from 'path';
-import fs from 'fs';
+"use-strict";
+import jwt from "jsonwebtoken";
+import path from "path";
+import fs from "fs";
 
-const privateKey = fs.readFileSync(path.join(__dirname, 'private.pem'));
-const privateKeyRefreshToken = fs.readFileSync(path.join(__dirname, 'privateRefreshToken.pem'));
+const privateKey = fs.readFileSync(path.join(__dirname, "private.pem"));
+const privateKeyRefreshToken = fs.readFileSync(
+  path.join(__dirname, "privateRefreshToken.pem")
+);
 
 const tokenController = {
   generateAccessToken: (doctor) => {
-		return jwt.sign(
-			{
-				id: doctor.id,
-				email: doctor.email,
-			},
-			privateKey,
-			{
-				expiresIn: `${process.env.NODE_ENV==='development'?'1m':'5m'}`,
-				algorithm: 'RS512'
-			},
-		);
-	},
+    return jwt.sign(
+      {
+        id: doctor.id,
+        email: doctor.email,
+      },
+      privateKey,
+      {
+        expiresIn: `${process.env.NODE_ENV === "development" ? "1m" : "15m"}`,
+        algorithm: "RS512",
+      }
+    );
+  },
   generateRefreshToken: (doctor) => {
-		return jwt.sign(
-			{
-				id: doctor.id,
-				email: doctor.email,
-			},
-			privateKeyRefreshToken,
-			{
-				expiresIn: '1d',
-				algorithm: 'RS512'
-			},
-		);
-	}
-}
+    return jwt.sign(
+      {
+        id: doctor.id,
+        email: doctor.email,
+      },
+      privateKeyRefreshToken,
+      {
+        expiresIn: "1d",
+        algorithm: "RS512",
+      }
+    );
+  },
+};
 
 export default tokenController;

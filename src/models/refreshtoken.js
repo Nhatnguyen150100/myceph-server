@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class RefreshToken extends Model {
     /**
@@ -13,16 +11,19 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  RefreshToken.init({
-    token: DataTypes.TEXT,
-    idDoctor: DataTypes.UUID,
-    nameDevice: DataTypes.STRING,
-    ipOfDevice: DataTypes.STRING,
-    timeRefresh: DataTypes.INTEGER,
-    isActive: DataTypes.BOOLEAN
-  }, {
-    sequelize,
-    modelName: 'RefreshToken',
-  });
+  RefreshToken.init(
+    {
+      token: DataTypes.TEXT,
+      idDoctor: DataTypes.UUID,
+      nameDevice: DataTypes.STRING,
+      ipOfDevice: DataTypes.STRING,
+      timeRefresh: DataTypes.INTEGER,
+      isActive: DataTypes.BOOLEAN,
+    },
+    {
+      sequelize,
+      modelName: "RefreshToken",
+    }
+  );
   return RefreshToken;
 };

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 import logger from "../config/winston";
 
 const db = require("../models");
@@ -9,50 +9,50 @@ const radiographyServices = {
       try {
         const radiography = await db.Radiography.findOne({
           where: {
-            idRadiography: idPatient
-          }
-        })
+            idRadiography: idPatient,
+          },
+        });
         const typesToSearch = [
           {
             id: 1,
-            nameImage: 'lateralImage'
+            nameImage: "lateralImage",
           },
           {
             id: 3,
-            nameImage: 'panoramaImage'
-          }
+            nameImage: "panoramaImage",
+          },
         ];
         const listImage = {};
         for (const type of typesToSearch) {
           const image = await db.LibraryImagePatient.findOne({
-            attributes: ['linkImage'],
+            attributes: ["linkImage"],
             where: {
               typeImage: type.id,
-              idPatientImage: idPatient
-            }
+              idPatientImage: idPatient,
+            },
           });
           listImage[type.nameImage] = image ? image.linkImage : null;
         }
-        if(radiography){
+        if (radiography) {
           resolve({
             status: 200,
-            message: 'get radiography successfully',
-            data: {...radiography,listImage}
-          })
-        }else{
+            message: "get radiography successfully",
+            data: { ...radiography, listImage },
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'get radiography failed',
-            data: {}
-          })
+            message: "get radiography failed",
+            data: {},
+          });
         }
       } catch (error) {
         logger.radiography.error(error);
-        reject(error)
+        reject(error);
       }
-    })
+    });
   },
-  updateRadiography: (idPatient,data) => {
+  updateRadiography: (idPatient, data) => {
     return new Promise(async (resolve, reject) => {
       try {
         const dataUpdate = {
@@ -63,58 +63,58 @@ const radiographyServices = {
           crownRootRatio: data.crownRootRatio,
           others: data.others,
           lateralCephalometricRadiography: data.lateralCephalometricRadiography,
-          otherRadiography: data.otherRadiography
-        }
-        const radiographyUpdate = await db.Radiography.update(dataUpdate,{
+          otherRadiography: data.otherRadiography,
+        };
+        const radiographyUpdate = await db.Radiography.update(dataUpdate, {
           where: {
-            idRadiography: idPatient
-          }
-        })
-        if(radiographyUpdate){
+            idRadiography: idPatient,
+          },
+        });
+        if (radiographyUpdate) {
           const newRadiography = await db.Radiography.findOne({
             where: {
-              idRadiography: idPatient
-            }
-          })
+              idRadiography: idPatient,
+            },
+          });
           const typesToSearch = [
             {
               id: 1,
-              nameImage: 'lateralImage'
+              nameImage: "lateralImage",
             },
             {
               id: 3,
-              nameImage: 'panoramaImage'
-            }
+              nameImage: "panoramaImage",
+            },
           ];
           const listImage = {};
           for (const type of typesToSearch) {
             const image = await db.LibraryImagePatient.findOne({
-              attributes: ['linkImage'],
+              attributes: ["linkImage"],
               where: {
                 typeImage: type.id,
-                idPatientImage: idPatient
-              }
+                idPatientImage: idPatient,
+              },
             });
             listImage[type.nameImage] = image ? image.linkImage : null;
           }
           resolve({
             status: 200,
-            message: 'update radiography successfully',
-            data: {...newRadiography,listImage}
-          })
-        }else{
+            message: "update radiography successfully",
+            data: { ...newRadiography, listImage },
+          });
+        } else {
           resolve({
             status: 202,
-            message: 'update radiography failed',
-            data: null
-          })
+            message: "update radiography failed",
+            data: null,
+          });
         }
       } catch (error) {
         logger.radiography.error(error);
         reject(error);
       }
     });
-  }
-}
+  },
+};
 
 export default radiographyServices;

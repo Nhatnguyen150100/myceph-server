@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609524016,
             "name": "src\\log\\intraoral\\intraoral-2023-03-01.log",
             "hash": "3185f97dd52a34b67d235033d35466b1c86026d84c8bd295ee2c2d030db0e991"
@@ -78,33 +79,39 @@
             "name": "src\\log\\intraoral\\intraoral-2023-05-09.log",
             "hash": "bb585f592c8ca8c6a8d287bff6614c832472a91ac90ba248355a55227bab921a"
 >>>>>>> master
+=======
+            "date": 1686540170010,
+            "name": "src\\log\\intraoral\\intraoral-2023-06-12.log",
+            "hash": "0cddcf5635c355cddd08c223f552c35df1fd790319429c28b31bb5a2bb777924"
+>>>>>>> origin/master
         },
         {
-            "date": 1683688720231,
-            "name": "src\\log\\intraoral\\intraoral-2023-05-10.log",
-            "hash": "c1b6fffdb95c879fac3d54cf0f07bc15bbdb4a1ba079c048aedc24eed0d37d48"
+            "date": 1686627220081,
+            "name": "src\\log\\intraoral\\intraoral-2023-06-13.log",
+            "hash": "4d126d58d67df65dc020f4ccf099a0eaabf685e4d2b24cc002ed1a0743af5e08"
         },
         {
-            "date": 1684418120128,
-            "name": "src\\log\\intraoral\\intraoral-2023-05-18.log",
-            "hash": "1b4c66b4a76370478be0834725d5745cfe11e1a9bad1dabceb24ff8c276a7f96"
+            "date": 1686711499779,
+            "name": "src\\log\\intraoral\\intraoral-2023-06-14.log",
+            "hash": "2ebb90073d8d7ca48e5033974eb9ca077769f458dd85970a94b6459355f21a2e"
         },
         {
-            "date": 1684575289505,
-            "name": "src\\log\\intraoral\\intraoral-2023-05-20.log",
-            "hash": "14317d0f2f8cf2dfcb5434074a81c49a829c4091af7fb5ea54ac29c62be8f1f0"
+            "date": 1686786719059,
+            "name": "src\\log\\intraoral\\intraoral-2023-06-15.log",
+            "hash": "82d05f6d7eef7e68fb51abbc1959215bdd9833b35498d4fccadc6dec25f766c7"
         },
         {
-            "date": 1684663504717,
-            "name": "src\\log\\intraoral\\intraoral-2023-05-21.log",
-            "hash": "4b15a26b04f6eb0ec6fcfffc437954371b2f2030fb59eb61dec822f12fff9921"
+            "date": 1686971568966,
+            "name": "src\\log\\intraoral\\intraoral-2023-06-17.log",
+            "hash": "b2ff48ba51467bf6186b93b4b0d7d89d7e6299f758cf1578d5eba3d946c9066e"
         },
         {
-            "date": 1684689728025,
-            "name": "src\\log\\intraoral\\intraoral-2023-05-22.log",
-            "hash": "ca7fb1b59505be0a39c69bdf126c8e11b99697bb7648f4d1ec4957ee2d7e84c1"
+            "date": 1687059324136,
+            "name": "src\\log\\intraoral\\intraoral-2023-06-18.log",
+            "hash": "20069bd149e8f5b872d2d023e4523586a6181d16e7970f1b309a7a20e8d3ddc2"
         },
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             "date": 1680365348886,
             "name": "src\\log\\intraoral\\intraoral-2023-04-01.log",
@@ -170,6 +177,31 @@
             "name": "src\\log\\intraoral\\intraoral-2023-05-23.log",
             "hash": "2647e051027f3f015e1c571017f5d68fec8c2e8a5e298c36c582447095680ebf"
 >>>>>>> master
+=======
+            "date": 1687161913456,
+            "name": "src\\log\\intraoral\\intraoral-2023-06-19.log",
+            "hash": "5ce0726005d64f63b287ee615d8657e64b4c6cf569808fc58e3c95994d989af0"
+        },
+        {
+            "date": 1687422159019,
+            "name": "src\\log\\intraoral\\intraoral-2023-06-22.log",
+            "hash": "255adef9310259426834e08d41df696d8d810d4bc40ed8d11148fd7b247bead6"
+        },
+        {
+            "date": 1687509592964,
+            "name": "src\\log\\intraoral\\intraoral-2023-06-23.log",
+            "hash": "82d5dfac2fb5b41cfbc63f9298d37fb91d93c3118133ab142d3dbebc2e880c32"
+        },
+        {
+            "date": 1687576840156,
+            "name": "src\\log\\intraoral\\intraoral-2023-06-24.log",
+            "hash": "1c8ccc88b044a76c2dab34a0094178606da3a0d10eaeafdcd3ccea8bffb7d0a4"
+        },
+        {
+            "date": 1687681751505,
+            "name": "src\\log\\intraoral\\intraoral-2023-06-25.log",
+            "hash": "2fbf22db478ae1ae48e16ea210888f4eeada29477c1a8324ca66ff1c49657b47"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"

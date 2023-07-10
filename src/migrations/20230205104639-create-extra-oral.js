@@ -9,14 +9,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      idExtraoral: {
+      idExtraOral: {
         unique: true,
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
         references:{
           model: {
             tableName: 'Patients',
-            name: 'idExtraoral',
+            name: 'idExtraOral',
           },
           key: 'id',
         }

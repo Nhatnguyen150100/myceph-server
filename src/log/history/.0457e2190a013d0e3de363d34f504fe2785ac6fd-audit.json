@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "date": 1677609524019,
             "name": "src\\log\\history\\history-2023-03-01.log",
             "hash": "152703c69971c92f1879f73d6c7d1976bd5b2d1609e38db0d348c84be3187a13"
@@ -78,33 +79,39 @@
             "name": "src\\log\\history\\history-2023-05-09.log",
             "hash": "cda4556904379c91f1e036adc67654ddb2465dfa507852acfe9ccf9813f8a493"
 >>>>>>> master
+=======
+            "date": 1686540170120,
+            "name": "src\\log\\history\\history-2023-06-12.log",
+            "hash": "93dbec57339094daaf1d0470e7acbf4ec893db77445cac9de72404d1dea81fb4"
+>>>>>>> origin/master
         },
         {
-            "date": 1683688720280,
-            "name": "src\\log\\history\\history-2023-05-10.log",
-            "hash": "06a12709ca769d52403ccb9f09f01edcb5f6a880ef1359ce93035e393a227e0e"
+            "date": 1686627220157,
+            "name": "src\\log\\history\\history-2023-06-13.log",
+            "hash": "b8c0b6b5fea90b234595ccaf328ee6d3aaaee104624d7e67d11cbb36b5a77ce5"
         },
         {
-            "date": 1684418120155,
-            "name": "src\\log\\history\\history-2023-05-18.log",
-            "hash": "5144d26bdaf34cb16d5ac77d1565c14c27cce5eb5d2f374ff503d96994ad158b"
+            "date": 1686711499788,
+            "name": "src\\log\\history\\history-2023-06-14.log",
+            "hash": "6a029ea97b6cd7c9e20897bacc2d86073b3bd1272b4f0a44978cd24b1b9ee34b"
         },
         {
-            "date": 1684575289519,
-            "name": "src\\log\\history\\history-2023-05-20.log",
-            "hash": "63a1ca8b4f699e08cbd280926150a1229b1fccb245ab4ac07c6e467d5a3c01bf"
+            "date": 1686786719061,
+            "name": "src\\log\\history\\history-2023-06-15.log",
+            "hash": "785bcf6c3350874ae55abe3565c51b641d436583fc51d0712a70d38e194b337e"
         },
         {
-            "date": 1684663504747,
-            "name": "src\\log\\history\\history-2023-05-21.log",
-            "hash": "2ab54e0b4b00493191fe3ca5040203aaf476555853e78692b6310d4cbdda17b8"
+            "date": 1686971569053,
+            "name": "src\\log\\history\\history-2023-06-17.log",
+            "hash": "d1c4b99bd35c9ff323f5e15aa2c8a62b5c36de83d7c2c51495cb6849ab5cfbce"
         },
         {
-            "date": 1684689728041,
-            "name": "src\\log\\history\\history-2023-05-22.log",
-            "hash": "0e65944d9ff23a249b64b64a0551165b6cb6692d29b5f3cab08632480cb0f0a8"
+            "date": 1687059324169,
+            "name": "src\\log\\history\\history-2023-06-18.log",
+            "hash": "a5f31abd9f9ca8ca9fb1a4c56c71ebbe03703beecf50ab060678acd50e77ad82"
         },
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             "date": 1680365348889,
             "name": "src\\log\\history\\history-2023-04-01.log",
@@ -170,6 +177,31 @@
             "name": "src\\log\\history\\history-2023-05-23.log",
             "hash": "3bb5fe564336513fe15f51e5edf526d5923ce1ea6d1a1e609f1a619d0e63bdd1"
 >>>>>>> master
+=======
+            "date": 1687161913479,
+            "name": "src\\log\\history\\history-2023-06-19.log",
+            "hash": "31e7f2f0f6670881e061d12cce5c85e830d694596440df69b069aa7cbcee9060"
+        },
+        {
+            "date": 1687422159045,
+            "name": "src\\log\\history\\history-2023-06-22.log",
+            "hash": "a91d0958785b93e4fbaa50e8931e1223aa6e42be3e7c11492978779d43a9974f"
+        },
+        {
+            "date": 1687509592976,
+            "name": "src\\log\\history\\history-2023-06-23.log",
+            "hash": "ed3ea9b403019b16f473514b4524e1b95eea4b466f949d62102bf28ac34cf0e1"
+        },
+        {
+            "date": 1687576840166,
+            "name": "src\\log\\history\\history-2023-06-24.log",
+            "hash": "35a83ea1771497d326d90980bc514953ca70ace7eb5bab450a9d9d275aed257d"
+        },
+        {
+            "date": 1687681751519,
+            "name": "src\\log\\history\\history-2023-06-25.log",
+            "hash": "2a04978d318e7149351e45a959f2fad679c7ef9076366413235c1c1994212f3c"
+>>>>>>> origin/master
         }
     ],
     "hashType": "sha256"

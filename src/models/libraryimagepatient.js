@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class LibraryImagePatient extends Model {
     /**
@@ -11,25 +9,35 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      LibraryImagePatient.belongsTo(models.Patient, {foreignKey: {name: 'idPatientImage', allowNull: false}, targetKey: 'id'});
+      LibraryImagePatient.belongsTo(models.Patient, {
+        foreignKey: { name: "idPatientImage", allowNull: false },
+        targetKey: "id",
+      });
 
-      LibraryImagePatient.hasOne(models.LateralCeph, {foreignKey:'idImageAnalysis', as:'imageAnalysis' ,sourceKey:'id'});
+      LibraryImagePatient.hasOne(models.LateralCeph, {
+        foreignKey: "idImageAnalysis",
+        as: "imageAnalysis",
+        sourceKey: "id",
+      });
     }
   }
-  LibraryImagePatient.init({
-    id: {
-      allowNull: false,
-      defaultValue: DataTypes.UUIDV4,
-      primaryKey: true,
-      type: DataTypes.UUID
+  LibraryImagePatient.init(
+    {
+      id: {
+        allowNull: false,
+        defaultValue: DataTypes.UUIDV4,
+        primaryKey: true,
+        type: DataTypes.UUID,
+      },
+      idPatientImage: DataTypes.UUID,
+      linkImage: DataTypes.STRING,
+      typeImage: DataTypes.INTEGER,
+      consultationDate: DataTypes.DATE,
     },
-    idPatientImage: DataTypes.UUID,
-    linkImage: DataTypes.STRING,
-    typeImage: DataTypes.INTEGER,
-    consultationDate: DataTypes.DATE
-  }, {
-    sequelize,
-    modelName: 'LibraryImagePatient',
-  });
+    {
+      sequelize,
+      modelName: "LibraryImagePatient",
+    }
+  );
   return LibraryImagePatient;
 };

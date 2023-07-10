@@ -1,86 +1,109 @@
-'use strict';
+"use strict";
 import logger from "../config/winston";
 
 const { default: patientServices } = require("../services/patientServices");
-const { default: treatmentPlanServices } = require("../services/treatmentPlanServices")
+const {
+  default: treatmentPlanServices,
+} = require("../services/treatmentPlanServices");
 
 const treatmentPlanControllers = {
-  createTreatmentPlan: async (req,res) => {
+  createTreatmentPlan: async (req, res) => {
     try {
-      const { status, message, data } = await treatmentPlanServices.createTreatmentPlan(req.params.id,req.body);
-      patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
-        res.status(status).json({
-          message: message,
-          data: data
-        })
-      })
+      const { status, message, data } =
+        await treatmentPlanServices.createTreatmentPlan(
+          req.params.id,
+          req.body
+        );
+      patientServices
+        .saveUpdateDoctor(req.params.id, req.body.idDoctor)
+        .finally(() => {
+          res.status(status).json({
+            message: message,
+            data: data,
+          });
+        });
     } catch (error) {
       logger.treatmentPlan.error(error);
       res.status(500).json({
-        message: error
-      })
+        message: error,
+      });
     }
   },
-  getSelectedTreatmentPlan: async (req,res) => {
-    try {      
-      const { status, message, data } = await treatmentPlanServices.getSelectedTreatmentPlan(req.params.id);
+  getSelectedTreatmentPlan: async (req, res) => {
+    try {
+      const { status, message, data } =
+        await treatmentPlanServices.getSelectedTreatmentPlan(req.params.id);
       res.status(status).json({
         message: message,
-        data: data
+        data: data,
       });
     } catch (error) {
       logger.treatmentPlan.error(error);
       res.status(500).json({
-        message: error
-      })
+        message: error,
+      });
     }
   },
-  getAllTreatmentPlan: async (req,res) => {
-    try {      
-      const { status, message, data } = await treatmentPlanServices.getAllTreatmentPlan(req.params.id);
+  getAllTreatmentPlan: async (req, res) => {
+    try {
+      const { status, message, data } =
+        await treatmentPlanServices.getAllTreatmentPlan(req.params.id);
       res.status(status).json({
         message: message,
-        data: data
+        data: data,
+        roleOfDoctor: req.checkRole,
       });
     } catch (error) {
       logger.treatmentPlan.error(error);
       res.status(500).json({
-        message: error
-      })
+        message: error,
+      });
     }
   },
-  updateTreatmentPlan: async (req,res) => {
+  updateTreatmentPlan: async (req, res) => {
     try {
-      const { status, message, data } = await treatmentPlanServices.updateTreatmentPlan(req.params.id,req.query.idPlan,req.body);
-      patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
-        res.status(status).json({
-          message: message,
-          data: data
-        })
-      })
+      const { status, message, data } =
+        await treatmentPlanServices.updateTreatmentPlan(
+          req.params.id,
+          req.query.idPlan,
+          req.body
+        );
+      patientServices
+        .saveUpdateDoctor(req.params.id, req.body.idDoctor)
+        .finally(() => {
+          res.status(status).json({
+            message: message,
+            data: data,
+          });
+        });
     } catch (error) {
       logger.treatmentPlan.error(error);
       res.status(500).json({
-        message: error
-      })
+        message: error,
+      });
     }
   },
-  deleteTreatmentPlan: async (req,res) => {
+  deleteTreatmentPlan: async (req, res) => {
     try {
-      const { status, message, data } = await treatmentPlanServices.deletePlane(req.params.id,req.query.idPlan);
-      patientServices.saveUpdateDoctor(req.params.id,req.body.idDoctor).finally(()=>{
-        res.status(status).json({
-          message: message,
-          data: data
-        })
-      })
+      const { status, message, data } = await treatmentPlanServices.deletePlane(
+        req.params.id,
+        req.query.idPlan
+      );
+      patientServices
+        .saveUpdateDoctor(req.params.id, req.body.idDoctor)
+        .finally(() => {
+          res.status(status).json({
+            message: message,
+            data: data,
+          });
+        });
     } catch (error) {
       logger.treatmentPlan.error(error);
       res.status(500).json({
-        message: error
-      })
+        message: error,
+      });
     }
-  }
-}
+  },
+};
 
 export default treatmentPlanControllers;
