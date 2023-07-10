@@ -58,16 +58,11 @@ const authServices = {
               force: true,
             }
           );
-          resolve({
-            status: 200,
-            message: "logout successfully",
-          });
-        } else {
-          resolve({
-            status: 202,
-            message: "logout failed",
-          });
         }
+        resolve({
+          status: 200,
+          message: "logout successfully",
+        });
       } catch (error) {
         logger.token.error(error);
         reject(error);
