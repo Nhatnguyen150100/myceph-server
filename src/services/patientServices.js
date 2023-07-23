@@ -43,7 +43,7 @@ const patientServices = {
             )
               resolve({
                 status: 200,
-                message: "create patient successfully",
+                message: "Create patient successfully",
                 data: newPatient.dataValues,
               });
           }
@@ -82,14 +82,14 @@ const patientServices = {
             )
               resolve({
                 status: 200,
-                message: "create patient successfully",
+                message: "Create patient successfully",
                 data: newPatient.dataValues,
               });
           }
         }
         reject({
           status: 202,
-          message: "create patient failed",
+          message: "Create patient failed",
         });
       } catch (error) {
         reject(error);

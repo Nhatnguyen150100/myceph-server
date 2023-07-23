@@ -125,7 +125,7 @@ const libraryImagePatientServices = {
           logger.libraryImagePatient.info(listImageGroupByDate);
           resolve({
             status: 200,
-            message: "upload image successfully",
+            message: "update image successfully",
             data: listImageGroupByDate,
           });
         }
@@ -166,7 +166,7 @@ const libraryImagePatientServices = {
           logger.libraryImagePatient.info(listImageGroupByDate);
           resolve({
             status: 200,
-            message: "upload image successfully",
+            message: "update image successfully",
             data: listImageGroupByDate,
           });
         }
