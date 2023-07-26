@@ -15,6 +15,7 @@ const patientServices = {
             gender: data.gender,
             note: data.note,
             idPatientOfDoctor: data.idDoctor,
+            updateByDoctor: data.updateByDoctor,
             isEncrypted: data.isEncrypted,
           });
           if (newPatient) {
@@ -54,6 +55,7 @@ const patientServices = {
             gender: data.gender,
             note: data.note,
             idPatientOfClinic: data.idClinic,
+            updateByDoctor: data.updateByDoctor,
             isEncrypted: data.isEncrypted,
           });
           if (newPatient) {
