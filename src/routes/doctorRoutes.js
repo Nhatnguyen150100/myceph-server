@@ -44,7 +44,7 @@ router.post(
   doctorMiddleware.checkDoctorDontExistsByEmail,
   doctorController.createDoctorDev
 );
-router.get("/resetPassword", doctorController.verifyResetEmailDoctor);
+router.get("/resetPassword/:email", doctorController.verifyResetEmailDoctor);
 router.post(
   "/resetPassword",
   recaptchaMiddleware.verifyRecaptcha,

@@ -81,7 +81,7 @@ const doctorController = {
             );
         } else {
           const { status, message } = await doctorServices.resetPassword(
-            req.query.email,
+            req.params.email,
             req.query.password
           );
           if (status === 200)
