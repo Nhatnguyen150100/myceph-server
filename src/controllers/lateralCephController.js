@@ -1,61 +1,80 @@
 import logger from "../config/winston";
-import lateralCephServices from "../services/lateralCephServices"
+import lateralCephServices from "../services/lateralCephServices";
 
 const lateralCephController = {
-  getListFontSideImages: async (req,res) => {
+  getListFontSideImages: async (req, res) => {
     try {
-      const { status, message, data } = await lateralCephServices.getListFontSideImages(req.params.id);
+      const { status, message, data } =
+        await lateralCephServices.getListFontSideImages(req.params.id);
       res.status(status).json({
         message: message,
-        data: data
-      })
+        data: data,
+        roleOfDoctor: req.checkRole,
+      });
     } catch (error) {
       logger.lateralCeph.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
   },
-  getImageAnalysis: async (req,res) => {
+  getImageAnalysis: async (req, res) => {
     try {
-      const { status, message, data } = await lateralCephServices.getImageAnalysis(req.params.id);
+      const { status, message, data } =
+        await lateralCephServices.getImageAnalysis(req.params.id);
       res.status(status).json({
         message: message,
-        data: data
-      })
+        data: data,
+      });
     } catch (error) {
       logger.lateralCeph.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
   },
-  setImageAnalysis: async (req,res) => {
+  setImageAnalysis: async (req, res) => {
     try {
-      const { status, message } = await lateralCephServices.setImageAnalysis(req.body);
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
+      const { status, message } = await lateralCephServices.setImageAnalysis(
+        req.body
+      );
       res.status(status).json({
-        message: message
-      })
+        message: message,
+      });
     } catch (error) {
       logger.lateralCeph.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
   },
-  deleteImageAnalysis: async (req,res) => {
+  deleteImageAnalysis: async (req, res) => {
     try {
-      const { status, message } = await lateralCephServices.deleteImageAnalysis(req.params.id);
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
+      const { status, message } = await lateralCephServices.deleteImageAnalysis(
+        req.params.id
+      );
       res.status(status).json({
-        message: message
-      })
+        message: message,
+      });
     } catch (error) {
       logger.lateralCeph.error(error);
       res.status(500).json({
-        message: 'server error'
-      })
+        message: "server error",
+      });
     }
-  }
-}
+  },
+};
 
 export default lateralCephController;

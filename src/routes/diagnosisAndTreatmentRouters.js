@@ -19,6 +19,7 @@ router.put(
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
   doctorMiddleware.checkDoctorExistsByIdFromBody,
+  doctorMiddleware.checkRoleDoctor,
   diagnosisAndTreatmentControllers.updateDiagnosisAndTreatment
 );
 

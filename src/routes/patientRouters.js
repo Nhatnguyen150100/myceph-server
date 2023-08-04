@@ -35,11 +35,13 @@ router.post(
 router.delete(
   "/deletePatient/:id",
   middlewareController.verifyToken,
+  doctorMiddleware.checkRoleDoctor,
   patientController.deletePatient
 );
 router.put(
   "/updateInformationPatient/:id",
   middlewareController.verifyToken,
+  doctorMiddleware.checkRoleDoctor,
   patientController.updateInformationPatient
 );
 router.get(

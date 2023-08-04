@@ -18,18 +18,21 @@ router.post(
   "/createIssue/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   listOfIssueControllers.createIssue
 );
 router.put(
   "/updateIssue/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   listOfIssueControllers.updateIssue
 );
 router.delete(
   "/deleteIssue/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   listOfIssueControllers.deleteIssue
 );
 

@@ -24,18 +24,21 @@ router.post(
   "/createPlan/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   treatmentPlanControllers.createTreatmentPlan
 );
 router.put(
   "/updatePlan/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   treatmentPlanControllers.updateTreatmentPlan
 );
 router.delete(
   "/deletePlan/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   treatmentPlanControllers.deleteTreatmentPlan
 );
 

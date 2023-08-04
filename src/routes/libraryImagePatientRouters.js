@@ -18,24 +18,28 @@ router.post(
   "/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   libraryImagePatientController.uploadImage
 );
 router.put(
   "/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   libraryImagePatientController.updateImagePatient
 );
 router.put(
   "/updateArrayImage/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   libraryImagePatientController.updateArrayImagePatient
 );
 router.delete(
   "/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   libraryImagePatientController.deleteImagePatient
 );
 

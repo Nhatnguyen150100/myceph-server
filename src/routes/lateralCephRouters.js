@@ -1,5 +1,6 @@
 import express from "express";
 import lateralCephController from "../controllers/lateralCephController";
+import doctorMiddleware from "../middleware/doctorMiddleware";
 import middlewareController from "../middleware/middlewareController";
 import patientMiddleware from "../middleware/patientMiddleware";
 
@@ -9,6 +10,7 @@ router.get(
   "/getListFontSideImages/:id",
   middlewareController.verifyToken,
   patientMiddleware.checkPatient,
+  doctorMiddleware.checkRoleDoctor,
   lateralCephController.getListFontSideImages
 );
 router.get(
@@ -17,13 +19,15 @@ router.get(
   lateralCephController.getImageAnalysis
 );
 router.post(
-  "/setImageAnalysis",
+  "/setImageAnalysis/:id",
   middlewareController.verifyToken,
+  doctorMiddleware.checkRoleDoctor,
   lateralCephController.setImageAnalysis
 );
 router.delete(
   "/deleteImageAnalysis/:id",
   middlewareController.verifyToken,
+  doctorMiddleware.checkRoleDoctor,
   lateralCephController.deleteImageAnalysis
 );
 
