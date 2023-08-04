@@ -50,6 +50,12 @@ const libraryImagePatientController = {
   },
   uploadImage: async (req, res) => {
     try {
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
       const { status, message, data } =
         await libraryImagePatientServices.upLoadImage(
           req.params.id,
@@ -73,6 +79,12 @@ const libraryImagePatientController = {
   },
   updateArrayImagePatient: async (req, res) => {
     try {
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
       const { status, message, data } =
         await libraryImagePatientServices.updateArrayImage(
           req.params.id,
@@ -97,6 +109,12 @@ const libraryImagePatientController = {
   },
   updateImagePatient: async (req, res) => {
     try {
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
       const { status, message, data } =
         await libraryImagePatientServices.updateImage(
           req.params.id,
@@ -123,6 +141,12 @@ const libraryImagePatientController = {
   },
   deleteImagePatient: async (req, res) => {
     try {
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
       if (req.query.typeImages === "radiography") {
         const { status, message, data } =
           await libraryImagePatientServices.deleteImage(

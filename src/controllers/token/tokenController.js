@@ -17,7 +17,7 @@ const tokenController = {
       },
       privateKey,
       {
-        expiresIn: `${process.env.NODE_ENV === "development" ? "1m" : "15m"}`,
+        expiresIn: `${process.env.NODE_ENV === "development" ? "15m" : "10m"}`,
         algorithm: "RS512",
       }
     );

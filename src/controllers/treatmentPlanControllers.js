@@ -9,6 +9,12 @@ const {
 const treatmentPlanControllers = {
   createTreatmentPlan: async (req, res) => {
     try {
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
       const { status, message, data } =
         await treatmentPlanServices.createTreatmentPlan(
           req.params.id,
@@ -62,6 +68,12 @@ const treatmentPlanControllers = {
   },
   updateTreatmentPlan: async (req, res) => {
     try {
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
       const { status, message, data } =
         await treatmentPlanServices.updateTreatmentPlan(
           req.params.id,
@@ -85,6 +97,12 @@ const treatmentPlanControllers = {
   },
   deleteTreatmentPlan: async (req, res) => {
     try {
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
       const { status, message, data } = await treatmentPlanServices.deletePlane(
         req.params.id,
         req.query.idPlan

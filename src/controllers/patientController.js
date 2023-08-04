@@ -131,6 +131,12 @@ const patientController = {
   },
   deletePatient: async (req, res) => {
     try {
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
       const { status, message } = await patientServices.deletePatient(
         req.params.id
       );
@@ -146,6 +152,12 @@ const patientController = {
   },
   updateInformationPatient: async (req, res) => {
     try {
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
       const { status, message, data } =
         await patientServices.updateInformationPatient(req.params.id, req.body);
       res.status(status).json({

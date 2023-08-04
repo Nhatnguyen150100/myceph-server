@@ -15,6 +15,7 @@ const patientServices = {
             gender: data.gender,
             note: data.note,
             idPatientOfDoctor: data.idDoctor,
+            updateByDoctor: data.updateByDoctor,
             isEncrypted: data.isEncrypted,
           });
           if (newPatient) {
@@ -43,7 +44,7 @@ const patientServices = {
             )
               resolve({
                 status: 200,
-                message: "create patient successfully",
+                message: "Create patient successfully",
                 data: newPatient.dataValues,
               });
           }
@@ -54,6 +55,7 @@ const patientServices = {
             gender: data.gender,
             note: data.note,
             idPatientOfClinic: data.idClinic,
+            updateByDoctor: data.updateByDoctor,
             isEncrypted: data.isEncrypted,
           });
           if (newPatient) {
@@ -82,14 +84,14 @@ const patientServices = {
             )
               resolve({
                 status: 200,
-                message: "create patient successfully",
+                message: "Create patient successfully",
                 data: newPatient.dataValues,
               });
           }
         }
         reject({
           status: 202,
-          message: "create patient failed",
+          message: "Create patient failed",
         });
       } catch (error) {
         reject(error);

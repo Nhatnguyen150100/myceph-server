@@ -111,7 +111,7 @@ const doctorMiddleware = {
   },
   checkRoleDoctor: async (req, res, next) => {
     try {
-      if (req.query.mode !== "unCheck") {
+      if (req.query.mode !== "unCheck" || !req.query.mode) {
         const { status, message, data } = await doctorServices.checkRoleDoctor(
           req.params.id,
           req.query.idDoctor

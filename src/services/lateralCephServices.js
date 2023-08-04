@@ -122,7 +122,7 @@ const lateralCephServices = {
         } else {
           resolve({
             status: 202,
-            message: "This image has no analysis",
+            message: "This photo has no analysis",
           });
         }
       } catch (error) {

@@ -110,7 +110,7 @@ const doctorServices = {
           .sendMail(
             data.email,
             mailConfig.HTML_CONTENT_RESETPASSWOR,
-            `${process.env.BASE_URL_SERVER}/v1/doctor/resetPassword?email=${data.email}&password=${hashPassword}&token=${hashEmail}`
+            `${process.env.BASE_URL_SERVER}/v1/doctor/resetPassword/${data.email}?password=${hashPassword}&token=${hashEmail}`
           )
           .then(() => {
             resolve({
@@ -142,7 +142,7 @@ const doctorServices = {
           .sendMail(
             data.email,
             mailConfig.HTML_CONTENT,
-            `${process.env.BASE_URL_SERVER}/v1/doctor/verify?email=${data.email}&password=${hashPassword}&token=${hashEmail}`
+            `${process.env.BASE_URL_SERVER}/v1/doctor/verify/${data.email}?password=${hashPassword}&token=${hashEmail}`
           )
           .then(() => {
             resolve({

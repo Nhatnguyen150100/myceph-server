@@ -34,13 +34,13 @@ const encryptionServices = {
           );
           return resolve({
             status: 200,
-            message: "set encryption key for clinic successfully",
+            message: "Set encryption key for clinic successfully",
             data: newClinicWithEncrypted,
           });
         }
         reject({
           status: 202,
-          message: "set encryption key for clinic failed",
+          message: "Set encryption key for clinic failed",
           data: null,
         });
       } catch (error) {
@@ -70,13 +70,13 @@ const encryptionServices = {
           });
           return resolve({
             status: 200,
-            message: "delete encryption key for clinic successfully",
+            message: "Delete encryption key for clinic successfully",
             data: newClinicWithEncrypted,
           });
         }
         reject({
           status: 202,
-          message: "delete encryption key for clinic failed",
+          message: "Delete encryption key for clinic failed",
           data: null,
         });
       } catch (error) {
@@ -106,13 +106,13 @@ const encryptionServices = {
           });
           return resolve({
             status: 200,
-            message: "set encryption key for doctor successfully",
+            message: "Set encryption key for doctor successfully",
             data: newDoctorWithEncrypted,
           });
         }
         reject({
           status: 202,
-          message: "set encryption key for clinic failed",
+          message: "Set encryption key for doctor failed",
           data: null,
         });
       } catch (error) {
@@ -142,13 +142,13 @@ const encryptionServices = {
           });
           return resolve({
             status: 200,
-            message: "set encryption key for doctor successfully",
+            message: "Delete encryption key for doctor successfully",
             data: newDoctorWithEncrypted,
           });
         }
         reject({
           status: 202,
-          message: "set encryption key for clinic failed",
+          message: "Delete encryption key for doctor failed",
           data: null,
         });
       } catch (error) {
@@ -316,7 +316,7 @@ const encryptionServices = {
               },
             });
           }
-        const isEncrypted = await db.Patient.findOne({
+        const { isEncrypted } = await db.Patient.findOne({
           attributes: ["isEncrypted"],
           where: {
             id: idPatient,

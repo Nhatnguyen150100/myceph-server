@@ -9,10 +9,11 @@ const scheduleServices = {
       try {
         const allDoctorInClinic = await sequelize.query(
           `
-        select \"idDoctor\",\"email\",\"fullName\" 
+        select \"idDoctor\" AS \"id\",\"email\",\"fullName\" 
         from \"MemberOfClinics\", \"Doctors\" 
         where \"MemberOfClinics\".\"idClinic\" = ? 
-        and \"MemberOfClinics\".\"idDoctor\" = \"Doctors\".\"id\"`,
+        and \"MemberOfClinics\".\"idDoctor\" = \"Doctors\".\"id\"
+        and \"MemberOfClinics\".\"roleOfDoctor\" = 'admin'`,
           {
             replacements: [idClinic],
             type: QueryTypes.SELECT,

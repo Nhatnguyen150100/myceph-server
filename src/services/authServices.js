@@ -14,7 +14,7 @@ const authServices = {
         if (!doctor || Object.keys(doctor).length === 0) {
           resolve({
             data: null,
-            message: "Could not find your email",
+            message: "We couldn't find your email address",
           });
         }
         let validPassword = await bcrypt.compare(password, doctor.password);

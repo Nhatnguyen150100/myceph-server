@@ -37,14 +37,14 @@ router.put(
   doctorMiddleware.checkDoctorExistsById,
   doctorController.updateInformationDoctor
 );
-router.get("/verify", doctorController.verifyEmailDoctor);
+router.get("/verify/:email", doctorController.verifyEmailDoctor);
 router.post(
   "/registerDev",
   recaptchaMiddleware.verifyRecaptcha,
   doctorMiddleware.checkDoctorDontExistsByEmail,
   doctorController.createDoctorDev
 );
-router.get("/resetPassword", doctorController.verifyResetEmailDoctor);
+router.get("/resetPassword/:email", doctorController.verifyResetEmailDoctor);
 router.post(
   "/resetPassword",
   recaptchaMiddleware.verifyRecaptcha,

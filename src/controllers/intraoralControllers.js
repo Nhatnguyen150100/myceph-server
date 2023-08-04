@@ -24,6 +24,12 @@ const intraoralControllers = {
   },
   updateIntraoral: async (req, res) => {
     try {
+      if (req.checkRole === "view") {
+        res.status(401).json({
+          message: "You do not have permission to edit this patient",
+        });
+        return;
+      }
       const { status, message, data } = await intraoralServices.updateIntraoral(
         req.params.id,
         req.body
