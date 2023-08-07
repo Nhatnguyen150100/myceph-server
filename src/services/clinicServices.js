@@ -132,7 +132,7 @@ const clinicServices = {
         if (status) {
           resolve({
             status: 200,
-            message: "create new clinic successfully",
+            message: "Create new clinic successfully",
             idClinic: newClinic.dataValues.id,
           });
         } else {
@@ -278,7 +278,7 @@ const clinicServices = {
           },
         });
         if (!checkDoctorInClinic)
-          resolve({ status: 202, message: "doctor is not in this clinic" });
+          resolve({ status: 202, message: "Doctor is not in this clinic" });
         const deleteDoctor = await db.MemberOfClinic.destroy({
           where: {
             idClinic: idClinic,
@@ -288,7 +288,7 @@ const clinicServices = {
         if (deleteDoctor) {
           resolve({
             status: 200,
-            message: "doctor deleted successfully",
+            message: "Doctor deleted successfully",
           });
         } else {
           resolve({
@@ -304,10 +304,6 @@ const clinicServices = {
   deleteClinic: (idClinic) => {
     return new Promise(async (resolve, reject) => {
       try {
-        console.log(
-          "🚀 ~ file: clinicServices.js:353 ~ clinicServices.idClinic:",
-          idClinic
-        );
         await db.Schedule.destroy({
           where: {
             idClinicSchedule: idClinic,

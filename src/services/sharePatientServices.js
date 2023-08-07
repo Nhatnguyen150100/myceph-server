@@ -19,7 +19,7 @@ const sharePatientServices = {
           if (checkSharePatient)
             return resolve({
               status: 202,
-              message: "this patient is shared for doctor",
+              message: "This patient is shared for doctor",
             });
           const addPatient = await db.SharePatient.create({
             idSharedPatient: idSharedPatient,
@@ -30,7 +30,7 @@ const sharePatientServices = {
           if (addPatient) {
             resolve({
               status: 200,
-              message: "patient shared successfully",
+              message: "Patient shared successfully",
             });
           } else {
             resolve({
@@ -49,7 +49,7 @@ const sharePatientServices = {
           if (checkSharePatient)
             return resolve({
               status: 202,
-              message: "this patient is shared for doctor",
+              message: "This patient is shared for doctor",
             });
           const addPatient = await db.SharePatient.create({
             idSharedPatient: idSharedPatient,
@@ -96,12 +96,12 @@ const sharePatientServices = {
             });
             resolve({
               status: 200,
-              message: "remove patient shared by doctor successfully",
+              message: "Remove patient shared by doctor successfully",
             });
           } else {
             resolve({
               status: 202,
-              message: "can't found patient shared by doctor",
+              message: "Can't found patient shared by doctor",
             });
           }
         } else {
@@ -122,12 +122,12 @@ const sharePatientServices = {
             });
             resolve({
               status: 200,
-              message: "remove patient shared by clinic successfully",
+              message: "Remove patient shared by clinic successfully",
             });
           } else {
             resolve({
               status: 202,
-              message: "can't found patient shared by clinic",
+              message: "Can't found patient shared by clinic",
             });
           }
         }
@@ -167,12 +167,12 @@ const sharePatientServices = {
             );
             resolve({
               status: 200,
-              message: "update role of owner doctor",
+              message: "Update role of owner doctor successfully",
             });
           } else {
             resolve({
               status: 202,
-              message: "doctor is not admin of patient",
+              message: "Doctor is not admin of patient",
             });
           }
         } else {
@@ -196,12 +196,12 @@ const sharePatientServices = {
             );
             resolve({
               status: 200,
-              message: "update role of owner doctor",
+              message: "Update role of owner doctor successfully",
             });
           } else {
             resolve({
               status: 202,
-              message: "clinic is not admin of patient",
+              message: "Clinic is not admin of patient",
             });
           }
         }
@@ -550,12 +550,12 @@ const sharePatientServices = {
           });
           resolve({
             status: 200,
-            message: "delete share doctor successfully",
+            message: "Delete share doctor successfully",
           });
         } else {
           resolve({
             status: 202,
-            message: "share doctor is not found",
+            message: "Share doctor is not found",
           });
         }
       } catch (error) {
