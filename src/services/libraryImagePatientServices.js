@@ -138,14 +138,21 @@ const libraryImagePatientServices = {
   updateArrayImage: (idPatient, newDate, oldDate, type) => {
     return new Promise(async (resolve, reject) => {
       try {
+        const whereCondition = {
+          consultationDate: {
+            [Op.gte]: new Date(oldDate),
+            [Op.lt]: new Date(
+              new Date(oldDate).getTime() + 24 * 60 * 60 * 1000
+            ),
+          },
+          idPatientImage: idPatient,
+        };
         const updateArrayImage = await db.LibraryImagePatient.update(
           {
             consultationDate: new Date(newDate),
           },
           {
-            where: {
-              consultationDate: new Date(oldDate),
-            },
+            where: whereCondition,
           }
         );
         if (updateArrayImage) {
