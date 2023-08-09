@@ -32,11 +32,28 @@ const treatmentPlanServices = {
       }
     });
   },
-  getAllTreatmentPlan: (idPatient) => {
+  getAllTreatmentPlan: (idPatient, page, pageSize) => {
     return new Promise(async (resolve, reject) => {
       try {
+        const start = (page - 1) * pageSize;
+        const count = await db.TreatmentPlan.findAll({
+          where: {
+            idTreatmentPlan: idPatient,
+          },
+        });
+        if (count.length === 0) {
+          resolve({
+            status: 200,
+            message: "get all treatment plan successfully",
+            data: [],
+            count: count.length,
+          });
+          return;
+        }
         const allTreatmentPlan = await db.TreatmentPlan.findAll({
           order: [["createdAt", "DESC"]],
+          offset: start,
+          limit: Number(pageSize),
           where: {
             idTreatmentPlan: idPatient,
           },
@@ -46,12 +63,14 @@ const treatmentPlanServices = {
             status: 200,
             message: "get all treatment plan successfully",
             data: allTreatmentPlan,
+            count: count.length,
           });
         } else {
           resolve({
             status: 202,
             message: "get all treatment plan failed",
             data: {},
+            count: count.length,
           });
         }
       } catch (error) {
@@ -81,22 +100,31 @@ const treatmentPlanServices = {
           selected: data.selected,
         });
         if (treatmentPlan) {
+          const count = await db.TreatmentPlan.findAll({
+            where: {
+              idTreatmentPlan: idPatient,
+            },
+          });
           const allTreatmentPlan = await db.TreatmentPlan.findAll({
             order: [["createdAt", "DESC"]],
+            offset: 0,
+            limit: Number(3),
             where: {
               idTreatmentPlan: idPatient,
             },
           });
           resolve({
             status: 200,
-            message: "create treatment plan successfully",
+            message: "Create treatment plan successfully",
             data: allTreatmentPlan,
+            count: count.length,
           });
         } else {
           resolve({
             status: 202,
             message: "create treatment plan failed",
             data: null,
+            count: 0,
           });
         }
       } catch (error) {
@@ -105,7 +133,7 @@ const treatmentPlanServices = {
       }
     });
   },
-  updateTreatmentPlan: (idPatient, idPlan, data) => {
+  updateTreatmentPlan: (idPatient, idPlan, data, page, pageSize) => {
     return new Promise(async (resolve, reject) => {
       try {
         if (data.selected) {
@@ -130,22 +158,32 @@ const treatmentPlanServices = {
           },
         });
         if (newPlan) {
+          const start = (page - 1) * pageSize;
+          const count = await db.TreatmentPlan.findAll({
+            where: {
+              idTreatmentPlan: idPatient,
+            },
+          });
           const allTreatmentPlan = await db.TreatmentPlan.findAll({
             order: [["createdAt", "DESC"]],
+            offset: start,
+            limit: Number(pageSize),
             where: {
               idTreatmentPlan: idPatient,
             },
           });
           resolve({
             status: 200,
-            message: "update plan successfully",
+            message: "Update treatment plan successfully",
             data: allTreatmentPlan,
+            count: count.length,
           });
         } else {
           resolve({
             status: 202,
             message: "update plan failed",
             data: null,
+            count: 0,
           });
         }
       } catch (error) {
@@ -164,22 +202,31 @@ const treatmentPlanServices = {
           force: true,
         });
         if (deletePlan) {
+          const count = await db.TreatmentPlan.findAll({
+            where: {
+              idTreatmentPlan: idPatient,
+            },
+          });
           const allTreatmentPlan = await db.TreatmentPlan.findAll({
             order: [["createdAt", "DESC"]],
+            offset: 0,
+            limit: Number(3),
             where: {
               idTreatmentPlan: idPatient,
             },
           });
           resolve({
             status: 200,
-            message: "Delete plan successfully",
+            message: "Delete treatment plan successfully",
             data: allTreatmentPlan,
+            count: count.length,
           });
         } else {
           resolve({
             status: 200,
             message: "Delete plan failed",
             data: null,
+            count: 0,
           });
         }
       } catch (error) {

@@ -2,28 +2,79 @@
 import logger from "../config/winston";
 
 const db = require("../models");
+import { Op } from "sequelize";
 
 const treatmentHistoryServices = {
-  getTreatmentHistory: (idPatient) => {
+  getTreatmentHistory: (idPatient, page, pageSize) => {
     return new Promise(async (resolve, reject) => {
       try {
+        const start = (page - 1) * pageSize;
+        const count = await db.TreatmentHistory.findAll({
+          where: {
+            idTreatmentHistory: idPatient,
+          },
+        });
+        if (count.length === 0) {
+          resolve({
+            status: 200,
+            message: "get treatment history successfully",
+            data: [],
+            count: count.length,
+          });
+          return;
+        }
         const treatmentHistory = await db.TreatmentHistory.findAll({
           order: [["createdAt", "DESC"]],
+          offset: start,
+          limit: Number(pageSize),
           where: {
             idTreatmentHistory: idPatient,
           },
         });
         if (treatmentHistory.length >= 0) {
+          const arrayTreatmentHistory = [];
+          for (const element of treatmentHistory) {
+            const whereCondition = {
+              consultationDate: {
+                [Op.eq]: new Date(element.consultationDate),
+                [Op.lte]: new Date(
+                  new Date(element.consultationDate).getTime() +
+                    24 * 60 * 60 * 1000
+                ),
+              },
+              typeImage: {
+                [Op.or]: [1, 2, 3, 4, 10, 11, 12, 13, 14, 15],
+              },
+              idPatientImage: idPatient,
+            };
+            const arrayImages = await db.LibraryImagePatient.findAll({
+              order: [["consultationDate", "DESC"]],
+              where: whereCondition,
+            });
+            if (arrayImages.length > 0) {
+              const elementHistory = Object.assign(element, {
+                arrayImages: arrayImages,
+              });
+              arrayTreatmentHistory.push(elementHistory);
+            } else {
+              const elementHistory = Object.assign(element, {
+                arrayImages: [],
+              });
+              arrayTreatmentHistory.push(elementHistory);
+            }
+          }
           resolve({
             status: 200,
             message: "get treatment history successfully",
-            data: treatmentHistory,
+            data: arrayTreatmentHistory,
+            count: count.length,
           });
         } else {
           resolve({
             status: 202,
             message: "get treatment history failed",
             data: [],
+            count: 0,
           });
         }
       } catch (error) {
@@ -42,22 +93,62 @@ const treatmentHistoryServices = {
           consultationDate: new Date(data.consultationDate),
         });
         if (treatmentHistory) {
-          const treatmentHistoryData = await db.TreatmentHistory.findAll({
-            order: [["createdAt", "DESC"]],
+          const count = await db.TreatmentHistory.findAll({
             where: {
               idTreatmentHistory: idPatient,
             },
           });
+          const treatmentHistoryData = await db.TreatmentHistory.findAll({
+            order: [["createdAt", "DESC"]],
+            offset: 0,
+            limit: Number(2),
+            where: {
+              idTreatmentHistory: idPatient,
+            },
+          });
+          const arrayTreatmentHistory = [];
+          for (const element of treatmentHistoryData) {
+            const whereCondition = {
+              consultationDate: {
+                [Op.eq]: new Date(element.consultationDate),
+                [Op.lte]: new Date(
+                  new Date(element.consultationDate).getTime() +
+                    24 * 60 * 60 * 1000
+                ),
+              },
+              typeImage: {
+                [Op.or]: [1, 2, 3, 4, 10, 11, 12, 13, 14, 15],
+              },
+              idPatientImage: idPatient,
+            };
+            const arrayImages = await db.LibraryImagePatient.findAll({
+              order: [["consultationDate", "DESC"]],
+              where: whereCondition,
+            });
+            if (arrayImages.length > 0) {
+              const elementHistory = Object.assign(element, {
+                arrayImages: arrayImages,
+              });
+              arrayTreatmentHistory.push(elementHistory);
+            } else {
+              const elementHistory = Object.assign(element, {
+                arrayImages: [],
+              });
+              arrayTreatmentHistory.push(elementHistory);
+            }
+          }
           resolve({
             status: 200,
-            message: "create treatment history successfully",
-            data: treatmentHistoryData,
+            message: "Create treatment history successfully",
+            data: arrayTreatmentHistory,
+            count: count.length,
           });
         } else {
           resolve({
             status: 202,
-            message: "create treatment history failed",
+            message: "Create treatment history failed",
             data: null,
+            count: 0,
           });
         }
       } catch (error) {
@@ -66,7 +157,7 @@ const treatmentHistoryServices = {
       }
     });
   },
-  updateTreatmentHistory: (idPatient, idHistory, data) => {
+  updateTreatmentHistory: (idPatient, idHistory, data, page, pageSize) => {
     return new Promise(async (resolve, reject) => {
       try {
         const dataUpdate = {
@@ -83,22 +174,63 @@ const treatmentHistoryServices = {
           }
         );
         if (updateTreatmentHistory) {
-          const treatmentHistoryData = await db.TreatmentHistory.findAll({
-            order: [["createdAt", "DESC"]],
+          const count = await db.TreatmentHistory.findAll({
             where: {
               idTreatmentHistory: idPatient,
             },
           });
+          const start = (page - 1) * pageSize;
+          const treatmentHistoryData = await db.TreatmentHistory.findAll({
+            order: [["createdAt", "DESC"]],
+            offset: start,
+            limit: Number(pageSize),
+            where: {
+              idTreatmentHistory: idPatient,
+            },
+          });
+          const arrayTreatmentHistory = [];
+          for (const element of treatmentHistoryData) {
+            const whereCondition = {
+              consultationDate: {
+                [Op.eq]: new Date(element.consultationDate),
+                [Op.lte]: new Date(
+                  new Date(element.consultationDate).getTime() +
+                    24 * 60 * 60 * 1000
+                ),
+              },
+              typeImage: {
+                [Op.or]: [1, 2, 3, 4, 10, 11, 12, 13, 14, 15],
+              },
+              idPatientImage: idPatient,
+            };
+            const arrayImages = await db.LibraryImagePatient.findAll({
+              order: [["consultationDate", "DESC"]],
+              where: whereCondition,
+            });
+            if (arrayImages.length > 0) {
+              const elementHistory = Object.assign(element, {
+                arrayImages: arrayImages,
+              });
+              arrayTreatmentHistory.push(elementHistory);
+            } else {
+              const elementHistory = Object.assign(element, {
+                arrayImages: [],
+              });
+              arrayTreatmentHistory.push(elementHistory);
+            }
+          }
           resolve({
             status: 200,
-            message: "update treatment history successfully",
-            data: treatmentHistoryData,
+            message: "Update treatment history successfully",
+            data: arrayTreatmentHistory,
+            count: count.length,
           });
         } else {
           resolve({
             status: 202,
-            message: "update treatment history failed",
+            message: "Update treatment history failed",
             data: null,
+            count: 0,
           });
         }
       } catch (error) {
@@ -116,22 +248,62 @@ const treatmentHistoryServices = {
           },
         });
         if (deleteTreatmentHistory) {
-          const treatmentHistoryData = await db.TreatmentHistory.findAll({
-            order: [["createdAt", "DESC"]],
+          const count = await db.TreatmentHistory.findAll({
             where: {
               idTreatmentHistory: idPatient,
             },
           });
+          const treatmentHistoryData = await db.TreatmentHistory.findAll({
+            order: [["createdAt", "DESC"]],
+            offset: 0,
+            limit: Number(2),
+            where: {
+              idTreatmentHistory: idPatient,
+            },
+          });
+          const arrayTreatmentHistory = [];
+          for (const element of treatmentHistoryData) {
+            const whereCondition = {
+              consultationDate: {
+                [Op.eq]: new Date(element.consultationDate),
+                [Op.lte]: new Date(
+                  new Date(element.consultationDate).getTime() +
+                    24 * 60 * 60 * 1000
+                ),
+              },
+              typeImage: {
+                [Op.or]: [1, 2, 3, 4, 10, 11, 12, 13, 14, 15],
+              },
+              idPatientImage: idPatient,
+            };
+            const arrayImages = await db.LibraryImagePatient.findAll({
+              order: [["consultationDate", "DESC"]],
+              where: whereCondition,
+            });
+            if (arrayImages.length > 0) {
+              const elementHistory = Object.assign(element, {
+                arrayImages: arrayImages,
+              });
+              arrayTreatmentHistory.push(elementHistory);
+            } else {
+              const elementHistory = Object.assign(element, {
+                arrayImages: [],
+              });
+              arrayTreatmentHistory.push(elementHistory);
+            }
+          }
           resolve({
             status: 200,
-            message: "delete treatment history successfully",
-            data: treatmentHistoryData,
+            message: "Delete treatment history successfully",
+            data: arrayTreatmentHistory,
+            count: count.length,
           });
         } else {
           resolve({
             status: 202,
-            message: "delete treatment history failed",
+            message: "Delete treatment history failed",
             data: null,
+            count: 0,
           });
         }
       } catch (error) {

@@ -15,7 +15,7 @@ const treatmentHistoryControllers = {
         });
         return;
       }
-      const { status, message, data } =
+      const { status, message, data, count } =
         await treatmentHistoryServices.createTreatmentHistory(
           req.params.id,
           req.body
@@ -26,6 +26,7 @@ const treatmentHistoryControllers = {
           res.status(status).json({
             message: message,
             data: data,
+            count: count,
           });
         });
     } catch (error) {
@@ -37,11 +38,16 @@ const treatmentHistoryControllers = {
   },
   getTreatmentHistory: async (req, res) => {
     try {
-      const { status, message, data } =
-        await treatmentHistoryServices.getTreatmentHistory(req.params.id);
+      const { status, message, data, count } =
+        await treatmentHistoryServices.getTreatmentHistory(
+          req.params.id,
+          req.query.page,
+          req.query.pageSize
+        );
       res.status(status).json({
         message: message,
         data: data,
+        count: count,
       });
     } catch (error) {
       logger.treatmentHistory.error(error);
@@ -58,11 +64,13 @@ const treatmentHistoryControllers = {
         });
         return;
       }
-      const { status, message, data } =
+      const { status, message, data, count } =
         await treatmentHistoryServices.updateTreatmentHistory(
           req.params.id,
           req.query.idHistory,
-          req.body
+          req.body,
+          req.query.page,
+          req.query.pageSize
         );
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
@@ -70,6 +78,7 @@ const treatmentHistoryControllers = {
           res.status(status).json({
             message: message,
             data: data,
+            count: count,
           });
         });
     } catch (error) {
@@ -87,7 +96,7 @@ const treatmentHistoryControllers = {
         });
         return;
       }
-      const { status, message, data } =
+      const { status, message, data, count } =
         await treatmentHistoryServices.deleteTreatmentHistory(
           req.params.id,
           req.query.idHistory
@@ -98,6 +107,7 @@ const treatmentHistoryControllers = {
           res.status(status).json({
             message: message,
             data: data,
+            count: count,
           });
         });
     } catch (error) {

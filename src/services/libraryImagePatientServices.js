@@ -145,6 +145,9 @@ const libraryImagePatientServices = {
               new Date(oldDate).getTime() + 24 * 60 * 60 * 1000
             ),
           },
+          typeImage: {
+            [Op.or]: type,
+          },
           idPatientImage: idPatient,
         };
         const updateArrayImage = await db.LibraryImagePatient.update(

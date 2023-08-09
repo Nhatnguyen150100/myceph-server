@@ -15,7 +15,7 @@ const treatmentPlanControllers = {
         });
         return;
       }
-      const { status, message, data } =
+      const { status, message, data, count } =
         await treatmentPlanServices.createTreatmentPlan(
           req.params.id,
           req.body
@@ -26,6 +26,7 @@ const treatmentPlanControllers = {
           res.status(status).json({
             message: message,
             data: data,
+            count: count,
           });
         });
     } catch (error) {
@@ -52,12 +53,17 @@ const treatmentPlanControllers = {
   },
   getAllTreatmentPlan: async (req, res) => {
     try {
-      const { status, message, data } =
-        await treatmentPlanServices.getAllTreatmentPlan(req.params.id);
+      const { status, message, data, count } =
+        await treatmentPlanServices.getAllTreatmentPlan(
+          req.params.id,
+          req.query.page,
+          req.query.pageSize
+        );
       res.status(status).json({
         message: message,
         data: data,
         roleOfDoctor: req.checkRole,
+        count: count,
       });
     } catch (error) {
       logger.treatmentPlan.error(error);
@@ -74,11 +80,13 @@ const treatmentPlanControllers = {
         });
         return;
       }
-      const { status, message, data } =
+      const { status, message, data, count } =
         await treatmentPlanServices.updateTreatmentPlan(
           req.params.id,
           req.query.idPlan,
-          req.body
+          req.body,
+          req.query.page,
+          req.query.pageSize
         );
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
@@ -86,6 +94,7 @@ const treatmentPlanControllers = {
           res.status(status).json({
             message: message,
             data: data,
+            count: count,
           });
         });
     } catch (error) {
@@ -103,16 +112,18 @@ const treatmentPlanControllers = {
         });
         return;
       }
-      const { status, message, data } = await treatmentPlanServices.deletePlane(
-        req.params.id,
-        req.query.idPlan
-      );
+      const { status, message, data, count } =
+        await treatmentPlanServices.deletePlane(
+          req.params.id,
+          req.query.idPlan
+        );
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
         .finally(() => {
           res.status(status).json({
             message: message,
             data: data,
+            count: count,
           });
         });
     } catch (error) {

@@ -4,11 +4,28 @@ import logger from "../config/winston";
 const db = require("../models");
 
 const listOfIssueServices = {
-  getListOfIssue: (idPatient) => {
+  getListOfIssue: (idPatient, page, pageSize) => {
     return new Promise(async (resolve, reject) => {
       try {
+        const start = (page - 1) * pageSize;
+        const count = await db.ListOfIssue.findAll({
+          where: {
+            idListOfIssue: idPatient,
+          },
+        });
+        if (count.length === 0) {
+          resolve({
+            status: 200,
+            message: "get list of issues successfully",
+            data: [],
+            count: count.length,
+          });
+          return;
+        }
         const listOfIssue = await db.ListOfIssue.findAll({
           order: [["createdAt", "DESC"]],
+          offset: start,
+          limit: Number(pageSize),
           where: {
             idListOfIssue: idPatient,
           },
@@ -18,12 +35,14 @@ const listOfIssueServices = {
             status: 200,
             message: "get list of issues successfully",
             data: listOfIssue,
+            count: count.length,
           });
         } else {
           resolve({
             staus: 202,
             message: "get list of issues failed",
             data: {},
+            count: 0,
           });
         }
       } catch (error) {
@@ -43,22 +62,31 @@ const listOfIssueServices = {
           priotized: data.priotized,
         });
         if (newIssue) {
+          const count = await db.ListOfIssue.findAll({
+            where: {
+              idListOfIssue: idPatient,
+            },
+          });
           const listOfIssue = await db.ListOfIssue.findAll({
             order: [["createdAt", "DESC"]],
+            offset: 0,
+            limit: Number(3),
             where: {
               idListOfIssue: idPatient,
             },
           });
           resolve({
             status: 200,
-            message: "create issue successfully",
+            message: "Create issue successfully",
             data: listOfIssue,
+            count: count.length,
           });
         } else {
           resolve({
             status: 202,
             message: "create issue failed",
             data: null,
+            count: 0,
           });
         }
       } catch (error) {
@@ -67,7 +95,7 @@ const listOfIssueServices = {
       }
     });
   },
-  updateIssue: (idPatient, idIssue, data) => {
+  updateIssue: (idPatient, idIssue, data, page, pageSize) => {
     return new Promise(async (resolve, reject) => {
       try {
         const dataUpdate = {
@@ -82,22 +110,32 @@ const listOfIssueServices = {
           },
         });
         if (newIssue) {
+          const start = (page - 1) * pageSize;
+          const count = await db.ListOfIssue.findAll({
+            where: {
+              idListOfIssue: idPatient,
+            },
+          });
           const listOfIssue = await db.ListOfIssue.findAll({
             order: [["createdAt", "DESC"]],
+            offset: start,
+            limit: Number(pageSize),
             where: {
               idListOfIssue: idPatient,
             },
           });
           resolve({
             status: 200,
-            message: "update issue successfully",
+            message: "Update issue successfully",
             data: listOfIssue,
+            count: count.length,
           });
         } else {
           resolve({
             status: 202,
             message: "update issue failed",
             data: null,
+            count: 0,
           });
         }
       } catch (error) {
@@ -116,8 +154,15 @@ const listOfIssueServices = {
           force: true,
         });
         if (deleteIssue) {
+          const count = await db.ListOfIssue.findAll({
+            where: {
+              idListOfIssue: idPatient,
+            },
+          });
           const listOfIssue = await db.ListOfIssue.findAll({
             order: [["createdAt", "DESC"]],
+            offset: 0,
+            limit: Number(3),
             where: {
               idListOfIssue: idPatient,
             },
@@ -126,12 +171,14 @@ const listOfIssueServices = {
             status: 200,
             message: "Delete issue successfully",
             data: listOfIssue,
+            count: count.length,
           });
         } else {
           resolve({
             status: 200,
             message: "Delete issue failed",
             data: null,
+            count: 0,
           });
         }
       } catch (error) {

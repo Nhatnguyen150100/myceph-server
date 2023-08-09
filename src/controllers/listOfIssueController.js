@@ -9,11 +9,16 @@ const {
 const listOfIssueControllers = {
   getListOfIssue: async (req, res) => {
     try {
-      const { status, message, data } =
-        await listOfIssueServices.getListOfIssue(req.params.id);
+      const { status, message, data, count } =
+        await listOfIssueServices.getListOfIssue(
+          req.params.id,
+          req.query.page,
+          req.query.pageSize
+        );
       res.status(status).json({
         message: message,
         data: data,
+        count: count,
         roleOfDoctor: req.checkRole,
       });
     } catch (error) {
@@ -31,16 +36,15 @@ const listOfIssueControllers = {
         });
         return;
       }
-      const { status, message, data } = await listOfIssueServices.createIssue(
-        req.params.id,
-        req.body
-      );
+      const { status, message, data, count } =
+        await listOfIssueServices.createIssue(req.params.id, req.body);
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
         .finally(() => {
           res.status(status).json({
             message: message,
             data: data,
+            count: count,
           });
         });
     } catch (error) {
@@ -58,17 +62,21 @@ const listOfIssueControllers = {
         });
         return;
       }
-      const { status, message, data } = await listOfIssueServices.updateIssue(
-        req.params.id,
-        req.query.idIssue,
-        req.body
-      );
+      const { status, message, data, count } =
+        await listOfIssueServices.updateIssue(
+          req.params.id,
+          req.query.idIssue,
+          req.body,
+          req.query.page,
+          req.query.pageSize
+        );
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
         .finally(() => {
           res.status(status).json({
             message: message,
             data: data,
+            count: count,
           });
         });
     } catch (error) {
@@ -86,16 +94,15 @@ const listOfIssueControllers = {
         });
         return;
       }
-      const { status, message, data } = await listOfIssueServices.deleteIssue(
-        req.params.id,
-        req.query.idIssue
-      );
+      const { status, message, data, count } =
+        await listOfIssueServices.deleteIssue(req.params.id, req.query.idIssue);
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
         .finally(() => {
           res.status(status).json({
             message: message,
             data: data,
+            count: count,
           });
         });
     } catch (error) {
