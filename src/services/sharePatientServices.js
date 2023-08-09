@@ -60,7 +60,7 @@ const sharePatientServices = {
           if (addPatient) {
             resolve({
               status: 200,
-              message: "patient shared successfully",
+              message: "Patient shared successfully",
             });
           } else {
             resolve({
