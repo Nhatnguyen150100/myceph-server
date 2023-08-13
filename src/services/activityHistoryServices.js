@@ -58,10 +58,6 @@ const activityHistoryServices = {
               [Op.lt]: endOfDay,
             },
           };
-          console.log(
-            "🚀 ~ file: activityHistoryServices.js:55 ~ returnnewPromise ~ whereCondition:",
-            whereCondition
-          );
         } else if (
           searchDoctor &&
           searchDoctor !== "All doctor" &&
