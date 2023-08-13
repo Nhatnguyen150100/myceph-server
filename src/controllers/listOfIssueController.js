@@ -1,5 +1,7 @@
 "use strict";
+import { FILE_CHANGE } from "../common/utility";
 import logger from "../config/winston";
+import activityHistoryServices from "../services/activityHistoryServices";
 import patientServices from "../services/patientServices";
 
 const {
@@ -38,6 +40,13 @@ const listOfIssueControllers = {
       }
       const { status, message, data, count } =
         await listOfIssueServices.createIssue(req.params.id, req.body);
+
+      await activityHistoryServices.addActivityHistory({
+        idPatient: req.params.id,
+        idDoctor: req.body.idDoctor,
+        fileChange: FILE_CHANGE.MEDICAL_RECORD,
+        contentChange: "Thêm vấn đề của bệnh nhân",
+      });
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
         .finally(() => {
@@ -70,6 +79,13 @@ const listOfIssueControllers = {
           req.query.page,
           req.query.pageSize
         );
+
+      await activityHistoryServices.addActivityHistory({
+        idPatient: req.params.id,
+        idDoctor: req.body.idDoctor,
+        fileChange: FILE_CHANGE.MEDICAL_RECORD,
+        contentChange: "Cập nhật các vấn đề gặp phải của bệnh nhân",
+      });
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
         .finally(() => {
@@ -96,8 +112,15 @@ const listOfIssueControllers = {
       }
       const { status, message, data, count } =
         await listOfIssueServices.deleteIssue(req.params.id, req.query.idIssue);
+
+      await activityHistoryServices.addActivityHistory({
+        idPatient: req.params.id,
+        idDoctor: req.query.idDoctor,
+        fileChange: FILE_CHANGE.MEDICAL_RECORD,
+        contentChange: "Xóa các vấn đề gặp phải của bệnh nhân",
+      });
       patientServices
-        .saveUpdateDoctor(req.params.id, req.body.idDoctor)
+        .saveUpdateDoctor(req.params.id, req.query.idDoctor)
         .finally(() => {
           res.status(status).json({
             message: message,

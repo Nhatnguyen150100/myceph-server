@@ -63,6 +63,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "idRoomDiscussionOfPatient",
         sourceKey: "id",
       });
+      Patient.hasMany(models.ActivityHistory, {
+        foreignKey: "idPatientHistory",
+        sourceKey: "id",
+      });
 
       Patient.belongsTo(models.Doctor, {
         foreignKey: { name: "idPatientOfDoctor", allowNull: false },

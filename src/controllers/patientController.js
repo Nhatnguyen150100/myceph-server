@@ -1,5 +1,7 @@
 "use strict";
+import { FILE_CHANGE } from "../common/utility";
 import logger from "../config/winston";
+import activityHistoryServices from "../services/activityHistoryServices";
 import patientServices from "../services/patientServices";
 
 const patientController = {
@@ -160,6 +162,13 @@ const patientController = {
       }
       const { status, message, data } =
         await patientServices.updateInformationPatient(req.params.id, req.body);
+
+      await activityHistoryServices.addActivityHistory({
+        idPatient: req.params.id,
+        idDoctor: req.body.updateByDoctor,
+        fileChange: FILE_CHANGE.INFORMATION,
+        contentChange: "Cập nhật thông tin cơ bản của bệnh nhân",
+      });
       res.status(status).json({
         message: message,
         data: data,

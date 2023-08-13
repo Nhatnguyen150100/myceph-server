@@ -1,4 +1,6 @@
+import { FILE_CHANGE } from "../common/utility";
 import logger from "../config/winston";
+import activityHistoryServices from "../services/activityHistoryServices";
 import lateralCephServices from "../services/lateralCephServices";
 
 const lateralCephController = {
@@ -44,6 +46,12 @@ const lateralCephController = {
       const { status, message } = await lateralCephServices.setImageAnalysis(
         req.body
       );
+      await activityHistoryServices.addActivityHistory({
+        idPatient: req.params.id,
+        idDoctor: req.query.idDoctor,
+        fileChange: FILE_CHANGE.LATERALCEPH,
+        contentChange: "Cập nhật phân tích sọ nghiêng cho bệnh nhân",
+      });
       res.status(status).json({
         message: message,
       });
@@ -65,6 +73,13 @@ const lateralCephController = {
       const { status, message } = await lateralCephServices.deleteImageAnalysis(
         req.params.id
       );
+
+      await activityHistoryServices.addActivityHistory({
+        idPatient: req.params.id,
+        idDoctor: req.query.idDoctor,
+        fileChange: FILE_CHANGE.LATERALCEPH,
+        contentChange: "Xóa phân tích sọ nghiêng của bệnh nhân",
+      });
       res.status(status).json({
         message: message,
       });

@@ -1,5 +1,7 @@
 "use strict";
+import { FILE_CHANGE } from "../common/utility";
 import logger from "../config/winston";
+import activityHistoryServices from "../services/activityHistoryServices";
 
 const { default: patientServices } = require("../services/patientServices");
 const {
@@ -20,6 +22,13 @@ const treatmentPlanControllers = {
           req.params.id,
           req.body
         );
+
+      await activityHistoryServices.addActivityHistory({
+        idPatient: req.params.id,
+        idDoctor: req.body.idDoctor,
+        fileChange: FILE_CHANGE.MEDICAL_RECORD,
+        contentChange: "Thêm kế hoạch điều trị cho bệnh nhân",
+      });
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
         .finally(() => {
@@ -88,6 +97,13 @@ const treatmentPlanControllers = {
           req.query.page,
           req.query.pageSize
         );
+
+      await activityHistoryServices.addActivityHistory({
+        idPatient: req.params.id,
+        idDoctor: req.body.idDoctor,
+        fileChange: FILE_CHANGE.MEDICAL_RECORD,
+        contentChange: "Cập nhật kế hoạch điều trị cho bệnh nhân",
+      });
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
         .finally(() => {
@@ -117,8 +133,15 @@ const treatmentPlanControllers = {
           req.params.id,
           req.query.idPlan
         );
+
+      await activityHistoryServices.addActivityHistory({
+        idPatient: req.params.id,
+        idDoctor: req.query.idDoctor,
+        fileChange: FILE_CHANGE.MEDICAL_RECORD,
+        contentChange: "Xóa kế hoạch điều trị cho bệnh nhân",
+      });
       patientServices
-        .saveUpdateDoctor(req.params.id, req.body.idDoctor)
+        .saveUpdateDoctor(req.params.id, req.query.idDoctor)
         .finally(() => {
           res.status(status).json({
             message: message,

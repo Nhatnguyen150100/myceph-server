@@ -39,6 +39,12 @@ const diagnosisAndTreatmentControllers = {
           req.params.id,
           req.body
         );
+      await activityHistoryServices.addActivityHistory({
+        idPatient: req.params.id,
+        idDoctor: req.body.idDoctor,
+        fileChange: FILE_CHANGE.MEDICAL_RECORD,
+        contentChange: "Cập nhật chẩn đoán với tiên lượng và lưu ý",
+      });
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
         .finally(() => {

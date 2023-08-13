@@ -37,6 +37,7 @@ import scheduleRouter from "./routes/scheduleRouters";
 import encryptionRouter from "./routes/encryptionRouters";
 import discussionServices from "./services/discussionServices";
 import lateralCephRouter from "./routes/lateralCephRouters";
+import activityHistoryRouters from "./routes/activityHistoryRouters";
 
 const app = express();
 app.use(passport.initialize());
@@ -95,6 +96,7 @@ app.use("/v1/statusOfClinic", statusOfClinicRouter);
 app.use("/v1/schedule", scheduleRouter);
 app.use("/v1/encryption", encryptionRouter);
 app.use("/v1/lateralCeph", lateralCephRouter);
+app.use("/v1/activityHistory", activityHistoryRouters);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

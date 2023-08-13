@@ -1,5 +1,7 @@
 "use strict";
+import { FILE_CHANGE } from "../common/utility";
 import logger from "../config/winston";
+import activityHistoryServices from "../services/activityHistoryServices";
 import patientServices from "../services/patientServices";
 
 const { default: historyServices } = require("../services/historyServices");
@@ -37,6 +39,12 @@ const historyControllers = {
         req.params.id,
         req.body
       );
+      await activityHistoryServices.addActivityHistory({
+        idPatient: req.params.id,
+        idDoctor: req.body.idDoctor,
+        fileChange: FILE_CHANGE.MEDICAL_RECORD,
+        contentChange: "Cập nhật bệnh sử của bệnh nhân",
+      });
       patientServices
         .saveUpdateDoctor(req.params.id, req.body.idDoctor)
         .finally(() => {
