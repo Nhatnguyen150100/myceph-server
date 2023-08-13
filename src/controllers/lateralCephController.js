@@ -47,7 +47,7 @@ const lateralCephController = {
         req.body
       );
       await activityHistoryServices.addActivityHistory({
-        idPatient: req.params.id,
+        idPatient: req.query.idPatient,
         idDoctor: req.query.idDoctor,
         fileChange: FILE_CHANGE.LATERALCEPH,
         contentChange: "Cập nhật phân tích sọ nghiêng cho bệnh nhân",
