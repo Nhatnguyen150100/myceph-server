@@ -8,6 +8,8 @@
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel ./src -d ./build/src --copy-files",
     "build": "npm run clean && npm run build-babel",
+    "migrate": "cd src && sequelize-cli db:migrate",
+    "migrate:undo": "cd src && sequelize-cli db:migrate:undo:all",
     "production": "node ./build/src/app.js",
     "dev": "nodemon --exec ./node_modules/.bin/babel-node ./src/app.js"
   },
